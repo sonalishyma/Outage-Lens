@@ -1,6 +1,6 @@
 # Power Outages: An Analysis and Prediction Model
 
-**[Open the interactive dashboard →](dashboard.html)** — a live map + hover-decomposable trend chart built on this data.
+**[Live interactive dashboard →](https://sonalishyma.github.io/Power-Outage-Predictive-Modeling/)** — a real projected U.S. map plus a hover-decomposable trend chart built on this data. This document is the full write-up and methodology behind it.
 
 ## Introduction
 
