@@ -1,14 +1,12 @@
 # Power Outages: An Analysis and Prediction Model
 
-UCSD DSC 80 Data Science Project
-
-### By: Sonali Singh
-
 **[Open the interactive dashboard →](dashboard.html)** — a live map + hover-decomposable trend chart built on this data.
 
 ## Introduction
 
 In this project, I examine [data](https://engineering.purdue.edu/LASCI/research-data/outages) from Purdue University's Laboratory for Advancing Sustainable Critical Infrastructure on major power outages in the continental United States from January 2000 to July 2016.
+
+This project was orginally a UCSD DSC 80 Data Science Project done with Susana Haing. The project has now been redone and deployed independently with corrections made. 
 
 The data includes geographical location, climate/weather, outage cause, and the number of people affected for each major outage.
 
