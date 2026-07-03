@@ -1,0 +1,693 @@
+<title>Power Outage Analytics</title>
+<style>
+  :root {
+    --bg-0: #0a0a0d;
+    --bg-1: #101116;
+    --surface-1: #15161c;
+    --surface-2: #1b1c23;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --text-primary: #f5f6f8;
+    --text-secondary: #a7a9b4;
+    --text-muted: #6f717d;
+    --accent: #3987e5;
+    --accent-soft: rgba(57,135,229,0.16);
+    --good: #0ca30c;
+
+    --series-1: #3987e5; /* severe weather */
+    --series-2: #199e70; /* intentional attack */
+    --series-3: #c98500; /* system operability disruption */
+    --series-4: #008300; /* public appeal */
+    --series-5: #9085e9; /* equipment failure */
+    --series-6: #e66767; /* other */
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: var(--bg-0);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background:
+      radial-gradient(1200px 700px at 78% -10%, rgba(57,135,229,0.16), transparent 60%),
+      radial-gradient(900px 600px at 0% 100%, rgba(144,133,233,0.10), transparent 60%),
+      var(--bg-0);
+    min-height: 100%;
+  }
+
+  .app-shell {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+  }
+
+  /* ---------------- Sidebar ---------------- */
+  .sidebar {
+    background: var(--bg-1);
+    border-right: 1px solid var(--border);
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    padding: 6px 10px 22px 10px;
+  }
+  .brand-mark {
+    width: 30px; height: 30px; border-radius: 9px;
+    background: linear-gradient(135deg, #3987e5, #9085e9);
+    display: flex; align-items: center; justify-content: center;
+    flex: none;
+  }
+  .brand-name { font-weight: 700; font-size: 15px; letter-spacing: 0.2px; }
+  .brand-name span { color: var(--accent); }
+
+  .nav-section-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-muted); padding: 14px 12px 6px;
+  }
+  .nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px; border-radius: 9px;
+    color: var(--text-secondary); font-size: 13.5px; font-weight: 500;
+    cursor: default; user-select: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-item svg { flex: none; opacity: 0.8; }
+  .nav-item:hover { background: var(--surface-2); color: var(--text-primary); }
+  .nav-item.active {
+    background: var(--accent);
+    color: white;
+  }
+  .nav-item.active svg { opacity: 1; }
+
+  .sidebar-footer {
+    margin-top: auto;
+    padding: 12px; border-radius: 12px;
+    background: var(--surface-1); border: 1px solid var(--border);
+    font-size: 12px; color: var(--text-secondary);
+  }
+  .sidebar-footer strong { color: var(--text-primary); display: block; font-size: 13px; margin-bottom: 2px; }
+
+  /* ---------------- Topbar ---------------- */
+  .topbar {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .search {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px 12px;
+    color: var(--text-muted); font-size: 13px;
+    width: 260px;
+  }
+  .pill {
+    display: flex; align-items: center; gap: 7px;
+    padding: 7px 13px; border-radius: 999px;
+    background: var(--surface-1); border: 1px solid var(--border);
+    font-size: 12.5px; font-weight: 600; color: var(--text-secondary);
+    white-space: nowrap;
+  }
+  .pill.accent { background: var(--accent-soft); color: #7db2f0; border-color: rgba(57,135,229,0.3); }
+  .pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 3px rgba(12,163,12,0.18); }
+  .topbar-spacer { flex: 1; }
+  .topbar-date { font-size: 12.5px; color: var(--text-muted); }
+
+  /* ---------------- Main grid ---------------- */
+  .main {
+    padding: 22px 28px 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(360px, 0.85fr) minmax(420px, 1.15fr);
+    gap: 18px;
+    align-items: start;
+  }
+  .col { display: flex; flex-direction: column; gap: 18px; }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+  }
+  .card-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  .card-title { font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .card-subtitle { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+  .card-hint { font-size: 11px; color: var(--text-muted); }
+
+  /* ---------------- Stat tiles ---------------- */
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .stat-tile {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 14px;
+    padding: 14px 14px;
+  }
+  .stat-label { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .stat-value { font-size: 22px; font-weight: 700; }
+  .stat-value small { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+  .stat-delta { font-size: 11.5px; margin-top: 4px; color: var(--text-secondary); }
+  .stat-delta.good { color: var(--good); }
+
+  /* ---------------- Outage-over-time chart ---------------- */
+  .chart-wrap { position: relative; }
+  #chartSvg { width: 100%; height: 300px; display: block; overflow: visible; }
+  .series-line { fill: none; stroke-width: 2; opacity: 0; transition: opacity 0.35s ease; pointer-events: none; }
+  .series-line.total { stroke: var(--accent); stroke-width: 3; opacity: 1; }
+  .series-area { opacity: 0.16; transition: opacity 0.35s ease; }
+  .chart-wrap.hovering .series-line { opacity: 0.95; }
+  .chart-wrap.hovering .series-line.total { opacity: 0.55; stroke-width: 2; }
+  .chart-wrap.hovering .series-area.total-area { opacity: 0.04; }
+
+  .crosshair { stroke: rgba(255,255,255,0.25); stroke-width: 1; pointer-events: none; opacity: 0; }
+  .crosshair.show { opacity: 1; }
+  .hover-dot { r: 3.5; pointer-events: none; opacity: 0; }
+  .hover-dot.show { opacity: 1; }
+
+  .chart-tooltip {
+    position: absolute; pointer-events: none;
+    background: rgba(15,16,20,0.96); border: 1px solid var(--border-strong);
+    border-radius: 10px; padding: 9px 12px; font-size: 11.5px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    opacity: 0; transition: opacity 0.12s ease;
+    z-index: 20; min-width: 150px;
+  }
+  .chart-tooltip.show { opacity: 1; }
+  .chart-tooltip .tt-year { font-weight: 700; font-size: 12.5px; margin-bottom: 5px; }
+  .tt-row { display: flex; align-items: center; gap: 6px; padding: 1.5px 0; color: var(--text-secondary); }
+  .tt-row .sw { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+  .tt-row .tt-val { margin-left: auto; font-weight: 600; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px 16px; margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--text-secondary); }
+  .legend-item .sw { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+
+  /* ---------------- Notable outages list ---------------- */
+  .list-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 4px; border-bottom: 1px solid var(--border);
+    font-size: 12.5px;
+  }
+  .list-row:last-child { border-bottom: none; }
+  .list-badge {
+    width: 34px; height: 34px; border-radius: 10px;
+    background: var(--surface-2); display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: var(--accent); flex: none;
+  }
+  .list-main { flex: 1; min-width: 0; }
+  .list-title { font-weight: 600; color: var(--text-primary); }
+  .list-sub { color: var(--text-muted); font-size: 11px; margin-top: 1px; }
+  .list-value { text-align: right; }
+  .list-value .v { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .list-value .u { color: var(--text-muted); font-size: 10.5px; }
+
+  /* ---------------- Map ---------------- */
+  .map-card { position: relative; }
+  #mapSvg { width: 100%; height: auto; display: block; }
+  .state-path {
+    stroke: rgba(10,10,13,0.9); stroke-width: 1;
+    cursor: pointer; transition: filter 0.12s ease, stroke-width 0.12s ease;
+  }
+  .state-path:hover { filter: brightness(1.35); stroke: #fff; stroke-width: 1.4; }
+  .map-tooltip {
+    position: absolute; pointer-events: none;
+    background: rgba(15,16,20,0.96); border: 1px solid var(--border-strong);
+    border-radius: 10px; padding: 8px 11px; font-size: 11.5px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    opacity: 0; transition: opacity 0.12s ease; z-index: 20;
+  }
+  .map-tooltip.show { opacity: 1; }
+  .map-tooltip .mt-name { font-weight: 700; margin-bottom: 2px; }
+  .map-legend { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 11px; color: var(--text-muted); }
+  .map-legend .ramp { width: 120px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, #1c2536, #2a5fa8, #5ab0f2); }
+
+  /* ---------------- Climate region tiles ---------------- */
+  .region-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .region-tile { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; }
+  .region-name { font-size: 11px; color: var(--text-secondary); margin-bottom: 4px; }
+  .region-pct { font-size: 16px; font-weight: 700; }
+  .region-bar { height: 4px; border-radius: 2px; background: rgba(255,255,255,0.08); margin-top: 6px; overflow: hidden; }
+  .region-bar > div { height: 100%; background: var(--accent); border-radius: 2px; }
+
+  /* ---------------- Cause ranking ---------------- */
+  .cause-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; }
+  .cause-sw { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+  .cause-name { flex: 1; font-size: 12.5px; color: var(--text-secondary); }
+  .cause-count { font-size: 12.5px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .cause-bar { flex: none; width: 90px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.08); overflow: hidden; }
+  .cause-bar > div { height: 100%; border-radius: 3px; }
+
+  .banner {
+    display: flex; align-items: center; gap: 14px;
+    background: linear-gradient(120deg, rgba(57,135,229,0.18), rgba(144,133,233,0.10));
+    border: 1px solid rgba(57,135,229,0.25);
+    border-radius: 14px; padding: 14px 16px;
+  }
+  .banner-icon {
+    width: 38px; height: 38px; border-radius: 10px; background: rgba(57,135,229,0.25);
+    display: flex; align-items: center; justify-content: center; flex: none;
+  }
+  .banner-title { font-size: 13px; font-weight: 700; }
+  .banner-sub { font-size: 11.5px; color: var(--text-secondary); margin-top: 2px; }
+
+  @media (max-width: 980px) {
+    .app-shell { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .grid { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    .region-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="white"/></svg>
+      </div>
+      <div class="brand-name">Outage<span>Lens</span></div>
+    </div>
+
+    <div class="nav-section-label">Analysis</div>
+    <div class="nav-item active">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+      Dashboard
+    </div>
+    <div class="nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 7v13"/><path d="M15 4v13"/></svg>
+      U.S. Map
+    </div>
+    <div class="nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+      Causes &amp; Trends
+    </div>
+    <div class="nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      Duration Model
+    </div>
+    <div class="nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
+      Fairness
+    </div>
+
+    <div class="nav-section-label">Data</div>
+    <div class="nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+      outage.csv
+    </div>
+    <div class="nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1.04 1.56V21a2 2 0 11-4 0v-.09A1.7 1.7 0 008.87 19.4a1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.7 1.7 0 00.34-1.87 1.7 1.7 0 00-1.56-1.04H2.9a2 2 0 110-4H3a1.7 1.7 0 001.56-1.04 1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H9a1.7 1.7 0 001.04-1.56V2.9a2 2 0 114 0V3a1.7 1.7 0 001.04 1.56 1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06a1.7 1.7 0 00-.34 1.87V9c.36.62.99 1.04 1.56 1.04h.09a2 2 0 110 4H21a1.7 1.7 0 00-1.56 1.04z"/></svg>
+      Settings
+    </div>
+
+    <div class="sidebar-footer">
+      <strong>Continental U.S.</strong>
+      Jan 2000 &ndash; Jul 2016<br>1,534 major outages
+    </div>
+  </aside>
+
+  <div>
+    <div class="topbar">
+      <div class="search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        Quick search states, causes&hellip;
+      </div>
+      <div class="pill accent">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        1,534 outages logged
+      </div>
+      <div class="pill"><span class="dot"></span>Model MAE 38.6 hrs</div>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-date">Jan 2000 &ndash; Jul 2016 &middot; Purdue LASCI dataset</div>
+    </div>
+
+    <div class="main">
+      <div class="grid">
+        <!-- LEFT COLUMN -->
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+                  Power Outages Over Time
+                </div>
+                <div class="card-subtitle">Yearly count, 2000&ndash;2016</div>
+              </div>
+              <div class="card-hint">hover to break down by cause &rarr;</div>
+            </div>
+            <div class="chart-wrap" id="chartWrap">
+              <svg id="chartSvg" viewBox="0 0 640 300" preserveAspectRatio="none"></svg>
+              <div class="chart-tooltip" id="chartTooltip"></div>
+            </div>
+            <div class="legend" id="chartLegend"></div>
+          </div>
+
+          <div class="stat-row" id="statRow"></div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                  Longest Outages on Record
+                </div>
+                <div class="card-subtitle">Top 8 by duration</div>
+              </div>
+            </div>
+            <div id="notableList"></div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col">
+          <div class="card map-card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-6-3V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 7v13"/><path d="M15 4v13"/></svg>
+                  Outages by State
+                </div>
+                <div class="card-subtitle">Total major outages, 2000&ndash;2016</div>
+              </div>
+              <div class="map-legend">Fewer <div class="ramp"></div> More</div>
+            </div>
+            <svg id="mapSvg" viewBox="0 0 960 600"></svg>
+            <div class="map-tooltip" id="mapTooltip"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
+                Climate Regions
+              </div>
+            </div>
+            <div class="region-grid" id="regionGrid"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16"/><path d="M7 19V9"/><path d="M12 19V5"/><path d="M17 19v-7"/></svg>
+                Outage Causes, Ranked
+              </div>
+            </div>
+            <div id="causeList"></div>
+          </div>
+
+          <div class="banner">
+            <div class="banner-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7db2f0" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+            </div>
+            <div>
+              <div class="banner-title">Duration model: gradient boosting on log-duration</div>
+              <div class="banner-sub">MAE 38.6 hrs &middot; bucket classifier accuracy 68.1% vs. 59.9% baseline</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="dashboard-data" type="application/json">
+{"view": {"w": 960, "h": 600}, "states": {"AL": {"name": "Alabama", "d": "M 491.68 291.91 L 515.45 289.80 L 519.43 303.98 L 525.23 324.81 L 527.37 329.31 L 529.21 331.79 L 528.79 333.51 L 530.51 334.33 L 528.38 336.72 L 528.70 338.82 L 527.80 341.80 L 529.77 346.68 L 529.27 351.19 L 531.35 355.58 L 524.35 356.47 L 494.37 359.46 L 494.10 361.70 L 497.60 364.62 L 497.30 367.42 L 498.52 368.70 L 496.62 371.36 L 494.70 372.08 L 490.83 369.65 L 490.09 365.56 L 488.95 365.19 L 487.88 368.42 L 487.66 371.49 L 483.88 370.96 L 480.75 345.44 L 481.38 313.24 L 481.81 294.63 L 480.25 293.00 L 491.68 291.91 Z", "cx": 505.6, "cy": 341.9, "count": 6}, "AK": {"name": "Alaska", "d": "M 69.26 478.41 L 69.47 478.58 L 70.33 478.62 L 70.74 478.41 L 71.34 478.28 L 72.03 478.32 L 72.39 478.14 L 72.85 478.43 L 73.62 478.70 L 74.56 478.58 L 74.75 478.28 L 75.32 477.98 L 75.50 477.60 L 76.15 477.39 L 76.19 477.61 L 76.55 477.39 L 77.44 477.52 L 78.14 477.94 L 78.72 478.06 L 78.90 478.28 L 79.38 478.19 L 79.95 478.48 L 80.11 478.72 L 80.32 478.43 L 80.70 478.50 L 93.05 520.49 L 94.19 520.55 L 94.21 520.12 L 95.46 520.35 L 95.88 519.44 L 97.20 518.94 L 97.35 520.22 L 97.82 520.52 L 98.72 520.66 L 99.10 521.24 L 102.19 522.80 L 103.07 524.16 L 103.34 523.60 L 104.07 522.54 L 104.62 522.31 L 104.68 521.69 L 104.36 520.90 L 104.75 520.75 L 104.59 520.02 L 105.21 519.59 L 106.01 518.59 L 107.41 519.23 L 107.56 519.90 L 108.05 520.42 L 108.68 520.34 L 109.77 520.98 L 109.83 521.27 L 110.37 521.63 L 111.52 521.83 L 114.08 523.69 L 114.59 524.25 L 115.35 524.71 L 116.69 525.87 L 117.95 526.81 L 117.91 527.44 L 118.74 527.30 L 118.89 528.14 L 119.63 528.17 L 120.10 529.01 L 120.68 528.68 L 122.25 529.04 L 123.05 528.87 L 123.62 529.11 L 124.04 529.05 L 124.34 529.42 L 125.15 529.17 L 125.63 529.57 L 125.74 530.69 L 126.18 531.45 L 127.14 532.58 L 127.04 533.04 L 127.02 534.50 L 126.57 535.76 L 126.12 535.44 L 125.87 535.73 L 125.23 534.95 L 125.12 534.54 L 124.65 534.23 L 124.99 533.50 L 124.75 533.41 L 124.47 534.25 L 123.99 534.02 L 123.74 534.39 L 122.30 533.91 L 122.18 532.73 L 121.70 533.37 L 121.91 533.89 L 121.23 533.72 L 120.90 533.27 L 121.00 532.58 L 120.66 532.09 L 120.38 532.74 L 119.48 531.99 L 119.28 532.30 L 118.74 531.58 L 118.97 530.86 L 119.42 530.67 L 119.00 530.09 L 118.87 529.16 L 118.52 529.34 L 117.47 528.96 L 116.57 528.34 L 115.08 528.25 L 114.37 526.50 L 113.89 526.45 L 113.68 525.70 L 113.20 525.68 L 112.21 524.97 L 111.84 524.54 L 110.76 524.78 L 109.14 523.93 L 107.48 521.09 L 107.53 521.87 L 107.87 522.46 L 108.79 523.49 L 108.75 523.72 L 109.44 524.59 L 109.63 525.26 L 109.13 525.29 L 108.50 524.71 L 107.99 524.77 L 107.42 525.21 L 107.03 524.17 L 106.31 523.45 L 106.05 523.85 L 104.28 523.45 L 104.25 523.77 L 105.14 523.77 L 106.02 524.27 L 106.27 524.21 L 106.56 524.76 L 107.13 525.32 L 106.48 526.00 L 105.92 525.93 L 106.13 526.54 L 105.36 526.30 L 105.03 526.04 L 104.65 526.17 L 103.29 525.67 L 102.25 525.16 L 102.02 524.72 L 101.36 524.18 L 100.02 524.09 L 99.20 523.79 L 97.88 523.57 L 96.96 523.24 L 96.83 522.60 L 97.10 522.73 L 97.22 522.26 L 96.69 521.46 L 96.84 520.87 L 96.63 520.69 L 96.37 521.80 L 95.40 522.78 L 93.95 522.97 L 92.62 522.74 L 92.45 522.31 L 91.93 522.56 L 91.26 522.40 L 89.89 522.45 L 89.13 522.63 L 87.50 523.32 L 86.93 523.64 L 86.00 523.18 L 84.98 523.11 L 84.59 522.77 L 84.32 522.12 L 83.68 522.32 L 83.59 522.98 L 82.25 522.43 L 81.99 522.12 L 80.93 523.03 L 80.51 523.93 L 80.11 523.25 L 80.28 522.79 L 80.64 522.82 L 81.67 522.05 L 81.43 521.68 L 80.95 522.00 L 80.63 521.51 L 80.12 521.53 L 79.36 520.29 L 79.25 520.66 L 78.60 520.97 L 78.34 520.84 L 78.19 521.31 L 77.31 521.32 L 77.36 521.81 L 76.81 522.04 L 76.50 521.92 L 76.54 521.02 L 76.30 521.09 L 76.08 522.07 L 76.67 522.28 L 76.84 522.93 L 77.31 523.58 L 77.25 524.38 L 76.76 524.20 L 76.71 524.61 L 77.16 524.68 L 77.58 525.65 L 77.00 525.97 L 76.62 525.83 L 76.13 526.20 L 75.81 526.02 L 75.10 526.17 L 75.06 525.78 L 74.76 526.09 L 74.65 526.61 L 74.28 526.22 L 73.99 526.89 L 74.20 527.15 L 73.72 527.59 L 73.25 527.71 L 73.13 528.23 L 72.67 528.74 L 72.29 528.64 L 71.96 529.21 L 71.64 529.23 L 71.11 530.37 L 70.39 530.54 L 70.11 530.24 L 69.74 530.86 L 68.78 530.54 L 68.89 529.72 L 69.45 529.36 L 69.84 529.37 L 69.92 529.04 L 70.53 528.34 L 70.49 527.82 L 69.67 528.63 L 68.86 528.32 L 68.74 528.05 L 68.97 526.82 L 69.51 525.90 L 69.52 525.19 L 69.69 525.04 L 69.67 524.29 L 69.24 523.51 L 69.98 523.10 L 71.29 521.72 L 71.72 522.13 L 72.19 522.19 L 72.79 521.60 L 71.95 521.07 L 71.58 520.63 L 71.00 520.77 L 70.56 520.60 L 70.46 520.82 L 69.81 521.25 L 69.58 521.93 L 68.90 522.18 L 68.27 523.01 L 68.25 523.51 L 67.72 523.83 L 67.66 524.38 L 67.30 524.76 L 67.22 525.74 L 66.51 526.44 L 66.94 526.88 L 66.71 527.64 L 65.98 527.84 L 66.01 528.78 L 65.35 529.18 L 65.10 528.82 L 64.82 529.57 L 64.41 529.64 L 64.53 530.14 L 63.64 530.53 L 63.58 531.96 L 64.65 531.94 L 65.53 532.25 L 65.81 532.69 L 65.54 533.46 L 65.02 533.98 L 64.49 534.06 L 64.47 534.47 L 64.14 534.66 L 64.35 535.16 L 64.05 535.96 L 63.33 536.75 L 62.89 536.78 L 62.48 537.08 L 62.05 537.06 L 61.75 537.36 L 61.87 537.74 L 61.27 537.99 L 61.19 538.57 L 60.74 538.24 L 60.35 539.37 L 59.56 539.34 L 59.65 539.93 L 59.18 539.80 L 58.86 540.08 L 58.91 540.88 L 58.44 542.14 L 57.60 542.34 L 56.92 542.94 L 56.83 543.25 L 56.36 542.83 L 55.64 544.04 L 55.42 543.71 L 55.00 543.83 L 54.92 544.50 L 54.49 544.77 L 53.97 544.68 L 53.57 545.36 L 54.30 545.55 L 53.55 547.06 L 51.29 547.59 L 50.66 548.91 L 50.50 548.62 L 50.58 547.80 L 50.13 547.67 L 49.57 547.98 L 49.48 548.32 L 48.60 548.85 L 48.22 549.47 L 48.10 549.03 L 47.87 549.54 L 47.35 549.20 L 46.36 549.98 L 45.63 549.94 L 45.74 549.33 L 45.44 548.73 L 45.14 549.21 L 45.15 549.73 L 44.13 551.27 L 43.80 550.87 L 43.68 551.46 L 43.01 551.33 L 42.94 550.40 L 42.54 550.18 L 42.38 550.51 L 42.73 550.93 L 42.52 551.57 L 41.97 551.88 L 41.58 551.14 L 41.09 551.07 L 40.99 551.35 L 41.47 551.78 L 40.52 552.40 L 41.13 552.61 L 41.13 552.92 L 40.62 552.67 L 39.89 553.25 L 38.54 553.14 L 37.85 553.51 L 37.77 553.81 L 36.97 554.12 L 36.41 553.95 L 36.28 553.07 L 36.86 552.83 L 37.37 551.80 L 37.93 551.82 L 39.18 551.20 L 40.15 551.23 L 40.48 551.91 L 40.79 551.44 L 40.76 550.87 L 41.33 550.64 L 41.93 550.67 L 42.78 549.47 L 43.71 548.40 L 44.89 547.45 L 46.25 547.05 L 46.81 547.26 L 47.36 546.99 L 47.50 547.40 L 47.19 547.86 L 47.52 548.23 L 47.63 547.66 L 48.30 547.62 L 48.49 547.98 L 48.91 548.11 L 48.92 547.67 L 48.23 547.28 L 48.18 547.02 L 48.65 545.82 L 49.26 545.12 L 50.08 544.46 L 51.38 543.85 L 52.31 542.99 L 52.76 543.29 L 53.13 543.16 L 52.96 542.62 L 53.06 542.10 L 53.75 541.01 L 54.70 540.28 L 55.44 539.33 L 55.38 538.82 L 55.85 535.14 L 56.75 534.12 L 56.61 533.35 L 54.42 534.54 L 53.71 534.43 L 53.52 533.97 L 53.12 533.77 L 52.98 533.26 L 52.62 533.50 L 52.41 534.30 L 52.82 535.30 L 52.36 535.75 L 51.94 535.60 L 51.12 534.01 L 50.57 533.22 L 50.29 533.22 L 50.11 533.81 L 49.87 533.91 L 49.51 533.42 L 49.08 533.35 L 48.88 532.55 L 47.58 533.44 L 46.40 534.06 L 46.30 534.42 L 45.37 534.94 L 44.93 534.44 L 45.36 533.88 L 45.25 532.54 L 44.99 531.11 L 45.60 530.54 L 45.14 529.34 L 44.74 528.65 L 44.44 527.66 L 43.95 527.23 L 43.79 528.08 L 43.19 528.23 L 42.20 528.73 L 41.03 528.90 L 40.40 528.82 L 39.88 528.50 L 39.86 527.75 L 39.42 527.49 L 38.77 526.41 L 38.17 526.16 L 37.56 524.97 L 38.07 524.50 L 38.24 523.55 L 37.87 523.73 L 37.86 523.13 L 38.08 522.66 L 37.65 522.19 L 37.57 522.64 L 37.03 522.42 L 37.02 521.62 L 36.60 521.48 L 36.42 520.92 L 36.49 520.25 L 36.03 520.52 L 36.02 519.87 L 36.56 519.76 L 36.20 519.01 L 36.95 519.02 L 37.03 518.15 L 37.26 517.57 L 38.77 515.81 L 39.10 515.26 L 39.29 515.38 L 39.23 514.57 L 39.84 513.25 L 40.31 512.74 L 41.15 512.56 L 41.77 512.83 L 42.61 513.70 L 43.20 513.62 L 44.03 512.86 L 44.89 511.68 L 45.31 511.56 L 45.40 511.88 L 46.39 511.90 L 47.26 511.66 L 48.06 510.41 L 48.06 510.10 L 47.69 508.91 L 47.66 508.22 L 47.08 507.46 L 46.87 506.81 L 47.47 507.01 L 48.04 506.47 L 48.08 505.96 L 47.37 505.00 L 46.82 505.73 L 46.32 505.59 L 45.84 505.99 L 45.29 506.08 L 45.15 506.36 L 44.52 506.75 L 44.31 507.43 L 43.98 507.70 L 43.87 506.87 L 43.51 506.68 L 43.21 507.31 L 43.07 506.99 L 42.40 506.49 L 40.98 506.43 L 39.93 506.88 L 39.54 506.93 L 38.73 506.55 L 37.20 506.06 L 36.82 505.74 L 36.68 505.26 L 36.89 504.63 L 36.39 504.04 L 36.55 503.46 L 36.93 503.19 L 36.89 502.44 L 36.35 502.38 L 35.92 502.13 L 35.07 501.88 L 34.65 501.45 L 34.00 500.98 L 34.00 500.49 L 35.15 499.98 L 36.63 499.06 L 37.64 498.51 L 38.14 498.92 L 38.69 499.05 L 38.85 498.55 L 38.53 498.44 L 38.54 498.01 L 39.90 497.40 L 41.41 496.97 L 42.20 496.97 L 42.62 497.17 L 42.35 497.93 L 42.40 498.47 L 42.21 498.84 L 42.46 499.47 L 42.98 499.40 L 43.64 499.53 L 44.40 499.44 L 44.61 499.68 L 45.11 499.75 L 45.56 499.53 L 46.13 499.81 L 46.71 498.80 L 47.10 498.75 L 47.37 498.96 L 47.51 498.38 L 46.76 498.08 L 46.04 498.29 L 46.13 497.53 L 45.59 496.69 L 44.99 496.41 L 44.83 495.66 L 45.32 495.50 L 45.90 496.26 L 45.77 496.85 L 46.05 497.32 L 46.69 497.87 L 46.85 497.31 L 46.14 496.55 L 46.49 495.23 L 46.24 494.99 L 45.52 495.25 L 44.78 495.15 L 44.68 494.91 L 44.30 495.13 L 42.79 494.49 L 42.79 493.90 L 42.41 492.57 L 42.08 492.07 L 41.53 491.62 L 40.44 490.42 L 39.94 489.94 L 39.42 489.79 L 38.70 488.96 L 37.98 488.46 L 37.96 488.30 L 38.55 488.13 L 38.88 487.44 L 39.03 486.03 L 40.53 486.26 L 42.38 486.06 L 42.88 485.84 L 43.67 485.17 L 44.43 484.12 L 44.63 483.04 L 44.97 482.11 L 45.61 481.35 L 45.89 480.78 L 46.66 479.87 L 46.77 480.13 L 47.39 480.22 L 48.30 479.75 L 48.86 479.26 L 50.20 477.70 L 50.70 477.62 L 50.75 477.84 L 51.26 477.66 L 51.76 477.70 L 52.74 477.48 L 53.68 476.76 L 54.56 475.32 L 54.93 475.00 L 55.01 475.25 L 56.49 475.74 L 56.63 476.13 L 56.16 476.69 L 55.93 476.73 L 55.99 477.43 L 56.71 477.16 L 56.73 476.78 L 57.04 476.40 L 57.16 476.60 L 57.35 475.78 L 58.13 476.45 L 58.06 477.01 L 58.52 477.12 L 58.82 477.42 L 59.17 476.86 L 59.86 476.77 L 60.23 476.55 L 61.26 476.62 L 61.80 476.76 L 61.67 477.87 L 62.66 478.03 L 62.76 478.29 L 63.75 478.65 L 63.73 478.42 L 64.36 478.03 L 65.01 477.97 L 65.05 478.21 L 65.43 478.18 L 65.76 477.77 L 66.40 477.62 L 66.87 477.70 L 67.55 477.97 L 67.82 477.85 L 68.32 478.30 L 68.52 478.06 L 68.93 478.14 L 69.26 478.41 Z M 116.40 531.91 L 117.50 531.61 L 118.12 532.33 L 119.56 532.80 L 120.16 533.21 L 120.39 533.67 L 120.69 533.65 L 121.00 534.24 L 121.70 534.66 L 121.99 535.18 L 122.20 534.89 L 122.51 535.26 L 123.31 536.90 L 123.30 537.35 L 122.58 537.59 L 122.01 536.83 L 121.80 537.01 L 121.02 536.59 L 120.97 536.87 L 120.46 536.84 L 120.80 537.45 L 121.12 537.11 L 121.48 537.23 L 121.74 538.16 L 121.22 538.27 L 120.02 537.47 L 119.58 536.99 L 119.36 536.38 L 118.82 536.67 L 118.63 536.22 L 119.04 535.99 L 119.30 535.40 L 118.81 534.78 L 118.24 534.85 L 117.68 533.75 L 117.25 533.26 L 117.08 533.80 L 116.68 533.22 L 116.90 532.76 L 116.30 532.15 L 116.40 531.91 Z M 64.80 539.08 L 65.45 538.40 L 64.80 538.33 L 64.74 537.79 L 65.23 537.38 L 65.64 537.60 L 65.74 538.13 L 65.93 537.75 L 65.86 536.96 L 66.36 537.27 L 66.39 536.75 L 66.82 537.01 L 67.31 536.96 L 67.66 536.64 L 68.33 537.06 L 68.49 538.41 L 69.27 538.22 L 68.85 539.18 L 67.85 538.93 L 68.28 539.48 L 68.06 539.99 L 67.53 539.82 L 67.62 540.74 L 66.88 541.08 L 66.67 541.49 L 66.17 541.17 L 65.76 542.20 L 65.38 542.34 L 65.00 542.81 L 64.75 541.77 L 64.21 542.39 L 64.16 542.06 L 63.60 541.77 L 63.48 540.82 L 62.94 540.48 L 63.14 539.35 L 64.08 538.57 L 64.70 538.57 L 64.80 539.08 Z M 25.42 508.53 L 26.92 509.50 L 27.96 509.07 L 28.38 509.18 L 28.71 509.57 L 28.73 510.15 L 29.51 510.58 L 29.73 510.90 L 30.80 511.18 L 31.42 511.47 L 30.97 512.11 L 30.47 511.89 L 29.89 511.93 L 29.56 512.20 L 29.19 512.85 L 28.88 512.15 L 28.48 511.65 L 28.05 511.53 L 27.92 511.02 L 26.98 510.24 L 26.49 510.13 L 25.65 510.53 L 25.14 510.16 L 25.00 509.56 L 25.42 508.53 Z M 110.45 524.83 L 111.36 524.85 L 111.79 524.62 L 111.90 524.96 L 113.05 525.88 L 112.51 525.88 L 112.57 526.33 L 113.32 526.75 L 113.92 527.78 L 113.54 528.27 L 113.53 528.72 L 113.04 529.84 L 112.78 529.92 L 112.34 529.12 L 112.31 528.55 L 111.93 527.84 L 111.29 527.04 L 111.15 526.55 L 110.50 525.44 L 110.00 525.06 L 109.57 524.23 L 110.45 524.83 Z M 114.02 533.22 L 114.14 533.75 L 113.70 533.60 L 112.03 532.02 L 111.24 531.66 L 111.26 531.13 L 110.61 530.11 L 109.65 529.46 L 109.95 528.35 L 110.37 528.60 L 111.03 528.67 L 111.55 528.52 L 111.84 529.21 L 113.24 531.29 L 114.02 533.22 Z", "cx": 67.1, "cy": 519.0, "count": 1}, "AZ": {"name": "Arizona", "d": "M 201.86 251.60 L 188.69 346.40 L 160.10 342.14 L 144.67 333.22 L 111.43 313.51 L 113.46 310.05 L 116.30 309.95 L 117.33 308.65 L 117.19 305.42 L 115.33 304.96 L 115.66 298.62 L 118.89 296.81 L 119.75 294.44 L 120.00 290.43 L 122.20 287.85 L 124.56 287.18 L 126.60 285.31 L 124.41 282.44 L 123.42 277.72 L 121.76 274.56 L 122.18 272.47 L 123.43 270.36 L 123.75 267.21 L 123.29 263.82 L 124.43 253.94 L 129.39 254.25 L 130.58 256.57 L 131.90 256.73 L 133.82 254.17 L 136.39 240.79 L 182.76 248.72 L 201.86 251.60 Z", "cx": 133.4, "cy": 284.1, "count": 28}, "AR": {"name": "Arkansas", "d": "M 394.59 271.71 L 452.21 269.57 L 453.58 272.73 L 451.66 274.89 L 449.72 278.17 L 458.39 277.62 L 458.15 280.80 L 456.22 281.85 L 455.95 284.47 L 453.61 287.40 L 454.08 291.45 L 452.93 294.49 L 451.62 295.03 L 452.52 296.46 L 450.44 297.88 L 449.64 300.81 L 448.26 301.63 L 448.67 304.94 L 446.25 306.00 L 446.38 307.11 L 443.68 310.03 L 444.61 311.84 L 442.26 314.65 L 440.32 319.93 L 442.87 322.02 L 441.72 323.47 L 442.66 326.94 L 441.71 329.30 L 407.61 330.32 L 401.57 330.46 L 401.39 321.49 L 399.40 320.79 L 396.68 321.67 L 395.21 320.13 L 395.48 290.41 L 392.69 271.74 L 394.59 271.71 Z", "cx": 435.4, "cy": 300.3, "count": 25}, "CA": {"name": "California", "d": "M 42.04 130.86 L 52.21 133.71 L 68.13 138.41 L 80.51 141.68 L 73.27 170.01 L 67.85 190.72 L 80.36 209.53 L 92.47 227.73 L 102.22 242.37 L 109.36 253.10 L 122.18 272.47 L 121.76 274.56 L 123.42 277.72 L 124.41 282.44 L 126.60 285.31 L 124.56 287.18 L 122.20 287.85 L 120.00 290.43 L 119.75 294.44 L 118.89 296.81 L 115.66 298.62 L 115.33 304.96 L 117.19 305.42 L 117.33 308.65 L 116.30 309.95 L 113.46 310.05 L 94.94 307.82 L 79.82 306.01 L 78.66 303.47 L 79.36 300.03 L 79.24 295.74 L 77.97 292.42 L 74.66 287.48 L 70.14 282.52 L 68.87 283.26 L 66.96 282.14 L 67.64 280.59 L 66.09 276.70 L 62.76 276.65 L 57.79 272.85 L 57.48 270.67 L 54.37 267.32 L 50.13 266.33 L 46.91 264.35 L 42.37 263.64 L 40.61 260.88 L 42.33 256.45 L 41.72 255.53 L 43.08 252.44 L 40.28 249.10 L 41.02 245.76 L 39.78 245.23 L 38.41 241.79 L 37.08 240.76 L 36.93 238.79 L 33.81 230.73 L 32.02 228.12 L 33.00 222.71 L 33.86 223.43 L 35.64 220.56 L 34.62 217.20 L 32.28 216.93 L 30.08 213.51 L 29.62 211.16 L 30.39 209.26 L 29.67 206.26 L 30.89 201.98 L 33.24 202.65 L 33.98 196.40 L 32.77 196.73 L 31.72 199.62 L 29.06 199.53 L 26.75 196.44 L 27.38 192.48 L 26.35 188.89 L 24.38 186.28 L 23.65 183.74 L 21.23 178.47 L 22.21 177.41 L 22.15 171.49 L 23.80 168.70 L 24.09 163.85 L 22.30 158.47 L 20.00 155.05 L 20.30 151.95 L 25.51 145.80 L 26.83 143.59 L 26.81 141.55 L 29.40 137.02 L 29.77 132.30 L 28.80 130.84 L 30.40 127.46 L 42.04 130.86 Z", "cx": 58.7, "cy": 229.6, "count": 210}, "CO": {"name": "Colorado", "d": "M 225.09 186.34 L 252.38 189.56 L 273.32 191.43 L 298.33 193.29 L 297.25 210.20 L 294.16 260.99 L 281.49 260.02 L 263.82 258.69 L 230.44 255.31 L 223.17 254.36 L 201.86 251.60 L 204.56 232.04 L 204.60 230.17 L 206.64 215.95 L 211.04 184.58 L 225.09 186.34 Z", "cx": 243.3, "cy": 222.6, "count": 15}, "CT": {"name": "Connecticut", "d": "M 655.10 144.15 L 670.19 140.61 L 670.26 140.88 L 672.78 150.55 L 672.45 152.26 L 671.32 152.27 L 666.34 154.88 L 659.94 156.10 L 657.77 159.02 L 655.01 160.45 L 652.00 163.18 L 650.68 161.50 L 653.24 158.98 L 652.05 157.84 L 649.86 145.24 L 655.10 144.15 Z", "cx": 660.3, "cy": 152.6, "count": 18}, "DE": {"name": "Delaware", "d": "M 634.80 187.66 L 634.07 189.90 L 633.01 191.27 L 633.86 193.84 L 636.25 195.88 L 637.62 199.84 L 641.26 203.50 L 642.54 203.40 L 644.37 208.98 L 636.13 210.61 L 630.45 190.03 L 632.17 187.76 L 634.80 187.66 Z", "cx": 636.3, "cy": 196.2, "count": 41}, "DC": {"name": "District of Columbia", "d": "M 617.28 205.37 L 619.21 206.68 L 617.89 208.75 L 616.44 206.58 L 617.28 205.37 Z", "cx": 617.6, "cy": 206.6, "count": 10}, "FL": {"name": "Florida", "d": "M 524.35 356.47 L 531.35 355.58 L 533.87 360.20 L 553.54 358.85 L 571.99 357.59 L 573.21 361.03 L 574.92 360.69 L 575.04 357.23 L 574.04 354.21 L 575.17 352.74 L 578.65 353.62 L 582.63 353.66 L 584.60 360.71 L 587.66 368.51 L 593.52 378.46 L 601.80 388.72 L 600.97 389.69 L 602.15 394.88 L 605.85 400.29 L 612.11 411.38 L 613.62 414.91 L 614.18 418.70 L 614.83 432.53 L 613.48 433.03 L 612.69 437.49 L 613.41 438.75 L 611.02 442.28 L 609.74 441.75 L 607.13 443.46 L 602.43 444.95 L 600.75 443.47 L 601.01 440.85 L 596.49 434.11 L 593.64 433.17 L 591.48 434.51 L 589.06 430.74 L 588.07 427.49 L 584.40 424.26 L 583.31 421.93 L 583.28 418.34 L 581.47 417.96 L 582.18 419.98 L 580.71 420.75 L 574.70 412.49 L 572.52 410.49 L 576.02 403.25 L 573.17 404.03 L 571.52 406.39 L 569.13 403.40 L 570.43 393.97 L 569.85 386.38 L 567.84 384.81 L 566.94 382.43 L 564.08 382.27 L 560.28 378.72 L 557.45 377.43 L 556.96 375.00 L 555.03 374.33 L 553.17 371.79 L 547.19 368.86 L 542.49 370.28 L 543.04 372.80 L 541.40 372.54 L 535.77 376.36 L 529.44 377.83 L 529.39 375.99 L 527.65 373.96 L 519.62 369.85 L 514.05 368.30 L 509.19 368.24 L 505.22 368.99 L 496.62 371.36 L 498.52 368.70 L 497.30 367.42 L 497.60 364.62 L 494.10 361.70 L 494.37 359.46 L 524.35 356.47 Z", "cx": 566.8, "cy": 391.7, "count": 45}, "GA": {"name": "Georgia", "d": "M 549.16 285.37 L 546.76 289.34 L 546.77 291.12 L 551.79 294.08 L 553.16 293.61 L 555.76 296.98 L 556.48 298.84 L 559.14 302.02 L 562.58 303.67 L 564.84 306.52 L 568.94 308.81 L 569.07 310.75 L 571.95 313.50 L 576.04 315.49 L 577.37 318.09 L 578.08 321.62 L 580.16 322.51 L 583.07 326.64 L 583.59 329.45 L 587.03 330.40 L 584.48 336.59 L 584.33 339.60 L 583.26 342.38 L 583.52 345.04 L 582.16 346.47 L 582.63 353.66 L 578.65 353.62 L 575.17 352.74 L 574.04 354.21 L 575.04 357.23 L 574.92 360.69 L 573.21 361.03 L 571.99 357.59 L 553.54 358.85 L 533.87 360.20 L 531.35 355.58 L 529.27 351.19 L 529.77 346.68 L 527.80 341.80 L 528.70 338.82 L 528.38 336.72 L 530.51 334.33 L 528.79 333.51 L 529.21 331.79 L 527.37 329.31 L 525.23 324.81 L 519.43 303.98 L 515.45 289.80 L 532.84 287.68 L 542.32 286.57 L 549.16 285.37 Z", "cx": 557.0, "cy": 325.8, "count": 17}, "HI": {"name": "Hawaii", "d": "M 230.76 530.15 L 228.61 529.36 L 228.27 528.55 L 228.55 526.49 L 227.00 522.97 L 228.19 521.81 L 229.04 520.19 L 228.42 519.14 L 228.60 518.03 L 231.04 519.33 L 233.76 520.27 L 235.43 521.66 L 235.44 522.87 L 237.94 524.81 L 236.42 526.44 L 233.71 527.21 L 231.80 528.43 L 230.76 530.15 Z M 222.41 511.07 L 223.41 512.32 L 224.69 511.77 L 227.49 513.21 L 227.07 514.52 L 224.22 515.18 L 223.65 514.93 L 223.50 513.33 L 222.03 512.98 L 221.46 512.07 L 222.41 511.07 Z M 197.57 500.00 L 198.56 500.11 L 199.02 501.06 L 198.73 502.41 L 197.73 503.25 L 195.00 502.17 L 195.35 500.68 L 197.57 500.00 Z M 210.62 504.94 L 211.56 507.10 L 211.08 508.35 L 209.24 508.54 L 208.02 505.98 L 209.11 505.94 L 210.62 504.94 Z M 218.99 509.42 L 218.14 510.37 L 216.15 510.37 L 216.77 509.32 L 218.99 509.42 Z", "cx": 231.3, "cy": 524.3, "count": 5}, "ID": {"name": "Idaho", "d": "M 152.66 38.20 L 149.11 54.82 L 151.73 60.12 L 150.85 64.60 L 152.58 67.01 L 154.70 68.20 L 154.71 69.41 L 158.00 74.65 L 158.13 76.54 L 160.76 78.84 L 160.67 79.94 L 163.98 80.50 L 161.16 86.29 L 160.09 90.09 L 160.79 92.85 L 158.36 94.24 L 158.84 96.11 L 157.92 97.80 L 160.04 99.99 L 163.32 98.29 L 164.80 96.71 L 166.57 98.73 L 166.00 100.02 L 166.54 103.39 L 167.82 107.09 L 169.00 108.53 L 168.35 111.68 L 169.44 113.28 L 171.84 113.91 L 172.41 119.53 L 173.60 120.68 L 175.09 119.36 L 178.74 120.10 L 181.70 119.11 L 183.17 120.21 L 186.06 119.95 L 186.48 120.96 L 188.97 120.72 L 192.24 117.71 L 193.63 120.92 L 195.48 122.99 L 188.91 164.17 L 175.26 162.00 L 152.40 157.84 L 116.28 150.22 L 123.05 120.14 L 125.80 115.09 L 125.14 113.52 L 122.96 112.75 L 122.64 110.32 L 126.32 105.02 L 127.64 104.75 L 129.39 102.60 L 129.54 101.03 L 131.30 99.35 L 132.63 96.63 L 136.09 92.32 L 135.64 89.87 L 133.20 88.11 L 132.26 84.99 L 132.84 82.11 L 131.99 78.92 L 132.48 77.62 L 137.31 55.86 L 141.94 35.85 L 152.66 38.20 Z", "cx": 155.5, "cy": 98.5, "count": 9}, "IL": {"name": "Illinois", "d": "M 439.99 168.42 L 462.68 167.19 L 474.75 166.21 L 474.63 169.47 L 476.84 173.08 L 479.34 179.08 L 482.83 218.83 L 481.70 222.01 L 483.63 225.46 L 484.11 228.40 L 482.70 230.94 L 482.47 233.20 L 480.44 237.00 L 478.97 237.41 L 479.51 239.50 L 478.58 240.42 L 478.13 244.45 L 478.65 245.53 L 477.13 248.07 L 478.60 250.93 L 473.33 252.94 L 472.97 254.73 L 474.37 256.85 L 472.82 258.37 L 467.78 256.15 L 466.28 256.45 L 464.47 259.56 L 465.18 260.43 L 463.07 260.40 L 459.77 255.80 L 460.78 254.61 L 459.48 251.45 L 459.30 248.86 L 454.83 245.53 L 453.42 246.00 L 451.85 243.87 L 447.79 240.68 L 447.70 237.99 L 449.64 233.51 L 449.19 231.96 L 450.33 229.84 L 448.42 228.75 L 445.56 228.18 L 444.16 229.84 L 443.12 228.88 L 441.96 223.37 L 437.49 219.99 L 433.35 215.84 L 431.49 210.74 L 431.19 207.32 L 432.19 204.86 L 432.25 201.80 L 435.67 199.78 L 435.88 197.17 L 437.45 195.42 L 437.50 192.45 L 435.32 190.15 L 435.98 187.16 L 440.78 186.06 L 444.54 183.71 L 444.79 181.10 L 446.35 179.90 L 446.62 176.64 L 446.16 174.54 L 443.29 173.04 L 442.85 171.31 L 439.99 168.42 Z", "cx": 457.2, "cy": 219.7, "count": 46}, "IN": {"name": "Indiana", "d": "M 498.21 176.40 L 512.80 174.77 L 512.93 175.87 L 515.37 195.90 L 517.94 219.38 L 517.04 220.24 L 518.64 224.71 L 516.40 225.07 L 514.18 226.91 L 510.79 226.55 L 511.30 229.85 L 509.26 231.48 L 508.64 233.69 L 506.46 234.76 L 505.71 239.13 L 504.33 240.40 L 501.24 239.13 L 500.55 237.25 L 497.92 239.66 L 498.31 241.48 L 495.45 242.42 L 494.43 240.84 L 491.31 242.81 L 490.40 244.67 L 486.89 242.48 L 485.22 243.19 L 483.97 242.09 L 483.01 243.38 L 479.74 243.85 L 478.65 245.53 L 478.13 244.45 L 478.58 240.42 L 479.51 239.50 L 478.97 237.41 L 480.44 237.00 L 482.47 233.20 L 482.70 230.94 L 484.11 228.40 L 483.63 225.46 L 481.70 222.01 L 482.83 218.83 L 479.34 179.08 L 480.66 180.08 L 484.46 179.73 L 487.93 177.44 L 498.21 176.40 Z", "cx": 495.0, "cy": 224.2, "count": 43}, "IA": {"name": "Iowa", "d": "M 430.24 152.20 L 432.10 152.11 L 432.35 154.59 L 434.23 156.16 L 432.87 158.26 L 433.47 162.02 L 434.54 164.64 L 439.00 166.35 L 439.99 168.42 L 442.85 171.31 L 443.29 173.04 L 446.16 174.54 L 446.62 176.64 L 446.35 179.90 L 444.79 181.10 L 444.54 183.71 L 440.78 186.06 L 435.98 187.16 L 435.32 190.15 L 437.50 192.45 L 437.45 195.42 L 435.88 197.17 L 435.67 199.78 L 432.25 201.80 L 432.19 204.86 L 430.78 204.37 L 428.06 201.07 L 426.75 201.22 L 408.82 202.34 L 391.48 202.90 L 377.17 202.74 L 375.71 200.52 L 376.39 196.17 L 375.15 192.37 L 375.22 188.12 L 373.04 186.64 L 372.70 184.32 L 373.45 182.29 L 372.64 179.33 L 370.95 178.22 L 368.75 170.63 L 366.49 166.92 L 367.57 164.44 L 367.99 161.12 L 368.93 159.92 L 367.41 158.25 L 367.82 155.30 L 367.17 153.91 L 368.76 153.55 L 430.24 152.20 Z", "cx": 410.3, "cy": 178.6, "count": 8}, "KS": {"name": "Kansas", "d": "M 299.13 210.32 L 383.04 212.62 L 384.31 214.18 L 388.44 215.44 L 385.63 220.38 L 387.26 222.03 L 389.34 225.99 L 392.10 226.79 L 392.56 263.31 L 320.05 262.28 L 294.16 260.99 L 297.25 210.20 L 299.13 210.32 Z", "cx": 354.8, "cy": 227.3, "count": 9}, "KY": {"name": "Kentucky", "d": "M 530.35 223.55 L 533.53 225.48 L 535.42 224.02 L 540.44 224.65 L 541.62 222.81 L 543.37 222.00 L 544.33 224.77 L 545.87 225.02 L 547.96 227.07 L 548.32 232.17 L 550.34 235.16 L 552.76 237.34 L 553.68 239.17 L 556.45 240.73 L 558.20 240.75 L 553.86 245.98 L 549.41 249.14 L 549.59 250.43 L 547.80 251.80 L 547.86 253.29 L 545.43 254.28 L 544.82 256.24 L 538.05 259.57 L 537.87 259.87 L 526.55 261.11 L 516.62 261.71 L 514.03 262.19 L 499.31 263.09 L 482.63 265.00 L 479.66 264.51 L 480.14 267.54 L 463.58 268.63 L 461.99 268.93 L 462.57 266.75 L 464.59 267.35 L 465.18 260.43 L 464.47 259.56 L 466.28 256.45 L 467.78 256.15 L 472.82 258.37 L 474.37 256.85 L 472.97 254.73 L 473.33 252.94 L 478.60 250.93 L 477.13 248.07 L 478.65 245.53 L 479.74 243.85 L 483.01 243.38 L 483.97 242.09 L 485.22 243.19 L 486.89 242.48 L 490.40 244.67 L 491.31 242.81 L 494.43 240.84 L 495.45 242.42 L 498.31 241.48 L 497.92 239.66 L 500.55 237.25 L 501.24 239.13 L 504.33 240.40 L 505.71 239.13 L 506.46 234.76 L 508.64 233.69 L 509.26 231.48 L 511.30 229.85 L 510.79 226.55 L 514.18 226.91 L 516.40 225.07 L 518.64 224.71 L 517.04 220.24 L 517.94 219.38 L 522.84 218.79 L 525.87 221.97 L 526.26 223.41 L 530.35 223.55 Z", "cx": 510.3, "cy": 243.0, "count": 13}, "LA": {"name": "Louisiana", "d": "M 407.61 330.32 L 441.71 329.30 L 443.11 331.17 L 442.16 331.96 L 442.18 335.38 L 444.36 337.39 L 444.93 342.35 L 443.43 346.31 L 440.22 348.87 L 439.55 352.69 L 438.14 352.39 L 438.19 358.57 L 436.48 358.83 L 437.65 362.09 L 436.69 363.34 L 463.71 361.83 L 462.66 367.43 L 465.26 370.95 L 466.00 373.66 L 467.86 375.29 L 463.74 377.87 L 463.53 379.54 L 467.09 380.41 L 468.41 377.65 L 471.61 380.09 L 471.52 382.22 L 469.84 383.26 L 466.52 382.65 L 467.02 384.19 L 466.07 386.64 L 469.00 388.56 L 473.52 388.89 L 475.29 391.24 L 476.60 391.51 L 474.48 394.52 L 471.88 394.15 L 469.52 391.38 L 464.06 390.18 L 463.87 387.34 L 461.30 388.42 L 461.61 390.79 L 460.54 393.07 L 458.65 393.55 L 457.06 391.16 L 453.69 391.27 L 452.64 393.90 L 450.43 394.76 L 447.95 393.33 L 446.01 393.25 L 443.96 389.22 L 440.60 387.55 L 439.34 387.88 L 437.90 384.46 L 434.10 385.09 L 433.93 382.98 L 430.28 385.15 L 430.82 386.69 L 428.00 388.28 L 423.51 387.71 L 418.25 385.59 L 414.56 384.69 L 406.70 385.73 L 405.68 386.39 L 404.36 384.77 L 407.64 378.72 L 406.46 375.53 L 407.44 373.76 L 406.91 371.47 L 408.29 369.69 L 409.67 365.32 L 409.34 361.74 L 405.27 355.02 L 405.11 351.33 L 401.93 347.71 L 401.57 330.46 L 407.61 330.32 Z", "cx": 442.6, "cy": 373.5, "count": 40}, "ME": {"name": "Maine", "d": "M 678.69 120.28 L 676.96 119.51 L 676.72 117.85 L 674.35 116.49 L 667.84 95.34 L 664.46 85.02 L 668.77 81.47 L 667.65 80.54 L 668.84 77.55 L 670.44 75.88 L 669.80 75.00 L 671.17 73.01 L 669.83 70.33 L 669.76 65.79 L 671.08 63.90 L 670.49 59.22 L 675.50 44.49 L 677.64 44.44 L 678.62 47.39 L 680.38 48.02 L 683.41 45.22 L 685.63 44.56 L 686.84 42.95 L 690.67 44.56 L 693.11 46.11 L 698.72 64.02 L 699.79 68.39 L 704.00 68.34 L 704.02 70.35 L 705.55 71.80 L 705.24 73.63 L 707.60 75.59 L 709.54 74.40 L 713.37 79.46 L 711.81 82.75 L 710.14 82.21 L 709.57 84.32 L 707.81 84.38 L 708.09 85.93 L 705.91 86.41 L 703.58 90.87 L 702.05 88.74 L 700.80 88.92 L 702.14 91.30 L 699.87 93.33 L 698.64 91.49 L 697.70 92.92 L 694.75 93.79 L 693.98 91.43 L 692.38 92.47 L 693.19 94.06 L 692.58 98.07 L 693.18 98.95 L 691.60 101.52 L 689.24 101.43 L 688.56 103.83 L 686.86 104.61 L 685.87 106.70 L 683.99 106.85 L 682.99 105.22 L 681.17 108.79 L 682.37 110.37 L 680.63 111.52 L 680.92 113.07 L 679.25 115.54 L 678.69 120.28 Z", "cx": 688.6, "cy": 84.1, "count": 19}, "MD": {"name": "Maryland", "d": "M 634.10 219.86 L 633.82 219.92 L 633.47 220.00 L 634.10 219.86 Z M 584.18 199.08 L 630.45 190.03 L 636.13 210.61 L 644.37 208.98 L 643.42 216.50 L 641.52 217.21 L 638.24 218.97 L 635.66 220.29 L 635.15 217.55 L 633.87 216.69 L 635.08 215.20 L 632.54 212.90 L 632.17 214.21 L 629.46 214.50 L 627.92 211.69 L 628.76 211.52 L 628.01 207.60 L 628.51 205.89 L 626.30 200.86 L 627.02 197.49 L 629.04 196.49 L 628.70 193.24 L 627.20 193.94 L 627.48 195.59 L 624.62 198.37 L 624.05 200.48 L 624.85 205.33 L 624.07 207.86 L 625.42 211.55 L 627.64 213.84 L 627.85 215.88 L 629.32 217.65 L 629.04 219.13 L 625.56 217.11 L 621.10 216.70 L 619.33 214.41 L 617.24 216.35 L 615.94 214.53 L 617.31 211.61 L 617.89 208.75 L 619.21 206.68 L 617.28 205.37 L 616.44 206.58 L 614.47 205.37 L 611.68 205.07 L 611.19 202.62 L 609.54 201.53 L 607.55 201.63 L 605.21 197.27 L 603.07 197.68 L 600.64 196.54 L 599.72 198.04 L 597.63 198.34 L 597.49 200.25 L 593.55 199.75 L 591.51 202.67 L 589.76 202.42 L 587.77 205.69 L 585.55 207.68 L 584.18 199.08 Z", "cx": 619.1, "cy": 206.9, "count": 58}, "MA": {"name": "Massachusetts", "d": "M 676.92 123.73 L 678.16 123.68 L 679.38 126.41 L 679.50 128.87 L 678.19 131.52 L 678.80 134.03 L 681.50 133.68 L 683.77 135.84 L 684.07 137.96 L 685.52 138.14 L 686.17 139.98 L 689.95 140.66 L 693.39 138.07 L 693.17 140.53 L 688.00 144.08 L 685.92 144.75 L 684.26 143.57 L 682.41 144.55 L 682.66 145.73 L 680.61 147.04 L 678.90 144.34 L 678.43 143.89 L 676.87 143.06 L 675.20 139.40 L 673.43 139.86 L 670.26 140.88 L 670.19 140.61 L 655.10 144.15 L 649.86 145.24 L 649.44 144.67 L 649.71 133.20 L 659.40 131.08 L 673.30 128.04 L 674.19 126.18 L 676.92 123.73 Z", "cx": 676.7, "cy": 137.5, "count": 18}, "MI": {"name": "Michigan", "d": "M 529.52 173.14 L 512.93 175.87 L 512.80 174.77 L 498.21 176.40 L 487.93 177.44 L 490.22 174.99 L 491.53 171.05 L 492.84 168.59 L 493.65 165.26 L 493.84 160.60 L 493.07 155.67 L 488.51 146.30 L 489.26 142.52 L 488.03 138.20 L 490.31 133.43 L 490.51 129.61 L 489.91 127.64 L 491.77 126.62 L 491.74 123.85 L 494.70 122.79 L 496.69 119.52 L 497.16 125.58 L 498.42 125.72 L 499.63 122.53 L 499.12 117.41 L 499.94 116.02 L 503.05 114.83 L 501.61 111.39 L 503.37 108.14 L 505.96 107.65 L 509.12 109.21 L 512.02 109.13 L 513.72 111.32 L 515.91 111.23 L 519.84 112.94 L 521.10 112.68 L 523.56 115.97 L 522.21 118.10 L 524.08 120.35 L 525.04 123.10 L 525.17 129.40 L 522.97 131.27 L 522.80 134.54 L 520.08 136.01 L 519.00 140.05 L 519.78 141.44 L 522.84 142.44 L 524.79 140.04 L 526.83 135.40 L 530.71 133.19 L 532.91 134.19 L 534.48 136.39 L 536.71 143.15 L 537.41 146.59 L 539.33 150.60 L 538.93 156.82 L 537.07 158.01 L 536.69 155.83 L 535.45 156.66 L 534.62 161.90 L 532.41 164.16 L 532.20 168.11 L 529.54 171.73 L 529.52 173.14 Z M 496.80 109.35 L 497.21 111.34 L 495.72 111.87 L 496.05 108.97 L 496.80 109.35 Z M 473.49 122.38 L 471.54 120.80 L 472.42 118.32 L 469.63 118.20 L 470.52 115.82 L 470.40 112.88 L 467.80 111.08 L 466.28 109.09 L 461.18 107.85 L 459.70 108.51 L 454.55 106.42 L 442.39 103.84 L 440.95 101.09 L 438.74 100.21 L 443.11 98.20 L 445.00 96.07 L 449.98 94.91 L 453.07 92.21 L 454.57 92.01 L 455.70 90.19 L 459.07 87.46 L 460.72 85.22 L 463.29 83.64 L 465.94 84.61 L 461.86 90.08 L 460.94 91.89 L 461.25 94.98 L 463.25 92.44 L 467.24 92.47 L 470.46 93.84 L 473.63 98.15 L 475.22 98.83 L 478.06 97.83 L 478.85 98.77 L 481.80 99.03 L 487.59 94.59 L 490.76 93.88 L 495.05 93.60 L 497.80 92.00 L 499.98 91.66 L 500.96 96.25 L 503.30 96.62 L 505.48 95.62 L 506.56 96.60 L 507.90 95.05 L 511.18 94.18 L 511.97 99.99 L 513.80 102.25 L 516.16 102.60 L 516.20 100.93 L 518.41 100.64 L 519.84 102.21 L 519.00 103.61 L 512.52 103.34 L 509.57 104.44 L 506.03 102.84 L 505.29 104.78 L 505.92 106.27 L 504.42 106.08 L 501.99 104.06 L 498.10 103.12 L 496.18 103.24 L 494.58 105.63 L 491.59 106.50 L 488.24 106.39 L 487.00 107.44 L 486.87 109.30 L 483.39 111.22 L 483.36 109.01 L 481.73 108.71 L 481.31 111.05 L 478.64 111.40 L 477.52 112.52 L 476.09 116.61 L 473.20 121.95 L 473.49 122.38 Z M 455.53 75.57 L 452.84 77.87 L 451.38 78.25 L 451.38 76.51 L 458.18 72.08 L 457.04 74.91 L 455.53 75.57 Z", "cx": 481.6, "cy": 102.1, "count": 95}, "MN": {"name": "Minnesota", "d": "M 420.18 98.86 L 419.26 98.16 L 416.98 99.63 L 417.37 109.51 L 416.71 110.54 L 413.44 112.04 L 410.87 115.70 L 410.76 118.10 L 412.11 118.23 L 413.66 120.29 L 412.40 122.91 L 412.76 125.75 L 412.12 131.93 L 415.35 134.86 L 417.84 135.04 L 419.15 136.83 L 422.89 138.52 L 423.57 140.70 L 427.11 143.40 L 429.05 143.95 L 431.53 147.52 L 431.34 150.21 L 432.10 152.11 L 430.24 152.20 L 368.76 153.55 L 368.90 123.36 L 366.21 121.42 L 364.18 118.19 L 367.41 114.64 L 367.68 112.71 L 367.27 106.02 L 365.89 104.27 L 364.97 100.60 L 365.19 96.13 L 364.76 95.39 L 364.48 84.71 L 362.30 79.04 L 361.47 75.84 L 361.18 69.11 L 361.94 66.85 L 360.54 61.57 L 383.65 61.62 L 383.59 55.27 L 385.78 55.43 L 387.25 56.68 L 388.82 65.28 L 390.00 66.26 L 393.68 66.47 L 394.12 67.28 L 398.42 67.55 L 398.96 69.36 L 402.63 68.81 L 402.61 68.08 L 405.47 67.10 L 407.99 67.38 L 410.92 68.65 L 411.78 70.35 L 413.43 70.10 L 415.11 73.77 L 415.79 72.20 L 418.59 71.36 L 419.15 72.88 L 422.53 73.83 L 422.59 75.28 L 424.31 76.39 L 427.68 75.59 L 429.64 73.85 L 432.36 72.70 L 433.48 75.10 L 435.36 74.45 L 437.68 74.86 L 440.31 74.33 L 443.47 76.23 L 446.35 75.68 L 446.16 76.60 L 442.52 78.94 L 437.35 80.90 L 434.03 82.82 L 429.34 87.36 L 427.34 90.11 L 424.22 93.28 L 419.24 97.52 L 420.18 98.86 Z", "cx": 406.9, "cy": 94.3, "count": 15}, "MS": {"name": "Mississippi", "d": "M 476.61 293.29 L 480.25 293.00 L 481.81 294.63 L 481.38 313.24 L 480.75 345.44 L 483.88 370.96 L 482.37 371.82 L 478.87 371.73 L 477.37 370.73 L 473.95 371.72 L 469.27 373.99 L 467.86 375.29 L 466.00 373.66 L 465.26 370.95 L 462.66 367.43 L 463.71 361.83 L 436.69 363.34 L 437.65 362.09 L 436.48 358.83 L 438.19 358.57 L 438.14 352.39 L 439.55 352.69 L 440.22 348.87 L 443.43 346.31 L 444.93 342.35 L 444.36 337.39 L 442.18 335.38 L 442.16 331.96 L 443.11 331.17 L 441.71 329.30 L 442.66 326.94 L 441.72 323.47 L 442.87 322.02 L 440.32 319.93 L 442.26 314.65 L 444.61 311.84 L 443.68 310.03 L 446.38 307.11 L 446.25 306.00 L 448.67 304.94 L 448.26 301.63 L 449.64 300.81 L 450.44 297.88 L 452.52 296.46 L 451.62 295.03 L 476.61 293.29 Z", "cx": 455.0, "cy": 334.8, "count": 4}, "MO": {"name": "Missouri", "d": "M 426.75 201.22 L 428.06 201.07 L 430.78 204.37 L 432.19 204.86 L 431.19 207.32 L 431.49 210.74 L 433.35 215.84 L 437.49 219.99 L 441.96 223.37 L 443.12 228.88 L 444.16 229.84 L 445.56 228.18 L 448.42 228.75 L 450.33 229.84 L 449.19 231.96 L 449.64 233.51 L 447.70 237.99 L 447.79 240.68 L 451.85 243.87 L 453.42 246.00 L 454.83 245.53 L 459.30 248.86 L 459.48 251.45 L 460.78 254.61 L 459.77 255.80 L 463.07 260.40 L 465.18 260.43 L 464.59 267.35 L 462.57 266.75 L 461.99 268.93 L 461.11 268.99 L 460.38 269.04 L 460.74 273.19 L 458.39 277.62 L 449.72 278.17 L 451.66 274.89 L 453.58 272.73 L 452.21 269.57 L 394.59 271.71 L 392.69 271.74 L 392.56 263.31 L 392.10 226.79 L 389.34 225.99 L 387.26 222.03 L 385.63 220.38 L 388.44 215.44 L 384.31 214.18 L 383.04 212.62 L 379.89 208.19 L 377.17 202.74 L 391.48 202.90 L 408.82 202.34 L 426.75 201.22 Z", "cx": 433.2, "cy": 237.6, "count": 17}, "MT": {"name": "Montana", "d": "M 284.73 57.87 L 283.19 76.71 L 280.42 108.57 L 279.14 124.41 L 278.95 124.39 L 257.08 122.22 L 219.89 117.70 L 196.81 114.26 L 195.48 122.99 L 193.63 120.92 L 192.24 117.71 L 188.97 120.72 L 186.48 120.96 L 186.06 119.95 L 183.17 120.21 L 181.70 119.11 L 178.74 120.10 L 175.09 119.36 L 173.60 120.68 L 172.41 119.53 L 171.84 113.91 L 169.44 113.28 L 168.35 111.68 L 169.00 108.53 L 167.82 107.09 L 166.54 103.39 L 166.00 100.02 L 166.57 98.73 L 164.80 96.71 L 163.32 98.29 L 160.04 99.99 L 157.92 97.80 L 158.84 96.11 L 158.36 94.24 L 160.79 92.85 L 160.09 90.09 L 161.16 86.29 L 163.98 80.50 L 160.67 79.94 L 160.76 78.84 L 158.13 76.54 L 158.00 74.65 L 154.71 69.41 L 154.70 68.20 L 152.58 67.01 L 150.85 64.60 L 151.73 60.12 L 149.11 54.82 L 152.66 38.20 L 202.38 47.70 L 224.93 51.07 L 284.73 57.87 Z", "cx": 185.7, "cy": 95.5, "count": 3}, "NE": {"name": "Nebraska", "d": "M 285.03 158.52 L 305.67 160.03 L 343.75 161.66 L 344.13 162.50 L 350.35 165.69 L 351.85 164.06 L 353.59 164.46 L 359.34 164.55 L 365.74 167.75 L 366.53 170.16 L 368.75 170.63 L 370.95 178.22 L 372.64 179.33 L 373.45 182.29 L 372.70 184.32 L 373.04 186.64 L 375.22 188.12 L 375.15 192.37 L 376.39 196.17 L 375.71 200.52 L 377.17 202.74 L 379.89 208.19 L 383.04 212.62 L 299.13 210.32 L 297.25 210.20 L 298.33 193.29 L 273.32 191.43 L 276.18 157.81 L 285.03 158.52 Z", "cx": 345.8, "cy": 180.8, "count": 4}, "NV": {"name": "Nevada", "d": "M 116.28 150.22 L 152.40 157.84 L 136.39 240.79 L 133.82 254.17 L 131.90 256.73 L 130.58 256.57 L 129.39 254.25 L 124.43 253.94 L 123.29 263.82 L 123.75 267.21 L 123.43 270.36 L 122.18 272.47 L 109.36 253.10 L 102.22 242.37 L 92.47 227.73 L 80.36 209.53 L 67.85 190.72 L 73.27 170.01 L 80.51 141.68 L 96.12 145.69 L 116.28 150.22 Z", "cx": 112.7, "cy": 220.4, "count": 7}, "NH": {"name": "New Hampshire", "d": "M 664.46 85.02 L 667.84 95.34 L 674.35 116.49 L 676.72 117.85 L 676.96 119.51 L 678.69 120.28 L 678.16 123.68 L 676.92 123.73 L 674.19 126.18 L 673.30 128.04 L 659.40 131.08 L 658.05 130.09 L 657.57 127.64 L 658.38 126.48 L 657.66 124.19 L 656.82 117.07 L 658.05 113.33 L 658.13 109.41 L 658.80 107.81 L 657.71 103.81 L 661.18 101.30 L 662.35 98.04 L 660.58 95.65 L 661.45 92.57 L 660.90 91.00 L 661.42 86.40 L 664.16 86.14 L 664.46 85.02 Z", "cx": 665.0, "cy": 110.1, "count": 14}, "NJ": {"name": "New Jersey", "d": "M 644.32 162.33 L 648.95 163.72 L 648.60 168.84 L 646.84 170.39 L 646.35 173.17 L 650.02 173.64 L 650.73 175.47 L 651.32 184.66 L 648.96 192.15 L 646.86 194.64 L 645.54 199.31 L 643.75 196.86 L 639.81 196.32 L 634.54 193.69 L 633.73 191.30 L 633.59 190.96 L 634.07 189.90 L 634.80 187.66 L 637.84 185.56 L 637.76 184.25 L 640.95 180.68 L 641.24 179.10 L 636.96 176.55 L 636.36 174.50 L 634.69 174.30 L 634.13 172.44 L 635.37 169.12 L 633.98 167.63 L 636.29 163.51 L 636.55 161.55 L 637.88 160.02 L 644.32 162.33 Z", "cx": 640.8, "cy": 178.6, "count": 35}, "NM": {"name": "New Mexico", "d": "M 223.17 254.36 L 230.44 255.31 L 263.82 258.69 L 281.49 260.02 L 280.86 268.44 L 280.35 268.40 L 277.17 310.31 L 275.60 327.35 L 274.34 344.19 L 224.36 339.53 L 223.79 341.13 L 225.19 343.24 L 201.51 340.39 L 200.53 347.98 L 188.69 346.40 L 201.86 251.60 L 223.17 254.36 Z", "cx": 239.8, "cy": 300.7, "count": 8}, "NY": {"name": "New York", "d": "M 639.79 96.35 L 640.74 99.71 L 640.85 102.91 L 642.64 105.60 L 643.09 108.80 L 642.55 112.44 L 644.66 116.67 L 644.34 118.17 L 646.86 120.40 L 649.23 131.79 L 649.71 133.20 L 649.44 144.67 L 649.86 145.24 L 652.05 157.84 L 653.24 158.98 L 650.68 161.50 L 652.00 163.18 L 657.54 163.27 L 658.36 162.02 L 662.83 160.91 L 664.97 159.81 L 668.03 156.26 L 668.78 158.08 L 670.92 158.39 L 667.07 161.95 L 658.52 167.89 L 654.74 169.57 L 652.07 170.02 L 650.31 171.29 L 648.60 168.84 L 648.95 163.72 L 644.32 162.33 L 637.88 160.02 L 637.08 158.97 L 635.20 159.30 L 632.37 156.99 L 632.09 154.50 L 630.21 152.93 L 629.31 153.22 L 627.48 151.26 L 574.05 161.76 L 573.33 157.57 L 573.28 157.29 L 579.88 151.26 L 580.66 148.77 L 582.75 146.80 L 581.32 144.15 L 580.23 143.78 L 578.69 139.37 L 585.34 136.18 L 591.55 135.10 L 594.12 135.07 L 597.15 136.36 L 598.70 135.30 L 603.87 134.36 L 606.75 132.55 L 609.45 128.88 L 611.57 128.34 L 610.68 123.81 L 611.23 120.97 L 608.21 119.72 L 608.35 117.53 L 612.44 113.74 L 613.64 110.94 L 618.04 104.23 L 622.67 100.27 L 630.61 98.92 L 639.79 96.35 Z", "cx": 628.1, "cy": 140.3, "count": 71}, "NC": {"name": "North Carolina", "d": "M 573.69 255.06 L 582.75 253.86 L 593.06 252.20 L 640.70 242.71 L 643.63 249.00 L 639.84 249.15 L 639.51 250.08 L 635.26 252.01 L 634.80 253.06 L 631.91 253.94 L 632.29 255.09 L 635.73 253.53 L 636.38 254.14 L 640.17 252.49 L 641.80 253.76 L 644.04 252.61 L 645.77 256.41 L 645.38 258.48 L 643.83 259.00 L 641.36 263.79 L 636.97 264.90 L 636.83 267.87 L 639.31 270.28 L 640.96 270.50 L 639.07 275.72 L 636.54 275.68 L 632.38 277.00 L 629.64 278.59 L 625.63 282.69 L 622.76 287.59 L 621.84 293.22 L 618.79 292.58 L 614.09 294.59 L 595.92 281.50 L 580.77 283.76 L 580.68 281.80 L 578.16 279.30 L 576.92 280.53 L 576.57 278.80 L 559.90 280.49 L 556.31 281.67 L 553.66 283.63 L 549.16 285.37 L 542.32 286.57 L 532.84 287.68 L 532.72 283.69 L 535.33 282.99 L 536.02 280.10 L 539.01 277.20 L 542.66 276.62 L 545.62 273.61 L 548.93 272.23 L 551.33 268.06 L 552.99 266.70 L 553.59 268.30 L 558.37 264.34 L 560.86 264.63 L 562.07 261.26 L 564.41 260.07 L 564.39 256.04 L 573.69 255.06 Z", "cx": 597.1, "cy": 268.9, "count": 40}, "ND": {"name": "North Dakota", "d": "M 360.54 61.57 L 361.94 66.85 L 361.18 69.11 L 361.47 75.84 L 362.30 79.04 L 364.48 84.71 L 364.76 95.39 L 365.19 96.13 L 364.97 100.60 L 365.89 104.27 L 367.27 106.02 L 367.68 112.71 L 280.42 108.57 L 283.19 76.71 L 284.73 57.87 L 360.54 61.57 Z", "cx": 348.5, "cy": 84.8, "count": 2}, "OH": {"name": "Ohio", "d": "M 564.89 163.68 L 568.57 186.04 L 566.88 187.26 L 568.06 188.94 L 568.41 191.51 L 567.35 195.81 L 567.17 202.13 L 563.11 208.31 L 561.63 209.29 L 560.07 208.41 L 558.98 211.02 L 557.50 211.15 L 556.38 214.60 L 557.02 216.47 L 555.93 218.23 L 553.66 215.94 L 551.87 220.32 L 552.88 222.80 L 551.46 223.94 L 551.29 226.22 L 547.96 227.07 L 545.87 225.02 L 544.33 224.77 L 543.37 222.00 L 541.62 222.81 L 540.44 224.65 L 535.42 224.02 L 533.53 225.48 L 530.35 223.55 L 526.26 223.41 L 525.87 221.97 L 522.84 218.79 L 517.94 219.38 L 515.37 195.90 L 512.93 175.87 L 529.52 173.14 L 534.62 174.78 L 536.43 175.93 L 537.46 174.48 L 540.54 176.76 L 542.35 177.34 L 547.77 174.31 L 551.21 174.26 L 554.38 170.60 L 559.21 166.75 L 564.89 163.68 L 564.89 163.68 Z", "cx": 547.9, "cy": 201.3, "count": 43}, "OK": {"name": "Oklahoma", "d": "M 320.05 262.28 L 392.56 263.31 L 392.69 271.74 L 395.48 290.41 L 395.21 320.13 L 389.88 318.35 L 388.49 316.43 L 384.92 314.79 L 384.03 316.28 L 380.47 316.21 L 379.71 315.29 L 376.46 316.96 L 375.10 316.04 L 372.15 316.87 L 369.41 319.45 L 368.36 317.97 L 365.49 316.75 L 362.46 316.73 L 361.50 314.78 L 357.97 318.53 L 356.87 316.39 L 355.27 317.01 L 354.08 315.61 L 350.85 314.26 L 348.39 316.43 L 347.38 314.10 L 345.42 313.78 L 344.33 311.91 L 341.71 311.10 L 339.93 312.63 L 338.84 311.21 L 336.12 311.32 L 333.15 309.75 L 330.36 309.85 L 329.49 306.58 L 325.15 306.24 L 323.47 306.73 L 320.53 303.37 L 319.47 303.51 L 320.85 270.75 L 296.69 269.50 L 280.86 268.44 L 281.49 260.02 L 294.16 260.99 L 320.05 262.28 Z", "cx": 349.9, "cy": 303.6, "count": 24}, "OR": {"name": "Oregon", "d": "M 62.09 63.71 L 63.18 63.84 L 65.08 66.21 L 65.56 68.45 L 64.71 73.45 L 70.01 76.88 L 75.67 75.71 L 78.84 76.30 L 82.18 78.16 L 82.27 79.33 L 89.08 78.68 L 90.36 79.88 L 93.83 80.31 L 97.03 79.44 L 102.35 79.28 L 106.97 80.06 L 108.79 79.37 L 132.26 84.99 L 133.20 88.11 L 135.64 89.87 L 136.09 92.32 L 132.63 96.63 L 131.30 99.35 L 129.54 101.03 L 129.39 102.60 L 127.64 104.75 L 126.32 105.02 L 122.64 110.32 L 122.96 112.75 L 125.14 113.52 L 125.80 115.09 L 123.05 120.14 L 116.28 150.22 L 96.12 145.69 L 80.51 141.68 L 68.13 138.41 L 52.21 133.71 L 42.04 130.86 L 30.40 127.46 L 29.29 125.09 L 29.99 119.60 L 31.30 116.04 L 30.57 112.72 L 32.54 110.43 L 34.70 106.36 L 37.82 102.31 L 39.82 98.48 L 45.23 85.21 L 45.61 83.31 L 48.54 77.66 L 51.48 69.53 L 52.25 64.78 L 53.62 62.23 L 58.78 61.20 L 60.19 63.63 L 62.09 63.71 Z", "cx": 81.4, "cy": 94.7, "count": 26}, "PA": {"name": "Pennsylvania", "d": "M 573.33 157.57 L 574.05 161.76 L 627.48 151.26 L 629.31 153.22 L 630.21 152.93 L 632.09 154.50 L 632.37 156.99 L 635.20 159.30 L 637.08 158.97 L 637.88 160.02 L 636.55 161.55 L 636.29 163.51 L 633.98 167.63 L 635.37 169.12 L 634.13 172.44 L 634.69 174.30 L 636.36 174.50 L 636.96 176.55 L 641.24 179.10 L 640.95 180.68 L 637.76 184.25 L 637.84 185.56 L 634.80 187.66 L 632.17 187.76 L 630.45 190.03 L 584.18 199.08 L 571.08 201.31 L 568.57 186.04 L 564.89 163.68 L 564.89 163.68 L 567.01 162.39 L 573.28 157.29 L 573.33 157.57 Z", "cx": 615.6, "cy": 170.1, "count": 57}, "RI": {"name": "Rhode Island", "d": "M 678.90 144.34 L 680.61 147.04 L 678.33 148.04 L 678.90 144.34 Z M 673.43 139.86 L 675.20 139.40 L 676.87 143.06 L 678.43 143.89 L 676.91 144.01 L 676.30 146.76 L 676.80 150.26 L 672.45 152.26 L 672.78 150.55 L 670.26 140.88 L 673.43 139.86 Z", "cx": 674.8, "cy": 144.6, "count": 0}, "SC": {"name": "South Carolina", "d": "M 553.66 283.63 L 556.31 281.67 L 559.90 280.49 L 576.57 278.80 L 576.92 280.53 L 578.16 279.30 L 580.68 281.80 L 580.77 283.76 L 595.92 281.50 L 614.09 294.59 L 611.86 295.85 L 609.38 299.13 L 607.23 303.93 L 607.32 307.48 L 605.48 310.62 L 602.39 311.17 L 602.06 313.29 L 599.19 316.03 L 597.77 318.71 L 595.06 320.20 L 592.37 323.26 L 592.26 324.50 L 589.59 326.34 L 587.03 330.40 L 583.59 329.45 L 583.07 326.64 L 580.16 322.51 L 578.08 321.62 L 577.37 318.09 L 576.04 315.49 L 571.95 313.50 L 569.07 310.75 L 568.94 308.81 L 564.84 306.52 L 562.58 303.67 L 559.14 302.02 L 556.48 298.84 L 555.76 296.98 L 553.16 293.61 L 551.79 294.08 L 546.77 291.12 L 546.76 289.34 L 549.16 285.37 L 553.66 283.63 Z", "cx": 578.6, "cy": 303.2, "count": 8}, "SD": {"name": "South Dakota", "d": "M 280.42 108.57 L 367.68 112.71 L 367.41 114.64 L 364.18 118.19 L 366.21 121.42 L 368.90 123.36 L 368.76 153.55 L 367.17 153.91 L 367.82 155.30 L 367.41 158.25 L 368.93 159.92 L 367.99 161.12 L 367.57 164.44 L 366.49 166.92 L 368.75 170.63 L 366.53 170.16 L 365.74 167.75 L 359.34 164.55 L 353.59 164.46 L 351.85 164.06 L 350.35 165.69 L 344.13 162.50 L 343.75 161.66 L 305.67 160.03 L 285.03 158.52 L 276.18 157.81 L 278.95 124.39 L 279.14 124.41 L 280.42 108.57 Z", "cx": 343.7, "cy": 148.2, "count": 2}, "TN": {"name": "Tennessee", "d": "M 480.14 267.54 L 479.66 264.51 L 482.63 265.00 L 499.31 263.09 L 514.03 262.19 L 516.62 261.71 L 526.55 261.11 L 537.87 259.87 L 538.05 259.57 L 564.39 256.04 L 564.41 260.07 L 562.07 261.26 L 560.86 264.63 L 558.37 264.34 L 553.59 268.30 L 552.99 266.70 L 551.33 268.06 L 548.93 272.23 L 545.62 273.61 L 542.66 276.62 L 539.01 277.20 L 536.02 280.10 L 535.33 282.99 L 532.72 283.69 L 532.84 287.68 L 515.45 289.80 L 491.68 291.91 L 480.25 293.00 L 476.61 293.29 L 451.62 295.03 L 452.93 294.49 L 454.08 291.45 L 453.61 287.40 L 455.95 284.47 L 456.22 281.85 L 458.15 280.80 L 458.39 277.62 L 460.74 273.19 L 460.38 269.04 L 461.11 268.99 L 461.99 268.93 L 463.58 268.63 L 480.14 267.54 Z", "cx": 505.8, "cy": 274.1, "count": 34}, "TX": {"name": "Texas", "d": "M 296.69 269.50 L 320.85 270.75 L 319.47 303.51 L 320.53 303.37 L 323.47 306.73 L 325.15 306.24 L 329.49 306.58 L 330.36 309.85 L 333.15 309.75 L 336.12 311.32 L 338.84 311.21 L 339.93 312.63 L 341.71 311.10 L 344.33 311.91 L 345.42 313.78 L 347.38 314.10 L 348.39 316.43 L 350.85 314.26 L 354.08 315.61 L 355.27 317.01 L 356.87 316.39 L 357.97 318.53 L 361.50 314.78 L 362.46 316.73 L 365.49 316.75 L 368.36 317.97 L 369.41 319.45 L 372.15 316.87 L 375.10 316.04 L 376.46 316.96 L 379.71 315.29 L 380.47 316.21 L 384.03 316.28 L 384.92 314.79 L 388.49 316.43 L 389.88 318.35 L 395.21 320.13 L 396.68 321.67 L 399.40 320.79 L 401.39 321.49 L 401.57 330.46 L 401.93 347.71 L 405.11 351.33 L 405.27 355.02 L 409.34 361.74 L 409.67 365.32 L 408.29 369.69 L 406.91 371.47 L 407.44 373.76 L 406.46 375.53 L 407.64 378.72 L 404.36 384.77 L 405.68 386.39 L 403.29 386.54 L 395.75 388.97 L 393.02 387.72 L 392.50 384.98 L 390.61 386.93 L 389.25 386.48 L 388.56 388.88 L 390.09 389.87 L 390.37 392.99 L 387.68 396.32 L 383.29 400.48 L 374.43 404.91 L 373.55 404.18 L 370.88 405.27 L 370.80 404.27 L 367.16 404.98 L 365.48 402.87 L 364.43 403.32 L 368.28 407.65 L 365.44 409.00 L 362.78 408.16 L 362.35 411.18 L 358.99 414.26 L 355.50 419.98 L 353.20 425.97 L 351.57 425.49 L 351.13 427.68 L 352.86 427.16 L 351.97 431.52 L 350.81 431.69 L 350.69 434.15 L 352.07 435.54 L 352.41 440.56 L 354.04 442.31 L 354.41 445.50 L 355.70 448.34 L 351.01 450.00 L 349.14 447.79 L 345.57 446.90 L 340.83 446.98 L 336.82 444.15 L 333.76 443.80 L 331.50 441.54 L 328.37 440.72 L 326.29 438.55 L 325.06 433.50 L 322.45 430.39 L 322.87 427.85 L 321.74 425.07 L 322.23 422.71 L 320.45 419.99 L 318.91 419.66 L 316.48 417.18 L 315.79 414.14 L 313.71 411.30 L 310.65 408.88 L 309.35 403.78 L 307.96 402.33 L 306.22 398.21 L 305.74 394.89 L 304.02 392.41 L 301.01 390.14 L 300.37 388.64 L 297.56 387.20 L 295.54 383.41 L 289.23 382.20 L 285.40 382.15 L 282.23 380.65 L 281.40 382.34 L 277.87 382.65 L 275.00 385.95 L 273.00 391.42 L 272.11 391.44 L 269.86 394.59 L 267.45 394.50 L 264.05 391.65 L 255.36 386.79 L 253.80 384.45 L 250.49 382.03 L 248.46 377.06 L 248.70 372.74 L 246.58 369.03 L 246.31 365.96 L 244.92 363.89 L 239.64 360.51 L 237.06 356.36 L 234.78 354.74 L 232.56 351.18 L 229.18 349.06 L 227.18 344.39 L 225.19 343.24 L 223.79 341.13 L 224.36 339.53 L 274.34 344.19 L 275.60 327.35 L 277.17 310.31 L 280.35 268.40 L 280.86 268.44 L 296.69 269.50 Z", "cx": 335.0, "cy": 371.1, "count": 127}, "UT": {"name": "Utah", "d": "M 175.26 162.00 L 188.91 164.17 L 186.24 180.89 L 211.04 184.58 L 206.64 215.95 L 204.60 230.17 L 204.56 232.04 L 201.86 251.60 L 182.76 248.72 L 136.39 240.79 L 152.40 157.84 L 175.26 162.00 Z", "cx": 185.5, "cy": 202.6, "count": 41}, "VT": {"name": "Vermont", "d": "M 660.90 91.00 L 661.45 92.57 L 660.58 95.65 L 662.35 98.04 L 661.18 101.30 L 657.71 103.81 L 658.80 107.81 L 658.13 109.41 L 658.05 113.33 L 656.82 117.07 L 657.66 124.19 L 658.38 126.48 L 657.57 127.64 L 658.05 130.09 L 659.40 131.08 L 649.71 133.20 L 649.23 131.79 L 646.86 120.40 L 644.34 118.17 L 644.66 116.67 L 642.55 112.44 L 643.09 108.80 L 642.64 105.60 L 640.85 102.91 L 640.74 99.71 L 639.79 96.35 L 651.72 93.57 L 660.90 91.00 Z", "cx": 653.0, "cy": 110.7, "count": 9}, "VA": {"name": "Virginia", "d": "M 641.52 217.21 L 643.42 216.50 L 642.36 219.68 L 640.82 221.06 L 640.60 225.10 L 639.26 231.84 L 637.33 233.58 L 636.14 231.46 L 636.18 226.15 L 638.24 218.97 L 641.52 217.21 Z M 633.82 219.92 L 634.10 219.86 L 633.47 220.00 L 633.82 219.92 Z M 599.16 200.78 L 606.79 205.08 L 607.55 201.63 L 609.54 201.53 L 611.19 202.62 L 611.68 205.07 L 614.47 205.37 L 616.44 206.58 L 617.89 208.75 L 617.31 211.61 L 615.92 212.64 L 615.42 215.20 L 616.32 216.81 L 619.64 215.58 L 620.80 218.09 L 625.50 218.26 L 627.20 220.09 L 631.25 221.60 L 630.60 226.57 L 632.85 229.89 L 631.44 231.98 L 631.67 234.11 L 633.57 235.04 L 632.21 237.41 L 628.96 235.34 L 628.51 236.38 L 631.25 237.80 L 637.75 236.90 L 640.70 242.71 L 593.06 252.20 L 582.75 253.86 L 573.69 255.06 L 564.39 256.04 L 538.05 259.57 L 544.82 256.24 L 545.43 254.28 L 547.86 253.29 L 547.80 251.80 L 549.59 250.43 L 549.41 249.14 L 553.86 245.98 L 558.20 240.75 L 558.19 242.16 L 560.40 244.74 L 562.83 245.78 L 564.46 245.43 L 566.63 242.85 L 568.68 244.31 L 571.90 242.86 L 577.30 238.70 L 577.96 239.63 L 580.00 237.79 L 579.56 234.76 L 580.54 231.87 L 582.52 228.99 L 583.00 225.81 L 585.00 222.27 L 585.31 218.26 L 587.88 220.17 L 590.12 220.53 L 591.20 218.92 L 592.86 212.50 L 594.73 213.67 L 599.39 205.83 L 599.16 200.78 Z", "cx": 594.3, "cy": 229.7, "count": 37}, "WA": {"name": "Washington", "d": "M 141.94 35.85 L 137.31 55.86 L 132.48 77.62 L 131.99 78.92 L 132.84 82.11 L 132.26 84.99 L 108.79 79.37 L 106.97 80.06 L 102.35 79.28 L 97.03 79.44 L 93.83 80.31 L 90.36 79.88 L 89.08 78.68 L 82.27 79.33 L 82.18 78.16 L 78.84 76.30 L 75.67 75.71 L 70.01 76.88 L 64.71 73.45 L 65.56 68.45 L 65.08 66.21 L 63.18 63.84 L 62.09 63.71 L 60.19 63.63 L 58.78 61.20 L 56.96 59.99 L 55.02 60.45 L 53.32 58.41 L 54.41 56.35 L 56.21 55.65 L 54.98 51.64 L 56.12 42.53 L 55.57 41.12 L 56.25 34.65 L 54.84 31.64 L 55.42 26.67 L 57.57 23.91 L 59.29 26.06 L 63.10 29.42 L 66.15 30.24 L 68.93 31.93 L 72.01 31.98 L 72.96 33.78 L 75.54 34.43 L 76.32 38.45 L 77.71 38.56 L 76.59 43.36 L 76.14 47.88 L 77.35 47.75 L 77.32 43.76 L 78.64 40.25 L 81.48 37.08 L 80.47 35.19 L 81.10 32.53 L 80.86 29.34 L 81.99 27.40 L 81.98 24.75 L 80.38 23.91 L 79.32 21.62 L 80.23 20.00 L 141.94 35.85 Z M 77.47 31.11 L 79.09 30.82 L 77.92 33.99 L 76.56 32.27 L 77.47 31.11 Z M 75.43 25.79 L 77.22 24.04 L 78.07 27.03 L 76.97 29.07 L 74.67 27.74 L 75.43 25.79 Z", "cx": 80.0, "cy": 51.9, "count": 97}, "WV": {"name": "West Virginia", "d": "M 568.57 186.04 L 571.08 201.31 L 584.18 199.08 L 585.55 207.68 L 587.77 205.69 L 589.76 202.42 L 591.51 202.67 L 593.55 199.75 L 597.49 200.25 L 597.63 198.34 L 599.72 198.04 L 600.64 196.54 L 603.07 197.68 L 605.21 197.27 L 607.55 201.63 L 606.79 205.08 L 599.16 200.78 L 599.39 205.83 L 594.73 213.67 L 592.86 212.50 L 591.20 218.92 L 590.12 220.53 L 587.88 220.17 L 585.31 218.26 L 585.00 222.27 L 583.00 225.81 L 582.52 228.99 L 580.54 231.87 L 579.56 234.76 L 580.00 237.79 L 577.96 239.63 L 577.30 238.70 L 571.90 242.86 L 568.68 244.31 L 566.63 242.85 L 564.46 245.43 L 562.83 245.78 L 560.40 244.74 L 558.19 242.16 L 558.20 240.75 L 556.45 240.73 L 553.68 239.17 L 552.76 237.34 L 550.34 235.16 L 548.32 232.17 L 547.96 227.07 L 551.29 226.22 L 551.46 223.94 L 552.88 222.80 L 551.87 220.32 L 553.66 215.94 L 555.93 218.23 L 557.02 216.47 L 556.38 214.60 L 557.50 211.15 L 558.98 211.02 L 560.07 208.41 L 561.63 209.29 L 563.11 208.31 L 567.17 202.13 L 567.35 195.81 L 568.41 191.51 L 568.06 188.94 L 566.88 187.26 L 568.57 186.04 Z", "cx": 574.4, "cy": 216.8, "count": 4}, "WI": {"name": "Wisconsin", "d": "M 438.74 100.21 L 440.95 101.09 L 442.39 103.84 L 454.55 106.42 L 459.70 108.51 L 461.18 107.85 L 466.28 109.09 L 467.80 111.08 L 470.40 112.88 L 470.52 115.82 L 469.63 118.20 L 472.42 118.32 L 471.54 120.80 L 473.49 122.38 L 473.22 124.43 L 470.99 125.00 L 469.38 129.01 L 468.89 131.73 L 470.29 132.07 L 471.96 130.18 L 473.62 126.71 L 475.96 125.20 L 477.51 120.82 L 479.87 119.67 L 479.89 121.89 L 478.40 124.06 L 475.73 131.32 L 475.16 135.25 L 475.47 138.00 L 474.31 139.03 L 473.53 142.89 L 474.20 146.07 L 473.33 148.27 L 472.33 153.63 L 473.01 157.74 L 474.80 161.30 L 474.75 166.21 L 462.68 167.19 L 439.99 168.42 L 439.00 166.35 L 434.54 164.64 L 433.47 162.02 L 432.87 158.26 L 434.23 156.16 L 432.35 154.59 L 432.10 152.11 L 431.34 150.21 L 431.53 147.52 L 429.05 143.95 L 427.11 143.40 L 423.57 140.70 L 422.89 138.52 L 419.15 136.83 L 417.84 135.04 L 415.35 134.86 L 412.12 131.93 L 412.76 125.75 L 412.40 122.91 L 413.66 120.29 L 412.11 118.23 L 410.76 118.10 L 410.87 115.70 L 413.44 112.04 L 416.71 110.54 L 417.37 109.51 L 416.98 99.63 L 419.26 98.16 L 420.18 98.86 L 422.77 98.93 L 430.64 95.71 L 433.52 94.00 L 434.59 95.13 L 433.13 97.41 L 437.08 100.03 L 438.74 100.21 Z", "cx": 447.3, "cy": 127.6, "count": 20}, "WY": {"name": "Wyoming", "d": "M 219.89 117.70 L 257.08 122.22 L 278.95 124.39 L 276.18 157.81 L 273.32 191.43 L 252.38 189.56 L 225.09 186.34 L 211.04 184.58 L 186.24 180.89 L 188.91 164.17 L 195.48 122.99 L 196.81 114.26 L 219.89 117.70 Z", "cx": 229.3, "cy": 151.8, "count": 6}}, "years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "total_series": [26, 15, 17, 46, 71, 55, 67, 56, 111, 78, 106, 269, 174, 153, 112, 119, 59], "cause_series": {"severe weather": [13, 1, 13, 30, 56, 47, 54, 40, 76, 45, 62, 107, 65, 49, 45, 48, 12], "intentional attack": [2, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 121, 89, 80, 47, 43, 33], "system operability disruption": [6, 10, 3, 7, 3, 4, 9, 4, 14, 6, 13, 12, 7, 6, 1, 13, 9], "public appeal": [0, 3, 0, 1, 7, 0, 2, 2, 2, 10, 14, 16, 3, 0, 5, 4, 0], "equipment failure": [5, 1, 0, 6, 5, 3, 1, 6, 9, 10, 5, 4, 1, 4, 0, 0, 0], "other": [0, 0, 0, 0, 0, 1, 1, 4, 10, 7, 12, 9, 9, 14, 14, 11, 5]}, "top_causes": ["severe weather", "intentional attack", "system operability disruption", "public appeal", "equipment failure"], "region_breakdown": [{"region": "Northeast", "count": 350}, {"region": "South", "count": 229}, {"region": "West", "count": 217}, {"region": "Central", "count": 200}, {"region": "Southeast", "count": 153}, {"region": "East North Central", "count": 138}, {"region": "Northwest", "count": 132}, {"region": "Southwest", "count": 92}, {"region": "West North Central", "count": 17}], "cause_breakdown": [{"cause": "Severe Weather", "count": 763}, {"cause": "Intentional Attack", "count": 418}, {"cause": "System Operability Disruption", "count": 127}, {"cause": "Public Appeal", "count": 69}, {"cause": "Equipment Failure", "count": 60}, {"cause": "Fuel Supply Emergency", "count": 51}, {"cause": "Islanding", "count": 46}], "notable": [{"state": "Wisconsin", "cause": "Fuel Supply Emergency", "duration_hours": 1810.9, "year": 2014, "customers": null}, {"state": "Michigan", "cause": "Equipment Failure", "duration_hours": 1306.3, "year": 2009, "customers": null}, {"state": "New York", "cause": "Fuel Supply Emergency", "duration_hours": 1008.0, "year": 2014, "customers": null}, {"state": "California", "cause": "Fuel Supply Emergency", "duration_hours": 823.8, "year": 2016, "customers": 0}, {"state": "Arizona", "cause": "Severe Weather", "duration_hours": 822.0, "year": 2004, "customers": null}, {"state": "Arizona", "cause": "Severe Weather", "duration_hours": 822.0, "year": 2004, "customers": null}, {"state": "Michigan", "cause": "Severe Weather", "duration_hours": 768.0, "year": 2003, "customers": 2}, {"state": "California", "cause": "Severe Weather", "duration_hours": 573.2, "year": 2003, "customers": 108000}], "stats": {"total_outages": 1534, "median_duration_hours": 14.5, "total_customers_affected": 156510739, "model_mae_hours": 38.59, "model_r2_log": 0.5321, "classifier_accuracy": 0.681, "classifier_baseline": 0.599}}
+</script>
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById('dashboard-data').textContent);
+  const SERIES_COLORS = {
+    'severe weather': 'var(--series-1)',
+    'intentional attack': 'var(--series-2)',
+    'system operability disruption': 'var(--series-3)',
+    'public appeal': 'var(--series-4)',
+    'equipment failure': 'var(--series-5)',
+    'other': 'var(--series-6)'
+  };
+  const SERIES_LABELS = {
+    'severe weather': 'Severe weather',
+    'intentional attack': 'Intentional attack',
+    'system operability disruption': 'System operability disruption',
+    'public appeal': 'Public appeal',
+    'equipment failure': 'Equipment failure',
+    'other': 'Other causes'
+  };
+  const RESOLVED = {}; // resolve CSS vars to hex for JS-side math if ever needed
+  const rootStyle = getComputedStyle(document.documentElement);
+  Object.keys(SERIES_COLORS).forEach(k => {
+    const varName = SERIES_COLORS[k].match(/--[a-z0-9-]+/)[0];
+    RESOLVED[k] = rootStyle.getPropertyValue(varName).trim();
+  });
+
+  // ---------------------------------------------------------------- Stat tiles
+  const statRow = document.getElementById('statRow');
+  const stats = DATA.stats;
+  const tiles = [
+    { label: 'Total Outages', value: stats.total_outages.toLocaleString(), delta: '2000–2016, continental U.S.' },
+    { label: 'Median Duration', value: stats.median_duration_hours, unit: 'hrs', delta: 'across all recorded causes' },
+    { label: 'Model MAE', value: stats.model_mae_hours, unit: 'hrs', delta: 'gradient boosting, log-duration', good: true },
+    { label: 'Triage Accuracy', value: Math.round(stats.classifier_accuracy * 100), unit: '%', delta: `vs. ${Math.round(stats.classifier_baseline * 100)}% baseline`, good: true },
+  ];
+  statRow.innerHTML = tiles.map(t => `
+    <div class="stat-tile">
+      <div class="stat-label">${t.label}</div>
+      <div class="stat-value">${t.value}${t.unit ? ` <small>${t.unit}</small>` : ''}</div>
+      <div class="stat-delta ${t.good ? 'good' : ''}">${t.delta}</div>
+    </div>
+  `).join('');
+
+  // ---------------------------------------------------------------- Notable outages list
+  const notableList = document.getElementById('notableList');
+  notableList.innerHTML = DATA.notable.map(n => `
+    <div class="list-row">
+      <div class="list-badge">${n.state.slice(0,2).toUpperCase()}</div>
+      <div class="list-main">
+        <div class="list-title">${n.state}</div>
+        <div class="list-sub">${n.cause} &middot; ${n.year ?? '—'}</div>
+      </div>
+      <div class="list-value">
+        <div class="v">${n.duration_hours.toLocaleString()}</div>
+        <div class="u">hours</div>
+      </div>
+    </div>
+  `).join('');
+
+  // ---------------------------------------------------------------- Cause ranking list
+  const causeList = document.getElementById('causeList');
+  const maxCauseCount = Math.max(...DATA.cause_breakdown.map(c => c.count));
+  causeList.innerHTML = DATA.cause_breakdown.map(c => {
+    const key = c.cause.toLowerCase();
+    const color = RESOLVED[key] || RESOLVED['other'];
+    const pct = (c.count / maxCauseCount) * 100;
+    return `
+      <div class="cause-row">
+        <div class="cause-sw" style="background:${color}"></div>
+        <div class="cause-name">${c.cause}</div>
+        <div class="cause-bar"><div style="width:${pct}%; background:${color}"></div></div>
+        <div class="cause-count">${c.count}</div>
+      </div>
+    `;
+  }).join('');
+
+  // ---------------------------------------------------------------- Climate region tiles
+  const regionGrid = document.getElementById('regionGrid');
+  const maxRegion = Math.max(...DATA.region_breakdown.map(r => r.count));
+  const totalRegionCount = DATA.region_breakdown.reduce((s, r) => s + r.count, 0);
+  regionGrid.innerHTML = DATA.region_breakdown.map(r => {
+    const pct = Math.round((r.count / totalRegionCount) * 100);
+    const barPct = (r.count / maxRegion) * 100;
+    return `
+      <div class="region-tile">
+        <div class="region-name">${r.region}</div>
+        <div class="region-pct">${pct}%</div>
+        <div class="region-bar"><div style="width:${barPct}%"></div></div>
+      </div>
+    `;
+  }).join('');
+
+  // ================================================================== MAP
+  const mapSvg = document.getElementById('mapSvg');
+  const mapTooltip = document.getElementById('mapTooltip');
+  const mapCard = document.querySelector('.map-card');
+
+  const counts = Object.values(DATA.states).map(s => s.count);
+  const maxCount = Math.max(...counts);
+
+  function lerpColor(a, b, t) {
+    const pa = hexToRgb(a), pb = hexToRgb(b);
+    const r = Math.round(pa[0] + (pb[0] - pa[0]) * t);
+    const g = Math.round(pa[1] + (pb[1] - pa[1]) * t);
+    const b2 = Math.round(pa[2] + (pb[2] - pa[2]) * t);
+    return `rgb(${r},${g},${b2})`;
+  }
+  function hexToRgb(hex) {
+    const v = hex.replace('#', '');
+    return [parseInt(v.slice(0,2),16), parseInt(v.slice(2,4),16), parseInt(v.slice(4,6),16)];
+  }
+  const RAMP_ZERO = '#2c303c', RAMP_LOW = '#1c2536', RAMP_MID = '#2a5fa8', RAMP_HIGH = '#5ab0f2';
+  function countToColor(count) {
+    if (count === 0) return RAMP_ZERO;
+    const t = Math.sqrt(count / maxCount); // sqrt for perceptual spread since a few states dominate
+    return t < 0.5 ? lerpColor(RAMP_LOW, RAMP_MID, t / 0.5) : lerpColor(RAMP_MID, RAMP_HIGH, (t - 0.5) / 0.5);
+  }
+
+  const ns = 'http://www.w3.org/2000/svg';
+  const sortedStates = Object.entries(DATA.states).sort((a, b) => b[1].count - a[1].count);
+  const rankOf = {};
+  sortedStates.forEach(([abbr], i) => { rankOf[abbr] = i + 1; });
+
+  Object.entries(DATA.states).forEach(([abbr, s]) => {
+    const path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', s.d);
+    path.setAttribute('class', 'state-path');
+    path.setAttribute('fill', countToColor(s.count));
+    path.addEventListener('mousemove', (e) => {
+      const rect = mapCard.getBoundingClientRect();
+      mapTooltip.innerHTML = s.count > 0 ? `
+        <div class="mt-name">${s.name}</div>
+        <div>${s.count.toLocaleString()} outages &middot; rank #${rankOf[abbr]} of ${sortedStates.length}</div>
+      ` : `
+        <div class="mt-name">${s.name}</div>
+        <div>No major outages recorded</div>
+      `;
+      mapTooltip.style.left = (e.clientX - rect.left + 14) + 'px';
+      mapTooltip.style.top = (e.clientY - rect.top + 10) + 'px';
+      mapTooltip.classList.add('show');
+    });
+    path.addEventListener('mouseleave', () => mapTooltip.classList.remove('show'));
+    mapSvg.appendChild(path);
+  });
+
+  // ================================================================== CHART
+  const chartSvg = document.getElementById('chartSvg');
+  const chartWrap = document.getElementById('chartWrap');
+  const chartTooltip = document.getElementById('chartTooltip');
+  const chartLegend = document.getElementById('chartLegend');
+
+  const years = DATA.years;
+  const seriesKeys = [...DATA.top_causes, 'other'];
+  const allSeries = { total: DATA.total_series };
+  seriesKeys.forEach(k => { allSeries[k] = DATA.cause_series[k]; });
+
+  const CW = 640, CH = 300, PAD_L = 34, PAD_R = 8, PAD_T = 10, PAD_B = 26;
+  const plotW = CW - PAD_L - PAD_R, plotH = CH - PAD_T - PAD_B;
+  const maxY = Math.max(...DATA.total_series) * 1.12;
+
+  function xFor(i) { return PAD_L + (i / (years.length - 1)) * plotW; }
+  function yFor(v) { return PAD_T + plotH - (v / maxY) * plotH; }
+
+  function pathFor(series) {
+    return series.map((v, i) => `${i === 0 ? 'M' : 'L'} ${xFor(i).toFixed(1)} ${yFor(v).toFixed(1)}`).join(' ');
+  }
+  function areaFor(series) {
+    const top = series.map((v, i) => `${i === 0 ? 'M' : 'L'} ${xFor(i).toFixed(1)} ${yFor(v).toFixed(1)}`).join(' ');
+    return `${top} L ${xFor(series.length - 1).toFixed(1)} ${yFor(0).toFixed(1)} L ${xFor(0).toFixed(1)} ${yFor(0).toFixed(1)} Z`;
+  }
+
+  let svgHTML = '';
+
+  // gridlines
+  const gridSteps = 4;
+  for (let i = 0; i <= gridSteps; i++) {
+    const v = (maxY / gridSteps) * i;
+    const y = yFor(v);
+    svgHTML += `<line x1="${PAD_L}" y1="${y.toFixed(1)}" x2="${CW - PAD_R}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1"/>`;
+    svgHTML += `<text x="${PAD_L - 8}" y="${(y + 3).toFixed(1)}" font-size="9" fill="var(--text-muted)" text-anchor="end">${Math.round(v)}</text>`;
+  }
+  // x labels (every other year)
+  years.forEach((yr, i) => {
+    if (i % 3 !== 0) return;
+    svgHTML += `<text x="${xFor(i).toFixed(1)}" y="${CH - 8}" font-size="9" fill="var(--text-muted)" text-anchor="middle">${yr}</text>`;
+  });
+
+  // total area + line
+  svgHTML += `<path class="series-area total-area" d="${areaFor(allSeries.total)}" fill="var(--accent)"/>`;
+  svgHTML += `<path class="series-line total" d="${pathFor(allSeries.total)}" stroke="var(--accent)"/>`;
+
+  // category lines (hidden by default, shown on hover)
+  seriesKeys.forEach(key => {
+    const color = SERIES_COLORS[key];
+    svgHTML += `<path class="series-line cat-line" data-key="${key}" d="${pathFor(allSeries[key])}" stroke="${color}"/>`;
+  });
+
+  // crosshair + hover dots
+  svgHTML += `<line id="crosshair" class="crosshair" x1="0" y1="${PAD_T}" x2="0" y2="${PAD_T + plotH}"/>`;
+  svgHTML += `<circle id="dot-total" class="hover-dot" fill="var(--accent)"/>`;
+  seriesKeys.forEach(key => {
+    svgHTML += `<circle id="dot-${key.replace(/\s+/g,'-')}" class="hover-dot cat-dot" fill="${SERIES_COLORS[key]}"/>`;
+  });
+
+  // invisible hit-area rects per year, for hover
+  years.forEach((yr, i) => {
+    const bandW = plotW / years.length;
+    const bx = PAD_L + i * bandW;
+    svgHTML += `<rect class="hit-band" data-i="${i}" x="${bx.toFixed(1)}" y="${PAD_T}" width="${bandW.toFixed(1)}" height="${plotH}" fill="transparent"/>`;
+  });
+
+  chartSvg.innerHTML = svgHTML;
+
+  // legend
+  chartLegend.innerHTML = `
+    <div class="legend-item"><div class="sw" style="background:var(--accent)"></div>Total</div>
+    ${seriesKeys.map(k => `<div class="legend-item"><div class="sw" style="background:${SERIES_COLORS[k]}"></div>${SERIES_LABELS[k]}</div>`).join('')}
+  `;
+
+  const crosshair = document.getElementById('crosshair');
+  const dotTotal = document.getElementById('dot-total');
+  const catDots = {};
+  seriesKeys.forEach(k => { catDots[k] = document.getElementById('dot-' + k.replace(/\s+/g,'-')); });
+
+  function showAt(i) {
+    const x = xFor(i);
+    crosshair.setAttribute('x1', x); crosshair.setAttribute('x2', x);
+    crosshair.classList.add('show');
+
+    dotTotal.setAttribute('cx', x); dotTotal.setAttribute('cy', yFor(allSeries.total[i]));
+    dotTotal.classList.add('show');
+
+    let rows = `<div class="tt-row"><div class="sw" style="background:var(--accent)"></div>Total<div class="tt-val">${allSeries.total[i]}</div></div>`;
+    seriesKeys.forEach(k => {
+      const dot = catDots[k];
+      dot.setAttribute('cx', x); dot.setAttribute('cy', yFor(allSeries[k][i]));
+      dot.classList.add('show');
+      rows += `<div class="tt-row"><div class="sw" style="background:${SERIES_COLORS[k]}"></div>${SERIES_LABELS[k]}<div class="tt-val">${allSeries[k][i]}</div></div>`;
+    });
+
+    chartTooltip.innerHTML = `<div class="tt-year">${years[i]}</div>${rows}`;
+    chartTooltip.classList.add('show');
+
+    const wrapRect = chartWrap.getBoundingClientRect();
+    const svgRect = chartSvg.getBoundingClientRect();
+    const scaleX = svgRect.width / CW;
+    let leftPx = (x * scaleX) + 14;
+    if (leftPx + 190 > wrapRect.width) leftPx = (x * scaleX) - 190;
+    chartTooltip.style.left = leftPx + 'px';
+    chartTooltip.style.top = '6px';
+  }
+
+  function hideHover() {
+    crosshair.classList.remove('show');
+    dotTotal.classList.remove('show');
+    seriesKeys.forEach(k => catDots[k].classList.remove('show'));
+    chartTooltip.classList.remove('show');
+    chartWrap.classList.remove('hovering');
+  }
+
+  chartSvg.querySelectorAll('.hit-band').forEach(band => {
+    band.addEventListener('mouseenter', () => {
+      chartWrap.classList.add('hovering');
+      showAt(parseInt(band.dataset.i, 10));
+    });
+  });
+  chartWrap.addEventListener('mouseleave', hideHover);
+})();
+
+</script>
