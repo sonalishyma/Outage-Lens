@@ -143,17 +143,21 @@
   .two-col { display: grid; grid-template-columns: minmax(360px, 0.85fr) minmax(420px, 1.15fr); gap: 18px; align-items: start; }
   .full-col { display: flex; flex-direction: column; gap: 18px; }
 
+  .map-card-big #mapSvg2 { width: 100%; height: auto; display: block; }
   .state-detail-empty {
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 40px 20px; color: var(--text-muted); font-size: 13px; text-align: center; gap: 8px;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+    padding: 28px 20px; color: var(--text-muted); font-size: 13px; text-align: center; gap: 10px;
   }
   .state-detail-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
   .state-detail-name { font-size: 20px; font-weight: 700; }
   .state-detail-rank { font-size: 12px; color: var(--text-muted); }
+  .state-detail-columns { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; gap: 28px; align-items: start; }
   .state-metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+  .state-detail-columns .state-metric-row { grid-template-columns: 1fr; }
   .state-metric { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; }
   .state-metric-label { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
   .state-metric-value { font-size: 16px; font-weight: 700; }
+  .state-cause-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 28px; }
 
   .model-compare-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .model-compare-row:last-child { border-bottom: none; }
@@ -532,8 +536,8 @@
       <section class="tab-panel" data-panel="map">
         <div class="section-title">U.S. Map</div>
         <div class="section-subtitle">Click any state for its full outage profile.</div>
-        <div class="two-col">
-          <div class="card map-card">
+        <div class="full-col">
+          <div class="card map-card map-card-big">
             <div class="card-header">
               <div>
                 <div class="card-title">Outages by State</div>
@@ -869,21 +873,25 @@
         <div class="state-detail-name">${s.name}</div>
         <div class="state-detail-rank">${s.count > 0 ? `Rank #${rank} of ${sortedStates.length}` : 'No data'}</div>
       </div>
-      <div class="state-metric-row">
-        <div class="state-metric">
-          <div class="state-metric-label">Outages</div>
-          <div class="state-metric-value">${s.count.toLocaleString()}</div>
+      <div class="state-detail-columns">
+        <div class="state-metric-row">
+          <div class="state-metric">
+            <div class="state-metric-label">Outages</div>
+            <div class="state-metric-value">${s.count.toLocaleString()}</div>
+          </div>
+          <div class="state-metric">
+            <div class="state-metric-label">Avg Duration</div>
+            <div class="state-metric-value">${s.avg_duration_hours != null ? s.avg_duration_hours + 'h' : '—'}</div>
+          </div>
+          <div class="state-metric">
+            <div class="state-metric-label">Top Cause</div>
+            <div class="state-metric-value" style="font-size:13px;">${s.top_cause ?? '—'}</div>
+          </div>
         </div>
-        <div class="state-metric">
-          <div class="state-metric-label">Avg Duration</div>
-          <div class="state-metric-value">${s.avg_duration_hours != null ? s.avg_duration_hours + 'h' : '—'}</div>
-        </div>
-        <div class="state-metric">
-          <div class="state-metric-label">Top Cause</div>
-          <div class="state-metric-value" style="font-size:13px;">${s.top_cause ?? '—'}</div>
+        <div>
+          ${causeRows ? `<div class="card-subtitle" style="margin-bottom:6px;">Causes in ${s.name}</div><div class="state-cause-grid">${causeRows}</div>` : ''}
         </div>
       </div>
-      ${causeRows ? `<div class="card-subtitle" style="margin-bottom:6px;">Causes in ${s.name}</div>${causeRows}` : ''}
     `;
   }
 
