@@ -141,6 +141,7 @@
   .section-title { font-size: 18px; font-weight: 700; margin-bottom: 2px; }
   .section-subtitle { font-size: 12.5px; color: var(--text-muted); margin-bottom: 18px; }
   .two-col { display: grid; grid-template-columns: minmax(360px, 0.85fr) minmax(420px, 1.15fr); gap: 18px; align-items: start; }
+  .causes-top-grid { display: grid; grid-template-columns: minmax(260px, 0.55fr) minmax(480px, 1.6fr); gap: 18px; align-items: start; }
   .full-col { display: flex; flex-direction: column; gap: 18px; }
 
   .map-card-big #mapSvg2 { width: 100%; height: auto; display: block; }
@@ -175,12 +176,22 @@
   .class-metric-bar > div { height: 100%; border-radius: 3px; background: var(--series-2); }
   .class-support { width: 50px; text-align: right; color: var(--text-muted); font-size: 11px; }
 
-  .fairness-compare { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; margin: 8px 0 18px; }
+  .fairness-card-full { max-width: none; }
+  .fairness-card-full .card-header { margin-bottom: 8px; }
+  .fairness-card-full .card-title { font-size: 17px; }
+  .fairness-compare { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 40px; margin: 12px 0 28px; padding: 12px 40px; }
   .fairness-group { text-align: center; }
-  .fairness-group-label { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
-  .fairness-group-value { font-size: 26px; font-weight: 700; }
-  .fairness-group-n { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
-  .fairness-vs { font-size: 12px; color: var(--text-muted); font-weight: 700; }
+  .fairness-group-label { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+  .fairness-group-value { font-size: 56px; font-weight: 700; line-height: 1; }
+  .fairness-group-n { font-size: 12.5px; color: var(--text-muted); margin-top: 8px; }
+  .fairness-vs { font-size: 13px; color: var(--text-muted); font-weight: 700; }
+  .fairness-card-full .model-compare-row { padding: 16px 0; }
+  .fairness-card-full .model-compare-name { font-size: 15px; }
+  .fairness-card-full .model-compare-bar-wrap { height: 14px; border-radius: 7px; }
+  .fairness-card-full .model-compare-bar { border-radius: 7px; }
+  .fairness-card-full .model-compare-val { font-size: 15px; width: 130px; }
+  .fairness-card-full #fairnessCompare > .card-subtitle { font-size: 13.5px; margin-top: 18px; }
+  .fairness-card-full .caveat-box { font-size: 13.5px; padding: 16px 18px; max-width: 900px; }
   .caveat-box {
     background: rgba(250, 178, 25, 0.08); border: 1px solid rgba(250, 178, 25, 0.25);
     border-radius: 12px; padding: 12px 14px; font-size: 12.5px; color: var(--text-secondary);
@@ -268,6 +279,7 @@
   /* ---------------- Outage-over-time chart ---------------- */
   .chart-wrap { position: relative; }
   #chartSvg { width: 100%; height: 300px; display: block; overflow: visible; }
+  .chart-wrap-big #chartSvg2 { width: 100%; height: auto; display: block; overflow: visible; }
   .series-line { fill: none; stroke-width: 2; opacity: 0; transition: opacity 0.35s ease; pointer-events: none; }
   .series-line.total { stroke: var(--accent); stroke-width: 3; opacity: 1; }
   .series-area { opacity: 0.16; transition: opacity 0.35s ease; }
@@ -564,16 +576,10 @@
       <section class="tab-panel" data-panel="causes">
         <div class="section-title">Causes &amp; Trends</div>
         <div class="section-subtitle">What's driving outages, and how each cause has trended since 2000.</div>
-        <div class="two-col">
-          <div class="full-col">
-            <div class="card">
-              <div class="card-header"><div class="card-title">Outage Causes, Ranked</div></div>
-              <div id="causeListBig"></div>
-            </div>
-            <div class="card">
-              <div class="card-header"><div class="card-title">Climate Regions</div></div>
-              <div class="region-grid" id="regionGridBig"></div>
-            </div>
+        <div class="causes-top-grid">
+          <div class="card">
+            <div class="card-header"><div class="card-title">Outage Causes, Ranked</div></div>
+            <div id="causeListBig"></div>
           </div>
           <div class="card">
             <div class="card-header">
@@ -583,12 +589,16 @@
               </div>
               <div class="card-hint">hover to break down by cause &rarr;</div>
             </div>
-            <div class="chart-wrap" id="chartWrap2">
+            <div class="chart-wrap chart-wrap-big" id="chartWrap2">
               <svg id="chartSvg2" viewBox="0 0 640 300" preserveAspectRatio="none"></svg>
               <div class="chart-tooltip" id="chartTooltip2"></div>
             </div>
             <div class="legend" id="chartLegend2"></div>
           </div>
+        </div>
+        <div class="card" style="margin-top:18px;">
+          <div class="card-header"><div class="card-title">Climate Regions</div></div>
+          <div class="region-grid" id="regionGridBig"></div>
         </div>
       </section>
 
@@ -625,7 +635,7 @@
       <section class="tab-panel" data-panel="fairness">
         <div class="section-title">Fairness Analysis</div>
         <div class="section-subtitle">Is the duration model equally accurate across different outage causes?</div>
-        <div class="card" style="max-width:640px;">
+        <div class="card fairness-card-full">
           <div class="card-header"><div class="card-title">RMSE by Cause Group</div></div>
           <div id="fairnessCompare"></div>
           <div id="fairnessCaveat"></div>
@@ -911,26 +921,31 @@
   const allSeries = { total: DATA.total_series };
   seriesKeys.forEach(k => { allSeries[k] = DATA.cause_series[k]; });
 
-  const CW = 640, CH = 300, PAD_L = 34, PAD_R = 8, PAD_T = 10, PAD_B = 26;
-  const plotW = CW - PAD_L - PAD_R, plotH = CH - PAD_T - PAD_B;
   const maxY = Math.max(...DATA.total_series) * 1.12;
 
-  function xFor(i) { return PAD_L + (i / (years.length - 1)) * plotW; }
-  function yFor(v) { return PAD_T + plotH - (v / maxY) * plotH; }
-  function pathFor(series) {
-    return series.map((v, i) => `${i === 0 ? 'M' : 'L'} ${xFor(i).toFixed(1)} ${yFor(v).toFixed(1)}`).join(' ');
-  }
-  function areaFor(series) {
-    const top = series.map((v, i) => `${i === 0 ? 'M' : 'L'} ${xFor(i).toFixed(1)} ${yFor(v).toFixed(1)}`).join(' ');
-    return `${top} L ${xFor(series.length - 1).toFixed(1)} ${yFor(0).toFixed(1)} L ${xFor(0).toFixed(1)} ${yFor(0).toFixed(1)} Z`;
-  }
-
-  function buildChart(svgId, wrapId, tooltipId, legendId) {
+  function buildChart(svgId, wrapId, tooltipId, legendId, opts) {
     const chartSvg = document.getElementById(svgId);
     const chartWrap = document.getElementById(wrapId);
     const chartTooltip = document.getElementById(tooltipId);
     const chartLegend = document.getElementById(legendId);
     if (!chartSvg) return;
+
+    const CW = (opts && opts.width) || 640;
+    const CH = (opts && opts.height) || 300;
+    const PAD_L = 34, PAD_R = 8, PAD_T = 10, PAD_B = 26;
+    const plotW = CW - PAD_L - PAD_R, plotH = CH - PAD_T - PAD_B;
+
+    chartSvg.setAttribute('viewBox', `0 0 ${CW} ${CH}`);
+
+    function xFor(i) { return PAD_L + (i / (years.length - 1)) * plotW; }
+    function yFor(v) { return PAD_T + plotH - (v / maxY) * plotH; }
+    function pathFor(series) {
+      return series.map((v, i) => `${i === 0 ? 'M' : 'L'} ${xFor(i).toFixed(1)} ${yFor(v).toFixed(1)}`).join(' ');
+    }
+    function areaFor(series) {
+      const top = series.map((v, i) => `${i === 0 ? 'M' : 'L'} ${xFor(i).toFixed(1)} ${yFor(v).toFixed(1)}`).join(' ');
+      return `${top} L ${xFor(series.length - 1).toFixed(1)} ${yFor(0).toFixed(1)} L ${xFor(0).toFixed(1)} ${yFor(0).toFixed(1)} Z`;
+    }
 
     let svgHTML = '';
     const gridSteps = 4;
@@ -1021,8 +1036,8 @@
     chartWrap.addEventListener('mouseleave', hideHover);
   }
 
-  buildChart('chartSvg', 'chartWrap', 'chartTooltip', 'chartLegend');
-  buildChart('chartSvg2', 'chartWrap2', 'chartTooltip2', 'chartLegend2');
+  buildChart('chartSvg', 'chartWrap', 'chartTooltip', 'chartLegend', { width: 640, height: 300 });
+  buildChart('chartSvg2', 'chartWrap2', 'chartTooltip2', 'chartLegend2', { width: 900, height: 460 });
 
   // ================================================================== DURATION MODEL TAB
   const md = DATA.model_detail;
