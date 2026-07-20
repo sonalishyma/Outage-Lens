@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <title>Power Outage Analytics</title>
 <style>
   :root {
@@ -378,14 +379,147 @@
   .banner-title { font-size: 13px; font-weight: 700; }
   .banner-sub { font-size: 11.5px; color: var(--text-secondary); margin-top: 2px; }
 
+  /* ---------------- Project tour ---------------- */
+  body.tour-open { overflow: hidden; }
+  .tour-overlay {
+    position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center;
+    padding: 28px; background: rgba(5, 6, 10, 0.88); backdrop-filter: blur(14px);
+    transition: opacity 0.22s ease, visibility 0.22s ease;
+  }
+  .tour-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+  .tour-shell {
+    width: min(1080px, 100%); max-height: min(760px, calc(100vh - 56px));
+    display: grid; grid-template-columns: 260px minmax(0, 1fr); overflow: hidden;
+    background: #111218; border: 1px solid var(--border-strong); border-radius: 24px;
+    box-shadow: 0 28px 90px rgba(0,0,0,0.62);
+  }
+  .tour-menu { padding: 30px 22px; background: #0d0e13; border-right: 1px solid var(--border); }
+  .tour-brand { display:flex; align-items:center; gap:10px; margin-bottom: 30px; font-weight: 750; }
+  .tour-kicker { margin-bottom: 10px; color: #7db2f0; font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+  .tour-menu-item {
+    width: 100%; display: flex; align-items: center; gap: 11px; padding: 11px 12px;
+    border: 0; border-radius: 10px; background: transparent; color: var(--text-muted);
+    font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+  }
+  .tour-menu-item:hover { color: var(--text-primary); background: var(--surface-1); }
+  .tour-menu-item.active { color: white; background: var(--accent-soft); }
+  .tour-step-number {
+    width: 24px; height: 24px; display: grid; place-items: center; flex: none;
+    border: 1px solid var(--border-strong); border-radius: 7px; font-size: 10px; font-weight: 750;
+  }
+  .tour-menu-item.active .tour-step-number { background: var(--accent); border-color: var(--accent); }
+  .tour-content { min-height: 590px; padding: 48px 52px 34px; display: flex; flex-direction: column; overflow-y: auto; }
+  .tour-slide { display: none; animation: tourIn .25s ease; }
+  .tour-slide.active { display: block; }
+  @keyframes tourIn { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:none; } }
+  .tour-eyebrow { color: #7db2f0; font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+  .tour-title { max-width: 720px; margin: 10px 0 14px; font-size: clamp(30px, 4vw, 49px); line-height: 1.05; letter-spacing: -.035em; }
+  .tour-lede { max-width: 710px; color: var(--text-secondary); font-size: 16px; line-height: 1.65; }
+  .tour-question { margin-top: 26px; padding: 18px 20px; border: 1px solid rgba(57,135,229,.28); border-radius: 14px; background: var(--accent-soft); font-size: 16px; line-height: 1.5; }
+  .tour-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; margin-top: 25px; }
+  .tour-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface-1); }
+  .tour-card-icon { color: #7db2f0; font-size: 18px; margin-bottom: 9px; }
+  .tour-card h3 { margin: 0 0 6px; font-size: 14px; }
+  .tour-card p { margin: 0; color: var(--text-secondary); font-size: 12.5px; line-height: 1.55; }
+  .tour-tip { margin-top: 18px; color: var(--text-muted); font-size: 12.5px; line-height: 1.5; }
+  .tour-footer { display:flex; align-items:center; gap:10px; margin-top:auto; padding-top:30px; }
+  .tour-progress { color: var(--text-muted); font-size: 12px; }
+  .tour-footer-spacer { flex:1; }
+  .tour-btn { border: 0; border-radius: 10px; padding: 10px 17px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+  .tour-btn.secondary { color: var(--text-secondary); background: var(--surface-2); }
+  .tour-btn.primary { color: white; background: var(--accent); }
+  .tour-btn:hover { filter: brightness(1.1); }
+  .tour-launch { cursor: pointer; }
+
   @media (max-width: 980px) {
     .app-shell { grid-template-columns: 1fr; }
     .sidebar { display: none; }
     .grid { grid-template-columns: 1fr; }
     .stat-row { grid-template-columns: repeat(2, 1fr); }
     .region-grid { grid-template-columns: repeat(2, 1fr); }
+    .tour-overlay { padding: 12px; }
+    .tour-shell { max-height: calc(100vh - 24px); grid-template-columns: 1fr; }
+    .tour-menu { padding: 18px 20px; border-right: 0; border-bottom: 1px solid var(--border); }
+    .tour-brand { margin-bottom: 14px; }
+    .tour-nav { display:flex; gap:6px; overflow-x:auto; }
+    .tour-menu-item { width:auto; white-space:nowrap; padding:8px; }
+    .tour-menu-label { display:none; }
+    .tour-content { min-height: 0; padding: 28px 24px 22px; }
+    .tour-card-grid { grid-template-columns: 1fr; }
   }
 </style>
+
+<div class="tour-overlay" id="projectTour" role="dialog" aria-modal="true" aria-labelledby="tourTitle">
+  <div class="tour-shell">
+    <aside class="tour-menu">
+      <div class="tour-brand"><div class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="white"/></svg></div> Outage<span style="color:var(--accent)">Lens</span></div>
+      <div class="tour-kicker">Project tour</div>
+      <nav class="tour-nav" aria-label="Tour sections">
+        <button class="tour-menu-item active" data-tour-step="0"><span class="tour-step-number">01</span><span class="tour-menu-label">The project</span></button>
+        <button class="tour-menu-item" data-tour-step="1"><span class="tour-step-number">02</span><span class="tour-menu-label">Map &amp; timeline</span></button>
+        <button class="tour-menu-item" data-tour-step="2"><span class="tour-step-number">03</span><span class="tour-menu-label">Causes &amp; regions</span></button>
+        <button class="tour-menu-item" data-tour-step="3"><span class="tour-step-number">04</span><span class="tour-menu-label">Prediction model</span></button>
+        <button class="tour-menu-item" data-tour-step="4"><span class="tour-step-number">05</span><span class="tour-menu-label">Fairness &amp; limits</span></button>
+      </nav>
+    </aside>
+    <div class="tour-content">
+      <div class="tour-slide active" data-tour-slide="0">
+        <div class="tour-eyebrow">Major U.S. power outages · 2000–2016</div>
+        <h1 class="tour-title" id="tourTitle">What makes an outage last longer?</h1>
+        <p class="tour-lede">OutageLens explores 1,534 major power outages from Purdue University's LASCI dataset. We connect where and why outages happen with how long restoration takes, then test how useful those patterns are for early estimates.</p>
+        <div class="tour-question"><strong>Our objective:</strong> understand how outage cause affects duration—and determine whether information available near the start can predict restoration time.</div>
+        <p class="tour-tip">This tour takes about one minute. Use the numbered menu or the arrow buttons to move through it.</p>
+      </div>
+      <div class="tour-slide" data-tour-slide="1">
+        <div class="tour-eyebrow">Explore when and where</div>
+        <h2 class="tour-title">Map &amp; timeline</h2>
+        <div class="tour-card-grid">
+          <div class="tour-card"><div class="tour-card-icon">⌖</div><h3>Outages by State</h3><p>Darker blue means more recorded major outages. Hover for a quick count; click a state for duration, its leading cause, and a full cause breakdown. This shows frequency—not grid reliability or outage risk per resident.</p></div>
+          <div class="tour-card"><div class="tour-card-icon">↗</div><h3>Power Outages Over Time</h3><p>The blue line is the total number of outages recorded each year. Hover to reveal colored cause-level lines and see what drove a rise or fall. The partial 2016 value only covers January through July.</p></div>
+          <div class="tour-card"><div class="tour-card-icon">◷</div><h3>Longest Outages</h3><p>A ranked list of extreme restoration times. These cases reveal the dataset's long tail and explain why a few multi-week outages can distort averages and raw-error metrics.</p></div>
+          <div class="tour-card"><div class="tour-card-icon">▦</div><h3>Summary tiles</h3><p>Headline counts and model results give orientation. Median duration describes a typical recorded outage more robustly than the mean; MAE is the model's average absolute miss.</p></div>
+        </div>
+      </div>
+      <div class="tour-slide" data-tour-slide="2">
+        <div class="tour-eyebrow">Explore what drives outages</div>
+        <h2 class="tour-title">Causes &amp; climate regions</h2>
+        <div class="tour-card-grid">
+          <div class="tour-card"><div class="tour-card-icon">ϟ</div><h3>Cause ranking</h3><p>Bars compare the number of outages assigned to each cause category. Severe weather is the largest category. Counts describe prevalence in this dataset; they do not prove that a cause makes an outage longer.</p></div>
+          <div class="tour-card"><div class="tour-card-icon">◎</div><h3>Climate regions</h3><p>Each tile shows a region's share of all recorded outages. These NOAA regions help compare broad climate patterns while avoiding noisy state-level categories in the prediction model.</p></div>
+          <div class="tour-card"><div class="tour-card-icon">≠</div><h3>Hypothesis test</h3><p>A permutation test compares severe-weather duration with other causes. The observed difference is unlikely under the no-effect hypothesis (p &lt; 0.05), supporting a real association with longer duration.</p></div>
+          <div class="tour-card"><div class="tour-card-icon">!</div><h3>Read association carefully</h3><p>Cause, geography, season, and infrastructure can overlap. The visuals uncover patterns, while the test measures evidence—not a complete causal explanation.</p></div>
+        </div>
+      </div>
+      <div class="tour-slide" data-tour-slide="3">
+        <div class="tour-eyebrow">Estimate restoration time</div>
+        <h2 class="tour-title">The prediction model</h2>
+        <p class="tour-lede">The model uses cause, climate and NERC region, season, start time, year, and population density—features knowable around outage onset. Gradient boosting predicts log-duration so rare, extremely long events do not dominate training.</p>
+        <div class="tour-card-grid">
+          <div class="tour-card"><h3>Baseline → final bars</h3><p>Shorter MAE bars are better. The final model averages a 38.6-hour absolute error, improving on linear regression's 43.4 hours. The gain is meaningful but modest.</p></div>
+          <div class="tour-card"><h3>Duration buckets</h3><p>Precision and recall show performance for &lt;1 day, 1–3 days, and 3+ days. This triage view asks a more actionable question than predicting an exact minute.</p></div>
+          <div class="tour-card"><h3>Log-scale R²</h3><p>R² = 0.53 describes fit on the transformed target the model optimizes. Raw-duration R² is only 0.08 because a handful of extreme outages dominate that scale.</p></div>
+          <div class="tour-card"><h3>What it cannot know</h3><p>The data lacks physical damage, crew availability, and dispatch information. Treat the model as a pattern-based estimate, not a real-time restoration promise.</p></div>
+        </div>
+      </div>
+      <div class="tour-slide" data-tour-slide="4">
+        <div class="tour-eyebrow">Interpret responsibly</div>
+        <h2 class="tour-title">Fairness, uncertainty &amp; next steps</h2>
+        <div class="tour-card-grid">
+          <div class="tour-card"><h3>Fairness comparison</h3><p>The chart compares model RMSE for severe weather and equipment failure. Larger RMSE means less accurate predictions for that group.</p></div>
+          <div class="tour-card"><h3>Small-sample warning</h3><p>Only 12 equipment-failure examples appear in the test set, versus 151 severe-weather cases. That group's error estimate is therefore highly uncertain.</p></div>
+          <div class="tour-card"><h3>Test conclusion</h3><p>The fairness permutation test gives p = 0.0795, so we do not find statistically significant evidence of unequal error at α = 0.05. This is not proof that the model is fair.</p></div>
+          <div class="tour-card"><h3>How to explore</h3><p>Start on the dashboard, hover over the trend, click states on the map, then compare the model and fairness tabs. The Data and Notebook sections expose the evidence behind every view.</p></div>
+        </div>
+      </div>
+      <div class="tour-footer">
+        <span class="tour-progress" id="tourProgress">1 of 5</span><span class="tour-footer-spacer"></span>
+        <button class="tour-btn secondary" id="tourSkip">Skip tour</button>
+        <button class="tour-btn secondary" id="tourPrev" hidden>Back</button>
+        <button class="tour-btn primary" id="tourNext">Next →</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="app-shell">
   <aside class="sidebar">
@@ -397,6 +531,10 @@
     </div>
 
     <div class="nav-section-label">Analysis</div>
+    <button class="nav-item tour-launch" id="tourLaunch" type="button">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 014.8 1c0 2-2.3 2.2-2.3 4"/><path d="M12 18h.01"/></svg>
+      Project Tour
+    </button>
     <div class="nav-item active" data-tab="dashboard">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
       Dashboard
@@ -670,6 +808,49 @@
 </script>
 <script>
 (function () {
+  // ================================================================== PROJECT TOUR
+  const tour = document.getElementById('projectTour');
+  const tourSlides = [...document.querySelectorAll('[data-tour-slide]')];
+  const tourMenuItems = [...document.querySelectorAll('[data-tour-step]')];
+  const tourProgress = document.getElementById('tourProgress');
+  const tourPrev = document.getElementById('tourPrev');
+  const tourNext = document.getElementById('tourNext');
+  const tourSkip = document.getElementById('tourSkip');
+  let tourStep = 0;
+
+  function showTourStep(step) {
+    tourStep = Math.max(0, Math.min(step, tourSlides.length - 1));
+    tourSlides.forEach((slide, i) => slide.classList.toggle('active', i === tourStep));
+    tourMenuItems.forEach((item, i) => item.classList.toggle('active', i === tourStep));
+    tourProgress.textContent = `${tourStep + 1} of ${tourSlides.length}`;
+    tourPrev.hidden = tourStep === 0;
+    tourSkip.hidden = tourStep > 0;
+    tourNext.textContent = tourStep === tourSlides.length - 1 ? 'Explore dashboard →' : 'Next →';
+    tourNext.focus();
+  }
+  function openTour() {
+    tour.classList.remove('hidden');
+    document.body.classList.add('tour-open');
+    showTourStep(0);
+  }
+  function closeTour() {
+    tour.classList.add('hidden');
+    document.body.classList.remove('tour-open');
+    document.getElementById('tourLaunch').focus();
+  }
+  tourMenuItems.forEach(item => item.addEventListener('click', () => showTourStep(Number(item.dataset.tourStep))));
+  tourPrev.addEventListener('click', () => showTourStep(tourStep - 1));
+  tourNext.addEventListener('click', () => tourStep === tourSlides.length - 1 ? closeTour() : showTourStep(tourStep + 1));
+  tourSkip.addEventListener('click', closeTour);
+  document.getElementById('tourLaunch').addEventListener('click', openTour);
+  document.addEventListener('keydown', (event) => {
+    if (tour.classList.contains('hidden')) return;
+    if (event.key === 'Escape') closeTour();
+    if (event.key === 'ArrowRight') showTourStep(tourStep + 1);
+    if (event.key === 'ArrowLeft') showTourStep(tourStep - 1);
+  });
+  document.body.classList.add('tour-open');
+
   const DATA = JSON.parse(document.getElementById('dashboard-data').textContent);
   const SERIES_COLORS = {
     'severe weather': 'var(--series-1)',
