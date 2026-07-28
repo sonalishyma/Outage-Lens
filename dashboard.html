@@ -13,6 +13,10 @@
     --text-muted: #6f717d;
     --accent: #3987e5;
     --accent-soft: rgba(57,135,229,0.16);
+    --accent-violet: #7c5cff;
+    --accent-cyan: #2dd4ff;
+    --gradient-primary: linear-gradient(135deg, #148cff 0%, #4057f5 48%, #8a42f4 100%);
+    --gradient-cool: linear-gradient(135deg, rgba(45,212,255,0.18), rgba(91,92,246,0.16) 55%, rgba(139,92,246,0.08));
     --good: #0ca30c;
 
     --series-1: #3987e5; /* severe weather */
@@ -33,9 +37,11 @@
   }
   body {
     background:
-      radial-gradient(1200px 700px at 78% -10%, rgba(57,135,229,0.16), transparent 60%),
-      radial-gradient(900px 600px at 0% 100%, rgba(144,133,233,0.10), transparent 60%),
+      radial-gradient(1100px 720px at 88% -8%, rgba(45,212,255,0.12), transparent 58%),
+      radial-gradient(950px 680px at 66% 4%, rgba(76,81,255,0.20), transparent 60%),
+      radial-gradient(820px 640px at 18% 100%, rgba(139,92,246,0.14), transparent 62%),
       var(--bg-0);
+    background-attachment: fixed;
     min-height: 100%;
   }
 
@@ -47,7 +53,9 @@
 
   /* ---------------- Sidebar ---------------- */
   .sidebar {
-    background: var(--bg-1);
+    background:
+      radial-gradient(360px 520px at -20% 10%, rgba(45,212,255,0.08), transparent 65%),
+      linear-gradient(180deg, rgba(17,18,29,0.98), rgba(10,10,15,0.98));
     border-right: 1px solid var(--border);
     padding: 20px 14px;
     display: flex;
@@ -60,12 +68,17 @@
   }
   .brand-mark {
     width: 30px; height: 30px; border-radius: 9px;
-    background: linear-gradient(135deg, #3987e5, #9085e9);
+    background: var(--gradient-primary);
+    box-shadow: 0 8px 24px rgba(91,92,246,0.32), inset 0 1px 0 rgba(255,255,255,0.26);
     display: flex; align-items: center; justify-content: center;
     flex: none;
   }
   .brand-name { font-weight: 700; font-size: 15px; letter-spacing: 0.2px; }
-  .brand-name span { color: var(--accent); }
+  .brand-name span {
+    color: #79c8ff;
+    background: linear-gradient(90deg, #79c8ff, #a78bfa);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
 
   .nav-section-label {
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
@@ -83,15 +96,16 @@
   .nav-item svg { flex: none; opacity: 0.8; }
   .nav-item:hover { background: var(--surface-2); color: var(--text-primary); }
   .nav-item.active {
-    background: var(--accent);
+    background: var(--gradient-primary);
     color: white;
+    box-shadow: 0 8px 22px rgba(63,81,238,0.24), inset 0 1px 0 rgba(255,255,255,0.18);
   }
   .nav-item.active svg { opacity: 1; }
 
   .sidebar-footer {
     margin-top: auto;
     padding: 12px; border-radius: 12px;
-    background: var(--surface-1); border: 1px solid var(--border);
+    background: var(--gradient-cool); border: 1px solid rgba(125,178,240,0.18);
     font-size: 12px; color: var(--text-secondary);
   }
   .sidebar-footer strong { color: var(--text-primary); display: block; font-size: 13px; margin-bottom: 2px; }
@@ -101,6 +115,8 @@
     display: flex; align-items: center; gap: 14px;
     padding: 16px 28px;
     border-bottom: 1px solid var(--border);
+    background: linear-gradient(90deg, rgba(10,10,13,0.72), rgba(18,20,35,0.48));
+    backdrop-filter: blur(18px);
   }
   .search-wrap { position: relative; width: 280px; }
   .search {
@@ -222,8 +238,9 @@
 
   .ext-link-btn {
     display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent); color: white; font-weight: 600; font-size: 12.5px;
+    background: var(--gradient-primary); color: white; font-weight: 600; font-size: 12.5px;
     padding: 9px 16px; border-radius: 10px; text-decoration: none; margin-top: 4px;
+    box-shadow: 0 8px 24px rgba(63,81,238,0.22);
   }
   .ext-link-btn:hover { filter: brightness(1.1); }
   .ext-link-btn.secondary { background: var(--surface-2); color: var(--text-primary); }
@@ -252,10 +269,15 @@
   .col { display: flex; flex-direction: column; gap: 18px; }
 
   .card {
-    background: var(--surface-1);
-    border: 1px solid var(--border);
+    background:
+      radial-gradient(540px 220px at 105% -15%, rgba(65,87,245,0.22), transparent 58%) padding-box,
+      radial-gradient(420px 200px at -8% 112%, rgba(138,66,244,0.13), transparent 60%) padding-box,
+      linear-gradient(145deg, rgba(24,27,43,0.98), rgba(13,15,24,0.98)) padding-box,
+      linear-gradient(135deg, rgba(45,212,255,0.38), rgba(91,92,246,0.24) 48%, rgba(139,92,246,0.14)) border-box;
+    border: 1px solid transparent;
     border-radius: 16px;
     padding: 18px 18px 16px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.16);
   }
   .card-header {
     display: flex; align-items: baseline; justify-content: space-between;
@@ -268,14 +290,23 @@
   /* ---------------- Stat tiles ---------------- */
   .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .stat-tile {
-    background: var(--surface-1); border: 1px solid var(--border); border-radius: 14px;
+    background: linear-gradient(135deg, #087fe8 0%, #3349e7 52%, #7537db 100%);
+    border: 1px solid rgba(255,255,255,0.18); border-radius: 14px;
     padding: 14px 14px;
+    box-shadow: 0 16px 38px rgba(31,69,229,0.28), inset 0 1px 0 rgba(255,255,255,0.22);
   }
-  .stat-label { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .stat-tile:nth-child(2) { background: linear-gradient(135deg, #3146e9, #7040e6 58%, #a23fd5); }
+  .stat-tile:nth-child(3) { background: linear-gradient(135deg, #5444ed, #853fdd 52%, #ca3ea8); }
+  .stat-tile:nth-child(4) { background: linear-gradient(135deg, #077bcf, #3155e1 50%, #6741de); }
+  .stat-value {
+    background: linear-gradient(90deg, #ffffff, #b9d8ff);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .stat-label { font-size: 11px; color: rgba(255,255,255,0.72); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
   .stat-value { font-size: 22px; font-weight: 700; }
-  .stat-value small { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-  .stat-delta { font-size: 11.5px; margin-top: 4px; color: var(--text-secondary); }
-  .stat-delta.good { color: var(--good); }
+  .stat-value small { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); -webkit-text-fill-color: rgba(255,255,255,0.7); }
+  .stat-delta { font-size: 11.5px; margin-top: 4px; color: rgba(255,255,255,0.72); }
+  .stat-delta.good { color: #bfffd5; }
 
   /* ---------------- Outage-over-time chart ---------------- */
   .chart-wrap { position: relative; }
@@ -352,11 +383,15 @@
 
   /* ---------------- Climate region tiles ---------------- */
   .region-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-  .region-tile { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; }
+  .region-tile, .state-metric {
+    background: linear-gradient(135deg, rgba(45,212,255,0.08), rgba(91,92,246,0.08) 58%, rgba(139,92,246,0.05));
+    border: 1px solid rgba(125,178,240,0.10);
+  }
+  .region-tile { border-radius: 12px; padding: 10px 12px; }
   .region-name { font-size: 11px; color: var(--text-secondary); margin-bottom: 4px; }
   .region-pct { font-size: 16px; font-weight: 700; }
   .region-bar { height: 4px; border-radius: 2px; background: rgba(255,255,255,0.08); margin-top: 6px; overflow: hidden; }
-  .region-bar > div { height: 100%; background: var(--accent); border-radius: 2px; }
+  .region-bar > div { height: 100%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-violet)); border-radius: 2px; }
 
   /* ---------------- Cause ranking ---------------- */
   .cause-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; }
@@ -368,16 +403,17 @@
 
   .banner {
     display: flex; align-items: center; gap: 14px;
-    background: linear-gradient(120deg, rgba(57,135,229,0.18), rgba(144,133,233,0.10));
-    border: 1px solid rgba(57,135,229,0.25);
+    background: linear-gradient(115deg, rgba(8,127,232,0.88), rgba(64,74,232,0.88) 48%, rgba(138,66,244,0.84));
+    border: 1px solid rgba(255,255,255,0.18);
     border-radius: 14px; padding: 14px 16px;
+    box-shadow: 0 18px 40px rgba(49,70,233,0.24);
   }
   .banner-icon {
-    width: 38px; height: 38px; border-radius: 10px; background: rgba(57,135,229,0.25);
+    width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.16);
     display: flex; align-items: center; justify-content: center; flex: none;
   }
   .banner-title { font-size: 13px; font-weight: 700; }
-  .banner-sub { font-size: 11.5px; color: var(--text-secondary); margin-top: 2px; }
+  .banner-sub { font-size: 11.5px; color: rgba(255,255,255,0.76); margin-top: 2px; }
 
   /* ---------------- Project tour ---------------- */
   body.tour-open { overflow: hidden; }
@@ -390,10 +426,10 @@
   .tour-shell {
     width: min(1080px, 100%); max-height: min(760px, calc(100vh - 56px));
     display: grid; grid-template-columns: 260px minmax(0, 1fr); overflow: hidden;
-    background: #111218; border: 1px solid var(--border-strong); border-radius: 24px;
+    background: linear-gradient(145deg, #151724, #0e0f16); border: 1px solid var(--border-strong); border-radius: 24px;
     box-shadow: 0 28px 90px rgba(0,0,0,0.62);
   }
-  .tour-menu { padding: 30px 22px; background: #0d0e13; border-right: 1px solid var(--border); }
+  .tour-menu { padding: 30px 22px; background: linear-gradient(180deg, #10121d, #0b0c12); border-right: 1px solid var(--border); }
   .tour-brand { display:flex; align-items:center; gap:10px; margin-bottom: 30px; font-weight: 750; }
   .tour-kicker { margin-bottom: 10px; color: #7db2f0; font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
   .tour-menu-item {
@@ -407,7 +443,7 @@
     width: 24px; height: 24px; display: grid; place-items: center; flex: none;
     border: 1px solid var(--border-strong); border-radius: 7px; font-size: 10px; font-weight: 750;
   }
-  .tour-menu-item.active .tour-step-number { background: var(--accent); border-color: var(--accent); }
+  .tour-menu-item.active .tour-step-number { background: var(--gradient-primary); border-color: transparent; }
   .tour-content { min-height: 590px; padding: 48px 52px 34px; display: flex; flex-direction: column; overflow-y: auto; }
   .tour-slide { display: none; animation: tourIn .25s ease; }
   .tour-slide.active { display: block; }
@@ -427,9 +463,49 @@
   .tour-footer-spacer { flex:1; }
   .tour-btn { border: 0; border-radius: 10px; padding: 10px 17px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
   .tour-btn.secondary { color: var(--text-secondary); background: var(--surface-2); }
-  .tour-btn.primary { color: white; background: var(--accent); }
+  .tour-btn.primary { color: white; background: var(--gradient-primary); box-shadow: 0 8px 22px rgba(63,81,238,0.26); }
   .tour-btn:hover { filter: brightness(1.1); }
   .tour-launch { cursor: pointer; }
+  .tour-overlay.guided { display: none; }
+  body::after {
+    content: ""; position: fixed; inset: 0; z-index: 1000;
+    background: rgba(5,6,12,0.76); opacity: 0; visibility: hidden;
+    pointer-events: none;
+    transition: opacity .42s cubic-bezier(.22,.8,.3,1), visibility .42s ease;
+  }
+  body.tour-guided-active::after { opacity: 1; visibility: visible; }
+  .tour-highlight {
+    position: relative; z-index: 1001;
+    border-radius: 16px;
+    outline: 2px solid rgba(45,212,255,0.9);
+    outline-offset: 5px;
+    box-shadow: 0 0 46px rgba(45,126,255,0.68), 0 18px 54px rgba(0,0,0,0.42) !important;
+    scroll-margin: 110px;
+    animation: tourSpotlightIn .56s cubic-bezier(.16,.84,.28,1) both;
+  }
+  .tour-highlight.tour-highlight-leaving { animation: tourSpotlightOut .28s cubic-bezier(.4,0,.6,1) both; }
+  @keyframes tourSpotlightIn {
+    from { opacity: .48; transform: translateY(5px) scale(.988); outline-color: transparent; filter: blur(2px); }
+    to { opacity: 1; transform: translateY(0) scale(1); outline-color: rgba(45,212,255,0.9); filter: blur(0); }
+  }
+  @keyframes tourSpotlightOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: .28; transform: translateY(-4px) scale(.992); outline-color: transparent; filter: blur(1px); }
+  }
+  .tour-popover {
+    position: fixed; z-index: 1003; width: min(340px, calc(100vw - 28px));
+    padding: 19px; border: 1px solid rgba(125,178,240,0.35); border-radius: 16px;
+    background: linear-gradient(145deg, rgba(24,28,48,0.98), rgba(12,14,24,0.98));
+    box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 34px rgba(64,87,245,0.22);
+    opacity: 0; visibility: hidden; transform: translateY(8px);
+    transition: opacity .38s ease, transform .46s cubic-bezier(.16,.84,.28,1), visibility .38s ease;
+  }
+  .tour-popover.show { opacity: 1; visibility: visible; transform: none; }
+  .tour-popover-kicker { color: #79c8ff; font-size: 10.5px; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+  .tour-popover h3 { margin: 7px 0 8px; font-size: 18px; }
+  .tour-popover p { margin: 0; color: var(--text-secondary); font-size: 13px; line-height: 1.55; }
+  .tour-popover-footer { display: flex; align-items: center; gap: 8px; margin-top: 17px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .tour-popover-progress { margin-right: auto; color: var(--text-muted); font-size: 11px; }
 
   @media (max-width: 980px) {
     .app-shell { grid-template-columns: 1fr; }
@@ -446,6 +522,7 @@
     .tour-menu-label { display:none; }
     .tour-content { min-height: 0; padding: 28px 24px 22px; }
     .tour-card-grid { grid-template-columns: 1fr; }
+    .tour-popover { left: 14px !important; right: 14px; bottom: 14px; top: auto !important; width: auto; }
   }
 </style>
 
@@ -520,6 +597,18 @@
     </div>
   </div>
 </div>
+
+<aside class="tour-popover" id="tourPopover" role="dialog" aria-live="polite" aria-labelledby="tourPopoverTitle">
+  <div class="tour-popover-kicker" id="tourPopoverKicker"></div>
+  <h3 id="tourPopoverTitle"></h3>
+  <p id="tourPopoverText"></p>
+  <div class="tour-popover-footer">
+    <span class="tour-popover-progress" id="tourPopoverProgress"></span>
+    <button class="tour-btn secondary" id="tourPopoverBack">Back</button>
+    <button class="tour-btn primary" id="tourPopoverNext">Next →</button>
+    <button class="tour-btn secondary" id="tourPopoverClose" aria-label="Close tour">×</button>
+  </div>
+</aside>
 
 <div class="app-shell">
   <aside class="sidebar">
@@ -816,33 +905,116 @@
   const tourPrev = document.getElementById('tourPrev');
   const tourNext = document.getElementById('tourNext');
   const tourSkip = document.getElementById('tourSkip');
+  const tourPopover = document.getElementById('tourPopover');
+  const tourPopoverKicker = document.getElementById('tourPopoverKicker');
+  const tourPopoverTitle = document.getElementById('tourPopoverTitle');
+  const tourPopoverText = document.getElementById('tourPopoverText');
+  const tourPopoverProgress = document.getElementById('tourPopoverProgress');
+  const tourPopoverBack = document.getElementById('tourPopoverBack');
+  const tourPopoverNext = document.getElementById('tourPopoverNext');
+  const tourPopoverClose = document.getElementById('tourPopoverClose');
+  const guidedTourSteps = [
+    { tab: 'dashboard', target: '#statRow', kicker: 'Dashboard overview', title: 'The headline metrics', text: 'These four tiles orient the analysis: total recorded outages, typical duration, model error, and triage accuracy. The median is more representative than the mean because a few outages last for weeks.' },
+    { tab: 'dashboard', target: '#chartWrap', kicker: 'Pattern over time', title: 'Power outages by year', text: 'The glowing blue line shows the annual total. Hover over it to reveal cause-level trends and see which categories drove each rise or fall. The 2016 value only covers January through July.' },
+    { tab: 'dashboard', target: '.map-card', kicker: 'Geographic view', title: 'Outages by state', text: 'Darker states have more recorded major outages. Hover for a count or click a state for duration and cause details. This visual describes the dataset—not outage risk per resident.' },
+    { tab: 'dashboard', target: '#regionGrid', kicker: 'What drives outages', title: 'Regions and causes', text: 'Climate-region tiles summarize broad geographic patterns, while the cause ranking below shows prevalence. Severe weather is the largest category, but frequency alone does not prove causation.' },
+    { tab: 'model', target: '[data-panel="model"] .two-col', kicker: 'Prediction model', title: 'Estimating restoration time', text: 'The model uses information available near outage onset. Compare baseline and final MAE, then use the duration buckets to judge the more actionable question: under one day, one to three days, or longer.' },
+    { tab: 'fairness', target: '.fairness-card-full', kicker: 'Interpret responsibly', title: 'Fairness and uncertainty', text: 'This panel compares model error across cause groups. The equipment-failure sample is very small, so the result is uncertain; a non-significant test is not proof that the model is fair.' }
+  ];
   let tourStep = 0;
+  let highlightedTourTarget = null;
+  let tourTransitionToken = 0;
 
   function showTourStep(step) {
-    tourStep = Math.max(0, Math.min(step, tourSlides.length - 1));
-    tourSlides.forEach((slide, i) => slide.classList.toggle('active', i === tourStep));
-    tourMenuItems.forEach((item, i) => item.classList.toggle('active', i === tourStep));
-    tourProgress.textContent = `${tourStep + 1} of ${tourSlides.length}`;
-    tourPrev.hidden = tourStep === 0;
-    tourSkip.hidden = tourStep > 0;
-    tourNext.textContent = tourStep === tourSlides.length - 1 ? 'Explore dashboard →' : 'Next →';
-    tourNext.focus();
+    const transitionToken = ++tourTransitionToken;
+    tourStep = Math.max(0, Math.min(step, guidedTourSteps.length));
+    const previousTarget = highlightedTourTarget;
+    if (previousTarget) previousTarget.classList.add('tour-highlight-leaving');
+    highlightedTourTarget = null;
+    tourPopover.classList.remove('show');
+    if (tourStep === 0) {
+      tour.classList.remove('guided');
+      document.body.classList.remove('tour-guided-active');
+      tourSlides.forEach((slide, i) => slide.classList.toggle('active', i === 0));
+      tourProgress.textContent = `1 of ${guidedTourSteps.length + 1}`;
+      tourPrev.hidden = true;
+      tourSkip.hidden = false;
+      tourNext.textContent = 'Start guided tour →';
+      document.body.classList.add('tour-open');
+      tourNext.focus();
+      return;
+    }
+    document.body.classList.remove('tour-open');
+    document.body.classList.add('tour-guided-active');
+    tour.classList.add('guided');
+    const item = guidedTourSteps[tourStep - 1];
+    tourPopoverKicker.textContent = item.kicker;
+    tourPopoverTitle.textContent = item.title;
+    tourPopoverText.textContent = item.text;
+    tourPopoverProgress.textContent = `${tourStep + 1} of ${guidedTourSteps.length + 1}`;
+    tourPopoverBack.hidden = false;
+    tourPopoverNext.textContent = tourStep === guidedTourSteps.length ? 'Finish →' : 'Next →';
+    window.setTimeout(() => {
+      if (transitionToken !== tourTransitionToken) return;
+      if (previousTarget) previousTarget.classList.remove('tour-highlight', 'tour-highlight-leaving');
+      activateTab(item.tab);
+      if (item.tab === 'map') ensureMapTabBuilt();
+      highlightedTourTarget = document.querySelector(item.target);
+      if (!highlightedTourTarget) return;
+      highlightedTourTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      window.setTimeout(() => {
+        if (transitionToken !== tourTransitionToken || !highlightedTourTarget) return;
+        highlightedTourTarget.classList.remove('tour-highlight-leaving');
+        highlightedTourTarget.classList.add('tour-highlight');
+        positionTourPopover();
+        tourPopover.classList.add('show');
+        tourPopoverNext.focus();
+      }, 430);
+    }, previousTarget ? 280 : 60);
+  }
+  function positionTourPopover() {
+    if (!highlightedTourTarget || tourStep === 0) return;
+    const rect = highlightedTourTarget.getBoundingClientRect();
+    const width = Math.min(340, window.innerWidth - 28);
+    const gap = 18;
+    let left = rect.right + gap;
+    if (left + width > window.innerWidth - 14) left = rect.left - width - gap;
+    left = Math.max(14, Math.min(left, window.innerWidth - width - 14));
+    const height = tourPopover.offsetHeight || 250;
+    let top = rect.top + (rect.height - height) / 2;
+    top = Math.max(14, Math.min(top, window.innerHeight - height - 14));
+    tourPopover.style.left = `${left}px`;
+    tourPopover.style.top = `${top}px`;
   }
   function openTour() {
     tour.classList.remove('hidden');
-    document.body.classList.add('tour-open');
     showTourStep(0);
   }
   function closeTour() {
+    tourTransitionToken++;
+    if (highlightedTourTarget) highlightedTourTarget.classList.remove('tour-highlight', 'tour-highlight-leaving');
+    highlightedTourTarget = null;
+    tourPopover.classList.remove('show');
     tour.classList.add('hidden');
-    document.body.classList.remove('tour-open');
+    tour.classList.remove('guided');
+    document.body.classList.remove('tour-open', 'tour-guided-active');
     document.getElementById('tourLaunch').focus();
   }
-  tourMenuItems.forEach(item => item.addEventListener('click', () => showTourStep(Number(item.dataset.tourStep))));
+  function finishTour() {
+    closeTour();
+    activateTab('dashboard');
+    window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 80);
+  }
+  tourMenuItems.forEach(item => item.addEventListener('click', () => showTourStep(item.dataset.tourStep === '0' ? 0 : Number(item.dataset.tourStep) + 1)));
   tourPrev.addEventListener('click', () => showTourStep(tourStep - 1));
-  tourNext.addEventListener('click', () => tourStep === tourSlides.length - 1 ? closeTour() : showTourStep(tourStep + 1));
+  tourNext.addEventListener('click', () => showTourStep(1));
   tourSkip.addEventListener('click', closeTour);
+  tourPopoverBack.addEventListener('click', () => showTourStep(tourStep - 1));
+  tourPopoverNext.addEventListener('click', () => tourStep === guidedTourSteps.length ? finishTour() : showTourStep(tourStep + 1));
+  tourPopoverClose.addEventListener('click', closeTour);
   document.getElementById('tourLaunch').addEventListener('click', openTour);
+  window.addEventListener('resize', positionTourPopover);
+  window.addEventListener('scroll', positionTourPopover, { passive: true });
   document.addEventListener('keydown', (event) => {
     if (tour.classList.contains('hidden')) return;
     if (event.key === 'Escape') closeTour();
