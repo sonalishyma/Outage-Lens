@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 64"><defs><linearGradient id="g" x1="8" y1="7" x2="52" y2="57"><stop stop-color="#2DD4FF"/><stop offset=".5" stop-color="#3987E5"/><stop offset="1" stop-color="#8A42F4"/></linearGradient></defs><rect x="3" y="3" width="122" height="58" rx="16" fill="#101116"/><rect x="10" y="10" width="44" height="44" rx="12" fill="url(#g)"/><path d="M35 15L20 35h10l-2 14 17-25H34z" fill="#fff"/><text x="62" y="29" fill="#F5F6F8" font-family="Arial,sans-serif" font-size="15" font-weight="700">Outage</text><text x="62" y="46" fill="#3987E5" font-family="Arial,sans-serif" font-size="15" font-weight="700">Lens</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tile" x1="11" y1="9" x2="54" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#238BFF"/>
+      <stop offset=".48" stop-color="#4057F5"/>
+      <stop offset="1" stop-color="#8A42F4"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  <rect x="7" y="8" width="50" height="50" rx="16" fill="#4057F5" opacity=".28" filter="url(#glow)"/>
+  <rect x="6" y="6" width="52" height="52" rx="16" fill="url(#tile)"/>
+  <path d="M35 15L21 34h10l-2 15 16-24H34z" fill="#FFF"/>
+</svg>
