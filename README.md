@@ -2,6 +2,10 @@
 
 **[Live interactive dashboard →](https://sonalishyma.github.io/Outage-Lens/)** — a real projected U.S. map plus a hover-decomposable trend chart built on this data. This document is the full write-up and methodology behind it.
 
+## Project Preview
+
+![Outage Lens interactive power outage dashboard](./SS1.png)
+
 ## Introduction
 
 In this project, I examine [data](https://engineering.purdue.edu/LASCI/research-data/outages) from Purdue University's Laboratory for Advancing Sustainable Critical Infrastructure on major power outages in the continental United States from January 2000 to July 2016.
