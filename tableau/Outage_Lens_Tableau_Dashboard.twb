@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- Outage Lens Tableau dashboard built from the public Purdue LASCI outage data. -->
+<workbook original-version='18.1' source-build='2026.2.0' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Outage Lens Tableau Source' inline='true' name='federated.outage' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Outage Lens Tableau Source' name='textscan.outage'>
+            <connection class='textscan' directory='.' filename='outage_tableau.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.outage' name='outage_tableau.csv' table='[outage_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Event ID' ordinal='0' />
+            <column datatype='datetime' name='Outage Start' ordinal='1' />
+            <column datatype='integer' name='YEAR' ordinal='2' />
+            <column datatype='integer' name='MONTH' ordinal='3' />
+            <column datatype='string' name='Season' ordinal='4' />
+            <column datatype='string' name='State' ordinal='5' />
+            <column datatype='string' name='Postal Code' ordinal='6' />
+            <column datatype='string' name='Climate Region' ordinal='7' />
+            <column datatype='string' name='NERC Region' ordinal='8' />
+            <column datatype='string' name='Climate Category' ordinal='9' />
+            <column datatype='string' name='Cause Category' ordinal='10' />
+            <column datatype='string' name='Cause Detail' ordinal='11' />
+            <column datatype='real' name='Duration Minutes' ordinal='12' />
+            <column datatype='real' name='Duration Hours' ordinal='13' />
+            <column datatype='string' name='Duration Bucket' ordinal='14' />
+            <column datatype='real' name='Customers Affected' ordinal='15' />
+            <column datatype='real' name='Urban Population Density' ordinal='16' />
+            <column datatype='integer' name='Outage Count' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.outage' name='outage_tableau.csv' table='[outage_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Event ID' ordinal='0' />
+            <column datatype='datetime' name='Outage Start' ordinal='1' />
+            <column datatype='integer' name='YEAR' ordinal='2' />
+            <column datatype='integer' name='MONTH' ordinal='3' />
+            <column datatype='string' name='Season' ordinal='4' />
+            <column datatype='string' name='State' ordinal='5' />
+            <column datatype='string' name='Postal Code' ordinal='6' />
+            <column datatype='string' name='Climate Region' ordinal='7' />
+            <column datatype='string' name='NERC Region' ordinal='8' />
+            <column datatype='string' name='Climate Category' ordinal='9' />
+            <column datatype='string' name='Cause Category' ordinal='10' />
+            <column datatype='string' name='Cause Detail' ordinal='11' />
+            <column datatype='real' name='Duration Minutes' ordinal='12' />
+            <column datatype='real' name='Duration Hours' ordinal='13' />
+            <column datatype='string' name='Duration Bucket' ordinal='14' />
+            <column datatype='real' name='Customers Affected' ordinal='15' />
+            <column datatype='real' name='Urban Population Density' ordinal='16' />
+            <column datatype='integer' name='Outage Count' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Cause Category]' value='[outage_tableau.csv].[Cause Category]' />
+          <map key='[Climate Region]' value='[outage_tableau.csv].[Climate Region]' />
+          <map key='[Duration Hours]' value='[outage_tableau.csv].[Duration Hours]' />
+          <map key='[Outage Count]' value='[outage_tableau.csv].[Outage Count]' />
+          <map key='[State]' value='[outage_tableau.csv].[State]' />
+          <map key='[YEAR]' value='[outage_tableau.csv].[YEAR]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[outage_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'><remote-name>YEAR</remote-name><remote-type>20</remote-type><local-name>[YEAR]</local-name><parent-name>[outage_tableau.csv]</parent-name><remote-alias>YEAR</remote-alias><ordinal>2</ordinal><local-type>integer</local-type><aggregation>Sum</aggregation><contains-null>false</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>State</remote-name><remote-type>129</remote-type><local-name>[State]</local-name><parent-name>[outage_tableau.csv]</parent-name><remote-alias>State</remote-alias><ordinal>5</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>false</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>Climate Region</remote-name><remote-type>129</remote-type><local-name>[Climate Region]</local-name><parent-name>[outage_tableau.csv]</parent-name><remote-alias>Climate Region</remote-alias><ordinal>7</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>false</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>Cause Category</remote-name><remote-type>129</remote-type><local-name>[Cause Category]</local-name><parent-name>[outage_tableau.csv]</parent-name><remote-alias>Cause Category</remote-alias><ordinal>10</ordinal><local-type>string</local-type><aggregation>Count</aggregation><contains-null>false</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>Duration Hours</remote-name><remote-type>5</remote-type><local-name>[Duration Hours]</local-name><parent-name>[outage_tableau.csv]</parent-name><remote-alias>Duration Hours</remote-alias><ordinal>13</ordinal><local-type>real</local-type><aggregation>Sum</aggregation><contains-null>false</contains-null></metadata-record>
+          <metadata-record class='column'><remote-name>Outage Count</remote-name><remote-type>20</remote-type><local-name>[Outage Count]</local-name><parent-name>[outage_tableau.csv]</parent-name><remote-alias>Outage Count</remote-alias><ordinal>17</ordinal><local-type>integer</local-type><aggregation>Sum</aggregation><contains-null>false</contains-null></metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='State' datatype='string' datatype-customized='true' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Year' datatype='integer' datatype-customized='true' name='[YEAR]' role='dimension' type='ordinal' />
+      <column caption='Cause Category' datatype='string' datatype-customized='true' name='[Cause Category]' role='dimension' type='nominal' />
+      <column caption='Climate Region' datatype='string' datatype-customized='true' name='[Climate Region]' role='dimension' type='nominal' />
+      <column caption='Duration Hours' datatype='real' datatype-customized='true' name='[Duration Hours]' role='measure' type='quantitative'>
+        <default-format format='0.0' />
+      </column>
+      <column caption='Outage Count' datatype='integer' datatype-customized='true' name='[Outage Count]' role='measure' type='quantitative'>
+        <default-format format='0' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Median Duration by Cause'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#122247' fontname='Arial' fontsize='13'>Median duration by recorded cause</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='Outage Lens Tableau Source' name='federated.outage' /></datasources>
+          <datasource-dependencies datasource='federated.outage'>
+            <column datatype='string' name='[Cause Category]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Duration Hours]' role='measure' type='quantitative' />
+            <column-instance column='[Cause Category]' derivation='None' name='[none:Cause Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Duration Hours]' derivation='Median' name='[med:Duration Hours:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'><format attr='background-color' value='#ffffff' /></style-rule>
+          <style-rule element='mark'><encoding attr='color' field='[federated.outage].[none:Cause Category:nk]' palette='tableau10' type='palette' /></style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view><breakdown value='auto' /></view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.outage].[none:Cause Category:nk]' />
+              <text column='[federated.outage].[med:Duration Hours:qk]' />
+            </encodings>
+            <style><style-rule element='mark'><format attr='mark-labels-show' value='true' /><format attr='mark-labels-cull' value='true' /></style-rule></style>
+          </pane>
+        </panes>
+        <rows>[federated.outage].[none:Cause Category:nk]</rows>
+        <cols>[federated.outage].[med:Duration Hours:qk]</cols>
+      </table>
+      <simple-id uuid='{B10A14BA-1903-45D3-9F52-63592B29E701}' />
+    </worksheet>
+    <worksheet name='Outage Count by Year'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#122247' fontname='Arial' fontsize='13'>Major outages recorded by year</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='Outage Lens Tableau Source' name='federated.outage' /></datasources>
+          <datasource-dependencies datasource='federated.outage'>
+            <column datatype='integer' name='[YEAR]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Outage Count]' role='measure' type='quantitative' />
+            <column-instance column='[YEAR]' derivation='None' name='[none:YEAR:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Outage Count]' derivation='Sum' name='[sum:Outage Count:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'><format attr='background-color' value='#ffffff' /></style-rule>
+          <style-rule element='mark'><encoding attr='color' field='[federated.outage].[sum:Outage Count:qk]' type='interpolated'><color-palette name='sequential-blue' type='ordered-sequential' /></encoding></style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view><breakdown value='auto' /></view>
+            <mark class='Line' />
+            <encodings><color column='[federated.outage].[sum:Outage Count:qk]' /></encodings>
+          </pane>
+        </panes>
+        <rows>[federated.outage].[sum:Outage Count:qk]</rows>
+        <cols>[federated.outage].[none:YEAR:ok]</cols>
+      </table>
+      <simple-id uuid='{1C4E52A2-7DA5-4BE5-8DA8-AEDE4C9C2403}' />
+    </worksheet>
+    <worksheet name='State Duration Map'>
+      <layout-options><title><formatted-text><run bold='true' fontcolor='#122247' fontname='Arial' fontsize='13'>Median duration by state</run></formatted-text></title></layout-options>
+      <table>
+        <view>
+          <datasources><datasource caption='Outage Lens Tableau Source' name='federated.outage' /></datasources>
+          <mapsources><mapsource name='Tableau' /></mapsources>
+          <datasource-dependencies datasource='federated.outage'>
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='real' name='[Duration Hours]' role='measure' type='quantitative' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Duration Hours]' derivation='Median' name='[med:Duration Hours:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'><format attr='background-color' value='#ffffff' /></style-rule>
+          <style-rule element='mark'><encoding attr='color' field='[federated.outage].[med:Duration Hours:qk]' palette='blue' type='interpolated' /></style-rule>
+          <style-rule element='map'><format attr='washout' value='25' /><format attr='map-style' value='normal' /></style-rule>
+          <style-rule element='map-data-layer'><format attr='palette' value='tableau-map-blue-green-light' /><format attr='geo-area-type' value='State' /></style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view><breakdown value='auto' /></view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.outage].[med:Duration Hours:qk]' />
+              <lod column='[federated.outage].[none:State:nk]' />
+              <text column='[federated.outage].[none:State:nk]' />
+              <geometry column='[federated.outage].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.outage].[Latitude (generated)]</rows>
+        <cols>[federated.outage].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{BD9E289D-CE91-4D2B-8724-C01B722C19DB}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Outage Lens Tableau Dashboard'>
+      <style>
+        <style-rule element='table'><format attr='background-color' value='#f7f9fc' /></style-rule>
+        <style-rule element='dash-title'><format attr='color' value='#122247' /><format attr='background-color' value='#f7f9fc' /></style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1400' minheight='900' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='1' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone forceUpdate='true' h='8500' id='2' type-v2='text' w='96000' x='2000' y='1200'>
+            <formatted-text><run bold='true' fontcolor='#122247' fontname='Arial' fontsize='22'>OUTAGE LENS</run><run fontcolor='#51617d' fontname='Arial' fontsize='11'>   Cause, geography, and duration across 1,393 major U.S. outages, 2000 to 2016</run></formatted-text>
+            <zone-style><format attr='border-style' value='none' /><format attr='margin' value='10' /></zone-style>
+          </zone>
+          <zone h='85000' id='3' name='State Duration Map' w='54500' x='2000' y='10500'><zone-style><format attr='border-color' value='#d6dfec' /><format attr='border-style' value='solid' /><format attr='border-width' value='1' /><format attr='margin' value='8' /></zone-style></zone>
+          <zone h='40500' id='4' name='Median Duration by Cause' w='40500' x='57500' y='10500'><zone-style><format attr='border-color' value='#d6dfec' /><format attr='border-style' value='solid' /><format attr='border-width' value='1' /><format attr='margin' value='8' /></zone-style></zone>
+          <zone h='40500' id='5' name='Outage Count by Year' w='40500' x='57500' y='55000'><zone-style><format attr='border-color' value='#d6dfec' /><format attr='border-style' value='solid' /><format attr='border-width' value='1' /><format attr='margin' value='8' /></zone-style></zone>
+          <zone-style><format attr='border-style' value='none' /><format attr='margin' value='8' /></zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{8A21D22A-A6FD-4626-B7DC-81B877256EB3}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Median Duration by Cause'><cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip><strip size='31'><card type='title' /></strip></edge></cards><viewpoint><zoom type='entire-view' /></viewpoint><simple-id uuid='{C1FDF357-E59B-4112-84D5-1CB6F365F87C}' /></window>
+    <window class='worksheet' name='Outage Count by Year'><cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip><strip size='31'><card type='title' /></strip></edge></cards><viewpoint><zoom type='entire-view' /></viewpoint><simple-id uuid='{F1BEB0DE-0710-423D-8C31-F3E7BBFB50C4}' /></window>
+    <window class='worksheet' name='State Duration Map'><cards><edge name='left'><strip size='160'><card type='pages' /><card type='filters' /><card type='marks' /></strip></edge><edge name='top'><strip size='2147483647'><card type='columns' /></strip><strip size='2147483647'><card type='rows' /></strip><strip size='31'><card type='title' /></strip></edge><edge name='right'><strip size='160'><card pane-specification-id='1' param='[federated.outage].[med:Duration Hours:qk]' type='color' /></strip></edge></cards><viewpoint><zoom type='entire-view' /></viewpoint><simple-id uuid='{E3378B0E-1FB3-4E12-A220-9610103E5FCB}' /></window>
+    <window class='dashboard' maximized='true' name='Outage Lens Tableau Dashboard'>
+      <viewpoints><viewpoint name='Median Duration by Cause'><zoom type='entire-view' /></viewpoint><viewpoint name='Outage Count by Year'><zoom type='entire-view' /></viewpoint><viewpoint name='State Duration Map'><zoom type='entire-view' /></viewpoint></viewpoints>
+      <active id='3' />
+      <simple-id uuid='{CE8B1D43-1957-457B-9C4E-79AD409788AB}' />
+    </window>
+  </windows>
+</workbook>

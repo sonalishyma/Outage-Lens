@@ -1,0 +1,1394 @@
+Event ID,Outage Start,YEAR,MONTH,Season,State,Postal Code,Climate Region,NERC Region,Climate Category,Cause Category,Cause Detail,Duration Minutes,Duration Hours,Duration Bucket,Customers Affected,Urban Population Density,Outage Count
+811,2000-01-23 08:00:00,2000,1,Winter,South Carolina,SC,Southeast,SERC,Cold,Severe Weather,Winter Storm,7440.0,124.0,More than 3 days,133000.0,1288.1,1
+813,2000-01-29 22:00:00,2000,1,Winter,South Carolina,SC,Southeast,SERC,Cold,Severe Weather,Winter Storm,6600.0,110.0,More than 3 days,81000.0,1288.1,1
+236,2000-03-18 16:00:00,2000,3,Spring,Texas,TX,South,TRE,Cold,System Operability Disruption,Transmission Interruption,70.0,1.1666666666666667,Under 1 day,100000.0,2435.3,1
+188,2000-05-02 04:00:00,2000,5,Spring,Texas,TX,South,TRE,Cold,Severe Weather,,480.0,8.0,Under 1 day,238000.0,2435.3,1
+924,2000-05-09 11:39:00,2000,5,Spring,New York,NY,Northeast,NPCC,Cold,System Operability Disruption,,681.0,11.35,Under 1 day,,4161.4,1
+231,2000-05-24 10:15:00,2000,5,Spring,Texas,TX,South,SPP,Cold,System Operability Disruption,,2159.0,35.983333333333334,1 to 3 days,2000000.0,2435.3,1
+732,2000-05-25 10:00:00,2000,5,Spring,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,,11280.0,188.0,More than 3 days,100000.0,1367.2,1
+505,2000-06-14 15:54:00,2000,6,Summer,Arizona,AZ,Southwest,WECC,Cold,Severe Weather,Wildfire,66.0,1.1,Under 1 day,40911.0,2625.4,1
+382,2000-08-06 16:00:00,2000,8,Summer,Illinois,IL,Central,SERC,Cold,Severe Weather,,1200.0,20.0,Under 1 day,239567.0,2877.6,1
+342,2000-08-10 21:30:00,2000,8,Summer,Alabama,AL,Southeast,SERC,Cold,Severe Weather,,1230.0,20.5,Under 1 day,75000.0,1278.5,1
+746,2000-08-18 18:30:00,2000,8,Summer,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,,2490.0,41.5,1 to 3 days,130000.0,1367.2,1
+341,2000-12-16 11:36:00,2000,12,Winter,Alabama,AL,Southeast,SERC,Cold,Severe Weather,Tornadoes,3264.0,54.4,1 to 3 days,60000.0,1278.5,1
+1161,2001-01-17 01:45:00,2001,1,Winter,California,CA,West,WECC,Cold,System Operability Disruption,,2055.0,34.25,1 to 3 days,,4303.7,1
+1257,2001-01-20 08:15:00,2001,1,Winter,California,CA,West,WECC,Cold,System Operability Disruption,,1835.0,30.583333333333332,1 to 3 days,,4303.7,1
+1439,2001-03-06 09:17:00,2001,3,Spring,Massachusetts,MA,Northeast,NPCC,Normal,System Operability Disruption,,103.0,1.7166666666666666,Under 1 day,130000.0,2016.3,1
+294,2001-03-14 15:00:00,2001,3,Spring,Texas,TX,South,TRE,Normal,System Operability Disruption,,1440.0,24.0,1 to 3 days,114000.0,2435.3,1
+1222,2001-03-19 11:46:00,2001,3,Spring,California,CA,West,WECC,Normal,Public Appeal,,554.0,9.233333333333333,Under 1 day,,4303.7,1
+1128,2001-03-20 09:17:00,2001,3,Spring,California,CA,West,WECC,Normal,System Operability Disruption,,316.0,5.266666666666667,Under 1 day,,4303.7,1
+1250,2001-03-20 11:50:00,2001,3,Spring,California,CA,West,WECC,Normal,System Operability Disruption,,141.0,2.35,Under 1 day,25000.0,4303.7,1
+1245,2001-05-07 16:45:00,2001,5,Spring,California,CA,West,WECC,Normal,Public Appeal,,75.0,1.25,Under 1 day,,4303.7,1
+1163,2001-05-08 15:10:00,2001,5,Spring,California,CA,West,WECC,Normal,Public Appeal,,140.0,2.3333333333333335,Under 1 day,,4303.7,1
+1243,2001-05-08 15:12:00,2001,5,Spring,California,CA,West,WECC,Normal,System Operability Disruption,,108.0,1.8,Under 1 day,70848.0,4303.7,1
+253,2001-06-06 16:22:00,2001,6,Summer,Texas,TX,South,TRE,Normal,System Operability Disruption,,167.0,2.783333333333333,Under 1 day,24506.0,2435.3,1
+273,2001-06-08 19:00:00,2001,6,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Flooding,10140.0,169.0,More than 3 days,36073.0,2435.3,1
+925,2001-06-25 13:25:00,2001,6,Summer,New York,NY,Northeast,NPCC,Normal,Equipment Failure,Feeder Shutdown,494.0,8.233333333333333,Under 1 day,,4161.4,1
+1329,2001-08-09 15:11:00,2001,8,Summer,Virginia,VA,Southeast,SERC,Normal,System Operability Disruption,,241.0,4.016666666666667,Under 1 day,600000.0,2265.2,1
+1412,2002-01-30 06:00:00,2002,1,Winter,Oklahoma,OK,South,SPP,Normal,Severe Weather,Winter Storm,11880.0,198.0,More than 3 days,1881134.0,1901.7,1
+867,2002-01-30 16:00:00,2002,1,Winter,Missouri,MO,Central,SPP,Normal,Severe Weather,Winter Storm,15420.0,257.0,More than 3 days,95000.0,2053.5,1
+1173,2002-02-27 10:48:00,2002,2,Winter,California,CA,West,WECC,Normal,System Operability Disruption,,47.0,0.7833333333333333,Under 1 day,255000.0,4303.7,1
+156,2002-03-09 00:00:00,2002,3,Spring,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,,3600.0,60.0,1 to 3 days,190000.0,2034.1,1
+1038,2002-08-09 08:23:00,2002,8,Summer,Florida,FL,Southeast,SERC,Warm,System Operability Disruption,,230.0,3.8333333333333335,Under 1 day,25000.0,2315.2,1
+1135,2002-08-25 03:41:00,2002,8,Summer,California,CA,West,WECC,Warm,System Operability Disruption,,336.0,5.6,Under 1 day,,4303.7,1
+1158,2002-11-06 22:00:00,2002,11,Fall,California,CA,West,WECC,Warm,Severe Weather,Winter Storm,5160.0,86.0,More than 3 days,939000.0,4303.7,1
+1406,2002-11-17 06:00:00,2002,11,Fall,Connecticut,CT,Northeast,NPCC,Warm,Severe Weather,Winter Storm,5880.0,98.0,More than 3 days,224912.0,1721.9,1
+1302,2002-12-03 18:30:00,2002,12,Winter,Arkansas,AR,South,SPP,Warm,Severe Weather,Winter Storm,8160.0,136.0,More than 3 days,43000.0,1492.8,1
+1338,2002-12-11 13:09:00,2002,12,Winter,Virginia,VA,Southeast,SERC,Warm,Severe Weather,Winter Storm,2691.0,44.85,1 to 3 days,130000.0,2265.2,1
+1258,2002-12-14 11:00:00,2002,12,Winter,California,CA,West,WECC,Warm,Severe Weather,Winter Storm,6780.0,113.0,More than 3 days,1500000.0,4303.7,1
+1206,2002-12-19 06:00:00,2002,12,Winter,California,CA,West,WECC,Warm,Severe Weather,Winter Storm,2820.0,47.0,1 to 3 days,385000.0,4303.7,1
+628,2002-12-25 10:00:00,2002,12,Winter,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Winter Storm,2790.0,46.5,1 to 3 days,95630.0,2123.4,1
+625,2002-12-25 17:00:00,2002,12,Winter,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Winter Storm,720.0,12.0,Under 1 day,106000.0,2123.4,1
+711,2003-01-25 14:00:00,2003,1,Winter,Ohio,OH,Central,ECAR,Warm,Intentional Attack,Vandalism,1440.0,24.0,1 to 3 days,,2033.7,1
+750,2003-02-27 11:32:00,2003,2,Winter,North Carolina,NC,Southeast,SERC,Warm,Severe Weather,Winter Storm,3388.0,56.46666666666667,1 to 3 days,340000.0,1367.2,1
+81,2003-04-03 19:00:00,2003,4,Spring,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Winter Storm,4200.0,70.0,1 to 3 days,425000.0,2034.1,1
+920,2003-04-04 03:11:00,2003,4,Spring,New York,NY,Northeast,NPCC,Normal,Severe Weather,Storm,2089.0,34.81666666666667,1 to 3 days,160000.0,4161.4,1
+201,2003-04-15 11:00:00,2003,4,Spring,Texas,TX,South,TRE,Normal,Equipment Failure,Relaying Malfunction,186.0,3.1,Under 1 day,68530.0,2435.3,1
+62,2003-04-28 15:41:00,2003,4,Spring,Wisconsin,WI,East North Central,MRO,Normal,Intentional Attack,Vandalism,1219.0,20.316666666666666,Under 1 day,0.0,2123.3,1
+212,2003-05-15 02:52:00,2003,5,Spring,Texas,TX,South,TRE,Normal,System Operability Disruption,,757.0,12.616666666666667,Under 1 day,192000.0,2435.3,1
+118,2003-05-15 14:00:00,2003,5,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Flooding,46080.0,768.0,More than 3 days,2.0,2034.1,1
+1525,2003-06-15 15:12:00,2003,6,Summer,Idaho,ID,Northwest,WECC,Normal,Public Appeal,,1548.0,25.8,1 to 3 days,0.0,2216.8,1
+497,2003-07-01 15:15:00,2003,7,Summer,Arizona,AZ,Southwest,WECC,Normal,Equipment Failure,Breaker Trip,35.0,0.5833333333333334,Under 1 day,47000.0,2625.4,1
+1210,2003-07-02 13:54:00,2003,7,Summer,California,CA,West,WECC,Normal,Equipment Failure,Generator Trip,125.0,2.0833333333333335,Under 1 day,1.0,4303.7,1
+56,2003-07-04 06:00:00,2003,7,Summer,Wisconsin,WI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,960.0,16.0,Under 1 day,52000.0,2123.3,1
+96,2003-07-04 09:00:00,2003,7,Summer,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,3300.0,55.0,1 to 3 days,131000.0,2034.1,1
+387,2003-07-05 03:00:00,2003,7,Summer,Illinois,IL,Central,SERC,Normal,Severe Weather,Storm,960.0,16.0,Under 1 day,130000.0,2877.6,1
+371,2003-07-07 09:00:00,2003,7,Summer,Illinois,IL,Central,SERC,Normal,Severe Weather,Thunderstorm,360.0,6.0,Under 1 day,72000.0,2877.6,1
+699,2003-07-08 04:00:00,2003,7,Summer,Ohio,OH,Central,ECAR,Normal,Severe Weather,Thunderstorm,5040.0,84.0,More than 3 days,134500.0,2033.7,1
+1340,2003-07-09 17:14:00,2003,7,Summer,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Thunderstorm,115.0,1.9166666666666667,Under 1 day,80000.0,2265.2,1
+187,2003-07-15 08:24:00,2003,7,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,9486.0,158.1,More than 3 days,108000.0,2435.3,1
+597,2003-07-21 17:15:00,2003,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Storm,4338.0,72.3,More than 3 days,185000.0,2123.4,1
+519,2003-07-28 18:55:00,2003,7,Summer,Arizona,AZ,Southwest,WECC,Normal,Equipment Failure,Breaker Trip,100.0,1.6666666666666667,Under 1 day,90000.0,2625.4,1
+80,2003-08-14 16:09:00,2003,8,Summer,Michigan,MI,East North Central,ECAR,Normal,System Operability Disruption,,3051.0,50.85,1 to 3 days,2100000.0,2034.1,1
+129,2003-08-14 16:09:00,2003,8,Summer,Michigan,MI,East North Central,ECAR,Normal,System Operability Disruption,,2694.0,44.9,1 to 3 days,101000.0,2034.1,1
+706,2003-08-14 16:10:00,2003,8,Summer,Ohio,OH,Central,ECAR,Normal,System Operability Disruption,,3137.0,52.28333333333333,1 to 3 days,1203000.0,2033.7,1
+966,2003-08-14 16:10:00,2003,8,Summer,New York,NY,Northeast,NPCC,Normal,System Operability Disruption,,5513.0,91.88333333333334,More than 3 days,,4161.4,1
+951,2003-08-14 16:11:00,2003,8,Summer,New York,NY,Northeast,NPCC,Normal,System Operability Disruption,,1732.0,28.866666666666667,1 to 3 days,3125350.0,4161.4,1
+559,2003-08-26 16:00:00,2003,8,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,4080.0,68.0,1 to 3 days,133000.0,2511.4,1
+570,2003-08-26 16:22:00,2003,8,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,7298.0,121.63333333333334,More than 3 days,153000.0,2511.4,1
+109,2003-09-07 05:19:00,2003,9,Fall,Michigan,MI,East North Central,RFC,Normal,Equipment Failure,Transmission Interruption,761.0,12.683333333333334,Under 1 day,,2034.1,1
+546,2003-09-18 00:00:00,2003,9,Fall,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Hurricanes,12890.0,214.83333333333334,More than 3 days,650000.0,2511.4,1
+769,2003-09-18 11:45:00,2003,9,Fall,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Hurricanes,15.0,0.25,Under 1 day,320000.0,1367.2,1
+757,2003-09-18 15:32:00,2003,9,Fall,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Hurricanes,1528.0,25.466666666666665,1 to 3 days,50000.0,1367.2,1
+844,2003-09-18 16:20:00,2003,9,Fall,District of Columbia,DC,Northeast,RFC,Normal,Severe Weather,Hurricanes,14500.0,241.66666666666666,More than 3 days,530000.0,9856.5,1
+1182,2003-10-26 01:44:00,2003,10,Fall,California,CA,West,WECC,Normal,Severe Weather,Wildfire,34390.0,573.1666666666666,More than 3 days,108000.0,4303.7,1
+76,2003-11-12 17:00:00,2003,11,Fall,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Heavy Wind,5820.0,97.0,More than 3 days,245000.0,2034.1,1
+381,2003-11-12 17:00:00,2003,11,Fall,Illinois,IL,Central,RFC,Normal,Severe Weather,Heavy Wind,120.0,2.0,Under 1 day,51000.0,2877.6,1
+143,2003-11-12 18:00:00,2003,11,Fall,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Heavy Wind,5700.0,95.0,More than 3 days,160000.0,2034.1,1
+557,2003-11-13 06:00:00,2003,11,Fall,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Heavy Wind,4920.0,82.0,More than 3 days,110000.0,2511.4,1
+968,2003-11-13 07:30:00,2003,11,Fall,New York,NY,Northeast,NPCC,Normal,Severe Weather,Heavy Wind,2100.0,35.0,1 to 3 days,50280.0,4161.4,1
+537,2003-11-13 11:00:00,2003,11,Fall,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Heavy Wind,1950.0,32.5,1 to 3 days,104195.0,2511.4,1
+1318,2003-11-13 13:40:00,2003,11,Fall,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Heavy Wind,131.0,2.183333333333333,Under 1 day,67000.0,2265.2,1
+1448,2003-12-01 18:16:00,2003,12,Winter,Massachusetts,MA,Northeast,NPCC,Normal,Severe Weather,Wildfire,115.0,1.9166666666666667,Under 1 day,300000.0,2016.3,1
+465,2003-12-04 07:00:00,2003,12,Winter,Washington,WA,Northwest,WECC,Normal,Severe Weather,Heavy Wind,6480.0,108.0,More than 3 days,200000.0,2380.0,1
+1075,2003-12-05 04:49:00,2003,12,Winter,Florida,FL,Southeast,FRCC,Normal,System Operability Disruption,Transmission Interruption,816.0,13.6,Under 1 day,16500.0,2315.2,1
+1283,2003-12-20 15:51:00,2003,12,Winter,California,CA,West,WECC,Normal,Equipment Failure,Cables,1914.0,31.9,1 to 3 days,120000.0,4303.7,1
+1165,2003-12-22 11:15:00,2003,12,Winter,California,CA,West,WECC,Normal,Severe Weather,Earthquake,721.0,12.016666666666667,Under 1 day,109750.0,4303.7,1
+1180,2003-12-28 21:00:00,2003,12,Winter,California,CA,West,WECC,Normal,Severe Weather,Winter Storm,5910.0,98.5,More than 3 days,241000.0,4303.7,1
+1248,2004-01-01 07:30:00,2004,1,Winter,California,CA,West,WECC,Normal,Severe Weather,Winter Storm,1950.0,32.5,1 to 3 days,263000.0,4303.7,1
+408,2004-01-07 00:00:00,2004,1,Winter,Washington,WA,Northwest,WECC,Normal,Severe Weather,Winter Storm,5340.0,89.0,More than 3 days,145000.0,2380.0,1
+969,2004-01-08 15:00:00,2004,1,Winter,New York,NY,Northeast,NPCC,Normal,Public Appeal,,3120.0,52.0,1 to 3 days,18600.0,4161.4,1
+934,2004-01-14 06:00:00,2004,1,Winter,New York,NY,Northeast,NPCC,Normal,Public Appeal,,4680.0,78.0,More than 3 days,18600.0,4161.4,1
+812,2004-01-26 10:00:00,2004,1,Winter,South Carolina,SC,Southeast,SERC,Normal,Severe Weather,Winter Storm,3480.0,58.0,1 to 3 days,150000.0,1288.1,1
+1377,2004-01-26 14:00:00,2004,1,Winter,Georgia,GA,Southeast,SERC,Normal,Severe Weather,Winter Storm,1800.0,30.0,1 to 3 days,30689.0,1516.0,1
+521,2004-01-28 13:09:00,2004,1,Winter,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Winter Storm,1671.0,27.85,1 to 3 days,70000.0,2511.4,1
+987,2004-02-14 20:00:00,2004,2,Winter,New York,NY,Northeast,NPCC,Normal,Public Appeal,,2400.0,40.0,1 to 3 days,18600.0,4161.4,1
+1255,2004-02-17 14:25:00,2004,2,Winter,California,CA,West,WECC,Normal,Severe Weather,Thunderstorm,572.0,9.533333333333333,Under 1 day,,4303.7,1
+1150,2004-02-25 00:01:00,2004,2,Winter,California,CA,West,WECC,Normal,Severe Weather,Winter Storm,2759.0,45.983333333333334,1 to 3 days,505000.0,4303.7,1
+1375,2004-02-26 00:00:00,2004,2,Winter,Georgia,GA,Southeast,SERC,Normal,Severe Weather,Winter Storm,810.0,13.5,Under 1 day,47165.0,1516.0,1
+263,2004-03-04 05:00:00,2004,3,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Heavy Wind,17865.0,297.75,More than 3 days,63000.0,2435.3,1
+1109,2004-03-08 18:22:00,2004,3,Spring,California,CA,West,WECC,Normal,System Operability Disruption,,33.0,0.55,Under 1 day,70000.0,4303.7,1
+223,2004-03-17 13:27:00,2004,3,Spring,Texas,TX,South,WECC,Normal,Equipment Failure,Switching,39.0,0.65,Under 1 day,100000.0,2435.3,1
+242,2004-04-10 20:00:00,2004,4,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,1200.0,20.0,Under 1 day,85000.0,2435.3,1
+1045,2004-04-12 05:30:00,2004,4,Spring,Florida,FL,Southeast,FRCC,Normal,Severe Weather,Heavy Wind,1005.0,16.75,Under 1 day,179000.0,2315.2,1
+486,2004-04-27 12:35:00,2004,4,Spring,Washington,WA,Northwest,WECC,Normal,Severe Weather,Heavy Wind,4285.0,71.41666666666667,1 to 3 days,187000.0,2380.0,1
+1238,2004-05-03 14:30:00,2004,5,Spring,California,CA,West,WECC,Normal,Severe Weather,Heatwave,270.0,4.5,Under 1 day,940.0,4303.7,1
+288,2004-05-11 15:30:00,2004,5,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,150.0,2.5,Under 1 day,62500.0,2435.3,1
+689,2004-05-21 02:00:00,2004,5,Spring,Ohio,OH,Central,ECAR,Normal,Severe Weather,Thunderstorm,4920.0,82.0,More than 3 days,281000.0,2033.7,1
+691,2004-05-21 02:00:00,2004,5,Spring,Ohio,OH,Central,ECAR,Normal,Severe Weather,Thunderstorm,4920.0,82.0,More than 3 days,127000.0,2033.7,1
+140,2004-05-21 11:00:00,2004,5,Spring,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,7800.0,130.0,More than 3 days,122600.0,2034.1,1
+102,2004-05-21 13:00:00,2004,5,Spring,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,5700.0,95.0,More than 3 days,248209.0,2034.1,1
+135,2004-05-21 16:00:00,2004,5,Spring,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,4560.0,76.0,More than 3 days,250000.0,2034.1,1
+1042,2004-05-28 12:00:00,2004,5,Spring,Florida,FL,Southeast,FRCC,Normal,Public Appeal,,4320.0,72.0,More than 3 days,0.0,2315.2,1
+1043,2004-05-28 12:00:00,2004,5,Spring,Florida,FL,Southeast,FRCC,Normal,Public Appeal,,4320.0,72.0,More than 3 days,0.0,2315.2,1
+1049,2004-05-28 12:00:00,2004,5,Spring,Florida,FL,Southeast,FRCC,Normal,Public Appeal,,4320.0,72.0,More than 3 days,0.0,2315.2,1
+278,2004-06-01 17:00:00,2004,6,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Heavy Wind,1200.0,20.0,Under 1 day,500000.0,2435.3,1
+993,2004-06-02 01:46:00,2004,6,Summer,Louisiana,LA,South,ECAR,Normal,Severe Weather,Thunderstorm,8054.0,134.23333333333332,More than 3 days,59057.0,1685.8,1
+1429,2004-06-02 02:35:00,2004,6,Summer,Oklahoma,OK,South,ECAR,Normal,Severe Weather,Thunderstorm,6685.0,111.41666666666667,More than 3 days,56874.0,1901.7,1
+1350,2004-06-12 17:37:00,2004,6,Summer,Nebraska,NE,West North Central,MRO,Normal,Severe Weather,Tornadoes,4.0,0.06666666666666667,Under 1 day,120212.0,2549.1,1
+518,2004-06-14 07:41:00,2004,6,Summer,Arizona,AZ,Southwest,WECC,Normal,Equipment Failure,Line Fault,418.0,6.966666666666667,Under 1 day,30000.0,2625.4,1
+1523,2004-06-23 17:35:00,2004,6,Summer,Idaho,ID,Northwest,WECC,Normal,System Operability Disruption,,95.0,1.5833333333333333,Under 1 day,35000.0,2216.8,1
+500,2004-07-06 06:00:00,2004,7,Summer,Arizona,AZ,Southwest,WECC,Warm,Severe Weather,Wildfire,49320.0,822.0,More than 3 days,,2625.4,1
+514,2004-07-06 06:00:00,2004,7,Summer,Arizona,AZ,Southwest,WECC,Warm,Severe Weather,Wildfire,49320.0,822.0,More than 3 days,,2625.4,1
+1316,2004-07-07 13:30:00,2004,7,Summer,Virginia,VA,Southeast,SERC,Warm,Severe Weather,Thunderstorm,624.0,10.4,Under 1 day,88110.0,2265.2,1
+1046,2004-07-13 13:34:00,2004,7,Summer,Florida,FL,Southeast,FRCC,Warm,Equipment Failure,Generator Trip,221.0,3.683333333333333,Under 1 day,42124.0,2315.2,1
+298,2004-07-13 16:30:00,2004,7,Summer,Indiana,IN,Central,ECAR,Warm,Severe Weather,Thunderstorm,5250.0,87.5,More than 3 days,135000.0,1860.0,1
+1278,2004-07-20 14:26:00,2004,7,Summer,California,CA,West,WECC,Warm,Severe Weather,Wildfire,1414.0,23.566666666666666,Under 1 day,,4303.7,1
+376,2004-07-21 17:30:00,2004,7,Summer,Illinois,IL,Central,RFC,Warm,Severe Weather,Thunderstorm,1530.0,25.5,1 to 3 days,200000.0,2877.6,1
+1004,2004-07-24 15:45:00,2004,7,Summer,Louisiana,LA,South,SPP,Warm,Public Appeal,,1755.0,29.25,1 to 3 days,,1685.8,1
+200,2004-08-02 10:00:00,2004,8,Summer,Texas,TX,South,SPP,Warm,Equipment Failure,Generator Trip,600.0,10.0,Under 1 day,,2435.3,1
+363,2004-08-03 21:00:00,2004,8,Summer,Illinois,IL,Central,RFC,Warm,Severe Weather,Storm,1320.0,22.0,Under 1 day,127000.0,2877.6,1
+1188,2004-08-04 12:46:00,2004,8,Summer,California,CA,West,WECC,Warm,Equipment Failure,Substation,64.0,1.0666666666666667,Under 1 day,182000.0,4303.7,1
+1069,2004-08-13 08:00:00,2004,8,Summer,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,13920.0,232.0,More than 3 days,502000.0,2315.2,1
+1044,2004-08-13 15:00:00,2004,8,Summer,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,480.0,8.0,Under 1 day,1200000.0,2315.2,1
+1057,2004-08-13 16:43:00,2004,8,Summer,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,221.0,3.683333333333333,Under 1 day,78000.0,2315.2,1
+1071,2004-08-13 22:04:00,2004,8,Summer,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,1099.0,18.316666666666666,Under 1 day,23000.0,2315.2,1
+1444,2004-08-20 15:31:00,2004,8,Summer,Massachusetts,MA,Northeast,NPCC,Warm,Severe Weather,Thunderstorm,374.0,6.233333333333333,Under 1 day,380000.0,2016.3,1
+807,2004-08-29 09:52:00,2004,8,Summer,South Carolina,SC,Southeast,SERC,Warm,Severe Weather,Hurricanes,488.0,8.133333333333333,Under 1 day,125000.0,1288.1,1
+1072,2004-09-03 21:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,2460.0,41.0,1 to 3 days,26000.0,2315.2,1
+1052,2004-09-04 08:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,3600.0,60.0,1 to 3 days,2775093.0,2315.2,1
+1066,2004-09-04 10:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,12060.0,201.0,More than 3 days,268000.0,2315.2,1
+1063,2004-09-05 07:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,10380.0,173.0,More than 3 days,832898.0,2315.2,1
+1378,2004-09-07 10:00:00,2004,9,Fall,Georgia,GA,Southeast,SERC,Warm,Severe Weather,Hurricanes,1560.0,26.0,1 to 3 days,150000.0,1516.0,1
+758,2004-09-17 04:30:00,2004,9,Fall,North Carolina,NC,Southeast,SERC,Warm,Severe Weather,Hurricanes,1890.0,31.5,1 to 3 days,112000.0,1367.2,1
+1068,2004-09-25 17:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,1680.0,28.0,1 to 3 days,26000.0,2315.2,1
+1065,2004-09-26 02:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,2040.0,34.0,1 to 3 days,285300.0,2315.2,1
+1056,2004-09-26 03:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,6840.0,114.0,More than 3 days,110000.0,2315.2,1
+1061,2004-09-26 06:00:00,2004,9,Fall,Florida,FL,Southeast,FRCC,Warm,Severe Weather,Hurricanes,7560.0,126.0,More than 3 days,722000.0,2315.2,1
+1389,2004-09-27 08:00:00,2004,9,Fall,Georgia,GA,Southeast,SERC,Warm,Severe Weather,Hurricanes,360.0,6.0,Under 1 day,85455.0,1516.0,1
+1114,2004-10-18 22:30:00,2004,10,Fall,California,CA,West,WECC,Warm,Severe Weather,Heavy Wind,2790.0,46.5,1 to 3 days,407440.0,4303.7,1
+997,2004-10-25 11:00:00,2004,10,Fall,Louisiana,LA,South,SPP,Warm,Severe Weather,Wildfire,2100.0,35.0,1 to 3 days,,1685.8,1
+1174,2004-10-28 15:27:00,2004,10,Fall,California,CA,West,WECC,Warm,System Operability Disruption,Transmission Interruption,161.0,2.683333333333333,Under 1 day,59458.0,4303.7,1
+113,2004-10-30 10:00:00,2004,10,Fall,Michigan,MI,East North Central,ECAR,Warm,Severe Weather,Heavy Wind,3360.0,56.0,1 to 3 days,122000.0,2034.1,1
+149,2004-10-30 12:30:00,2004,10,Fall,Michigan,MI,East North Central,ECAR,Warm,Severe Weather,Heavy Wind,5840.0,97.33333333333333,More than 3 days,159870.0,2034.1,1
+176,2004-11-23 22:00:00,2004,11,Fall,Texas,TX,South,TRE,Warm,Severe Weather,Thunderstorm,900.0,15.0,Under 1 day,119000.0,2435.3,1
+1385,2004-11-24 10:00:00,2004,11,Fall,Georgia,GA,Southeast,SERC,Warm,Severe Weather,Thunderstorm,360.0,6.0,Under 1 day,83450.0,1516.0,1
+596,2004-12-01 07:30:00,2004,12,Winter,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Wind/Rain,2319.0,38.65,1 to 3 days,105312.0,2123.4,1
+524,2004-12-01 10:00:00,2004,12,Winter,Maryland,MD,Northeast,RFC,Warm,Severe Weather,Heavy Wind,2279.0,37.983333333333334,1 to 3 days,122000.0,2511.4,1
+1175,2004-12-27 07:50:00,2004,12,Winter,California,CA,West,WECC,Warm,Severe Weather,,900.0,15.0,Under 1 day,95000.0,4303.7,1
+1515,2005-01-04 18:00:00,2005,1,Winter,Kansas,KS,South,SPP,Warm,Severe Weather,Winter Storm,14040.0,234.0,More than 3 days,211000.0,2176.5,1
+704,2005-01-05 16:00:00,2005,1,Winter,Ohio,OH,Central,ECAR,Warm,Severe Weather,Winter Storm,11640.0,194.0,More than 3 days,246990.0,2033.7,1
+316,2005-01-05 21:10:00,2005,1,Winter,Indiana,IN,Central,ECAR,Warm,Severe Weather,Winter Storm,15950.0,265.8333333333333,More than 3 days,114791.0,1860.0,1
+1131,2005-01-07 13:00:00,2005,1,Winter,California,CA,West,WECC,Warm,Severe Weather,Winter Storm,4740.0,79.0,More than 3 days,442000.0,4303.7,1
+1376,2005-01-29 16:00:00,2005,1,Winter,Georgia,GA,Southeast,SERC,Warm,Severe Weather,Winter Storm,1380.0,23.0,Under 1 day,82000.0,1516.0,1
+753,2005-03-08 11:00:00,2005,3,Spring,North Carolina,NC,Southeast,SERC,Warm,Severe Weather,Heavy Wind,240.0,4.0,Under 1 day,51600.0,1367.2,1
+708,2005-04-01 00:00:00,2005,4,Spring,Ohio,OH,Central,ECAR,Warm,Severe Weather,Winter Storm,7920.0,132.0,More than 3 days,211000.0,2033.7,1
+1275,2005-04-22 15:51:00,2005,4,Spring,California,CA,West,WECC,Warm,Severe Weather,Thunderstorm,8.0,0.13333333333333333,Under 1 day,,4303.7,1
+713,2005-04-23 06:00:00,2005,4,Spring,Ohio,OH,Central,ECAR,Warm,Severe Weather,Winter Storm,6480.0,108.0,More than 3 days,150000.0,2033.7,1
+293,2005-05-08 15:00:00,2005,5,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,420.0,7.0,Under 1 day,243000.0,2435.3,1
+268,2005-05-29 20:00:00,2005,5,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,1110.0,18.5,Under 1 day,123000.0,2435.3,1
+91,2005-06-05 14:00:00,2005,6,Summer,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,3120.0,52.0,1 to 3 days,105000.0,2034.1,1
+93,2005-06-05 14:00:00,2005,6,Summer,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,7530.0,125.5,More than 3 days,201580.0,2034.1,1
+971,2005-06-06 12:00:00,2005,6,Summer,New York,NY,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,3240.0,54.0,1 to 3 days,65000.0,4161.4,1
+591,2005-06-06 16:43:00,2005,6,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,1757.0,29.283333333333335,1 to 3 days,143000.0,2123.4,1
+8,2005-06-08 04:00:00,2005,6,Summer,Minnesota,MN,East North Central,MRO,Normal,Severe Weather,Thunderstorm,3960.0,66.0,1 to 3 days,300000.0,2279.0,1
+359,2005-06-24 20:37:00,2005,6,Summer,Illinois,IL,Central,RFC,Normal,Equipment Failure,Transmission Interruption,149.0,2.4833333333333334,Under 1 day,51500.0,2877.6,1
+146,2005-06-29 16:30:00,2005,6,Summer,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,7620.0,127.0,More than 3 days,114711.0,2034.1,1
+1001,2005-07-05 21:00:00,2005,7,Summer,Louisiana,LA,South,SPP,Normal,Severe Weather,Hurricanes,1440.0,24.0,1 to 3 days,287000.0,1685.8,1
+1084,2005-07-21 14:39:00,2005,7,Summer,California,CA,West,WECC,Normal,System Operability Disruption,,171.0,2.85,Under 1 day,128050.0,4303.7,1
+1213,2005-07-22 13:55:00,2005,7,Summer,California,CA,West,WECC,Normal,System Operability Disruption,,245.0,4.083333333333333,Under 1 day,133900.0,4303.7,1
+542,2005-07-23 01:02:00,2005,7,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,5628.0,93.8,More than 3 days,55118.0,2511.4,1
+599,2005-07-27 16:50:00,2005,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,1714.0,28.566666666666666,1 to 3 days,93837.0,2123.4,1
+576,2005-07-27 17:50:00,2005,7,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,4517.0,75.28333333333333,More than 3 days,64943.0,2511.4,1
+526,2005-07-27 18:00:00,2005,7,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,2760.0,46.0,1 to 3 days,87600.0,2511.4,1
+1087,2005-08-08 12:38:00,2005,8,Summer,California,CA,West,WECC,Normal,Equipment Failure,Plant Trip,202.0,3.3666666666666667,Under 1 day,,4303.7,1
+1305,2005-08-20 14:15:00,2005,8,Summer,Arkansas,AR,South,ECAR,Normal,Severe Weather,Thunderstorm,126.0,2.1,Under 1 day,50797.0,1492.8,1
+1151,2005-08-25 15:50:00,2005,8,Summer,California,CA,West,WECC,Normal,System Operability Disruption,,250.0,4.166666666666667,Under 1 day,,4303.7,1
+1153,2005-08-25 15:51:00,2005,8,Summer,California,CA,West,WECC,Normal,System Operability Disruption,Transmission Interruption,249.0,4.15,Under 1 day,409000.0,4303.7,1
+1006,2005-08-29 01:10:00,2005,8,Summer,Louisiana,LA,South,SPP,Normal,Severe Weather,Hurricanes,692.0,11.533333333333333,Under 1 day,143000.0,1685.8,1
+996,2005-08-29 06:00:00,2005,8,Summer,Louisiana,LA,South,SPP,Normal,Severe Weather,Hurricanes,2160.0,36.0,1 to 3 days,1100000.0,1685.8,1
+1048,2005-08-29 07:10:00,2005,8,Summer,Florida,FL,Southeast,FRCC,Normal,Severe Weather,,13430.0,223.83333333333334,More than 3 days,0.0,2315.2,1
+1070,2005-08-29 17:00:00,2005,8,Summer,Florida,FL,Southeast,FRCC,Normal,Severe Weather,,14101.0,235.01666666666668,More than 3 days,0.0,2315.2,1
+1033,2005-08-31 16:00:00,2005,8,Summer,Florida,FL,Southeast,FRCC,Normal,Severe Weather,,17520.0,292.0,More than 3 days,0.0,2315.2,1
+1086,2005-09-12 12:32:00,2005,9,Fall,California,CA,West,WECC,Normal,Equipment Failure,,84.0,1.4,Under 1 day,900000.0,4303.7,1
+59,2005-09-13 18:30:00,2005,9,Fall,Wisconsin,WI,East North Central,RFC,Normal,Severe Weather,Storm,4410.0,73.5,More than 3 days,110000.0,2123.3,1
+733,2005-09-14 15:00:00,2005,9,Fall,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Hurricanes,1440.0,24.0,1 to 3 days,60000.0,1367.2,1
+12,2005-09-21 19:00:00,2005,9,Fall,Minnesota,MN,East North Central,MRO,Normal,Severe Weather,Tornadoes,8880.0,148.0,More than 3 days,200000.0,2279.0,1
+75,2005-09-22 11:00:00,2005,9,Fall,Michigan,MI,East North Central,ECAR,Normal,Severe Weather,Thunderstorm,6510.0,108.5,More than 3 days,53000.0,2034.1,1
+1053,2005-09-22 12:00:00,2005,9,Fall,Florida,FL,Southeast,FRCC,Normal,Severe Weather,,10080.0,168.0,More than 3 days,0.0,2315.2,1
+1034,2005-09-23 07:00:00,2005,9,Fall,Florida,FL,Southeast,FRCC,Normal,Severe Weather,,8189.0,136.48333333333332,More than 3 days,0.0,2315.2,1
+1027,2005-09-23 13:06:00,2005,9,Fall,Louisiana,LA,South,SPP,Normal,Severe Weather,Hurricanes,18804.0,313.4,More than 3 days,125000.0,1685.8,1
+234,2005-09-23 17:00:00,2005,9,Fall,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,1620.0,27.0,1 to 3 days,715000.0,2435.3,1
+198,2005-09-24 06:00:00,2005,9,Fall,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,12180.0,203.0,More than 3 days,200000.0,2435.3,1
+1016,2005-09-24 10:00:00,2005,9,Fall,Louisiana,LA,South,ECAR,Normal,Severe Weather,Hurricanes,6240.0,104.0,More than 3 days,190000.0,1685.8,1
+1067,2005-10-23 20:00:00,2005,10,Fall,Florida,FL,Southeast,FRCC,Normal,Severe Weather,Hurricanes,1080.0,18.0,Under 1 day,3241437.0,2315.2,1
+1040,2005-10-24 04:00:00,2005,10,Fall,Florida,FL,Southeast,FRCC,Normal,Severe Weather,Hurricanes,720.0,12.0,Under 1 day,105000.0,2315.2,1
+1058,2005-10-24 07:00:00,2005,10,Fall,Florida,FL,Southeast,FRCC,Normal,Severe Weather,Hurricanes,24780.0,413.0,More than 3 days,84900.0,2315.2,1
+1189,2005-11-03 18:47:00,2005,11,Fall,California,CA,West,WECC,Cold,Severe Weather,Wildfire,13.0,0.21666666666666667,Under 1 day,,4303.7,1
+95,2005-11-06 07:30:00,2005,11,Fall,Michigan,MI,East North Central,ECAR,Cold,Severe Weather,Thunderstorm,8160.0,136.0,More than 3 days,118000.0,2034.1,1
+52,2005-11-12 16:00:00,2005,11,Fall,Wisconsin,WI,East North Central,RFC,Cold,Severe Weather,Thunderstorm,3000.0,50.0,1 to 3 days,48000.0,2123.3,1
+154,2005-11-12 23:00:00,2005,11,Fall,Michigan,MI,East North Central,ECAR,Cold,Severe Weather,Thunderstorm,2939.0,48.983333333333334,1 to 3 days,272355.0,2034.1,1
+1381,2005-12-15 05:05:00,2005,12,Winter,Georgia,GA,Southeast,SERC,Cold,Severe Weather,Winter Storm,1865.0,31.083333333333332,1 to 3 days,52659.0,1516.0,1
+1202,2005-12-31 06:00:00,2005,12,Winter,California,CA,West,WECC,Cold,Severe Weather,Storm,8100.0,135.0,More than 3 days,1667316.0,4303.7,1
+593,2006-01-14 15:45:00,2006,1,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Heavy Wind,2985.0,49.75,1 to 3 days,142315.0,2123.4,1
+1460,2006-01-18 15:16:00,2006,1,Winter,Maine,ME,Northeast,NPCC,Cold,Severe Weather,Storm,198.0,3.3,Under 1 day,63000.0,1428.0,1
+477,2006-02-04 01:34:00,2006,2,Winter,Washington,WA,Northwest,WECC,Cold,Severe Weather,Heavy Wind,3507.0,58.45,1 to 3 days,123827.0,2380.0,1
+430,2006-02-04 04:30:00,2006,2,Winter,Washington,WA,Northwest,WECC,Cold,Severe Weather,Heavy Wind,6690.0,111.5,More than 3 days,140000.0,2380.0,1
+525,2006-02-11 21:00:00,2006,2,Winter,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Winter Storm,4440.0,74.0,More than 3 days,180000.0,2511.4,1
+522,2006-02-12 00:06:00,2006,2,Winter,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Winter Storm,3938.0,65.63333333333334,1 to 3 days,60000.0,2511.4,1
+789,2006-02-12 02:00:00,2006,2,Winter,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,Winter Storm,3720.0,62.0,1 to 3 days,130000.0,2851.2,1
+1345,2006-02-12 05:55:00,2006,2,Winter,Virginia,VA,Southeast,RFC,Cold,Severe Weather,Winter Storm,485.0,8.083333333333334,Under 1 day,126000.0,2265.2,1
+117,2006-02-16 12:00:00,2006,2,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Winter Storm,6420.0,107.0,More than 3 days,252089.0,2034.1,1
+963,2006-02-17 04:32:00,2006,2,Winter,New York,NY,Northeast,NPCC,Cold,Severe Weather,,448.0,7.466666666666667,Under 1 day,200000.0,4161.4,1
+1502,2006-02-18 08:50:00,2006,2,Winter,Colorado,CO,Southwest,WECC,Cold,System Operability Disruption,,439.0,7.316666666666666,Under 1 day,,2836.1,1
+1141,2006-02-27 18:25:00,2006,2,Winter,California,CA,West,WECC,Cold,Severe Weather,Winter Storm,2645.0,44.083333333333336,1 to 3 days,160000.0,4303.7,1
+377,2006-03-12 20:30:00,2006,3,Spring,Illinois,IL,Central,RFC,Normal,Severe Weather,,2370.0,39.5,1 to 3 days,65400.0,2877.6,1
+319,2006-04-02 21:00:00,2006,4,Spring,Indiana,IN,Central,RFC,Normal,Severe Weather,Tornadoes,4045.0,67.41666666666667,1 to 3 days,186000.0,1860.0,1
+196,2006-04-17 15:25:00,2006,4,Spring,Texas,TX,South,TRE,Normal,System Operability Disruption,,245.0,4.083333333333333,Under 1 day,200000.0,2435.3,1
+243,2006-04-17 16:10:00,2006,4,Spring,Texas,TX,South,TRE,Normal,System Operability Disruption,,121.0,2.0166666666666666,Under 1 day,68000.0,2435.3,1
+180,2006-04-17 16:11:00,2006,4,Spring,Texas,TX,South,TRE,Normal,System Operability Disruption,,189.0,3.15,Under 1 day,489478.0,2435.3,1
+270,2006-04-17 16:20:00,2006,4,Spring,Texas,TX,South,TRE,Normal,System Operability Disruption,Shed Load,130.0,2.1666666666666665,Under 1 day,9000.0,2435.3,1
+238,2006-04-17 16:35:00,2006,4,Spring,Texas,TX,South,TRE,Normal,System Operability Disruption,,95.0,1.5833333333333333,Under 1 day,51404.0,2435.3,1
+280,2006-04-21 07:00:00,2006,4,Spring,Texas,TX,South,TRE,Normal,Severe Weather,,900.0,15.0,Under 1 day,82000.0,2435.3,1
+1129,2006-05-03 15:30:00,2006,5,Spring,California,CA,West,WECC,Normal,Severe Weather,Wildfire,365.0,6.083333333333333,Under 1 day,55655.0,4303.7,1
+1078,2006-05-19 15:13:00,2006,5,Spring,California,CA,West,WECC,Normal,Severe Weather,Thunderstorm,437.0,7.283333333333333,Under 1 day,,4303.7,1
+588,2006-06-01 18:00:00,2006,6,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,,3060.0,51.0,1 to 3 days,111555.0,2123.4,1
+549,2006-06-01 18:30:00,2006,6,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,2610.0,43.5,1 to 3 days,70000.0,2511.4,1
+734,2006-06-11 18:00:00,2006,6,Summer,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Thunderstorm,180.0,3.0,Under 1 day,72000.0,1367.2,1
+1339,2006-07-02 18:39:00,2006,7,Summer,Virginia,VA,Southeast,RFC,Normal,Severe Weather,Thunderstorm,1072.0,17.866666666666667,Under 1 day,75000.0,2265.2,1
+1342,2006-07-04 17:30:00,2006,7,Summer,Virginia,VA,Southeast,RFC,Normal,Severe Weather,Thunderstorm,168.0,2.8,Under 1 day,67000.0,2265.2,1
+155,2006-07-16 14:00:00,2006,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,7080.0,118.0,More than 3 days,315000.0,2034.1,1
+988,2006-07-17 18:50:00,2006,7,Summer,New York,NY,Northeast,NPCC,Normal,Severe Weather,,11296.0,188.26666666666668,More than 3 days,25000.0,4161.4,1
+389,2006-07-17 21:00:00,2006,7,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,1440.0,24.0,1 to 3 days,170519.0,2877.6,1
+616,2006-07-18 18:36:00,2006,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,7523.0,125.38333333333334,More than 3 days,492955.0,2123.4,1
+1407,2006-07-18 20:07:00,2006,7,Summer,Connecticut,CT,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,145.0,2.4166666666666665,Under 1 day,0.0,1721.9,1
+1304,2006-07-19 11:00:00,2006,7,Summer,Arkansas,AR,South,SERC,Normal,Public Appeal,,414.0,6.9,Under 1 day,8000.0,1492.8,1
+1143,2006-07-22 13:09:00,2006,7,Summer,California,CA,West,WECC,Normal,Severe Weather,Heatwave,7371.0,122.85,More than 3 days,1271893.0,4303.7,1
+1083,2006-07-24 14:33:00,2006,7,Summer,California,CA,West,WECC,Normal,Severe Weather,Heatwave,180.0,3.0,Under 1 day,,4303.7,1
+1203,2006-07-24 14:33:00,2006,7,Summer,California,CA,West,WECC,Normal,Severe Weather,Heatwave,180.0,3.0,Under 1 day,,4303.7,1
+578,2006-07-27 18:38:00,2006,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,3058.0,50.96666666666667,1 to 3 days,167564.0,2123.4,1
+692,2006-08-01 12:00:00,2006,8,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,Heatwave,420.0,7.0,Under 1 day,,2033.7,1
+1421,2006-08-07 13:00:00,2006,8,Summer,Oklahoma,OK,South,RFC,Normal,Public Appeal,,300.0,5.0,Under 1 day,,1901.7,1
+752,2006-09-01 05:30:00,2006,9,Fall,North Carolina,NC,Southeast,SERC,Warm,Severe Weather,Hurricanes,990.0,16.5,Under 1 day,61000.0,1367.2,1
+587,2006-09-01 15:00:00,2006,9,Fall,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Hurricanes,4800.0,80.0,More than 3 days,146094.0,2123.4,1
+774,2006-09-01 20:00:00,2006,9,Fall,New Jersey,NJ,Northeast,RFC,Warm,Severe Weather,Hurricanes,4140.0,69.0,1 to 3 days,100000.0,2851.2,1
+357,2006-10-02 14:00:00,2006,10,Fall,Illinois,IL,Central,RFC,Warm,Severe Weather,Thunderstorm,1680.0,28.0,1 to 3 days,471932.0,2877.6,1
+1117,2006-10-02 15:05:00,2006,10,Fall,California,CA,West,WECC,Warm,System Operability Disruption,,334.0,5.566666666666666,Under 1 day,130000.0,4303.7,1
+228,2006-10-03 17:28:00,2006,10,Fall,Texas,TX,South,TRE,Warm,System Operability Disruption,,271.0,4.516666666666667,Under 1 day,,2435.3,1
+981,2006-10-12 17:48:00,2006,10,Fall,New York,NY,Northeast,NPCC,Warm,Severe Weather,Winter Storm,15492.0,258.2,More than 3 days,250000.0,4161.4,1
+978,2006-10-12 20:00:00,2006,10,Fall,New York,NY,Northeast,NPCC,Warm,Severe Weather,Winter Storm,13140.0,219.0,More than 3 days,120000.0,4161.4,1
+1505,2006-10-26 05:30:00,2006,10,Fall,Colorado,CO,Southwest,MRO,Warm,Severe Weather,Winter Storm,2140.0,35.666666666666664,1 to 3 days,65000.0,2836.1,1
+222,2006-11-15 10:00:00,2006,11,Fall,Texas,TX,South,TRE,Warm,Severe Weather,Heavy Wind,600.0,10.0,Under 1 day,83000.0,2435.3,1
+480,2006-11-15 13:00:00,2006,11,Fall,Washington,WA,Northwest,WECC,Warm,Severe Weather,Heavy Wind,5855.0,97.58333333333333,More than 3 days,50000.0,2380.0,1
+1383,2006-11-15 15:00:00,2006,11,Fall,Georgia,GA,Southeast,SERC,Warm,Severe Weather,,120.0,2.0,Under 1 day,109000.0,1516.0,1
+409,2006-11-26 13:00:00,2006,11,Fall,Washington,WA,Northwest,WECC,Warm,Severe Weather,Winter Storm,8940.0,149.0,More than 3 days,63992.0,2380.0,1
+720,2006-12-01 18:20:00,2006,12,Winter,Ohio,OH,Central,RFC,Warm,Severe Weather,Heavy Wind,1420.0,23.666666666666668,Under 1 day,59106.0,2033.7,1
+1111,2006-12-10 19:35:00,2006,12,Winter,California,CA,West,WECC,Warm,Equipment Failure,Generator Trip,159.0,2.65,Under 1 day,,4303.7,1
+484,2006-12-13 04:30:00,2006,12,Winter,Washington,WA,Northwest,WECC,Warm,Severe Weather,Heavy Wind,22769.0,379.48333333333335,More than 3 days,700000.0,2380.0,1
+461,2006-12-14 00:01:00,2006,12,Winter,Washington,WA,Northwest,WECC,Warm,Severe Weather,Heavy Wind,2639.0,43.983333333333334,1 to 3 days,175000.0,2380.0,1
+476,2006-12-14 05:30:00,2006,12,Winter,Washington,WA,Northwest,WECC,Warm,Severe Weather,Heavy Wind,9630.0,160.5,More than 3 days,172060.0,2380.0,1
+831,2006-12-14 12:07:00,2006,12,Winter,Oregon,OR,Northwest,WECC,Warm,Severe Weather,Heavy Wind,4313.0,71.88333333333334,1 to 3 days,111000.0,2804.9,1
+478,2006-12-14 17:00:00,2006,12,Winter,Washington,WA,Northwest,WECC,Warm,Severe Weather,Heavy Wind,2820.0,47.0,1 to 3 days,75000.0,2380.0,1
+825,2006-12-14 19:00:00,2006,12,Winter,Oregon,OR,Northwest,WECC,Warm,Severe Weather,Heavy Wind,4380.0,73.0,More than 3 days,249500.0,2804.9,1
+836,2006-12-16 19:30:00,2006,12,Winter,Oregon,OR,Northwest,WECC,Warm,Severe Weather,Wildfire,1050.0,17.5,Under 1 day,84500.0,2804.9,1
+1107,2006-12-26 00:01:00,2006,12,Winter,California,CA,West,WECC,Warm,Severe Weather,,8472.0,141.2,More than 3 days,850068.0,4303.7,1
+1351,2006-12-30 22:25:00,2006,12,Winter,Nebraska,NE,West North Central,MRO,Warm,Severe Weather,,9600.0,160.0,More than 3 days,15000.0,2549.1,1
+163,2007-01-13 07:30:00,2007,1,Winter,Michigan,MI,East North Central,RFC,Warm,Severe Weather,Winter Storm,9150.0,152.5,More than 3 days,129607.0,2034.1,1
+416,2007-01-16 02:00:00,2007,1,Winter,Washington,WA,Northwest,WECC,Warm,Severe Weather,Heavy Wind,2040.0,34.0,1 to 3 days,110433.0,2380.0,1
+571,2007-02-13 17:00:00,2007,2,Winter,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Winter Storm,5790.0,96.5,More than 3 days,155183.0,2511.4,1
+910,2007-02-24 18:00:00,2007,2,Winter,Iowa,IA,East North Central,MRO,Normal,Severe Weather,Winter Storm,347.0,5.783333333333333,Under 1 day,140000.0,2045.8,1
+915,2007-02-24 19:23:00,2007,2,Winter,Iowa,IA,East North Central,RFC,Normal,Severe Weather,Winter Storm,1044.0,17.4,Under 1 day,215000.0,2045.8,1
+1281,2007-02-28 00:45:00,2007,2,Winter,California,CA,West,WECC,Normal,Severe Weather,Winter Storm,4080.0,68.0,1 to 3 days,671189.0,4303.7,1
+202,2007-03-31 07:30:00,2007,3,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,690.0,11.5,Under 1 day,67000.0,2435.3,1
+1470,2007-04-05 21:20:00,2007,4,Spring,Maine,ME,Northeast,NPCC,Normal,Severe Weather,Winter Storm,950.0,15.833333333333334,Under 1 day,117142.0,1428.0,1
+1254,2007-04-12 00:32:00,2007,4,Spring,California,CA,West,WECC,Normal,Severe Weather,Heavy Wind,1230.0,20.5,Under 1 day,158977.0,4303.7,1
+1157,2007-04-12 09:09:00,2007,4,Spring,California,CA,West,WECC,Normal,Equipment Failure,Generator Trip,854.0,14.233333333333333,Under 1 day,,4303.7,1
+1480,2007-04-16 08:00:00,2007,4,Spring,New Hampshire,NH,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,660.0,11.0,Under 1 day,102568.0,1232.6,1
+1455,2007-04-16 10:14:00,2007,4,Spring,Maine,ME,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,3604.0,60.06666666666667,1 to 3 days,127545.0,1428.0,1
+566,2007-04-16 14:00:00,2007,4,Spring,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,3060.0,51.0,1 to 3 days,138000.0,2511.4,1
+285,2007-05-02 13:30:00,2007,5,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Storm,1830.0,30.5,1 to 3 days,300000.0,2435.3,1
+1229,2007-05-10 09:57:00,2007,5,Spring,California,CA,West,WECC,Normal,Equipment Failure,Generator Trip,230.0,3.8333333333333335,Under 1 day,,4303.7,1
+1108,2007-05-14 11:15:00,2007,5,Spring,California,CA,West,WECC,Normal,Equipment Failure,Generator Trip,155.0,2.5833333333333335,Under 1 day,,4303.7,1
+142,2007-05-15 15:00:00,2007,5,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,3120.0,52.0,1 to 3 days,66000.0,2034.1,1
+1402,2007-05-16 18:00:00,2007,5,Spring,Connecticut,CT,Northeast,NPCC,Normal,Severe Weather,Storm,4260.0,71.0,1 to 3 days,67000.0,1721.9,1
+1185,2007-05-21 13:48:00,2007,5,Spring,California,CA,West,WECC,Normal,Equipment Failure,Generator Trip,182.0,3.033333333333333,Under 1 day,,4303.7,1
+957,2007-06-27 15:41:00,2007,6,Summer,New York,NY,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,49.0,0.8166666666666667,Under 1 day,137000.0,4161.4,1
+989,2007-06-27 15:42:00,2007,6,Summer,New York,NY,Northeast,NPCC,Normal,System Operability Disruption,,48.0,0.8,Under 1 day,,4161.4,1
+192,2007-06-29 09:23:00,2007,6,Summer,Texas,TX,South,WECC,Normal,System Operability Disruption,,766.0,12.766666666666667,Under 1 day,98700.0,2435.3,1
+1152,2007-07-03 10:59:00,2007,7,Summer,California,CA,West,WECC,Normal,Public Appeal,,3301.0,55.016666666666666,1 to 3 days,,4303.7,1
+89,2007-07-05 19:00:00,2007,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Storm,4320.0,72.0,More than 3 days,69000.0,2034.1,1
+930,2007-07-10 11:00:00,2007,7,Summer,New York,NY,Northeast,NPCC,Normal,Severe Weather,Storm,3300.0,55.0,1 to 3 days,300000.0,4161.4,1
+664,2007-07-16 16:17:00,2007,7,Summer,Utah,UT,Southwest,WECC,Normal,Severe Weather,Wildfire,283.0,4.716666666666667,Under 1 day,,2737.1,1
+379,2007-07-18 18:00:00,2007,7,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,,1200.0,20.0,Under 1 day,135000.0,2877.6,1
+79,2007-07-19 15:00:00,2007,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Storm,4830.0,80.5,More than 3 days,60000.0,2034.1,1
+1326,2007-07-19 15:50:00,2007,7,Summer,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Storm,385.0,6.416666666666667,Under 1 day,107000.0,2265.2,1
+615,2007-08-09 14:53:00,2007,8,Summer,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Thunderstorm,78.0,1.3,Under 1 day,55000.0,2123.4,1
+858,2007-08-13 01:30:00,2007,8,Summer,Missouri,MO,Central,SERC,Cold,Severe Weather,Thunderstorm,2070.0,34.5,1 to 3 days,63000.0,2053.5,1
+1341,2007-08-19 23:34:00,2007,8,Summer,Virginia,VA,Southeast,SERC,Cold,Severe Weather,Thunderstorm,816.0,13.6,Under 1 day,58500.0,2265.2,1
+352,2007-08-23 16:00:00,2007,8,Summer,Illinois,IL,Central,RFC,Cold,Severe Weather,Storm,7609.0,126.81666666666666,More than 3 days,629590.0,2877.6,1
+150,2007-08-24 18:00:00,2007,8,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Storm,5790.0,96.5,More than 3 days,75000.0,2034.1,1
+1100,2007-08-29 13:53:00,2007,8,Summer,California,CA,West,WECC,Cold,System Operability Disruption,,64.0,1.0666666666666667,Under 1 day,26000.0,4303.7,1
+1130,2007-08-29 16:00:00,2007,8,Summer,California,CA,West,WECC,Cold,Public Appeal,,1560.0,26.0,1 to 3 days,,4303.7,1
+1155,2007-08-31 12:45:00,2007,8,Summer,California,CA,West,WECC,Cold,Severe Weather,Heatwave,435.0,7.25,Under 1 day,,4303.7,1
+1270,2007-09-03 12:30:00,2007,9,Fall,California,CA,West,WECC,Cold,Severe Weather,Heatwave,300.0,5.0,Under 1 day,,4303.7,1
+1076,2007-09-04 08:30:00,2007,9,Fall,California,CA,West,WECC,Cold,Severe Weather,Heatwave,420.0,7.0,Under 1 day,,4303.7,1
+211,2007-09-05 07:53:00,2007,9,Fall,Texas,TX,South,TRE,Cold,Equipment Failure,Transmission Trip,318.0,5.3,Under 1 day,,2435.3,1
+185,2007-09-13 04:00:00,2007,9,Fall,Texas,TX,South,SPP,Cold,Severe Weather,Hurricanes,2340.0,39.0,1 to 3 days,118000.0,2435.3,1
+324,2007-09-17 19:01:00,2007,9,Fall,Indiana,IN,Central,RFC,Cold,Islanding,,47.0,0.7833333333333333,Under 1 day,9600.0,1860.0,1
+130,2007-09-24 13:38:00,2007,9,Fall,Michigan,MI,East North Central,RFC,Cold,Equipment Failure,Generator Trip,168.0,2.8,Under 1 day,,2034.1,1
+440,2007-10-18 15:00:00,2007,10,Fall,Washington,WA,Northwest,WECC,Cold,Severe Weather,Heavy Wind,6276.0,104.6,More than 3 days,160000.0,2380.0,1
+1247,2007-10-22 14:01:00,2007,10,Fall,California,CA,West,WECC,Cold,Severe Weather,Wildfire,21.0,0.35,Under 1 day,90323.0,4303.7,1
+1246,2007-10-22 14:05:00,2007,10,Fall,California,CA,West,WECC,Cold,Severe Weather,Wildfire,17.0,0.2833333333333333,Under 1 day,300000.0,4303.7,1
+1261,2007-10-22 14:06:00,2007,10,Fall,California,CA,West,WECC,Cold,Severe Weather,Wildfire,37.0,0.6166666666666667,Under 1 day,68780.0,4303.7,1
+1239,2007-10-26 06:44:00,2007,10,Fall,California,CA,West,WECC,Cold,Severe Weather,Wildfire,962.0,16.033333333333335,Under 1 day,20345.0,4303.7,1
+1251,2007-10-26 06:44:00,2007,10,Fall,California,CA,West,WECC,Cold,System Operability Disruption,,959.0,15.983333333333333,Under 1 day,104000.0,4303.7,1
+1452,2007-12-01 18:04:00,2007,12,Winter,Maine,ME,Northeast,NPCC,Cold,Fuel Supply Emergency,,1676.0,27.933333333333334,1 to 3 days,0.0,1428.0,1
+1418,2007-12-10 03:08:00,2007,12,Winter,Oklahoma,OK,South,SPP,Cold,Severe Weather,Winter Storm,13972.0,232.86666666666667,More than 3 days,256663.0,1901.7,1
+1511,2007-12-11 04:00:00,2007,12,Winter,Kansas,KS,South,MRO,Cold,Severe Weather,Winter Storm,13650.0,227.5,More than 3 days,95000.0,2176.5,1
+378,2007-12-23 01:00:00,2007,12,Winter,Illinois,IL,Central,RFC,Cold,Severe Weather,Storm,1200.0,20.0,Under 1 day,237000.0,2877.6,1
+87,2007-12-23 05:30:00,2007,12,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Winter Storm,3637.0,60.61666666666667,1 to 3 days,134288.0,2034.1,1
+1160,2008-01-04 04:00:00,2008,1,Winter,California,CA,West,WECC,Cold,Severe Weather,Winter Storm,15180.0,253.0,More than 3 days,2606931.0,4303.7,1
+1104,2008-01-04 07:47:00,2008,1,Winter,California,CA,West,WECC,Cold,Severe Weather,Storm,523.0,8.716666666666667,Under 1 day,150000.0,4303.7,1
+1082,2008-01-29 05:00:00,2008,1,Winter,California,CA,West,WECC,Cold,Equipment Failure,,437.0,7.283333333333333,Under 1 day,,4303.7,1
+112,2008-01-29 22:00:00,2008,1,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Winter Storm,4110.0,68.5,1 to 3 days,86915.0,2034.1,1
+698,2008-01-29 23:23:00,2008,1,Winter,Ohio,OH,Central,RFC,Cold,Severe Weather,Heavy Wind,805.0,13.416666666666666,Under 1 day,45000.0,2033.7,1
+946,2008-01-30 03:06:00,2008,1,Winter,New York,NY,Northeast,NPCC,Cold,Severe Weather,Heavy Wind,3584.0,59.733333333333334,1 to 3 days,54316.0,4161.4,1
+1186,2008-02-01 06:00:00,2008,2,Winter,California,CA,West,WECC,Cold,Equipment Failure,,829.0,13.816666666666666,Under 1 day,,4303.7,1
+1110,2008-02-02 03:58:00,2008,2,Winter,California,CA,West,WECC,Cold,Equipment Failure,,749.0,12.483333333333333,Under 1 day,,4303.7,1
+642,2008-02-05 22:00:00,2008,2,Winter,Kentucky,KY,Central,SERC,Cold,Severe Weather,,1020.0,17.0,Under 1 day,76000.0,1795.8,1
+20,2008-02-06 09:00:00,2008,2,Winter,Tennessee,TN,Central,SERC,Cold,Severe Weather,,840.0,14.0,Under 1 day,57000.0,1450.3,1
+1273,2008-02-09 11:59:00,2008,2,Winter,California,CA,West,WECC,Cold,Islanding,,214.0,3.566666666666667,Under 1 day,0.0,4303.7,1
+1336,2008-02-10 14:06:00,2008,2,Winter,Virginia,VA,Southeast,SERC,Cold,Severe Weather,Heavy Wind,570.0,9.5,Under 1 day,114618.0,2265.2,1
+745,2008-02-10 18:02:00,2008,2,Winter,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,Heavy Wind,1318.0,21.966666666666665,Under 1 day,50718.0,1367.2,1
+1462,2008-02-13 18:43:00,2008,2,Winter,Maine,ME,Northeast,NPCC,Cold,Severe Weather,Winter Storm,1037.0,17.283333333333335,Under 1 day,50462.0,1428.0,1
+667,2008-02-14 08:15:00,2008,2,Winter,Utah,UT,Southwest,WECC,Cold,System Operability Disruption,,871.0,14.516666666666667,Under 1 day,74031.0,2737.1,1
+1113,2008-02-15 15:06:00,2008,2,Winter,California,CA,West,WECC,Cold,Islanding,,270.0,4.5,Under 1 day,10008.0,4303.7,1
+645,2008-02-25 08:00:00,2008,2,Winter,Kentucky,KY,Central,RFC,Cold,Fuel Supply Emergency,,23700.0,395.0,More than 3 days,0.0,1795.8,1
+1035,2008-02-26 13:09:00,2008,2,Winter,Florida,FL,Southeast,FRCC,Cold,Equipment Failure,Transmission Trip,182.0,3.033333333333333,Under 1 day,584384.0,2315.2,1
+1050,2008-02-26 13:09:00,2008,2,Winter,Florida,FL,Southeast,FRCC,Cold,System Operability Disruption,,91.0,1.5166666666666666,Under 1 day,53965.0,2315.2,1
+1059,2008-02-26 13:09:00,2008,2,Winter,Florida,FL,Southeast,FRCC,Cold,System Operability Disruption,,38.0,0.6333333333333333,Under 1 day,56000.0,2315.2,1
+1060,2008-02-26 13:09:00,2008,2,Winter,Florida,FL,Southeast,FRCC,Cold,System Operability Disruption,,61.0,1.0166666666666666,Under 1 day,47661.0,2315.2,1
+1041,2008-02-26 13:10:00,2008,2,Winter,Florida,FL,Southeast,FRCC,Cold,System Operability Disruption,,155.0,2.5833333333333335,Under 1 day,150000.0,2315.2,1
+622,2008-03-08 16:00:00,2008,3,Spring,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,2684.0,44.733333333333334,1 to 3 days,168449.0,2123.4,1
+245,2008-04-09 16:00:00,2008,4,Spring,Texas,TX,South,TRE,Cold,Severe Weather,,5595.0,93.25,More than 3 days,488689.0,2435.3,1
+1077,2008-05-08 10:21:00,2008,5,Spring,California,CA,West,WECC,Cold,System Operability Disruption,,155.0,2.5833333333333335,Under 1 day,,4303.7,1
+1384,2008-05-11 06:00:00,2008,5,Spring,Georgia,GA,Southeast,SERC,Cold,Severe Weather,Thunderstorm,1950.0,32.5,1 to 3 days,80539.0,1516.0,1
+301,2008-05-11 16:50:00,2008,5,Spring,Indiana,IN,Central,RFC,Cold,Islanding,,233.0,3.8833333333333333,Under 1 day,9700.0,1860.0,1
+778,2008-05-12 00:01:00,2008,5,Spring,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,Storm,3599.0,59.983333333333334,1 to 3 days,135000.0,2851.2,1
+1398,2008-05-27 14:02:00,2008,5,Spring,Connecticut,CT,Northeast,NPCC,Cold,Severe Weather,Thunderstorm,110.0,1.8333333333333333,Under 1 day,56400.0,1721.9,1
+368,2008-05-30 09:30:00,2008,5,Spring,Illinois,IL,Central,RFC,Cold,Severe Weather,Storm,810.0,13.5,Under 1 day,109000.0,2877.6,1
+1020,2008-05-30 14:05:00,2008,5,Spring,Louisiana,LA,South,SERC,Cold,System Operability Disruption,,355.0,5.916666666666667,Under 1 day,,1685.8,1
+322,2008-05-30 22:00:00,2008,5,Spring,Indiana,IN,Central,RFC,Cold,Severe Weather,Thunderstorm,7319.0,121.98333333333333,More than 3 days,70000.0,1860.0,1
+523,2008-06-04 15:00:00,2008,6,Summer,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Storm,4470.0,74.5,More than 3 days,108000.0,2511.4,1
+563,2008-06-04 15:00:00,2008,6,Summer,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Thunderstorm,1320.0,22.0,Under 1 day,249408.0,2511.4,1
+1335,2008-06-04 15:04:00,2008,6,Summer,Virginia,VA,Southeast,SERC,Cold,Severe Weather,Thunderstorm,1826.0,30.433333333333334,1 to 3 days,253800.0,2265.2,1
+138,2008-06-06 15:18:00,2008,6,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Thunderstorm,8922.0,148.7,More than 3 days,358000.0,2034.1,1
+392,2008-06-08 09:30:00,2008,6,Summer,Illinois,IL,Central,RFC,Cold,Severe Weather,,2010.0,33.5,1 to 3 days,125000.0,2877.6,1
+133,2008-06-08 18:00:00,2008,6,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Storm,11850.0,197.5,More than 3 days,150000.0,2034.1,1
+790,2008-06-09 14:52:00,2008,6,Summer,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,Wildfire,333.0,5.55,Under 1 day,75654.0,2851.2,1
+949,2008-06-10 11:00:00,2008,6,Summer,New York,NY,Northeast,NPCC,Cold,Severe Weather,Storm,4710.0,78.5,More than 3 days,68000.0,4161.4,1
+782,2008-06-10 18:00:00,2008,6,Summer,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,Storm,6090.0,101.5,More than 3 days,248800.0,2851.2,1
+585,2008-06-10 19:00:00,2008,6,Summer,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Thunderstorm,5579.0,92.98333333333333,More than 3 days,198000.0,2123.4,1
+976,2008-06-11 13:15:00,2008,6,Summer,New York,NY,Northeast,NPCC,Cold,System Operability Disruption,Uncontrolled Loss,50.0,0.8333333333333334,Under 1 day,61000.0,4161.4,1
+916,2008-06-12 15:30:00,2008,6,Summer,Iowa,IA,East North Central,RFC,Cold,Severe Weather,Flooding,8670.0,144.5,More than 3 days,21000.0,2045.8,1
+384,2008-06-15 08:00:00,2008,6,Summer,Illinois,IL,Central,RFC,Cold,Severe Weather,,720.0,12.0,Under 1 day,165000.0,2877.6,1
+305,2008-06-15 19:06:00,2008,6,Summer,Indiana,IN,Central,RFC,Cold,Islanding,,96.0,1.6,Under 1 day,9700.0,1860.0,1
+1311,2008-06-16 16:15:00,2008,6,Summer,Virginia,VA,Southeast,SERC,Cold,Severe Weather,Thunderstorm,424.0,7.066666666666666,Under 1 day,115000.0,2265.2,1
+255,2008-06-17 09:01:00,2008,6,Summer,Texas,TX,South,TRE,Cold,Severe Weather,Thunderstorm,3569.0,59.483333333333334,1 to 3 days,234393.0,2435.3,1
+1115,2008-06-21 15:09:00,2008,6,Summer,California,CA,West,WECC,Cold,Severe Weather,Thunderstorm,224.0,3.7333333333333334,Under 1 day,477.0,4303.7,1
+335,2008-06-22 16:55:00,2008,6,Summer,Indiana,IN,Central,RFC,Cold,Severe Weather,Thunderstorm,10.0,0.16666666666666666,Under 1 day,,1860.0,1
+323,2008-06-23 13:44:00,2008,6,Summer,Indiana,IN,Central,RFC,Cold,Equipment Failure,Breaker Trip,1.0,0.016666666666666666,Under 1 day,,1860.0,1
+1064,2008-06-23 16:52:00,2008,6,Summer,Florida,FL,Southeast,FRCC,Cold,Equipment Failure,Transmission Trip,396.0,6.6,Under 1 day,32593.0,2315.2,1
+122,2008-06-26 17:00:00,2008,6,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Thunderstorm,270.0,4.5,Under 1 day,53000.0,2034.1,1
+1349,2008-06-27 16:30:00,2008,6,Summer,Nebraska,NE,West North Central,MRO,Cold,Severe Weather,Heavy Wind,60.0,1.0,Under 1 day,126000.0,2549.1,1
+1195,2008-07-01 07:31:00,2008,7,Summer,California,CA,West,WECC,Normal,Equipment Failure,Generator Trip,269.0,4.483333333333333,Under 1 day,,4303.7,1
+131,2008-07-02 15:00:00,2008,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,5580.0,93.0,More than 3 days,239663.0,2034.1,1
+1230,2008-07-02 19:16:00,2008,7,Summer,California,CA,West,WECC,Normal,Severe Weather,Wildfire,252.0,4.2,Under 1 day,200000.0,4303.7,1
+1089,2008-07-02 19:36:00,2008,7,Summer,California,CA,West,WECC,Normal,Severe Weather,Wildfire,1054.0,17.566666666666666,Under 1 day,37784.0,4303.7,1
+166,2008-07-02 20:00:00,2008,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,1140.0,19.0,Under 1 day,56000.0,2034.1,1
+1280,2008-07-07 12:15:00,2008,7,Summer,California,CA,West,WECC,Normal,Severe Weather,Heatwave,4605.0,76.75,More than 3 days,0.0,4303.7,1
+1166,2008-07-10 14:22:00,2008,7,Summer,California,CA,West,WECC,Normal,Equipment Failure,Generator Trip,179.0,2.9833333333333334,Under 1 day,,4303.7,1
+336,2008-07-22 03:00:00,2008,7,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,3872.0,64.53333333333333,1 to 3 days,58000.0,1860.0,1
+714,2008-07-22 03:00:00,2008,7,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,Thunderstorm,2190.0,36.5,1 to 3 days,56000.0,2033.7,1
+218,2008-07-23 05:56:00,2008,7,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,12124.0,202.06666666666666,More than 3 days,211266.0,2435.3,1
+1468,2008-07-24 07:23:00,2008,7,Summer,Maine,ME,Northeast,NPCC,Normal,Severe Weather,Thunderstorm; Islanding,618.0,10.3,Under 1 day,110000.0,1428.0,1
+374,2008-08-04 18:00:00,2008,8,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,,3000.0,50.0,1 to 3 days,653000.0,2877.6,1
+330,2008-08-05 03:00:00,2008,8,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Storm,1130.0,18.833333333333332,Under 1 day,63000.0,1860.0,1
+445,2008-08-15 12:52:00,2008,8,Summer,Washington,WA,Northwest,WECC,Normal,Public Appeal,,248.0,4.133333333333334,Under 1 day,8000.0,2380.0,1
+213,2008-08-16 05:23:00,2008,8,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Lightning,847.0,14.116666666666667,Under 1 day,71823.0,2435.3,1
+1054,2008-08-19 09:29:00,2008,8,Summer,Florida,FL,Southeast,FRCC,Normal,Severe Weather,Hurricanes,5071.0,84.51666666666667,More than 3 days,101950.0,2315.2,1
+1036,2008-08-21 19:00:00,2008,8,Summer,Florida,FL,Southeast,FRCC,Normal,Severe Weather,Hurricanes,5820.0,97.0,More than 3 days,430000.0,2315.2,1
+991,2008-08-31 07:30:00,2008,8,Summer,Louisiana,LA,South,SERC,Normal,Fuel Supply Emergency,,28170.0,469.5,More than 3 days,,1685.8,1
+1014,2008-09-01 10:30:00,2008,9,Fall,Louisiana,LA,South,SERC,Normal,Severe Weather,Hurricanes,17812.0,296.8666666666667,More than 3 days,150000.0,1685.8,1
+1011,2008-09-01 11:45:00,2008,9,Fall,Louisiana,LA,South,SERC,Normal,Severe Weather,Hurricanes,13215.0,220.25,More than 3 days,246092.0,1685.8,1
+768,2008-09-06 07:45:00,2008,9,Fall,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Hurricanes,885.0,14.75,Under 1 day,57000.0,1367.2,1
+1227,2008-09-08 22:03:00,2008,9,Fall,California,CA,West,WECC,Normal,Fuel Supply Emergency,,865.0,14.416666666666666,Under 1 day,,4303.7,1
+203,2008-09-12 18:21:00,2008,9,Fall,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,27698.0,461.6333333333333,More than 3 days,2142678.0,2435.3,1
+269,2008-09-12 18:21:00,2008,9,Fall,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,27698.0,461.6333333333333,More than 3 days,2504366.0,2435.3,1
+275,2008-09-12 20:00:00,2008,9,Fall,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,21540.0,359.0,More than 3 days,113247.0,2435.3,1
+1015,2008-09-13 10:24:00,2008,9,Fall,Louisiana,LA,South,SERC,Normal,Severe Weather,Hurricanes,20416.0,340.26666666666665,More than 3 days,50000.0,1685.8,1
+249,2008-09-13 12:00:00,2008,9,Fall,Texas,TX,South,TRE,Normal,Severe Weather,Hurricanes,3360.0,56.0,1 to 3 days,238392.0,2435.3,1
+646,2008-09-14 10:01:00,2008,9,Fall,Kentucky,KY,Central,RFC,Normal,Severe Weather,Heavy Wind,10499.0,174.98333333333332,More than 3 days,18000.0,1795.8,1
+641,2008-09-14 11:30:00,2008,9,Fall,Kentucky,KY,Central,RFC,Normal,Severe Weather,Hurricanes,300.0,5.0,Under 1 day,375000.0,1795.8,1
+697,2008-09-14 14:00:00,2008,9,Fall,Ohio,OH,Central,RFC,Normal,Severe Weather,Hurricanes,4200.0,70.0,1 to 3 days,95000.0,2033.7,1
+604,2008-09-14 17:00:00,2008,9,Fall,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Heavy Wind,6938.0,115.63333333333334,More than 3 days,124596.0,2123.4,1
+719,2008-09-14 17:00:00,2008,9,Fall,Ohio,OH,Central,RFC,Normal,Severe Weather,Heavy Wind,11531.0,192.18333333333334,More than 3 days,564728.0,2033.7,1
+723,2008-09-14 17:00:00,2008,9,Fall,Ohio,OH,Central,RFC,Normal,Severe Weather,Heavy Wind,11420.0,190.33333333333334,More than 3 days,245164.0,2033.7,1
+607,2008-09-14 19:00:00,2008,9,Fall,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Hurricanes,299.0,4.983333333333333,Under 1 day,105000.0,2123.4,1
+612,2008-09-15 00:37:00,2008,9,Fall,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Hurricanes,6713.0,111.88333333333334,More than 3 days,160875.0,2123.4,1
+1106,2008-09-30 14:02:00,2008,9,Fall,California,CA,West,WECC,Normal,Islanding,,3.0,0.05,Under 1 day,10000.0,4303.7,1
+1010,2008-10-02 14:50:00,2008,10,Fall,Louisiana,LA,South,SERC,Normal,System Operability Disruption,,420.0,7.0,Under 1 day,,1685.8,1
+1409,2008-10-25 23:00:00,2008,10,Fall,Connecticut,CT,Northeast,NPCC,Normal,Severe Weather,Storm,2640.0,44.0,1 to 3 days,52000.0,1721.9,1
+1201,2008-11-07 11:13:00,2008,11,Fall,California,CA,West,WECC,Cold,System Operability Disruption,,761.0,12.683333333333334,Under 1 day,140000.0,4303.7,1
+1284,2008-11-07 11:15:00,2008,11,Fall,California,CA,West,WECC,Cold,System Operability Disruption,,759.0,12.65,Under 1 day,400000.0,4303.7,1
+1271,2008-11-15 09:39:00,2008,11,Fall,California,CA,West,WECC,Cold,Severe Weather,Wildfire,751.0,12.516666666666667,Under 1 day,115500.0,4303.7,1
+859,2008-12-02 04:30:00,2008,12,Winter,Missouri,MO,Central,RFC,Cold,Severe Weather,Wildfire,870.0,14.5,Under 1 day,53000.0,2053.5,1
+783,2008-12-09 17:27:00,2008,12,Winter,New Jersey,NJ,Northeast,RFC,Cold,System Operability Disruption,Transmission Interruption,1365.0,22.75,Under 1 day,156729.0,2851.2,1
+822,2008-12-10 17:09:00,2008,12,Winter,Oregon,OR,Northwest,WECC,Cold,Equipment Failure,,200.0,3.3333333333333335,Under 1 day,3.0,2804.9,1
+944,2008-12-11 18:00:00,2008,12,Winter,New York,NY,Northeast,NPCC,Cold,Severe Weather,Winter Storm,5400.0,90.0,More than 3 days,60000.0,4161.4,1
+937,2008-12-12 02:38:00,2008,12,Winter,New York,NY,Northeast,NPCC,Cold,Severe Weather,Winter Storm,10726.0,178.76666666666668,More than 3 days,190000.0,4161.4,1
+1461,2008-12-12 08:45:00,2008,12,Winter,Maine,ME,Northeast,NPCC,Cold,Severe Weather,Winter Storm,3667.0,61.11666666666667,1 to 3 days,169757.0,1428.0,1
+1249,2008-12-13 15:30:00,2008,12,Winter,California,CA,West,WECC,Cold,Public Appeal,,11867.0,197.78333333333333,More than 3 days,,4303.7,1
+1252,2008-12-19 01:02:00,2008,12,Winter,California,CA,West,WECC,Cold,Islanding,,1035.0,17.25,Under 1 day,638.0,4303.7,1
+304,2008-12-19 09:00:00,2008,12,Winter,Indiana,IN,Central,RFC,Cold,Severe Weather,Winter Storm,2120.0,35.333333333333336,1 to 3 days,50000.0,1860.0,1
+1178,2008-12-26 11:40:00,2008,12,Winter,California,CA,West,WECC,Cold,System Operability Disruption,,234.0,3.9,Under 1 day,50000.0,4303.7,1
+107,2008-12-27 16:00:00,2008,12,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Heavy Wind,7650.0,127.5,More than 3 days,247847.0,2034.1,1
+105,2008-12-28 04:45:00,2008,12,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Heavy Wind,5115.0,85.25,More than 3 days,210517.0,2034.1,1
+132,2008-12-28 11:45:00,2008,12,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Heavy Wind,705.0,11.75,Under 1 day,230000.0,2034.1,1
+333,2008-12-30 16:02:00,2008,12,Winter,Indiana,IN,Central,RFC,Cold,System Operability Disruption,,35.0,0.5833333333333334,Under 1 day,9700.0,1860.0,1
+290,2009-01-05 05:00:00,2009,1,Winter,Texas,TX,South,TRE,Cold,Severe Weather,Storm,2220.0,37.0,1 to 3 days,157019.0,2435.3,1
+1051,2009-01-08 23:46:00,2009,1,Winter,Florida,FL,Southeast,FRCC,Cold,Equipment Failure,Transmission Trip,1419.0,23.65,Under 1 day,31000.0,2315.2,1
+297,2009-01-17 08:00:00,2009,1,Winter,Indiana,IN,Central,RFC,Cold,Fuel Supply Emergency,,12240.0,204.0,More than 3 days,,1860.0,1
+303,2009-01-22 16:00:00,2009,1,Winter,Indiana,IN,Central,RFC,Cold,System Operability Disruption,,65.0,1.0833333333333333,Under 1 day,9700.0,1860.0,1
+643,2009-01-27 05:00:00,2009,1,Winter,Kentucky,KY,Central,RFC,Cold,Severe Weather,Winter Storm,3570.0,59.5,1 to 3 days,383000.0,1795.8,1
+644,2009-01-27 05:03:00,2009,1,Winter,Kentucky,KY,Central,SERC,Cold,Severe Weather,Winter Storm,6492.0,108.2,More than 3 days,190000.0,1795.8,1
+854,2009-01-27 11:00:00,2009,1,Winter,Missouri,MO,Central,SERC,Cold,Severe Weather,Winter Storm,4740.0,79.0,More than 3 days,62500.0,2053.5,1
+1286,2009-01-27 13:46:00,2009,1,Winter,Arkansas,AR,South,SERC,Cold,Severe Weather,Winter Storm,10274.0,171.23333333333332,More than 3 days,111818.0,1492.8,1
+1288,2009-01-27 21:00:00,2009,1,Winter,Arkansas,AR,South,SERC,Cold,Severe Weather,Winter Storm,2700.0,45.0,1 to 3 days,215700.0,1492.8,1
+49,2009-01-27 21:45:00,2009,1,Winter,Tennessee,TN,Central,SERC,Cold,Severe Weather,Winter Storm,32.0,0.5333333333333333,Under 1 day,,1450.3,1
+853,2009-01-28 00:10:00,2009,1,Winter,Missouri,MO,Central,RFC,Cold,Severe Weather,Winter Storm,4150.0,69.16666666666667,1 to 3 days,,2053.5,1
+647,2009-01-28 04:00:00,2009,1,Winter,Kentucky,KY,Central,RFC,Cold,Severe Weather,Winter Storm,15180.0,253.0,More than 3 days,3500.0,1795.8,1
+338,2009-01-28 06:00:00,2009,1,Winter,Indiana,IN,Central,RFC,Cold,Severe Weather,Winter Storm,12240.0,204.0,More than 3 days,75000.0,1860.0,1
+334,2009-01-28 07:50:00,2009,1,Winter,Indiana,IN,Central,RFC,Cold,Severe Weather,Winter Storm,23773.0,396.21666666666664,More than 3 days,53700.0,1860.0,1
+217,2009-02-11 02:30:00,2009,2,Winter,Texas,TX,South,TRE,Cold,Severe Weather,Heavy Wind,570.0,9.5,Under 1 day,64801.0,2435.3,1
+637,2009-02-11 19:00:00,2009,2,Winter,Kentucky,KY,Central,RFC,Cold,Severe Weather,Thunderstorm,1680.0,28.0,1 to 3 days,78000.0,1795.8,1
+722,2009-02-12 02:30:00,2009,2,Winter,Ohio,OH,Central,RFC,Cold,Severe Weather,Heavy Wind,930.0,15.5,Under 1 day,184000.0,2033.7,1
+613,2009-02-12 08:00:00,2009,2,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Heavy Wind,5160.0,86.0,More than 3 days,132000.0,2123.4,1
+703,2009-02-13 02:30:00,2009,2,Winter,Ohio,OH,Central,RFC,Cold,Severe Weather,Heavy Wind,3630.0,60.5,1 to 3 days,184000.0,2033.7,1
+1459,2009-02-23 02:38:00,2009,2,Winter,Maine,ME,Northeast,NPCC,Cold,Severe Weather,Winter Storm,2108.0,35.13333333333333,1 to 3 days,131000.0,1428.0,1
+281,2009-03-01 00:15:00,2009,3,Spring,Texas,TX,South,WECC,Normal,Equipment Failure,Transmission Trip,885.0,14.75,Under 1 day,132000.0,2435.3,1
+1334,2009-03-01 22:00:00,2009,3,Spring,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Winter Storm,2640.0,44.0,1 to 3 days,217000.0,2265.2,1
+121,2009-03-03 06:48:00,2009,3,Spring,Michigan,MI,East North Central,RFC,Normal,Equipment Failure,Transformer Outage,78377.0,1306.2833333333333,More than 3 days,,2034.1,1
+1331,2009-03-03 22:00:00,2009,3,Spring,Virginia,VA,Southeast,RFC,Normal,Public Appeal,,1337.0,22.283333333333335,Under 1 day,,2265.2,1
+1266,2009-03-08 22:16:00,2009,3,Spring,California,CA,West,WECC,Normal,System Operability Disruption,,89.0,1.4833333333333334,Under 1 day,,4303.7,1
+86,2009-04-06 01:00:00,2009,4,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Winter Storm,3540.0,59.0,1 to 3 days,70793.0,2034.1,1
+435,2009-04-23 16:25:00,2009,4,Spring,Washington,WA,Northwest,WECC,Normal,Equipment Failure,Transmission Trip,1204.0,20.066666666666666,Under 1 day,93300.0,2380.0,1
+1204,2009-04-23 17:54:00,2009,4,Spring,California,CA,West,WECC,Normal,System Operability Disruption,Hvsubstation Interruption,124.0,2.066666666666667,Under 1 day,280000.0,4303.7,1
+1007,2009-04-24 11:09:00,2009,4,Spring,Louisiana,LA,South,SERC,Normal,System Operability Disruption,,732.0,12.2,Under 1 day,11000.0,1685.8,1
+101,2009-04-25 14:30:00,2009,4,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Wind/Rain,5670.0,94.5,More than 3 days,125000.0,2034.1,1
+254,2009-04-27 15:30:00,2009,4,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Heavy Wind,1920.0,32.0,1 to 3 days,158000.0,2435.3,1
+852,2009-05-08 07:30:00,2009,5,Spring,Missouri,MO,Central,SERC,Normal,Severe Weather,Thunderstorm,810.0,13.5,Under 1 day,83000.0,2053.5,1
+394,2009-05-08 13:30:00,2009,5,Spring,Illinois,IL,Central,SERC,Normal,Severe Weather,Thunderstorm,9230.0,153.83333333333334,More than 3 days,68800.0,2877.6,1
+639,2009-05-29 09:05:00,2009,5,Spring,Kentucky,KY,Central,SERC,Normal,Equipment Failure,Transmission,652.0,10.866666666666667,Under 1 day,,1795.8,1
+1197,2009-06-05 13:38:00,2009,6,Summer,California,CA,West,WECC,Normal,Islanding,,400.0,6.666666666666667,Under 1 day,70.0,4303.7,1
+565,2009-06-09 17:25:00,2009,6,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,2855.0,47.583333333333336,1 to 3 days,85091.0,2511.4,1
+286,2009-06-10 18:00:00,2009,6,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Storm,6000.0,100.0,More than 3 days,800000.0,2435.3,1
+42,2009-06-12 16:37:00,2009,6,Summer,Tennessee,TN,Central,SERC,Normal,Severe Weather,Storm,136.0,2.2666666666666666,Under 1 day,136000.0,1450.3,1
+1387,2009-06-12 22:00:00,2009,6,Summer,Georgia,GA,Southeast,SERC,Normal,Severe Weather,Thunderstorm,1200.0,20.0,Under 1 day,102000.0,1516.0,1
+1259,2009-06-16 23:00:00,2009,6,Summer,California,CA,West,WECC,Normal,Fuel Supply Emergency,,900.0,15.0,Under 1 day,,4303.7,1
+153,2009-06-19 00:01:00,2009,6,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Storm,4259.0,70.98333333333333,1 to 3 days,99000.0,2034.1,1
+362,2009-06-19 13:00:00,2009,6,Summer,Illinois,IL,Central,SERC,Normal,Severe Weather,Storm,659.0,10.983333333333333,Under 1 day,245000.0,2877.6,1
+1009,2009-06-24 13:30:00,2009,6,Summer,Louisiana,LA,South,SERC,Normal,Public Appeal,,510.0,8.5,Under 1 day,,1685.8,1
+235,2009-06-25 15:16:00,2009,6,Summer,Texas,TX,South,TRE,Normal,Public Appeal,,224.0,3.7333333333333334,Under 1 day,,2435.3,1
+92,2009-06-25 15:30:00,2009,6,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Wind/Rain,4590.0,76.5,More than 3 days,118000.0,2034.1,1
+1395,2009-06-26 17:00:00,2009,6,Summer,Connecticut,CT,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,4560.0,76.0,More than 3 days,50752.0,1721.9,1
+1467,2009-07-02 22:44:00,2009,7,Summer,Maine,ME,Northeast,NPCC,Warm,Islanding,,881.0,14.683333333333334,Under 1 day,0.0,1428.0,1
+252,2009-07-07 15:30:00,2009,7,Summer,Texas,TX,South,TRE,Warm,Public Appeal,,210.0,3.5,Under 1 day,,2435.3,1
+291,2009-07-08 13:30:00,2009,7,Summer,Texas,TX,South,TRE,Warm,Public Appeal,,330.0,5.5,Under 1 day,,2435.3,1
+992,2009-07-14 13:00:00,2009,7,Summer,Louisiana,LA,South,SPP,Warm,Public Appeal,,300.0,5.0,Under 1 day,,1685.8,1
+1013,2009-07-15 13:00:00,2009,7,Summer,Louisiana,LA,South,SPP,Warm,Public Appeal,,300.0,5.0,Under 1 day,,1685.8,1
+1022,2009-07-16 13:00:00,2009,7,Summer,Louisiana,LA,South,SPP,Warm,Public Appeal,,300.0,5.0,Under 1 day,,1685.8,1
+258,2009-07-18 19:00:00,2009,7,Summer,Texas,TX,South,TRE,Warm,Severe Weather,Thunderstorm,1560.0,26.0,1 to 3 days,73000.0,2435.3,1
+1496,2009-07-20 21:50:00,2009,7,Summer,Colorado,CO,Southwest,WECC,Warm,Severe Weather,Thunderstorm,2710.0,45.166666666666664,1 to 3 days,86058.0,2836.1,1
+1267,2009-07-21 05:34:00,2009,7,Summer,California,CA,West,WECC,Warm,Equipment Failure,Generator Trip,909.0,15.15,Under 1 day,1.0,4303.7,1
+26,2009-07-27 05:05:00,2009,7,Summer,Tennessee,TN,Central,SERC,Warm,Equipment Failure,Computer Hardware,762.0,12.7,Under 1 day,,1450.3,1
+681,2009-07-28 20:18:00,2009,7,Summer,Utah,UT,Southwest,WECC,Warm,Equipment Failure,Substation,15.0,0.25,Under 1 day,,2737.1,1
+260,2009-08-05 15:00:00,2009,8,Summer,Texas,TX,South,TRE,Warm,Public Appeal,,240.0,4.0,Under 1 day,,2435.3,1
+119,2009-08-07 23:00:00,2009,8,Summer,Michigan,MI,East North Central,RFC,Warm,Severe Weather,Wind/Rain,5700.0,95.0,More than 3 days,137000.0,2034.1,1
+157,2009-08-09 19:31:00,2009,8,Summer,Michigan,MI,East North Central,RFC,Warm,Severe Weather,Thunderstorm,1588.0,26.466666666666665,1 to 3 days,58156.0,2034.1,1
+215,2009-08-12 18:25:00,2009,8,Summer,Texas,TX,South,TRE,Warm,Severe Weather,Thunderstorm,215.0,3.5833333333333335,Under 1 day,73000.0,2435.3,1
+226,2009-08-21 19:00:00,2009,8,Summer,Texas,TX,South,TRE,Warm,Severe Weather,Thunderstorm,1500.0,25.0,1 to 3 days,80000.0,2435.3,1
+1533,2009-08-29 11:00:00,2009,8,Summer,South Dakota,SD,West North Central,MRO,Warm,Islanding,,181.0,3.0166666666666666,Under 1 day,,2038.3,1
+1532,2009-08-29 22:54:00,2009,8,Summer,South Dakota,SD,West North Central,RFC,Warm,Islanding,,59.0,0.9833333333333333,Under 1 day,,2038.3,1
+1225,2009-08-31 10:31:00,2009,8,Summer,California,CA,West,WECC,Warm,Public Appeal,,89.0,1.4833333333333334,Under 1 day,,4303.7,1
+90,2009-10-07 05:45:00,2009,10,Fall,Michigan,MI,East North Central,RFC,Warm,Severe Weather,Storm,3915.0,65.25,1 to 3 days,75000.0,2034.1,1
+1183,2009-10-09 18:30:00,2009,10,Fall,California,CA,West,WECC,Warm,System Operability Disruption,Transmission Interruption,40.0,0.6666666666666666,Under 1 day,,4303.7,1
+1352,2009-10-13 12:48:00,2009,10,Fall,Wyoming,WY,West North Central,WECC,Warm,Severe Weather,Winter Storm,106.0,1.7666666666666666,Under 1 day,35500.0,1876.2,1
+1126,2009-10-13 15:45:00,2009,10,Fall,California,CA,West,WECC,Warm,Severe Weather,Heavy Wind,125.0,2.0833333333333335,Under 1 day,94000.0,4303.7,1
+1193,2009-10-13 16:00:00,2009,10,Fall,California,CA,West,WECC,Warm,Severe Weather,Wind/Rain,390.0,6.5,Under 1 day,859554.0,4303.7,1
+1102,2009-11-18 06:15:00,2009,11,Fall,California,CA,West,WECC,Warm,Equipment Failure,Switching,945.0,15.75,Under 1 day,,4303.7,1
+1191,2009-12-07 22:00:00,2009,12,Winter,California,CA,West,WECC,Warm,Equipment Failure,,1080.0,18.0,Under 1 day,,4303.7,1
+501,2009-12-08 01:00:00,2009,12,Winter,Arizona,AZ,Southwest,WECC,Warm,Severe Weather,,4200.0,70.0,1 to 3 days,140000.0,2625.4,1
+1269,2009-12-08 06:34:00,2009,12,Winter,California,CA,West,WECC,Warm,System Operability Disruption,,326.0,5.433333333333334,Under 1 day,,4303.7,1
+728,2009-12-09 13:37:00,2009,12,Winter,Ohio,OH,Central,RFC,Warm,Severe Weather,,1733.0,28.883333333333333,1 to 3 days,48102.0,2033.7,1
+114,2009-12-10 17:45:00,2009,12,Winter,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,3015.0,50.25,1 to 3 days,65562.0,2034.1,1
+764,2009-12-18 22:55:00,2009,12,Winter,North Carolina,NC,Southeast,SERC,Warm,Severe Weather,,1460.0,24.333333333333332,1 to 3 days,47000.0,1367.2,1
+1026,2010-01-06 18:00:00,2010,1,Winter,Louisiana,LA,South,SERC,Warm,Public Appeal,,2880.0,48.0,1 to 3 days,,1685.8,1
+1047,2010-01-11 03:45:00,2010,1,Winter,Florida,FL,Southeast,"FRCC, SERC",Warm,System Operability Disruption,,372.0,6.2,Under 1 day,,2315.2,1
+1172,2010-01-18 11:30:00,2010,1,Winter,California,CA,West,WECC,Warm,Severe Weather,Storm,14190.0,236.5,More than 3 days,1700000.0,4303.7,1
+1132,2010-01-19 07:30:00,2010,1,Winter,California,CA,West,WECC,Warm,Severe Weather,Storm,294.0,4.9,Under 1 day,30000.0,4303.7,1
+1116,2010-01-19 14:30:00,2010,1,Winter,California,CA,West,WECC,Warm,Severe Weather,Storm,1470.0,24.5,1 to 3 days,50000.0,4303.7,1
+1176,2010-01-20 13:00:00,2010,1,Winter,California,CA,West,WECC,Warm,Severe Weather,Storm,6070.0,101.16666666666667,More than 3 days,147223.0,4303.7,1
+1415,2010-01-28 12:00:00,2010,1,Winter,Oklahoma,OK,South,SPP,Warm,Severe Weather,Winter Storm,7200.0,120.0,More than 3 days,68705.0,1901.7,1
+1417,2010-02-01 14:32:00,2010,2,Winter,Oklahoma,OK,South,SPP,Warm,Severe Weather,Winter Storm,148.0,2.466666666666667,Under 1 day,,1901.7,1
+803,2010-02-05 15:00:00,2010,2,Winter,New Jersey,NJ,Northeast,RFC,Warm,Severe Weather,Winter Storm,11580.0,193.0,More than 3 days,221000.0,2851.2,1
+841,2010-02-05 19:00:00,2010,2,Winter,District of Columbia,DC,Northeast,RFC,Warm,Severe Weather,Winter Storm,9886.0,164.76666666666668,More than 3 days,97651.0,9856.5,1
+583,2010-02-05 22:30:00,2010,2,Winter,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Winter Storm,9450.0,157.5,More than 3 days,57000.0,2123.4,1
+634,2010-02-09 18:00:00,2010,2,Winter,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Winter Storm,7080.0,118.0,More than 3 days,223000.0,2123.4,1
+232,2010-02-11 12:00:00,2010,2,Winter,Texas,TX,South,TRE,Warm,Severe Weather,Winter Storm,6300.0,105.0,More than 3 days,500000.0,2435.3,1
+1162,2010-02-19 20:30:00,2010,2,Winter,California,CA,West,WECC,Warm,System Operability Disruption,,451.0,7.516666666666667,Under 1 day,,4303.7,1
+964,2010-02-23 22:00:00,2010,2,Winter,New York,NY,Northeast,NPCC,Warm,Severe Weather,Winter Storm,2520.0,42.0,1 to 3 days,150000.0,4161.4,1
+961,2010-02-25 17:00:00,2010,2,Winter,New York,NY,Northeast,NPCC,Warm,Severe Weather,Winter Storm,7320.0,122.0,More than 3 days,55000.0,4161.4,1
+608,2010-03-13 01:00:00,2010,3,Spring,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Wind/Rain,5320.0,88.66666666666667,More than 3 days,177528.0,2123.4,1
+1405,2010-03-13 12:00:00,2010,3,Spring,Connecticut,CT,Northeast,NPCC,Warm,Severe Weather,Wind/Rain,3305.0,55.083333333333336,1 to 3 days,50246.0,1721.9,1
+959,2010-03-13 15:00:00,2010,3,Spring,New York,NY,Northeast,NPCC,Warm,Severe Weather,Wind/Rain,5760.0,96.0,More than 3 days,153000.0,4161.4,1
+800,2010-03-13 16:00:00,2010,3,Spring,New Jersey,NJ,Northeast,RFC,Warm,Severe Weather,Flooding,3300.0,55.0,1 to 3 days,180000.0,2851.2,1
+806,2010-03-13 18:00:00,2010,3,Spring,New Jersey,NJ,Northeast,RFC,Warm,Severe Weather,Wind/Rain,9719.0,161.98333333333332,More than 3 days,360000.0,2851.2,1
+943,2010-03-13 18:00:00,2010,3,Spring,New York,NY,Northeast,NPCC,Warm,Severe Weather,Wind/Rain,9480.0,158.0,More than 3 days,173000.0,4161.4,1
+1105,2010-03-31 23:59:00,2010,3,Spring,California,CA,West,WECC,Warm,System Operability Disruption,,56.0,0.9333333333333333,Under 1 day,290000.0,4303.7,1
+1170,2010-03-31 23:59:00,2010,3,Spring,California,CA,West,WECC,Warm,System Operability Disruption,,39.0,0.65,Under 1 day,,4303.7,1
+580,2010-04-16 17:15:00,2010,4,Spring,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,Thunderstorm,2865.0,47.75,1 to 3 days,120000.0,2123.4,1
+1030,2010-04-21 15:05:00,2010,4,Spring,Louisiana,LA,South,SERC,Warm,Equipment Failure,Generator Trip,295.0,4.916666666666667,Under 1 day,,1685.8,1
+1149,2010-05-18 08:15:00,2010,5,Spring,California,CA,West,WECC,Normal,Equipment Failure,Breaker Trip,871.0,14.516666666666667,Under 1 day,,4303.7,1
+337,2010-06-01 22:03:00,2010,6,Summer,Indiana,IN,Central,RFC,Normal,System Operability Disruption,,23187.0,386.45,More than 3 days,,1860.0,1
+181,2010-06-02 20:18:00,2010,6,Summer,Texas,TX,South,TRE,Normal,Severe Weather,,2142.0,35.7,1 to 3 days,126000.0,2435.3,1
+1219,2010-06-06 04:45:00,2010,6,Summer,California,CA,West,WECC,Normal,Islanding,,50.0,0.8333333333333334,Under 1 day,2650.0,4303.7,1
+1501,2010-06-07 18:29:00,2010,6,Summer,Colorado,CO,Southwest,WECC,Normal,System Operability Disruption,,391.0,6.516666666666667,Under 1 day,31000.0,2836.1,1
+182,2010-06-08 11:00:00,2010,6,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,360.0,6.0,Under 1 day,79741.0,2435.3,1
+770,2010-06-09 14:18:00,2010,6,Summer,North Carolina,NC,Southeast,SERC,Normal,System Operability Disruption,Transmission Interruption,42.0,0.7,Under 1 day,4196.0,1367.2,1
+967,2010-06-16 11:11:00,2010,6,Summer,New York,NY,Northeast,NPCC,Normal,System Operability Disruption,,21.0,0.35,Under 1 day,,4161.4,1
+1012,2010-06-17 08:30:00,2010,6,Summer,Louisiana,LA,South,SPP,Normal,Public Appeal,,557.0,9.283333333333333,Under 1 day,,1685.8,1
+1002,2010-06-17 09:30:00,2010,6,Summer,Louisiana,LA,South,SERC,Normal,Public Appeal,,430.0,7.166666666666667,Under 1 day,,1685.8,1
+1017,2010-06-17 09:30:00,2010,6,Summer,Louisiana,LA,South,SERC,Normal,Public Appeal,,467.0,7.783333333333333,Under 1 day,,1685.8,1
+1021,2010-06-17 09:30:00,2010,6,Summer,Louisiana,LA,South,SPP,Normal,Public Appeal,,430.0,7.166666666666667,Under 1 day,,1685.8,1
+919,2010-06-17 10:49:00,2010,6,Summer,Montana,MT,West North Central,MRO,Normal,Islanding,,13.0,0.21666666666666667,Under 1 day,,1860.8,1
+318,2010-06-18 15:30:00,2010,6,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,1980.0,33.0,1 to 3 days,94345.0,1860.0,1
+358,2010-06-18 16:00:00,2010,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,,2700.0,45.0,1 to 3 days,400000.0,2877.6,1
+152,2010-06-18 19:00:00,2010,6,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,600.0,10.0,Under 1 day,100000.0,2034.1,1
+83,2010-06-18 20:00:00,2010,6,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,5730.0,95.5,More than 3 days,150000.0,2034.1,1
+717,2010-06-21 13:48:00,2010,6,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,Thunderstorm,1843.0,30.716666666666665,1 to 3 days,50636.0,2033.7,1
+1298,2010-06-22 15:34:00,2010,6,Summer,Arkansas,AR,South,SERC,Normal,Public Appeal,,206.0,3.433333333333333,Under 1 day,25159.0,1492.8,1
+350,2010-06-23 17:00:00,2010,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,,2680.0,44.666666666666664,1 to 3 days,300000.0,2877.6,1
+332,2010-06-23 17:48:00,2010,6,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,513.0,8.55,Under 1 day,53000.0,1860.0,1
+796,2010-06-24 15:00:00,2010,6,Summer,New Jersey,NJ,Northeast,RFC,Normal,Severe Weather,Thunderstorm,7020.0,117.0,More than 3 days,150000.0,2851.2,1
+633,2010-06-24 15:30:00,2010,6,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,7709.0,128.48333333333332,More than 3 days,355000.0,2123.4,1
+1272,2010-06-25 23:36:00,2010,6,Summer,California,CA,West,WECC,Normal,Islanding,,122.0,2.033333333333333,Under 1 day,,4303.7,1
+868,2010-07-06 03:47:00,2010,7,Summer,Delaware,DE,Northeast,RFC,Cold,Equipment Failure,Transformer Outage,50.0,0.8333333333333334,Under 1 day,18400.0,1838.3,1
+619,2010-07-07 16:13:00,2010,7,Summer,Pennsylvania,PA,Northeast,RFC,Cold,Equipment Failure,Transmission,376.0,6.266666666666667,Under 1 day,43903.0,2123.4,1
+139,2010-07-15 19:00:00,2010,7,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,,6030.0,100.5,More than 3 days,127534.0,2034.1,1
+7,2010-07-17 20:30:00,2010,7,Summer,Minnesota,MN,East North Central,MRO,Cold,Severe Weather,Tornadoes,2970.0,49.5,1 to 3 days,63000.0,2279.0,1
+1403,2010-07-21 18:44:00,2010,7,Summer,Connecticut,CT,Northeast,NPCC,Cold,Severe Weather,Thunderstorm,76.0,1.2666666666666666,Under 1 day,50100.0,1721.9,1
+680,2010-07-23 10:00:00,2010,7,Summer,Utah,UT,Southwest,WECC,Cold,Public Appeal,,2275.0,37.916666666666664,1 to 3 days,,2737.1,1
+158,2010-07-23 19:30:00,2010,7,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,,4260.0,71.0,1 to 3 days,82000.0,2034.1,1
+544,2010-07-25 15:10:00,2010,7,Summer,Maryland,MD,Northeast,RFC,Cold,Severe Weather,,7700.0,128.33333333333334,More than 3 days,297700.0,2511.4,1
+572,2010-07-25 15:20:00,2010,7,Summer,Maryland,MD,Northeast,RFC,Cold,Severe Weather,,3040.0,50.666666666666664,1 to 3 days,124000.0,2511.4,1
+1328,2010-07-25 16:11:00,2010,7,Summer,Virginia,VA,Southeast,SERC,Cold,Severe Weather,,235.0,3.9166666666666665,Under 1 day,81000.0,2265.2,1
+1327,2010-07-29 17:43:00,2010,7,Summer,Virginia,VA,Southeast,SERC,Cold,Severe Weather,Thunderstorm,144.0,2.4,Under 1 day,55000.0,2265.2,1
+1194,2010-07-29 18:39:00,2010,7,Summer,California,CA,West,WECC,Cold,Severe Weather,Wildfire,47.0,0.7833333333333333,Under 1 day,,4303.7,1
+1240,2010-07-29 18:39:00,2010,7,Summer,California,CA,West,WECC,Cold,Severe Weather,Wildfire,47.0,0.7833333333333333,Under 1 day,,4303.7,1
+1198,2010-08-02 12:00:00,2010,8,Summer,California,CA,West,WECC,Cold,Fuel Supply Emergency,Hydro,660.0,11.0,Under 1 day,,4303.7,1
+994,2010-08-02 12:45:00,2010,8,Summer,Louisiana,LA,South,SERC,Cold,Public Appeal,,2775.0,46.25,1 to 3 days,,1685.8,1
+995,2010-08-02 12:45:00,2010,8,Summer,Louisiana,LA,South,SPP,Cold,Public Appeal,,2775.0,46.25,1 to 3 days,,1685.8,1
+998,2010-08-02 12:45:00,2010,8,Summer,Louisiana,LA,South,SERC,Cold,Public Appeal,,2775.0,46.25,1 to 3 days,,1685.8,1
+1000,2010-08-02 12:45:00,2010,8,Summer,Louisiana,LA,South,SERC,Cold,Public Appeal,,2775.0,46.25,1 to 3 days,,1685.8,1
+843,2010-08-05 15:30:00,2010,8,Summer,District of Columbia,DC,Northeast,RFC,Cold,Severe Weather,Thunderstorm,390.0,6.5,Under 1 day,76729.0,9856.5,1
+1333,2010-08-05 15:54:00,2010,8,Summer,Virginia,VA,Southeast,RFC,Cold,Severe Weather,Thunderstorm,3366.0,56.1,1 to 3 days,145157.0,2265.2,1
+936,2010-08-09 12:00:00,2010,8,Summer,New York,NY,Northeast,NPCC,Cold,Fuel Supply Emergency,,10080.0,168.0,More than 3 days,,4161.4,1
+850,2010-08-12 06:45:00,2010,8,Summer,District of Columbia,DC,Northeast,RFC,Cold,Severe Weather,,855.0,14.25,Under 1 day,101003.0,9856.5,1
+1348,2010-08-12 08:21:00,2010,8,Summer,Nebraska,NE,West North Central,SPP,Cold,Public Appeal,,159.0,2.65,Under 1 day,,2549.1,1
+60,2010-08-12 15:42:00,2010,8,Summer,Wisconsin,WI,East North Central,MRO,Cold,Public Appeal,,388.0,6.466666666666667,Under 1 day,7600.0,2123.3,1
+120,2010-08-19 18:00:00,2010,8,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,,5610.0,93.5,More than 3 days,80000.0,2034.1,1
+282,2010-08-23 17:50:00,2010,8,Summer,Texas,TX,South,TRE,Cold,Severe Weather,,940.0,15.666666666666666,Under 1 day,81586.0,2435.3,1
+1098,2010-09-01 10:20:00,2010,9,Fall,California,CA,West,WECC,Cold,Islanding,,144.0,2.4,Under 1 day,15000.0,4303.7,1
+250,2010-09-07 14:02:00,2010,9,Fall,Texas,TX,South,TRE,Cold,Severe Weather,Hurricanes,685.0,11.416666666666666,Under 1 day,340350.0,2435.3,1
+1343,2010-09-20 17:00:00,2010,9,Fall,Virginia,VA,Southeast,SERC,Cold,Public Appeal,,30.0,0.5,Under 1 day,,2265.2,1
+164,2010-09-21 21:31:00,2010,9,Fall,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Thunderstorm,1019.0,16.983333333333334,Under 1 day,138000.0,2034.1,1
+1220,2010-09-22 06:12:00,2010,9,Fall,California,CA,West,WECC,Cold,System Operability Disruption,,1008.0,16.8,Under 1 day,,4303.7,1
+589,2010-09-22 16:08:00,2010,9,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Thunderstorm,4792.0,79.86666666666666,More than 3 days,52000.0,2123.4,1
+595,2010-09-22 17:38:00,2010,9,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Thunderstorm,3232.0,53.86666666666667,1 to 3 days,82861.0,2123.4,1
+1093,2010-09-27 15:15:00,2010,9,Fall,California,CA,West,WECC,Cold,System Operability Disruption,,177.0,2.95,Under 1 day,,4303.7,1
+1224,2010-10-05 05:45:00,2010,10,Fall,California,CA,West,WECC,Cold,Severe Weather,Wind/Rain,2895.0,48.25,1 to 3 days,73514.0,4303.7,1
+354,2010-10-26 09:00:00,2010,10,Fall,Illinois,IL,Central,RFC,Cold,Severe Weather,Thunderstorm,3000.0,50.0,1 to 3 days,192106.0,2877.6,1
+3,2010-10-26 20:00:00,2010,10,Fall,Minnesota,MN,East North Central,MRO,Cold,Severe Weather,Heavy Wind,3000.0,50.0,1 to 3 days,70000.0,2279.0,1
+61,2010-10-27 04:00:00,2010,10,Fall,Wisconsin,WI,East North Central,MRO,Cold,Severe Weather,Heavy Wind,480.0,8.0,Under 1 day,63000.0,2123.3,1
+111,2010-10-27 08:00:00,2010,10,Fall,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Heavy Wind,2820.0,47.0,1 to 3 days,285000.0,2034.1,1
+386,2010-10-27 17:00:00,2010,10,Fall,Illinois,IL,Central,RFC,Cold,Severe Weather,Heavy Wind,2100.0,35.0,1 to 3 days,127000.0,2877.6,1
+1235,2010-10-27 17:16:00,2010,10,Fall,California,CA,West,WECC,Cold,Islanding,,11.0,0.18333333333333332,Under 1 day,2674.0,4303.7,1
+1164,2010-10-31 22:26:00,2010,10,Fall,California,CA,West,WECC,Cold,System Operability Disruption,,199.0,3.316666666666667,Under 1 day,,4303.7,1
+1357,2010-11-04 09:46:00,2010,11,Fall,Wyoming,WY,West North Central,WECC,Cold,Equipment Failure,Transmission,61.0,1.0166666666666666,Under 1 day,,1876.2,1
+1218,2010-11-06 15:53:00,2010,11,Fall,California,CA,West,WECC,Cold,Islanding,,135.0,2.25,Under 1 day,4.0,4303.7,1
+1463,2010-11-08 06:47:00,2010,11,Fall,Maine,ME,Northeast,NPCC,Cold,Severe Weather,Winter Storm,673.0,11.216666666666667,Under 1 day,60863.0,1428.0,1
+6,2010-11-13 15:00:00,2010,11,Fall,Minnesota,MN,East North Central,MRO,Cold,Severe Weather,Winter Storm,1860.0,31.0,1 to 3 days,60000.0,2279.0,1
+1276,2010-11-21 01:39:00,2010,11,Fall,California,CA,West,WECC,Cold,Severe Weather,Winter Storm,5227.0,87.11666666666666,More than 3 days,60000.0,4303.7,1
+447,2010-11-22 23:00:00,2010,11,Fall,Washington,WA,Northwest,WECC,Cold,Severe Weather,Winter Storm,2700.0,45.0,1 to 3 days,123535.0,2380.0,1
+1264,2010-11-23 14:01:00,2010,11,Fall,California,CA,West,WECC,Cold,Islanding,,251.0,4.183333333333334,Under 1 day,7077.0,4303.7,1
+1169,2010-12-03 21:32:00,2010,12,Winter,California,CA,West,WECC,Cold,Islanding,,268.0,4.466666666666667,Under 1 day,7077.0,4303.7,1
+127,2010-12-12 16:30:00,2010,12,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,,4170.0,69.5,1 to 3 days,60175.0,2034.1,1
+1232,2010-12-14 07:20:00,2010,12,Winter,California,CA,West,WECC,Cold,Islanding,,5.0,0.08333333333333333,Under 1 day,6635.0,4303.7,1
+1167,2010-12-14 07:36:00,2010,12,Winter,California,CA,West,WECC,Cold,System Operability Disruption,,1524.0,25.4,1 to 3 days,,4303.7,1
+398,2010-12-18 05:00:00,2010,12,Winter,Washington,WA,Northwest,WECC,Cold,Severe Weather,,2460.0,41.0,1 to 3 days,92090.0,2380.0,1
+980,2010-12-30 14:00:00,2010,12,Winter,New York,NY,Northeast,RFC,Cold,Fuel Supply Emergency,,18240.0,304.0,More than 3 days,,4161.4,1
+1434,2011-01-12 06:00:00,2011,1,Winter,Massachusetts,MA,Northeast,NPCC,Cold,Severe Weather,Winter Storm,480.0,8.0,Under 1 day,80000.0,2016.3,1
+1074,2011-01-13 07:21:00,2011,1,Winter,Florida,FL,Southeast,FRCC,Cold,System Operability Disruption,,52.0,0.8666666666666667,Under 1 day,20900.0,2315.2,1
+1524,2011-01-23 07:00:00,2011,1,Winter,Idaho,ID,Northwest,WECC,Cold,Intentional Attack,Vandalism,360.0,6.0,Under 1 day,0.0,2216.8,1
+257,2011-01-24 13:20:00,2011,1,Winter,Texas,TX,South,WECC,Cold,Intentional Attack,Vandalism,10.0,0.16666666666666666,Under 1 day,0.0,2435.3,1
+875,2011-01-25 03:23:00,2011,1,Winter,Delaware,DE,Northeast,RFC,Cold,Intentional Attack,Vandalism,457.0,7.616666666666666,Under 1 day,0.0,1838.3,1
+1485,2011-01-26 09:25:00,2011,1,Winter,Nevada,NV,West,WECC,Cold,Intentional Attack,Vandalism,1895.0,31.583333333333332,1 to 3 days,0.0,3314.8,1
+98,2011-01-26 09:33:00,2011,1,Winter,Michigan,MI,East North Central,RFC,Cold,Intentional Attack,Vandalism,1770.0,29.5,1 to 3 days,0.0,2034.1,1
+845,2011-01-26 17:00:00,2011,1,Winter,District of Columbia,DC,Northeast,RFC,Cold,Severe Weather,Winter Storm,6660.0,111.0,More than 3 days,210000.0,9856.5,1
+547,2011-01-26 18:28:00,2011,1,Winter,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Winter Storm,4232.0,70.53333333333333,1 to 3 days,234326.0,2511.4,1
+1322,2011-01-26 19:43:00,2011,1,Winter,Virginia,VA,Southeast,SERC,Cold,Severe Weather,Winter Storm,1355.0,22.583333333333332,Under 1 day,150084.0,2265.2,1
+947,2011-01-27 17:00:00,2011,1,Winter,New York,NY,Northeast,NPCC,Cold,Fuel Supply Emergency,Coal,3600.0,60.0,1 to 3 days,,4161.4,1
+390,2011-02-01 21:00:00,2011,2,Winter,Illinois,IL,Central,RFC,Cold,Severe Weather,Winter Storm,1020.0,17.0,Under 1 day,190000.0,2877.6,1
+602,2011-02-02 03:00:00,2011,2,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Winter Storm,4139.0,68.98333333333333,1 to 3 days,213000.0,2123.4,1
+237,2011-02-02 05:43:00,2011,2,Winter,Texas,TX,South,TRE,Cold,System Operability Disruption,,1697.0,28.283333333333335,1 to 3 days,1069730.0,2435.3,1
+516,2011-02-02 06:22:00,2011,2,Winter,Arizona,AZ,Southwest,WECC,Cold,System Operability Disruption,,215.0,3.5833333333333335,Under 1 day,69000.0,2625.4,1
+1223,2011-02-03 15:00:00,2011,2,Winter,California,CA,West,WECC,Cold,Fuel Supply Emergency,Natural Gas,1260.0,21.0,Under 1 day,,4303.7,1
+171,2011-02-03 22:04:00,2011,2,Winter,Texas,TX,South,TRE,Cold,System Operability Disruption,,868.0,14.466666666666667,Under 1 day,86013.0,2435.3,1
+206,2011-02-09 03:45:00,2011,2,Winter,Texas,TX,South,TRE,Cold,Severe Weather,Winter Storm,327.0,5.45,Under 1 day,60000.0,2435.3,1
+449,2011-02-09 14:54:00,2011,2,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,126.0,2.1,Under 1 day,0.0,2380.0,1
+170,2011-02-09 16:30:00,2011,2,Winter,Texas,TX,South,TRE,Cold,Severe Weather,Winter,1203.0,20.05,Under 1 day,,2435.3,1
+1145,2011-02-17 01:25:00,2011,2,Winter,California,CA,West,WECC,Cold,Severe Weather,Storm,3408.0,56.8,1 to 3 days,80000.0,4303.7,1
+1101,2011-02-17 13:00:00,2011,2,Winter,California,CA,West,WECC,Cold,Intentional Attack,Vandalism,8873.0,147.88333333333333,More than 3 days,0.0,4303.7,1
+605,2011-02-19 12:30:00,2011,2,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Storm,930.0,15.5,Under 1 day,118000.0,2123.4,1
+97,2011-02-20 16:00:00,2011,2,Winter,Michigan,MI,East North Central,RFC,Cold,Severe Weather,Winter Storm,4320.0,72.0,More than 3 days,160000.0,2034.1,1
+1287,2011-02-24 16:51:00,2011,2,Winter,Arkansas,AR,South,SPP,Cold,Islanding,,3.0,0.05,Under 1 day,,1492.8,1
+1147,2011-02-25 08:00:00,2011,2,Winter,California,CA,West,WECC,Cold,Severe Weather,Winter Storm,4890.0,81.5,More than 3 days,80000.0,4303.7,1
+671,2011-02-25 10:30:00,2011,2,Winter,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,15.0,0.25,Under 1 day,0.0,2737.1,1
+1344,2011-02-25 15:20:00,2011,2,Winter,Virginia,VA,Southeast,SERC,Cold,Severe Weather,,160.0,2.6666666666666665,Under 1 day,50000.0,2265.2,1
+538,2011-02-25 15:23:00,2011,2,Winter,Maryland,MD,Northeast,RFC,Cold,Severe Weather,,3037.0,50.61666666666667,1 to 3 days,93000.0,2511.4,1
+948,2011-03-01 08:00:00,2011,3,Spring,New York,NY,Northeast,NPCC,Cold,Fuel Supply Emergency,Coal,5850.0,97.5,More than 3 days,,4161.4,1
+678,2011-03-06 02:54:00,2011,3,Spring,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,3186.0,53.1,1 to 3 days,0.0,2737.1,1
+985,2011-03-08 08:00:00,2011,3,Spring,New York,NY,Northeast,NPCC,Cold,Fuel Supply Emergency,Coal,14400.0,240.0,More than 3 days,,4161.4,1
+199,2011-03-10 12:03:00,2011,3,Spring,Texas,TX,South,TRE,Cold,Intentional Attack,Vandalism,1077.0,17.95,Under 1 day,,2435.3,1
+1159,2011-03-11 07:02:00,2011,3,Spring,California,CA,West,WECC,Cold,System Operability Disruption,,133.0,2.216666666666667,Under 1 day,6800.0,4303.7,1
+815,2011-03-13 14:20:00,2011,3,Spring,Oregon,OR,Northwest,WECC,Cold,Severe Weather,,1526.0,25.433333333333334,1 to 3 days,9000.0,2804.9,1
+567,2011-03-14 07:30:00,2011,3,Spring,Maryland,MD,Northeast,RFC,Cold,Intentional Attack,Vandalism,565.0,9.416666666666666,Under 1 day,,2511.4,1
+292,2011-03-15 18:00:00,2011,3,Spring,Texas,TX,South,TRE,Cold,Intentional Attack,Vandalism,74.0,1.2333333333333334,Under 1 day,,2435.3,1
+1475,2011-03-17 07:40:00,2011,3,Spring,New Hampshire,NH,Northeast,NPCC,Cold,Intentional Attack,Vandalism,200.0,3.3333333333333335,Under 1 day,,1232.6,1
+696,2011-03-18 09:54:00,2011,3,Spring,Ohio,OH,Central,RFC,Cold,Intentional Attack,Vandalism,340.0,5.666666666666667,Under 1 day,,2033.7,1
+1234,2011-03-19 23:56:00,2011,3,Spring,California,CA,West,WECC,Cold,Severe Weather,Storm,6914.0,115.23333333333333,More than 3 days,128000.0,4303.7,1
+1092,2011-03-20 09:44:00,2011,3,Spring,California,CA,West,WECC,Cold,Severe Weather,Storm,1456.0,24.266666666666666,1 to 3 days,79000.0,4303.7,1
+1482,2011-03-21 00:57:00,2011,3,Spring,New Hampshire,NH,Northeast,NPCC,Cold,Intentional Attack,Vandalism,92.0,1.5333333333333334,Under 1 day,,1232.6,1
+1231,2011-03-21 12:35:00,2011,3,Spring,California,CA,West,WECC,Cold,Severe Weather,Storm,130.0,2.1666666666666665,Under 1 day,54332.0,4303.7,1
+1199,2011-03-27 13:27:00,2011,3,Spring,California,CA,West,WECC,Cold,System Operability Disruption,Transmission Interruption,213.0,3.55,Under 1 day,165000.0,4303.7,1
+1073,2011-03-31 11:30:00,2011,3,Spring,Florida,FL,Southeast,FRCC,Cold,Severe Weather,,540.0,9.0,Under 1 day,87000.0,2315.2,1
+1039,2011-03-31 14:30:00,2011,3,Spring,Florida,FL,Southeast,FRCC,Cold,Severe Weather,,2009.0,33.483333333333334,1 to 3 days,50000.0,2315.2,1
+41,2011-04-04 11:47:00,2011,4,Spring,Tennessee,TN,Central,SERC,Cold,Severe Weather,,5054.0,84.23333333333333,More than 3 days,63000.0,1450.3,1
+28,2011-04-04 13:00:00,2011,4,Spring,Tennessee,TN,Central,SERC,Cold,Severe Weather,,660.0,11.0,Under 1 day,63000.0,1450.3,1
+32,2011-04-04 14:00:00,2011,4,Spring,Tennessee,TN,Central,SERC,Cold,Severe Weather,,4921.0,82.01666666666667,More than 3 days,73000.0,1450.3,1
+663,2011-04-11 17:40:00,2011,4,Spring,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,11.0,0.18333333333333332,Under 1 day,0.0,2737.1,1
+735,2011-04-16 14:16:00,2011,4,Spring,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,,1574.0,26.233333333333334,1 to 3 days,220000.0,1367.2,1
+425,2011-04-19 14:01:00,2011,4,Spring,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,123.0,2.05,Under 1 day,0.0,2380.0,1
+373,2011-04-19 20:00:00,2011,4,Spring,Illinois,IL,Central,SERC,Cold,Severe Weather,,120.0,2.0,Under 1 day,80000.0,2877.6,1
+19,2011-04-19 22:44:00,2011,4,Spring,Tennessee,TN,Central,SERC,Cold,Severe Weather,,196.0,3.2666666666666666,Under 1 day,64000.0,1450.3,1
+36,2011-04-19 23:02:00,2011,4,Spring,Tennessee,TN,Central,SERC,Cold,Severe Weather,,2550.0,42.5,1 to 3 days,105000.0,1450.3,1
+1293,2011-04-19 23:13:00,2011,4,Spring,Arkansas,AR,South,SERC,Cold,Severe Weather,,1201.0,20.016666666666666,Under 1 day,,1492.8,1
+1008,2011-04-20 08:07:00,2011,4,Spring,Louisiana,LA,South,SERC,Cold,Equipment Failure,,7.0,0.11666666666666667,Under 1 day,11000.0,1685.8,1
+679,2011-04-21 07:15:00,2011,4,Spring,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,575.0,9.583333333333334,Under 1 day,0.0,2737.1,1
+116,2011-04-21 19:00:00,2011,4,Spring,Michigan,MI,East North Central,RFC,Cold,Intentional Attack,Vandalism,11525.0,192.08333333333334,More than 3 days,,2034.1,1
+862,2011-04-22 21:00:00,2011,4,Spring,Missouri,MO,Central,SERC,Cold,Severe Weather,,120.0,2.0,Under 1 day,55000.0,2053.5,1
+45,2011-04-25 16:33:00,2011,4,Spring,Tennessee,TN,Central,SERC,Cold,Equipment Failure,,46.0,0.7666666666666667,Under 1 day,,1450.3,1
+1029,2011-04-26 05:49:00,2011,4,Spring,Louisiana,LA,South,SPP,Cold,Severe Weather,,1690.0,28.166666666666668,1 to 3 days,,1685.8,1
+669,2011-04-26 13:04:00,2011,4,Spring,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,56.0,0.9333333333333333,Under 1 day,0.0,2737.1,1
+1295,2011-04-26 18:14:00,2011,4,Spring,Arkansas,AR,South,SPP,Cold,Severe Weather,,2806.0,46.766666666666666,1 to 3 days,13000.0,1492.8,1
+729,2011-04-28 05:00:00,2011,4,Spring,Ohio,OH,Central,RFC,Cold,Severe Weather,,3690.0,61.5,1 to 3 days,86000.0,2033.7,1
+511,2011-04-28 16:09:00,2011,4,Spring,Arizona,AZ,Southwest,WECC,Cold,Equipment Failure,,1.0,0.016666666666666666,Under 1 day,,2625.4,1
+686,2011-05-02 08:52:00,2011,5,Spring,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,114.0,1.9,Under 1 day,0.0,2737.1,1
+962,2011-05-03 12:00:00,2011,5,Spring,New York,NY,Northeast,NPCC,Normal,Intentional Attack,Vandalism,2880.0,48.0,1 to 3 days,0.0,4161.4,1
+160,2011-05-04 12:20:00,2011,5,Spring,Michigan,MI,East North Central,RFC,Normal,Intentional Attack,Vandalism,200.0,3.3333333333333335,Under 1 day,0.0,2034.1,1
+551,2011-05-04 13:08:00,2011,5,Spring,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,17.0,0.2833333333333333,Under 1 day,0.0,2511.4,1
+832,2011-05-06 06:56:00,2011,5,Spring,Oregon,OR,Northwest,WECC,Normal,Intentional Attack,Vandalism,214.0,3.566666666666667,Under 1 day,0.0,2804.9,1
+581,2011-05-09 04:08:00,2011,5,Spring,Pennsylvania,PA,Northeast,RFC,Normal,Intentional Attack,Vandalism,152.0,2.533333333333333,Under 1 day,,2123.4,1
+82,2011-05-10 03:25:00,2011,5,Spring,Michigan,MI,East North Central,RFC,Normal,System Operability Disruption,,2085.0,34.75,1 to 3 days,78213.0,2034.1,1
+1477,2011-05-10 13:45:00,2011,5,Spring,New Hampshire,NH,Northeast,NPCC,Normal,Intentional Attack,Vandalism,75.0,1.25,Under 1 day,0.0,1232.6,1
+751,2011-05-11 00:15:00,2011,5,Spring,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,,1025.0,17.083333333333332,Under 1 day,71000.0,1367.2,1
+945,2011-05-11 11:00:00,2011,5,Spring,New York,NY,Northeast,NPCC,Normal,Intentional Attack,Vandalism,30.0,0.5,Under 1 day,0.0,4161.4,1
+14,2011-05-11 15:55:00,2011,5,Spring,Minnesota,MN,East North Central,MRO,Normal,Intentional Attack,Vandalism,1322.0,22.033333333333335,Under 1 day,0.0,2279.0,1
+1488,2011-05-21 17:00:00,2011,5,Spring,Nevada,NV,West,WECC,Normal,Intentional Attack,Vandalism,1534.0,25.566666666666666,1 to 3 days,,3314.8,1
+860,2011-05-22 17:09:00,2011,5,Spring,Missouri,MO,Central,SPP,Normal,Severe Weather,,12652.0,210.86666666666667,More than 3 days,20000.0,2053.5,1
+861,2011-05-23 12:30:00,2011,5,Spring,Missouri,MO,Central,SERC,Normal,Severe Weather,,2880.0,48.0,1 to 3 days,70000.0,2053.5,1
+321,2011-05-23 16:45:00,2011,5,Spring,Indiana,IN,Central,RFC,Normal,Severe Weather,,3314.0,55.233333333333334,1 to 3 days,215387.0,1860.0,1
+349,2011-05-24 09:00:00,2011,5,Spring,Illinois,IL,Central,RFC,Normal,Intentional Attack,Vandalism,1450.0,24.166666666666668,1 to 3 days,0.0,2877.6,1
+1325,2011-05-24 16:35:00,2011,5,Spring,Virginia,VA,Southeast,SERC,Normal,Severe Weather,,1205.0,20.083333333333332,Under 1 day,175000.0,2265.2,1
+1433,2011-05-24 16:45:00,2011,5,Spring,Oklahoma,OK,South,SPP,Normal,Severe Weather,,2895.0,48.25,1 to 3 days,54000.0,1901.7,1
+329,2011-05-25 22:14:00,2011,5,Spring,Indiana,IN,Central,RFC,Normal,Severe Weather,,3646.0,60.766666666666666,1 to 3 days,141000.0,1860.0,1
+346,2011-05-26 01:00:00,2011,5,Spring,Mississippi,MS,South,SERC,Normal,System Operability Disruption,Transmission Interruption,300.0,5.0,Under 1 day,10000.0,1324.0,1
+1379,2011-05-26 18:30:00,2011,5,Spring,Georgia,GA,Southeast,SERC,Normal,Severe Weather,,2054.0,34.233333333333334,1 to 3 days,218783.0,1516.0,1
+620,2011-05-26 19:56:00,2011,5,Spring,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,,1324.0,22.066666666666666,Under 1 day,120001.0,2123.4,1
+74,2011-05-29 18:30:00,2011,5,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,3090.0,51.5,1 to 3 days,113000.0,2034.1,1
+808,2011-06-02 23:45:00,2011,6,Summer,South Carolina,SC,Southeast,SERC,Normal,Severe Weather,,2415.0,40.25,1 to 3 days,50465.0,1288.1,1
+1228,2011-06-04 01:17:00,2011,6,Summer,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,128.0,2.1333333333333333,Under 1 day,420.0,4303.7,1
+230,2011-06-05 05:30:00,2011,6,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,1200.0,20.0,Under 1 day,78000.0,2435.3,1
+1221,2011-06-05 20:02:00,2011,6,Summer,California,CA,West,WECC,Normal,Islanding,,53.0,0.8833333333333333,Under 1 day,5314.0,4303.7,1
+1300,2011-06-06 15:00:00,2011,6,Summer,Arkansas,AR,South,SPP,Normal,Public Appeal,,2880.0,48.0,1 to 3 days,13000.0,1492.8,1
+727,2011-06-07 14:00:00,2011,6,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,,960.0,16.0,Under 1 day,52747.0,2033.7,1
+388,2011-06-09 04:30:00,2011,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,450.0,7.5,Under 1 day,169000.0,2877.6,1
+1324,2011-06-12 19:00:00,2011,6,Summer,Virginia,VA,Southeast,RFC,Normal,Severe Weather,Thunderstorm,90.0,1.5,Under 1 day,56000.0,2265.2,1
+1526,2011-06-15 16:00:00,2011,6,Summer,Idaho,ID,Northwest,WECC,Normal,Intentional Attack,Vandalism,870.0,14.5,Under 1 day,,2216.8,1
+1390,2011-06-15 19:15:00,2011,6,Summer,Georgia,GA,Southeast,SERC,Normal,Severe Weather,Thunderstorm,645.0,10.75,Under 1 day,169000.0,1516.0,1
+738,2011-06-15 19:17:00,2011,6,Summer,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Thunderstorm,388.0,6.466666666666667,Under 1 day,70135.0,1367.2,1
+1380,2011-06-18 15:30:00,2011,6,Summer,Georgia,GA,Southeast,SERC,Normal,Severe Weather,Thunderstorm,1452.0,24.2,1 to 3 days,93828.0,1516.0,1
+1303,2011-06-18 16:45:00,2011,6,Summer,Arkansas,AR,South,SPP,Normal,Public Appeal,,3314.0,55.233333333333334,1 to 3 days,,1492.8,1
+370,2011-06-21 21:45:00,2011,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,1695.0,28.25,1 to 3 days,300000.0,2877.6,1
+1373,2011-06-23 08:10:00,2011,6,Summer,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,50.0,0.8333333333333334,Under 1 day,0.0,1558.8,1
+1513,2011-06-26 16:46:00,2011,6,Summer,Kansas,KS,South,SPP,Normal,Public Appeal,,913.0,15.216666666666667,Under 1 day,,2176.5,1
+248,2011-06-27 15:00:00,2011,6,Summer,Texas,TX,South,TRE,Normal,Public Appeal,,240.0,4.0,Under 1 day,0.0,2435.3,1
+272,2011-06-29 11:30:00,2011,6,Summer,Texas,TX,South,SPP,Normal,Public Appeal,,394.0,6.566666666666666,Under 1 day,0.0,2435.3,1
+492,2011-06-30 14:11:00,2011,6,Summer,Arizona,AZ,Southwest,WECC,Normal,System Operability Disruption,Majorsystem Interruption,554.0,9.233333333333333,Under 1 day,160000.0,2625.4,1
+360,2011-06-30 22:30:00,2011,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,,1110.0,18.5,Under 1 day,121000.0,2877.6,1
+1397,2011-07-01 08:00:00,2011,7,Summer,Connecticut,CT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1721.9,1
+709,2011-07-01 16:38:00,2011,7,Summer,Ohio,OH,Central,RFC,Normal,Intentional Attack,Vandalism,360.0,6.0,Under 1 day,0.0,2033.7,1
+1,2011-07-01 17:00:00,2011,7,Summer,Minnesota,MN,East North Central,MRO,Normal,Severe Weather,,3060.0,51.0,1 to 3 days,70000.0,2279.0,1
+124,2011-07-02 20:15:00,2011,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,5865.0,97.75,More than 3 days,182000.0,2034.1,1
+1312,2011-07-04 18:00:00,2011,7,Summer,Virginia,VA,Southeast,SERC,Normal,Severe Weather,,180.0,3.0,Under 1 day,51580.0,2265.2,1
+660,2011-07-05 10:40:00,2011,7,Summer,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,57.0,0.95,Under 1 day,0.0,2737.1,1
+1371,2011-07-06 09:51:00,2011,7,Summer,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1558.8,1
+611,2011-07-08 10:00:00,2011,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Intentional Attack,Vandalism,4260.0,71.0,1 to 3 days,,2123.4,1
+162,2011-07-11 09:00:00,2011,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,85.0,1.4166666666666667,Under 1 day,103000.0,2034.1,1
+148,2011-07-11 11:15:00,2011,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,1260.0,21.0,Under 1 day,85000.0,2034.1,1
+1099,2011-07-12 20:20:00,2011,7,Summer,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,70.0,1.1666666666666667,Under 1 day,,4303.7,1
+1497,2011-07-13 17:19:00,2011,7,Summer,Colorado,CO,Southwest,WECC,Normal,System Operability Disruption,,284.0,4.733333333333333,Under 1 day,,2836.1,1
+186,2011-07-14 11:00:00,2011,7,Summer,Texas,TX,South,TRE,Normal,Public Appeal,,480.0,8.0,Under 1 day,0.0,2435.3,1
+161,2011-07-18 17:00:00,2011,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,8430.0,140.5,More than 3 days,197166.0,2034.1,1
+1456,2011-07-19 11:45:00,2011,7,Summer,Maine,ME,Northeast,NPCC,Normal,Intentional Attack,Vandalism,195.0,3.25,Under 1 day,,1428.0,1
+429,2011-07-20 09:10:00,2011,7,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,440.0,7.333333333333333,Under 1 day,,2380.0,1
+77,2011-07-21 12:32:00,2011,7,Summer,Michigan,MI,East North Central,RFC,Normal,Public Appeal,,1078.0,17.966666666666665,Under 1 day,,2034.1,1
+393,2011-07-21 13:00:00,2011,7,Summer,Illinois,IL,Central,SERC,Normal,Public Appeal,,120.0,2.0,Under 1 day,,2877.6,1
+960,2011-07-22 11:00:00,2011,7,Summer,New York,NY,Northeast,NPCC,Normal,Public Appeal,,420.0,7.0,Under 1 day,,4161.4,1
+725,2011-07-22 11:34:00,2011,7,Summer,Ohio,OH,Central,RFC,Normal,System Operability Disruption,,352.0,5.866666666666666,Under 1 day,23000.0,2033.7,1
+364,2011-07-23 02:30:00,2011,7,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,,1830.0,30.5,1 to 3 days,169000.0,2877.6,1
+1474,2011-07-24 14:34:00,2011,7,Summer,New Hampshire,NH,Northeast,NPCC,Normal,Intentional Attack,Vandalism,73.0,1.2166666666666666,Under 1 day,0.0,1232.6,1
+446,2011-07-27 12:07:00,2011,7,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2380.0,1
+309,2011-07-28 00:14:00,2011,7,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,,2146.0,35.766666666666666,1 to 3 days,201000.0,1860.0,1
+635,2011-07-28 07:26:00,2011,7,Summer,Kentucky,KY,Central,SERC,Normal,Fuel Supply Emergency,Coal,1440.0,24.0,1 to 3 days,,1795.8,1
+479,2011-07-29 11:46:00,2011,7,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,314.0,5.233333333333333,Under 1 day,,2380.0,1
+801,2011-07-29 20:45:00,2011,7,Summer,New Jersey,NJ,Northeast,RFC,Normal,Severe Weather,,3339.0,55.65,1 to 3 days,67900.0,2851.2,1
+262,2011-08-01 15:00:00,2011,8,Summer,Texas,TX,South,TRE,Cold,Public Appeal,,6000.0,100.0,More than 3 days,0.0,2435.3,1
+1416,2011-08-02 10:15:00,2011,8,Summer,Oklahoma,OK,South,SPP,Cold,Public Appeal,,1381.0,23.016666666666666,Under 1 day,,1901.7,1
+375,2011-08-02 21:30:00,2011,8,Summer,Illinois,IL,Central,RFC,Cold,Severe Weather,,1290.0,21.5,Under 1 day,71500.0,2877.6,1
+953,2011-08-03 10:00:00,2011,8,Summer,New York,NY,Northeast,NPCC,Cold,Fuel Supply Emergency,Coal,23040.0,384.0,More than 3 days,,4161.4,1
+1425,2011-08-03 16:29:00,2011,8,Summer,Oklahoma,OK,South,SPP,Cold,Public Appeal,,431.0,7.183333333333334,Under 1 day,,1901.7,1
+1299,2011-08-03 16:30:00,2011,8,Summer,Arkansas,AR,South,SPP,Cold,Public Appeal,,270.0,4.5,Under 1 day,0.0,1492.8,1
+423,2011-08-08 09:35:00,2011,8,Summer,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,385.0,6.416666666666667,Under 1 day,,2380.0,1
+1414,2011-08-08 19:36:00,2011,8,Summer,Oklahoma,OK,South,SPP,Cold,Islanding,,984.0,16.4,Under 1 day,14500.0,1901.7,1
+1423,2011-08-08 20:58:00,2011,8,Summer,Oklahoma,OK,South,SPP,Cold,Severe Weather,,2612.0,43.53333333333333,1 to 3 days,54000.0,1901.7,1
+401,2011-08-09 10:26:00,2011,8,Summer,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,394.0,6.566666666666666,Under 1 day,,2380.0,1
+638,2011-08-13 16:41:00,2011,8,Summer,Kentucky,KY,Central,SERC,Cold,Severe Weather,,1579.0,26.316666666666666,1 to 3 days,181700.0,1795.8,1
+675,2011-08-15 02:05:00,2011,8,Summer,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,95.0,1.5833333333333333,Under 1 day,0.0,2737.1,1
+464,2011-08-18 09:51:00,2011,8,Summer,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,369.0,6.15,Under 1 day,,2380.0,1
+168,2011-08-20 17:42:00,2011,8,Summer,Michigan,MI,East North Central,RFC,Cold,Severe Weather,,4458.0,74.3,More than 3 days,65000.0,2034.1,1
+487,2011-08-22 10:05:00,2011,8,Summer,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,355.0,5.916666666666667,Under 1 day,,2380.0,1
+195,2011-08-23 15:43:00,2011,8,Summer,Texas,TX,South,TRE,Cold,Public Appeal,,197.0,3.283333333333333,Under 1 day,0.0,2435.3,1
+194,2011-08-24 07:45:00,2011,8,Summer,Texas,TX,South,TRE,Cold,Severe Weather,,1335.0,22.25,Under 1 day,79000.0,2435.3,1
+266,2011-08-24 13:20:00,2011,8,Summer,Texas,TX,South,TRE,Cold,Public Appeal,,7540.0,125.66666666666667,More than 3 days,0.0,2435.3,1
+701,2011-08-25 00:30:00,2011,8,Summer,Ohio,OH,Central,RFC,Cold,Severe Weather,,5490.0,91.5,More than 3 days,107833.0,2033.7,1
+592,2011-08-26 00:30:00,2011,8,Summer,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,200717.0,2123.4,1
+748,2011-08-27 02:00:00,2011,8,Summer,North Carolina,NC,Southeast,SERC,Cold,System Operability Disruption,Distribution Interruption,195.0,3.25,Under 1 day,1200.0,1367.2,1
+766,2011-08-27 02:57:00,2011,8,Summer,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,,4113.0,68.55,1 to 3 days,285465.0,1367.2,1
+759,2011-08-27 19:00:00,2011,8,Summer,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,,2551.0,42.516666666666666,1 to 3 days,136000.0,1367.2,1
+573,2011-08-27 20:30:00,2011,8,Summer,Maryland,MD,Northeast,RFC,Cold,Severe Weather,,11700.0,195.0,More than 3 days,760113.0,2511.4,1
+609,2011-08-27 22:00:00,2011,8,Summer,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,264000.0,2123.4,1
+785,2011-08-27 22:00:00,2011,8,Summer,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,,2520.0,42.0,1 to 3 days,140000.0,2851.2,1
+534,2011-08-27 23:00:00,2011,8,Summer,Maryland,MD,Northeast,RFC,Cold,Severe Weather,,1980.0,33.0,1 to 3 days,108000.0,2511.4,1
+842,2011-08-27 23:05:00,2011,8,Summer,District of Columbia,DC,Northeast,RFC,Cold,Severe Weather,,2425.0,40.416666666666664,1 to 3 days,220000.0,9856.5,1
+972,2011-08-28 00:01:00,2011,8,Summer,New York,NY,Northeast,NPCC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,180000.0,4161.4,1
+802,2011-08-28 00:23:00,2011,8,Summer,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,665000.0,2851.2,1
+775,2011-08-28 00:30:00,2011,8,Summer,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,650000.0,2851.2,1
+626,2011-08-28 02:58:00,2011,8,Summer,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,284000.0,2123.4,1
+923,2011-08-28 05:00:00,2011,8,Summer,New York,NY,Northeast,NPCC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,152261.0,4161.4,1
+979,2011-08-28 05:01:00,2011,8,Summer,New York,NY,Northeast,NPCC,Cold,Severe Weather,,8640.0,144.0,More than 3 days,50000.0,4161.4,1
+970,2011-08-28 07:00:00,2011,8,Summer,New York,NY,Northeast,NPCC,Cold,Severe Weather,,8221.0,137.01666666666668,More than 3 days,99700.0,4161.4,1
+1394,2011-08-28 07:40:00,2011,8,Summer,Connecticut,CT,Northeast,NPCC,Cold,Severe Weather,,1440.0,24.0,1 to 3 days,158000.0,1721.9,1
+958,2011-08-28 09:42:00,2011,8,Summer,New York,NY,Northeast,NPCC,Cold,Severe Weather,,2299.0,38.31666666666667,1 to 3 days,100000.0,4161.4,1
+1436,2011-08-28 12:10:00,2011,8,Summer,Massachusetts,MA,Northeast,NPCC,Cold,Severe Weather,,1.0,0.016666666666666666,Under 1 day,50000.0,2016.3,1
+926,2011-08-28 12:30:00,2011,8,Summer,New York,NY,Northeast,NPCC,Cold,Severe Weather,,1.0,0.016666666666666666,Under 1 day,116000.0,4161.4,1
+834,2011-08-28 20:55:00,2011,8,Summer,Oregon,OR,Northwest,WECC,Cold,Intentional Attack,Vandalism,164.0,2.7333333333333334,Under 1 day,0.0,2804.9,1
+410,2011-09-01 08:13:00,2011,9,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,467.0,7.783333333333333,Under 1 day,,2380.0,1
+167,2011-09-03 14:00:00,2011,9,Fall,Michigan,MI,East North Central,RFC,Cold,Severe Weather,,7440.0,124.0,More than 3 days,105000.0,2034.1,1
+452,2011-09-08 19:53:00,2011,9,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1207.0,20.116666666666667,Under 1 day,,2380.0,1
+784,2011-09-12 09:15:00,2011,9,Fall,New Jersey,NJ,Northeast,RFC,Cold,Intentional Attack,Vandalism,375.0,6.25,Under 1 day,0.0,2851.2,1
+473,2011-09-13 11:43:00,2011,9,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1697.0,28.283333333333335,1 to 3 days,,2380.0,1
+977,2011-09-13 14:03:00,2011,9,Fall,New York,NY,Northeast,NPCC,Cold,Intentional Attack,Vandalism,258.0,4.3,Under 1 day,0.0,4161.4,1
+676,2011-09-14 09:00:00,2011,9,Fall,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,300.0,5.0,Under 1 day,0.0,2737.1,1
+455,2011-09-20 12:55:00,2011,9,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,245.0,4.083333333333333,Under 1 day,,2380.0,1
+718,2011-09-22 14:50:00,2011,9,Fall,Ohio,OH,Central,RFC,Cold,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2033.7,1
+419,2011-09-24 16:17:00,2011,9,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1423.0,23.716666666666665,Under 1 day,,2380.0,1
+1404,2011-09-28 09:30:00,2011,9,Fall,Connecticut,CT,Northeast,NPCC,Cold,Intentional Attack,Vandalism,210.0,3.5,Under 1 day,,1721.9,1
+287,2011-09-29 05:00:00,2011,9,Fall,Texas,TX,South,TRE,Cold,Severe Weather,,1500.0,25.0,1 to 3 days,65000.0,2435.3,1
+426,2011-09-29 18:44:00,2011,9,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1276.0,21.266666666666666,Under 1 day,,2380.0,1
+456,2011-10-07 08:04:00,2011,10,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,476.0,7.933333333333334,Under 1 day,,2380.0,1
+532,2011-10-17 03:34:00,2011,10,Fall,Maryland,MD,Northeast,RFC,Cold,Intentional Attack,Vandalism,428.0,7.133333333333334,Under 1 day,0.0,2511.4,1
+624,2011-10-18 03:45:00,2011,10,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Intentional Attack,Vandalism,100.0,1.6666666666666667,Under 1 day,0.0,2123.4,1
+630,2011-10-24 23:37:00,2011,10,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Intentional Attack,Vandalism,2843.0,47.38333333333333,1 to 3 days,0.0,2123.4,1
+1495,2011-10-26 05:00:00,2011,10,Fall,Colorado,CO,Southwest,WECC,Cold,Severe Weather,,2040.0,34.0,1 to 3 days,204000.0,2836.1,1
+310,2011-10-27 01:00:00,2011,10,Fall,Indiana,IN,Central,RFC,Cold,Intentional Attack,Vandalism,96.0,1.6,Under 1 day,,1860.0,1
+579,2011-10-29 08:59:00,2011,10,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,13381.0,223.01666666666668,More than 3 days,50000.0,2123.4,1
+629,2011-10-29 08:59:00,2011,10,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,13679.0,227.98333333333332,More than 3 days,312359.0,2123.4,1
+805,2011-10-29 09:59:00,2011,10,Fall,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,,13201.0,220.01666666666668,More than 3 days,379000.0,2851.2,1
+986,2011-10-29 11:18:00,2011,10,Fall,New York,NY,Northeast,NPCC,Cold,Severe Weather,,7962.0,132.7,More than 3 days,161151.0,4161.4,1
+584,2011-10-29 12:57:00,2011,10,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,7803.0,130.05,More than 3 days,146721.0,2123.4,1
+598,2011-10-29 14:00:00,2011,10,Fall,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,,2880.0,48.0,1 to 3 days,109335.0,2123.4,1
+777,2011-10-29 14:30:00,2011,10,Fall,New Jersey,NJ,Northeast,RFC,Cold,Severe Weather,,11430.0,190.5,More than 3 days,197000.0,2851.2,1
+927,2011-10-29 15:00:00,2011,10,Fall,New York,NY,Northeast,NPCC,Cold,Severe Weather,,5355.0,89.25,More than 3 days,145000.0,4161.4,1
+955,2011-10-29 16:16:00,2011,10,Fall,New York,NY,Northeast,NPCC,Cold,Severe Weather,,6074.0,101.23333333333333,More than 3 days,50000.0,4161.4,1
+1483,2011-11-13 11:30:00,2011,11,Fall,New Hampshire,NH,Northeast,NPCC,Cold,Intentional Attack,Vandalism,30.0,0.5,Under 1 day,0.0,1232.6,1
+420,2011-11-30 10:00:00,2011,11,Fall,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,0.0,2380.0,1
+1096,2011-11-30 16:56:00,2011,11,Fall,California,CA,West,WECC,Cold,Severe Weather,,2464.0,41.06666666666667,1 to 3 days,150000.0,4303.7,1
+1244,2011-12-01 00:45:00,2011,12,Winter,California,CA,West,WECC,Cold,Severe Weather,,9855.0,164.25,More than 3 days,91690.0,4303.7,1
+1142,2011-12-01 03:29:00,2011,12,Winter,California,CA,West,WECC,Cold,Severe Weather,,2016.0,33.6,1 to 3 days,100000.0,4303.7,1
+668,2011-12-01 10:00:00,2011,12,Winter,Utah,UT,Southwest,WECC,Cold,Severe Weather,,1631.0,27.183333333333334,1 to 3 days,60000.0,2737.1,1
+295,2011-12-02 16:15:00,2011,12,Winter,Texas,TX,South,TRE,Cold,Intentional Attack,Vandalism,255.0,4.25,Under 1 day,,2435.3,1
+421,2011-12-05 14:00:00,2011,12,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1620.0,27.0,1 to 3 days,,2380.0,1
+1530,2011-12-06 08:00:00,2011,12,Winter,North Dakota,ND,West North Central,MRO,Cold,Public Appeal,,720.0,12.0,Under 1 day,34500.0,2192.2,1
+145,2011-12-06 17:38:00,2011,12,Winter,Michigan,MI,East North Central,RFC,Cold,Intentional Attack,Vandalism,1046.0,17.433333333333334,Under 1 day,0.0,2034.1,1
+1320,2011-12-07 19:29:00,2011,12,Winter,Virginia,VA,Southeast,SERC,Cold,Severe Weather,,208.0,3.466666666666667,Under 1 day,60000.0,2265.2,1
+396,2011-12-08 08:45:00,2011,12,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,465.0,7.75,Under 1 day,,2380.0,1
+707,2011-12-13 03:19:00,2011,12,Winter,Ohio,OH,Central,RFC,Cold,Intentional Attack,Vandalism,1440.0,24.0,1 to 3 days,0.0,2033.7,1
+471,2011-12-19 08:48:00,2011,12,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,432.0,7.2,Under 1 day,,2380.0,1
+816,2011-12-20 07:45:00,2011,12,Winter,Oregon,OR,Northwest,WECC,Cold,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,2500.0,2804.9,1
+469,2011-12-20 09:30:00,2011,12,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2380.0,1
+1432,2012-01-05 10:28:00,2012,1,Winter,Oklahoma,OK,South,SPP,Cold,Intentional Attack,Vandalism,117.0,1.95,Under 1 day,,1901.7,1
+1411,2012-01-05 10:35:00,2012,1,Winter,Oklahoma,OK,South,SPP,Cold,Intentional Attack,Vandalism,110.0,1.8333333333333333,Under 1 day,0.0,1901.7,1
+1003,2012-01-09 13:36:00,2012,1,Winter,Louisiana,LA,South,SERC,Cold,System Operability Disruption,,2129.0,35.483333333333334,1 to 3 days,1.0,1685.8,1
+1408,2012-01-09 14:30:00,2012,1,Winter,Connecticut,CT,Northeast,NPCC,Cold,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,,1721.9,1
+1491,2012-01-11 07:19:00,2012,1,Winter,Nevada,NV,West,WECC,Cold,Intentional Attack,Vandalism,108.0,1.8,Under 1 day,0.0,3314.8,1
+214,2012-01-17 10:31:00,2012,1,Winter,Texas,TX,South,TRE,Cold,Intentional Attack,Vandalism,410.0,6.833333333333333,Under 1 day,0.0,2435.3,1
+412,2012-01-19 07:00:00,2012,1,Winter,Washington,WA,Northwest,WECC,Cold,Severe Weather,Winter Storm,1920.0,32.0,1 to 3 days,426000.0,2380.0,1
+1506,2012-02-11 08:47:00,2012,2,Winter,Colorado,CO,Southwest,WECC,Cold,Intentional Attack,Vandalism,103.0,1.7166666666666666,Under 1 day,0.0,2836.1,1
+737,2012-02-13 07:02:00,2012,2,Winter,North Carolina,NC,Southeast,SERC,Cold,Intentional Attack,Vandalism,563.0,9.383333333333333,Under 1 day,,1367.2,1
+395,2012-02-14 19:20:00,2012,2,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1240.0,20.666666666666668,Under 1 day,,2380.0,1
+434,2012-02-15 05:33:00,2012,2,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,717.0,11.95,Under 1 day,0.0,2380.0,1
+1301,2012-02-17 03:00:00,2012,2,Winter,Arkansas,AR,South,SERC,Cold,Intentional Attack,Vandalism,513.0,8.55,Under 1 day,,1492.8,1
+247,2012-02-23 05:45:00,2012,2,Winter,Texas,TX,South,TRE,Cold,Intentional Attack,Vandalism,557.0,9.283333333333333,Under 1 day,0.0,2435.3,1
+1473,2012-02-23 23:12:00,2012,2,Winter,New Hampshire,NH,Northeast,NPCC,Cold,Intentional Attack,Vandalism,108.0,1.8,Under 1 day,0.0,1232.6,1
+448,2012-02-24 11:24:00,2012,2,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,25.0,0.4166666666666667,Under 1 day,,2380.0,1
+1274,2012-02-28 02:59:00,2012,2,Winter,California,CA,West,WECC,Cold,Islanding,,193.0,3.216666666666667,Under 1 day,1.0,4303.7,1
+1289,2012-03-02 13:45:00,2012,3,Spring,Arkansas,AR,South,SERC,Normal,Equipment Failure,,105.0,1.75,Under 1 day,,1492.8,1
+85,2012-03-02 21:00:00,2012,3,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Winter Storm,2670.0,44.5,1 to 3 days,140000.0,2034.1,1
+123,2012-03-02 21:00:00,2012,3,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Winter Storm,4050.0,67.5,1 to 3 days,130000.0,2034.1,1
+533,2012-03-04 01:27:00,2012,3,Spring,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,331.0,5.516666666666667,Under 1 day,,2511.4,1
+264,2012-03-04 13:38:00,2012,3,Spring,Texas,TX,South,SERC,Normal,Intentional Attack,Vandalism,1282.0,21.366666666666667,Under 1 day,,2435.3,1
+190,2012-03-20 08:00:00,2012,3,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,300.0,5.0,Under 1 day,96000.0,2435.3,1
+125,2012-03-29 12:01:00,2012,3,Spring,Michigan,MI,East North Central,RFC,Normal,Islanding,,1.0,0.016666666666666666,Under 1 day,0.0,2034.1,1
+1369,2012-03-30 11:10:00,2012,3,Spring,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,20.0,0.3333333333333333,Under 1 day,,1558.8,1
+913,2012-04-01 20:27:00,2012,4,Spring,Iowa,IA,East North Central,MRO,Normal,Intentional Attack,Vandalism,2161.0,36.016666666666666,1 to 3 days,0.0,2045.8,1
+1374,2012-04-03 11:10:00,2012,4,Spring,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,15.0,0.25,Under 1 day,0.0,1558.8,1
+436,2012-04-03 15:33:00,2012,4,Spring,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,292.0,4.866666666666666,Under 1 day,0.0,2380.0,1
+1134,2012-04-04 15:32:00,2012,4,Spring,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,2878.0,47.96666666666667,1 to 3 days,,4303.7,1
+889,2012-04-07 09:31:00,2012,4,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1838.3,1
+876,2012-04-07 12:25:00,2012,4,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1838.3,1
+900,2012-04-07 14:35:00,2012,4,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1838.3,1
+462,2012-04-12 08:08:00,2012,4,Spring,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,502.0,8.366666666666667,Under 1 day,,2380.0,1
+1391,2012-04-15 19:38:00,2012,4,Spring,Georgia,GA,Southeast,SERC,Normal,Intentional Attack,Vandalism,108.0,1.8,Under 1 day,,1516.0,1
+134,2012-04-16 15:46:00,2012,4,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Heavy Wind,3494.0,58.233333333333334,1 to 3 days,111393.0,2034.1,1
+1177,2012-04-17 06:11:00,2012,4,Spring,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,697.0,11.616666666666667,Under 1 day,0.0,4303.7,1
+403,2012-04-19 07:53:00,2012,4,Spring,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,487.0,8.116666666666667,Under 1 day,,2380.0,1
+259,2012-04-20 14:27:00,2012,4,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,840.0,14.0,Under 1 day,120377.0,2435.3,1
+1441,2012-04-21 15:02:00,2012,4,Spring,Massachusetts,MA,Northeast,NPCC,Normal,Intentional Attack,Vandalism,307.0,5.116666666666666,Under 1 day,,2016.3,1
+475,2012-04-21 20:55:00,2012,4,Spring,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,2615.0,43.583333333333336,1 to 3 days,,2380.0,1
+326,2012-04-23 08:11:00,2012,4,Spring,Indiana,IN,Central,RFC,Normal,Intentional Attack,Vandalism,276.0,4.6,Under 1 day,,1860.0,1
+402,2012-04-23 11:56:00,2012,4,Spring,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,219.0,3.65,Under 1 day,,2380.0,1
+1372,2012-05-07 12:50:00,2012,5,Spring,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,70.0,1.1666666666666667,Under 1 day,0.0,1558.8,1
+695,2012-05-07 17:45:00,2012,5,Spring,Ohio,OH,Central,RFC,Normal,Severe Weather,Thunderstorm,21.0,0.35,Under 1 day,,2033.7,1
+466,2012-05-11 11:05:00,2012,5,Spring,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,15.0,0.25,Under 1 day,,2380.0,1
+1446,2012-05-24 15:20:00,2012,5,Spring,Massachusetts,MA,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1569.0,26.15,1 to 3 days,,2016.3,1
+485,2012-05-29 18:30:00,2012,5,Spring,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,70.0,1.1666666666666667,Under 1 day,,2380.0,1
+1413,2012-05-29 20:35:00,2012,5,Spring,Oklahoma,OK,South,SPP,Normal,Severe Weather,Thunderstorm,2245.0,37.416666666666664,1 to 3 days,112000.0,1901.7,1
+715,2012-05-31 23:45:00,2012,5,Spring,Ohio,OH,Central,RFC,Normal,Intentional Attack,Vandalism,285.0,4.75,Under 1 day,0.0,2033.7,1
+1190,2012-06-02 07:30:00,2012,6,Summer,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,245.0,4.083333333333333,Under 1 day,,4303.7,1
+1503,2012-06-08 17:20:00,2012,6,Summer,Colorado,CO,Southwest,WECC,Normal,System Operability Disruption,,5.0,0.08333333333333333,Under 1 day,30379.0,2836.1,1
+239,2012-06-12 15:57:00,2012,6,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,2220.0,37.0,1 to 3 days,175000.0,2435.3,1
+1358,2012-06-13 16:55:00,2012,6,Summer,New Mexico,NM,Southwest,WECC,Normal,Intentional Attack,Vandalism,314.0,5.233333333333333,Under 1 day,0.0,1928.5,1
+4,2012-06-19 04:30:00,2012,6,Summer,Minnesota,MN,East North Central,MRO,Normal,Severe Weather,Thunderstorm,2550.0,42.5,1 to 3 days,68200.0,2279.0,1
+1237,2012-06-19 05:30:00,2012,6,Summer,California,CA,West,WECC,Normal,Fuel Supply Emergency,Hydro,2880.0,48.0,1 to 3 days,,4303.7,1
+1435,2012-06-23 18:57:00,2012,6,Summer,Massachusetts,MA,Northeast,NPCC,Normal,System Operability Disruption,,31.0,0.5166666666666667,Under 1 day,29250.0,2016.3,1
+1347,2012-06-25 16:04:00,2012,6,Summer,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Wind/Rain,1301.0,21.683333333333334,Under 1 day,190000.0,2265.2,1
+700,2012-06-29 14:10:00,2012,6,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,Thunderstorm,7430.0,123.83333333333333,More than 3 days,175000.0,2033.7,1
+1297,2012-06-29 16:00:00,2012,6,Summer,Arkansas,AR,South,SERC,Normal,Public Appeal,,300.0,5.0,Under 1 day,7935.0,1492.8,1
+73,2012-06-29 18:24:00,2012,6,Summer,West Virginia,WV,Central,RFC,Normal,Severe Weather,Thunderstorm,9576.0,159.6,More than 3 days,265000.0,1409.9,1
+849,2012-06-29 22:15:00,2012,6,Summer,District of Columbia,DC,Northeast,RFC,Normal,Severe Weather,Thunderstorm,8077.0,134.61666666666667,More than 3 days,425000.0,9856.5,1
+1330,2012-06-29 22:29:00,2012,6,Summer,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Thunderstorm,6787.0,113.11666666666666,More than 3 days,880000.0,2265.2,1
+574,2012-06-29 22:43:00,2012,6,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,7987.0,133.11666666666667,More than 3 days,600000.0,2511.4,1
+353,2012-06-29 23:30:00,2012,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,150.0,2.5,Under 1 day,109000.0,2877.6,1
+550,2012-06-30 01:00:00,2012,6,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,4320.0,72.0,More than 3 days,86390.0,2511.4,1
+797,2012-06-30 01:15:00,2012,6,Summer,New Jersey,NJ,Northeast,RFC,Normal,Severe Weather,Thunderstorm,11058.0,184.3,More than 3 days,205000.0,2851.2,1
+30,2012-06-30 15:00:00,2012,6,Summer,Tennessee,TN,Central,SERC,Normal,Public Appeal,,2700.0,45.0,1 to 3 days,,1450.3,1
+520,2012-06-30 22:30:00,2012,6,Summer,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,2021.0,33.68333333333333,1 to 3 days,60000.0,2511.4,1
+365,2012-07-01 13:00:00,2012,7,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,3000.0,50.0,1 to 3 days,320000.0,2877.6,1
+739,2012-07-01 16:47:00,2012,7,Summer,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Storm,373.0,6.216666666666667,Under 1 day,6100.0,1367.2,1
+743,2012-07-01 17:45:00,2012,7,Summer,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,,270.0,4.5,Under 1 day,69106.0,1367.2,1
+106,2012-07-05 00:00:00,2012,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,2670.0,44.5,1 to 3 days,111000.0,2034.1,1
+22,2012-07-05 19:00:00,2012,7,Summer,Tennessee,TN,Central,SERC,Normal,Severe Weather,Wind Storm,1260.0,21.0,Under 1 day,50001.0,1450.3,1
+460,2012-07-06 15:05:00,2012,7,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2380.0,1
+1205,2012-07-07 04:00:00,2012,7,Summer,California,CA,West,WECC,Normal,Fuel Supply Emergency,Hydro,4320.0,72.0,More than 3 days,0.0,4303.7,1
+590,2012-07-07 06:06:00,2012,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,3894.0,64.9,1 to 3 days,64500.0,2123.4,1
+780,2012-07-07 18:00:00,2012,7,Summer,New Jersey,NJ,Northeast,RFC,Normal,Severe Weather,Thunderstorm,2941.0,49.016666666666666,1 to 3 days,95400.0,2851.2,1
+1309,2012-07-16 11:27:00,2012,7,Summer,Arkansas,AR,South,SPP,Normal,Public Appeal,,62.0,1.0333333333333334,Under 1 day,,1492.8,1
+702,2012-07-18 16:20:00,2012,7,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,Thunderstorm,165.0,2.75,Under 1 day,67000.0,2033.7,1
+355,2012-07-18 23:00:00,2012,7,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,420.0,7.0,Under 1 day,181000.0,2877.6,1
+935,2012-07-19 10:30:00,2012,7,Summer,New York,NY,Northeast,NPCC,Normal,Fuel Supply Emergency,Coal,17310.0,288.5,More than 3 days,,4161.4,1
+883,2012-07-19 12:32:00,2012,7,Summer,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+224,2012-07-21 02:19:00,2012,7,Summer,Texas,TX,South,SPP,Normal,Severe Weather,,181.0,3.0166666666666666,Under 1 day,70000.0,2435.3,1
+314,2012-07-24 07:01:00,2012,7,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,569.0,9.483333333333333,Under 1 day,82621.0,1860.0,1
+367,2012-07-24 07:30:00,2012,7,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,870.0,14.5,Under 1 day,330000.0,2877.6,1
+614,2012-07-26 18:14:00,2012,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,1440.0,24.0,1 to 3 days,65112.0,2123.4,1
+627,2012-07-26 18:21:00,2012,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Thunderstorm,3189.0,53.15,1 to 3 days,65000.0,2123.4,1
+712,2012-07-26 18:30:00,2012,7,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,Thunderstorm,1372.0,22.866666666666667,Under 1 day,57054.0,2033.7,1
+325,2012-07-27 17:19:00,2012,7,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,1440.0,24.0,1 to 3 days,52702.0,1860.0,1
+1212,2012-08-04 03:55:00,2012,8,Summer,California,CA,West,WECC,Normal,Islanding,,26.0,0.43333333333333335,Under 1 day,127.0,4303.7,1
+317,2012-08-04 04:00:00,2012,8,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,200.0,3.3333333333333335,Under 1 day,61413.0,1860.0,1
+385,2012-08-04 17:30:00,2012,8,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,1120.0,18.666666666666668,Under 1 day,325000.0,2877.6,1
+451,2012-08-11 12:45:00,2012,8,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,,255.0,4.25,Under 1 day,,2380.0,1
+173,2012-08-19 08:42:00,2012,8,Summer,Texas,TX,South,WECC,Normal,Intentional Attack,Vandalism,206.0,3.433333333333333,Under 1 day,3314.0,2435.3,1
+1032,2012-08-26 22:04:00,2012,8,Summer,Florida,FL,Southeast,FRCC,Normal,Severe Weather,Hurricanes,240.0,4.0,Under 1 day,440000.0,2315.2,1
+1028,2012-08-29 06:53:00,2012,8,Summer,Louisiana,LA,South,SERC,Normal,Severe Weather,Hurricanes,1867.0,31.116666666666667,1 to 3 days,68018.0,1685.8,1
+1019,2012-08-29 09:00:00,2012,8,Summer,Louisiana,LA,South,SERC,Normal,Severe Weather,Hurricanes,3060.0,51.0,1 to 3 days,50000.0,1685.8,1
+1018,2012-08-29 09:48:00,2012,8,Summer,Louisiana,LA,South,SPP,Normal,Severe Weather,Hurricanes,3067.0,51.11666666666667,1 to 3 days,95000.0,1685.8,1
+1291,2012-09-07 21:30:00,2012,9,Fall,Arkansas,AR,South,SERC,Normal,Severe Weather,Thunderstorm,210.0,3.5,Under 1 day,64951.0,1492.8,1
+562,2012-09-08 15:40:00,2012,9,Fall,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Thunderstorm,185.0,3.0833333333333335,Under 1 day,65000.0,2511.4,1
+1332,2012-09-08 15:53:00,2012,9,Fall,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Thunderstorm,1673.0,27.883333333333333,1 to 3 days,119000.0,2265.2,1
+543,2012-09-24 00:00:00,2012,9,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,,1440.0,24.0,1 to 3 days,0.0,2511.4,1
+1242,2012-10-05 17:30:00,2012,10,Fall,California,CA,West,WECC,Normal,Intentional Attack,,20.0,0.3333333333333333,Under 1 day,,4303.7,1
+569,2012-10-09 00:00:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2511.4,1
+528,2012-10-11 00:00:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2511.4,1
+1179,2012-10-14 10:36:00,2012,10,Fall,California,CA,West,WECC,Normal,Islanding,,14.0,0.23333333333333334,Under 1 day,2035.0,4303.7,1
+1367,2012-10-15 14:15:00,2012,10,Fall,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1558.8,1
+558,2012-10-22 00:00:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2511.4,1
+313,2012-10-23 09:10:00,2012,10,Fall,Indiana,IN,Central,RFC,Normal,System Operability Disruption,Transmission Interruption,6.0,0.1,Under 1 day,9800.0,1860.0,1
+530,2012-10-24 00:00:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,0.0,2511.4,1
+568,2012-10-24 00:00:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2511.4,1
+880,2012-10-24 15:15:00,2012,10,Fall,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1838.3,1
+535,2012-10-25 00:00:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2511.4,1
+1504,2012-10-25 14:39:00,2012,10,Fall,Colorado,CO,Southwest,WECC,Normal,Intentional Attack,Vandalism,201.0,3.35,Under 1 day,0.0,2836.1,1
+894,2012-10-25 18:51:00,2012,10,Fall,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,39.0,0.65,Under 1 day,0.0,1838.3,1
+72,2012-10-29 00:00:00,2012,10,Fall,West Virginia,WV,Central,RFC,Normal,Severe Weather,Hurricanes,17339.0,288.98333333333335,More than 3 days,208000.0,1409.9,1
+804,2012-10-29 08:00:00,2012,10,Fall,New Jersey,NJ,Northeast,RFC,Normal,Severe Weather,Hurricanes,9600.0,160.0,More than 3 days,,2851.2,1
+407,2012-10-29 09:00:00,2012,10,Fall,Washington,WA,Northwest,WECC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,0.0,2380.0,1
+799,2012-10-29 12:00:00,2012,10,Fall,New Jersey,NJ,Northeast,RFC,Normal,Severe Weather,Hurricanes,9360.0,156.0,More than 3 days,217000.0,2851.2,1
+921,2012-10-29 13:00:00,2012,10,Fall,New York,NY,Northeast,NPCC,Normal,Severe Weather,Hurricanes,20280.0,338.0,More than 3 days,632816.0,4161.4,1
+1442,2012-10-29 14:40:00,2012,10,Fall,Massachusetts,MA,Northeast,NPCC,Normal,Severe Weather,Hurricanes,1656.0,27.6,1 to 3 days,50000.0,2016.3,1
+1443,2012-10-29 14:45:00,2012,10,Fall,Massachusetts,MA,Northeast,NPCC,Normal,Severe Weather,Hurricanes,3525.0,58.75,1 to 3 days,50000.0,2016.3,1
+1489,2012-10-29 15:00:00,2012,10,Fall,Nevada,NV,West,WECC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,3314.8,1
+631,2012-10-29 16:00:00,2012,10,Fall,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Hurricanes,13488.0,224.8,More than 3 days,270000.0,2123.4,1
+730,2012-10-29 16:00:00,2012,10,Fall,Ohio,OH,Central,RFC,Normal,Severe Weather,Hurricanes,10619.0,176.98333333333332,More than 3 days,346000.0,2033.7,1
+922,2012-10-29 16:01:00,2012,10,Fall,New York,NY,Northeast,NPCC,Normal,Severe Weather,Hurricanes,14639.0,243.98333333333332,More than 3 days,818000.0,4161.4,1
+793,2012-10-29 16:03:00,2012,10,Fall,New Jersey,NJ,Northeast,NPCC,Normal,Severe Weather,Hurricanes,11337.0,188.95,More than 3 days,50000.0,2851.2,1
+1471,2012-10-29 16:45:00,2012,10,Fall,New Hampshire,NH,Northeast,NPCC,Normal,Severe Weather,Hurricanes,2535.0,42.25,1 to 3 days,50000.0,1232.6,1
+554,2012-10-29 17:13:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Severe Weather,Hurricanes,2507.0,41.78333333333333,1 to 3 days,219000.0,2511.4,1
+603,2012-10-29 17:30:00,2012,10,Fall,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Hurricanes,10530.0,175.5,More than 3 days,850000.0,2123.4,1
+586,2012-10-29 18:11:00,2012,10,Fall,Pennsylvania,PA,Northeast,RFC,Normal,Severe Weather,Hurricanes,8979.0,149.65,More than 3 days,400000.0,2123.4,1
+1323,2012-10-29 18:12:00,2012,10,Fall,Virginia,VA,Southeast,RFC,Normal,Severe Weather,Hurricanes,1523.0,25.383333333333333,1 to 3 days,156000.0,2265.2,1
+982,2012-10-29 18:48:00,2012,10,Fall,New York,NY,Northeast,NPCC,Normal,Severe Weather,Hurricanes,8268.0,137.8,More than 3 days,371000.0,4161.4,1
+1469,2012-10-29 19:15:00,2012,10,Fall,Maine,ME,Northeast,NPCC,Normal,Severe Weather,Hurricanes,1187.0,19.783333333333335,Under 1 day,50000.0,1428.0,1
+545,2012-10-30 00:00:00,2012,10,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,2.0,0.03333333333333333,Under 1 day,0.0,2511.4,1
+100,2012-10-30 02:00:00,2012,10,Fall,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,4080.0,68.0,1 to 3 days,133777.0,2034.1,1
+1476,2012-10-30 13:20:00,2012,10,Fall,New Hampshire,NH,Northeast,NPCC,Normal,Intentional Attack,Vandalism,5.0,0.08333333333333333,Under 1 day,0.0,1232.6,1
+1500,2012-10-30 15:00:00,2012,10,Fall,Colorado,CO,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2836.1,1
+1368,2012-11-02 09:30:00,2012,11,Fall,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,160.0,2.6666666666666665,Under 1 day,0.0,1558.8,1
+1472,2012-11-07 14:21:00,2012,11,Fall,New Hampshire,NH,Northeast,NPCC,Normal,Intentional Attack,Vandalism,27.0,0.45,Under 1 day,0.0,1232.6,1
+539,2012-11-08 09:34:00,2012,11,Fall,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2511.4,1
+1451,2012-11-15 05:38:00,2012,11,Fall,Massachusetts,MA,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2016.3,1
+221,2012-11-17 10:00:00,2012,11,Fall,Texas,TX,South,TRE,Normal,Fuel Supply Emergency,,1440.0,24.0,1 to 3 days,,2435.3,1
+892,2012-11-21 14:50:00,2012,11,Fall,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+896,2012-11-26 12:37:00,2012,11,Fall,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1838.3,1
+871,2012-11-26 15:07:00,2012,11,Fall,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+1484,2012-11-27 13:07:00,2012,11,Fall,New Hampshire,NH,Northeast,NPCC,Normal,Intentional Attack,Vandalism,33.0,0.55,Under 1 day,0.0,1232.6,1
+1207,2012-12-02 05:20:00,2012,12,Winter,California,CA,West,WECC,Normal,Intentional Attack,,3100.0,51.666666666666664,1 to 3 days,125000.0,4303.7,1
+405,2012-12-03 12:02:00,2012,12,Winter,Washington,WA,Northwest,WECC,Normal,Intentional Attack,,28.0,0.4666666666666667,Under 1 day,0.0,2380.0,1
+1236,2012-12-06 21:18:00,2012,12,Winter,California,CA,West,WECC,Normal,System Operability Disruption,,13.0,0.21666666666666667,Under 1 day,,4303.7,1
+439,2012-12-17 06:55:00,2012,12,Winter,Washington,WA,Northwest,WECC,Normal,Intentional Attack,,5.0,0.08333333333333333,Under 1 day,0.0,2380.0,1
+208,2012-12-25 09:28:00,2012,12,Winter,Texas,TX,South,TRE,Normal,Severe Weather,Winter Storm,1860.0,31.0,1 to 3 days,262000.0,2435.3,1
+741,2012-12-26 14:50:00,2012,12,Winter,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Thunderstorm,290.0,4.833333333333333,Under 1 day,1200.0,1367.2,1
+755,2012-12-31 14:21:00,2012,12,Winter,North Carolina,NC,Southeast,SERC,Normal,System Operability Disruption,Transmission Interruption,129.0,2.15,Under 1 day,12000.0,1367.2,1
+911,2013-01-16 07:41:00,2013,1,Winter,Iowa,IA,East North Central,MRO,Normal,Intentional Attack,,1637.0,27.283333333333335,1 to 3 days,,2045.8,1
+1363,2013-01-16 16:45:00,2013,1,Winter,New Mexico,NM,Southwest,WECC,Normal,Intentional Attack,,161.0,2.683333333333333,Under 1 day,0.0,1928.5,1
+40,2013-01-17 19:02:00,2013,1,Winter,Tennessee,TN,Central,SERC,Normal,Severe Weather,Winter Storm,2818.0,46.96666666666667,1 to 3 days,80000.0,1450.3,1
+736,2013-01-17 20:35:00,2013,1,Winter,North Carolina,NC,Southeast,SERC,Normal,System Operability Disruption,Distribution Interruption,45.0,0.75,Under 1 day,12000.0,1367.2,1
+128,2013-01-20 03:30:00,2013,1,Winter,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,4485.0,74.75,More than 3 days,146500.0,2034.1,1
+442,2013-01-28 16:46:00,2013,1,Winter,Washington,WA,Northwest,WECC,Normal,Intentional Attack,,74.0,1.2333333333333334,Under 1 day,,2380.0,1
+1321,2013-01-31 03:05:00,2013,1,Winter,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Wind Storm,103.0,1.7166666666666666,Under 1 day,119000.0,2265.2,1
+1399,2013-01-31 06:30:00,2013,1,Winter,Connecticut,CT,Northeast,NPCC,Normal,Severe Weather,Wind Storm,210.0,3.5,Under 1 day,75000.0,1721.9,1
+1364,2013-02-02 21:15:00,2013,2,Winter,New Mexico,NM,Southwest,WECC,Normal,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,,1928.5,1
+716,2013-02-07 08:32:00,2013,2,Winter,Ohio,OH,Central,RFC,Normal,Intentional Attack,Vandalism,75.0,1.25,Under 1 day,0.0,2033.7,1
+846,2013-02-08 11:38:00,2013,2,Winter,District of Columbia,DC,Northeast,RFC,Normal,Equipment Failure,Generator Trip,159.0,2.65,Under 1 day,52000.0,9856.5,1
+1440,2013-02-08 20:55:00,2013,2,Winter,Massachusetts,MA,Northeast,NPCC,Normal,Severe Weather,Winter Storm,4745.0,79.08333333333333,More than 3 days,50000.0,2016.3,1
+1362,2013-02-09 08:30:00,2013,2,Winter,New Mexico,NM,Southwest,WECC,Normal,Intentional Attack,Vandalism,390.0,6.5,Under 1 day,,1928.5,1
+1450,2013-02-13 17:39:00,2013,2,Winter,Massachusetts,MA,Northeast,NPCC,Normal,Fuel Supply Emergency,Petroleum,2891.0,48.18333333333333,1 to 3 days,1.0,2016.3,1
+540,2013-02-15 00:00:00,2013,2,Winter,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2511.4,1
+1091,2013-02-19 16:01:00,2013,2,Winter,California,CA,West,WECC,Normal,Islanding,,1254.0,20.9,Under 1 day,6810.0,4303.7,1
+1359,2013-02-21 11:00:00,2013,2,Winter,New Mexico,NM,Southwest,WECC,Normal,Intentional Attack,Vandalism,30.0,0.5,Under 1 day,,1928.5,1
+866,2013-02-26 13:00:00,2013,2,Winter,Missouri,MO,Central,SERC,Normal,Severe Weather,Winter Storm,4140.0,69.0,1 to 3 days,56444.0,2053.5,1
+1125,2013-03-03 06:39:00,2013,3,Spring,California,CA,West,WECC,Normal,System Operability Disruption,Transmission Interruption,230.0,3.8333333333333335,Under 1 day,58850.0,4303.7,1
+552,2013-03-03 16:27:00,2013,3,Spring,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,113.0,1.8833333333333333,Under 1 day,,2511.4,1
+1337,2013-03-06 08:22:00,2013,3,Spring,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Winter Storm,1565.0,26.083333333333332,1 to 3 days,233000.0,2265.2,1
+1031,2013-03-18 17:50:00,2013,3,Spring,Florida,FL,Southeast,FRCC,Normal,Intentional Attack,,17.0,0.2833333333333333,Under 1 day,0.0,2315.2,1
+1400,2013-03-23 07:00:00,2013,3,Spring,Connecticut,CT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,120.0,2.0,Under 1 day,,1721.9,1
+1447,2013-03-27 10:25:00,2013,3,Spring,Massachusetts,MA,Northeast,NPCC,Normal,Intentional Attack,Vandalism,114.0,1.9,Under 1 day,,2016.3,1
+881,2013-03-28 13:01:00,2013,3,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+536,2013-03-29 10:16:00,2013,3,Spring,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,2511.4,1
+1396,2013-04-01 08:40:00,2013,4,Spring,Connecticut,CT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1721.9,1
+1493,2013-04-03 11:05:00,2013,4,Spring,Colorado,CO,Southwest,WECC,Normal,Intentional Attack,Sabotage,175.0,2.9166666666666665,Under 1 day,0.0,2836.1,1
+877,2013-04-09 11:30:00,2013,4,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+1146,2013-04-16 01:47:00,2013,4,Spring,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,3698.0,61.63333333333333,1 to 3 days,0.0,4303.7,1
+344,2013-04-17 15:36:00,2013,4,Spring,Alabama,AL,Southeast,SERC,Normal,Intentional Attack,,77.0,1.2833333333333334,Under 1 day,,1278.5,1
+147,2013-04-18 15:00:00,2013,4,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Heavy Wind,3630.0,60.5,1 to 3 days,99188.0,2034.1,1
+24,2013-04-21 02:11:00,2013,4,Spring,Tennessee,TN,Central,SERC,Normal,Intentional Attack,,619.0,10.316666666666666,Under 1 day,,1450.3,1
+1123,2013-04-23 00:49:00,2013,4,Spring,California,CA,West,WECC,Normal,Islanding,,195.0,3.25,Under 1 day,1.0,4303.7,1
+897,2013-04-23 11:00:00,2013,4,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+1081,2013-04-25 16:00:00,2013,4,Spring,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,1135.0,18.916666666666668,Under 1 day,0.0,4303.7,1
+1492,2013-05-01 09:22:00,2013,5,Spring,Colorado,CO,Southwest,WECC,Normal,Islanding,,2.0,0.03333333333333333,Under 1 day,35230.0,2836.1,1
+491,2013-05-09 13:21:00,2013,5,Spring,Washington,WA,Northwest,WECC,Normal,Islanding,,180.0,3.0,Under 1 day,,2380.0,1
+837,2013-05-14 00:01:00,2013,5,Spring,Oregon,OR,Northwest,WECC,Normal,Intentional Attack,Vandalism,838.0,13.966666666666667,Under 1 day,,2804.9,1
+1479,2013-05-14 10:25:00,2013,5,Spring,New Hampshire,NH,Northeast,NPCC,Normal,Intentional Attack,Vandalism,77.0,1.2833333333333334,Under 1 day,,1232.6,1
+899,2013-05-15 14:11:00,2013,5,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+891,2013-05-17 08:35:00,2013,5,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+1424,2013-05-20 15:00:00,2013,5,Spring,Oklahoma,OK,South,SPP,Normal,Severe Weather,Tornadoes,3000.0,50.0,1 to 3 days,41306.0,1901.7,1
+1023,2013-05-20 17:22:00,2013,5,Spring,Louisiana,LA,South,SERC,Normal,Equipment Failure,Generator Trip,227.0,3.783333333333333,Under 1 day,21800.0,1685.8,1
+1466,2013-05-28 13:00:00,2013,5,Spring,Maine,ME,Northeast,NPCC,Normal,Intentional Attack,Vandalism,300.0,5.0,Under 1 day,0.0,1428.0,1
+1315,2013-05-29 00:00:00,2013,5,Spring,Virginia,VA,Southeast,SERC,Normal,Intentional Attack,,2.0,0.03333333333333333,Under 1 day,,2265.2,1
+870,2013-05-29 09:52:00,2013,5,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+940,2013-05-29 20:58:00,2013,5,Spring,New York,NY,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,2515.0,41.916666666666664,1 to 3 days,61795.0,4161.4,1
+938,2013-05-30 10:15:00,2013,5,Spring,New York,NY,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,4161.4,1
+1294,2013-05-31 01:00:00,2013,5,Spring,Arkansas,AR,South,SPP,Normal,Severe Weather,Lightning,30.0,0.5,Under 1 day,,1492.8,1
+1426,2013-05-31 18:00:00,2013,5,Spring,Oklahoma,OK,South,SPP,Normal,Severe Weather,Tornadoes,5310.0,88.5,More than 3 days,127000.0,1901.7,1
+865,2013-05-31 19:30:00,2013,5,Spring,Missouri,MO,Central,SERC,Normal,Severe Weather,Thunderstorm,1470.0,24.5,1 to 3 days,100000.0,2053.5,1
+762,2013-06-13 13:17:00,2013,6,Summer,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Thunderstorm,1698.0,28.3,1 to 3 days,175000.0,1367.2,1
+848,2013-06-13 15:30:00,2013,6,Summer,District of Columbia,DC,Northeast,RFC,Normal,Severe Weather,Uncontrolled Loss,30.0,0.5,Under 1 day,40000.0,9856.5,1
+1346,2013-06-13 16:08:00,2013,6,Summer,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Thunderstorm,1508.0,25.133333333333333,1 to 3 days,283000.0,2265.2,1
+754,2013-06-13 17:45:00,2013,6,Summer,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Thunderstorm,1485.0,24.75,1 to 3 days,53000.0,1367.2,1
+1055,2013-06-17 16:17:00,2013,6,Summer,Florida,FL,Southeast,FRCC,Normal,System Operability Disruption,100 Mw Loadshed,152.0,2.533333333333333,Under 1 day,37.0,2315.2,1
+1356,2013-06-18 15:51:00,2013,6,Summer,Wyoming,WY,West North Central,WECC,Normal,Islanding,,32.0,0.5333333333333333,Under 1 day,,1876.2,1
+561,2013-06-20 18:00:00,2013,6,Summer,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,960.0,16.0,Under 1 day,,2511.4,1
+11,2013-06-21 03:00:00,2013,6,Summer,Minnesota,MN,East North Central,MRO,Normal,Severe Weather,Hailstorm,7740.0,129.0,More than 3 days,193000.0,2279.0,1
+1486,2013-06-21 07:40:00,2013,6,Summer,Nevada,NV,West,WECC,Normal,Intentional Attack,Vandalism,274.0,4.566666666666666,Under 1 day,1100.0,3314.8,1
+10,2013-06-21 17:39:00,2013,6,Summer,Minnesota,MN,East North Central,MRO,Normal,Severe Weather,Hailstorm,3621.0,60.35,1 to 3 days,400000.0,2279.0,1
+904,2013-06-21 23:14:00,2013,6,Summer,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+830,2013-06-22 04:59:00,2013,6,Summer,Oregon,OR,Northwest,WECC,Normal,Intentional Attack,Vandalism,989.0,16.483333333333334,Under 1 day,,2804.9,1
+918,2013-06-22 16:12:00,2013,6,Summer,Montana,MT,West North Central,WECC,Normal,Intentional Attack,,93.0,1.55,Under 1 day,,1860.8,1
+1088,2013-06-23 21:20:00,2013,6,Summer,California,CA,West,WECC,Normal,Severe Weather,Fog,255.0,4.25,Under 1 day,148000.0,4303.7,1
+320,2013-06-24 19:30:00,2013,6,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,2730.0,45.5,1 to 3 days,86615.0,1860.0,1
+369,2013-06-24 19:30:00,2013,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,1336.0,22.266666666666666,Under 1 day,283451.0,2877.6,1
+548,2013-06-27 01:10:00,2013,6,Summer,Maryland,MD,Northeast,RFC,Normal,Intentional Attack,Vandalism,95.0,1.5833333333333333,Under 1 day,,2511.4,1
+165,2013-06-27 17:00:00,2013,6,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,420.0,7.0,Under 1 day,138000.0,2034.1,1
+1366,2013-06-28 13:00:00,2013,6,Summer,Vermont,VT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1558.8,1
+898,2013-06-28 17:14:00,2013,6,Summer,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+1154,2013-06-28 18:02:00,2013,6,Summer,California,CA,West,WECC,Normal,Equipment Failure,,164.0,2.7333333333333334,Under 1 day,65255.0,4303.7,1
+1168,2013-07-03 09:34:00,2013,7,Summer,California,CA,West,WECC,Normal,Intentional Attack,,78.0,1.3,Under 1 day,0.0,4303.7,1
+1094,2013-07-05 00:05:00,2013,7,Summer,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,106.0,1.7666666666666666,Under 1 day,2500.0,4303.7,1
+1449,2013-07-10 14:30:00,2013,7,Summer,Massachusetts,MA,Northeast,NPCC,Normal,Intentional Attack,Vandalism,15.0,0.25,Under 1 day,0.0,2016.3,1
+705,2013-07-10 17:30:00,2013,7,Summer,Ohio,OH,Central,RFC,Normal,Severe Weather,Thunderstorm,1590.0,26.5,1 to 3 days,122314.0,2033.7,1
+496,2013-07-11 23:20:00,2013,7,Summer,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,Vandalism,3842.0,64.03333333333333,1 to 3 days,,2625.4,1
+438,2013-07-12 10:00:00,2013,7,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2380.0,1
+974,2013-07-17 15:30:00,2013,7,Summer,New York,NY,Northeast,NPCC,Normal,Fuel Supply Emergency,Natural Gas,2355.0,39.25,1 to 3 days,,4161.4,1
+683,2013-07-18 03:15:00,2013,7,Summer,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,44.0,0.7333333333333333,Under 1 day,,2737.1,1
+954,2013-07-18 11:30:00,2013,7,Summer,New York,NY,Northeast,NPCC,Normal,Severe Weather,Heatwave,1800.0,30.0,1 to 3 days,,4161.4,1
+1265,2013-07-18 23:45:00,2013,7,Summer,California,CA,West,WECC,Normal,Equipment Failure,,620.0,10.333333333333334,Under 1 day,123000.0,4303.7,1
+144,2013-07-19 18:00:00,2013,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,900.0,15.0,Under 1 day,156627.0,2034.1,1
+942,2013-07-19 22:30:00,2013,7,Summer,New York,NY,Northeast,NPCC,Normal,Severe Weather,Thunderstorm,2730.0,45.5,1 to 3 days,74300.0,4161.4,1
+1137,2013-07-22 07:00:00,2013,7,Summer,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,480.0,8.0,Under 1 day,,4303.7,1
+1427,2013-07-23 23:38:00,2013,7,Summer,Oklahoma,OK,South,SPP,Normal,Severe Weather,Thunderstorm,1732.0,28.866666666666667,1 to 3 days,92748.0,1901.7,1
+467,2013-07-25 13:10:00,2013,7,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,5.0,0.08333333333333333,Under 1 day,,2380.0,1
+984,2013-08-01 11:00:00,2013,8,Summer,New York,NY,Northeast,NPCC,Normal,Intentional Attack,Vandalism,300.0,5.0,Under 1 day,,4161.4,1
+1062,2013-08-01 23:19:00,2013,8,Summer,Florida,FL,Southeast,FRCC,Normal,System Operability Disruption,Uncontrolled Loss,90.0,1.5,Under 1 day,104498.0,2315.2,1
+688,2013-08-04 03:00:00,2013,8,Summer,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,,2737.1,1
+1361,2013-08-06 16:00:00,2013,8,Summer,New Mexico,NM,Southwest,WECC,Normal,Intentional Attack,Vandalism,92.0,1.5333333333333334,Under 1 day,,1928.5,1
+68,2013-08-07 00:15:00,2013,8,Summer,Wisconsin,WI,East North Central,MRO,Normal,Severe Weather,Thunderstorm,1272.0,21.2,Under 1 day,51160.0,2123.3,1
+66,2013-08-07 07:30:00,2013,8,Summer,Wisconsin,WI,East North Central,MRO,Normal,Fuel Supply Emergency,Natural Gas,104.0,1.7333333333333334,Under 1 day,,2123.3,1
+819,2013-08-07 14:30:00,2013,8,Summer,Oregon,OR,Northwest,WECC,Normal,Intentional Attack,Vandalism,1350.0,22.5,Under 1 day,,2804.9,1
+833,2013-08-12 11:55:00,2013,8,Summer,Oregon,OR,Northwest,WECC,Normal,Intentional Attack,Suspicious Activity,4.0,0.06666666666666667,Under 1 day,,2804.9,1
+229,2013-08-16 16:58:00,2013,8,Summer,Texas,TX,South,TRE,Normal,Severe Weather,Thunderstorm,1860.0,31.0,1 to 3 days,219681.0,2435.3,1
+1085,2013-08-19 19:06:00,2013,8,Summer,California,CA,West,WECC,Normal,Severe Weather,Lightning,656.0,10.933333333333334,Under 1 day,124000.0,4303.7,1
+1292,2013-08-21 14:00:00,2013,8,Summer,Arkansas,AR,South,SERC,Normal,Intentional Attack,Sabotage,1.0,0.016666666666666666,Under 1 day,,1492.8,1
+499,2013-08-22 08:40:00,2013,8,Summer,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,Sabotage,189.0,3.15,Under 1 day,,2625.4,1
+893,2013-08-22 12:55:00,2013,8,Summer,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,110.0,1.8333333333333333,Under 1 day,,1838.3,1
+887,2013-08-23 07:30:00,2013,8,Summer,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+450,2013-08-26 20:15:00,2013,8,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2380.0,1
+1355,2013-08-28 09:30:00,2013,8,Summer,Wyoming,WY,West North Central,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1876.2,1
+53,2013-08-29 14:57:00,2013,8,Summer,Wisconsin,WI,East North Central,MRO,Normal,Severe Weather,,32.0,0.5333333333333333,Under 1 day,7000.0,2123.3,1
+372,2013-08-30 19:30:00,2013,8,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,360.0,6.0,Under 1 day,157000.0,2877.6,1
+582,2013-09-10 17:42:00,2013,9,Fall,Pennsylvania,PA,Northeast,RFC,Normal,System Operability Disruption,,380.0,6.333333333333333,Under 1 day,,2123.4,1
+137,2013-09-11 16:00:00,2013,9,Fall,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,5760.0,96.0,More than 3 days,75000.0,2034.1,1
+1306,2013-09-29 00:00:00,2013,9,Fall,Arkansas,AR,South,SERC,Normal,Intentional Attack,Sabotage,60.0,1.0,Under 1 day,,1492.8,1
+1308,2013-10-06 07:25:00,2013,10,Fall,Arkansas,AR,South,SPP,Normal,Intentional Attack,,110.0,1.8333333333333333,Under 1 day,9200.0,1492.8,1
+1290,2013-10-11 14:30:00,2013,10,Fall,Arkansas,AR,South,SERC,Normal,Intentional Attack,,240.0,4.0,Under 1 day,,1492.8,1
+761,2013-10-16 11:15:00,2013,10,Fall,North Carolina,NC,Southeast,SERC,Normal,Intentional Attack,,405.0,6.75,Under 1 day,0.0,1367.2,1
+1279,2013-10-19 14:32:00,2013,10,Fall,California,CA,West,WECC,Normal,Intentional Attack,,448.0,7.466666666666667,Under 1 day,,4303.7,1
+1127,2013-10-21 05:18:00,2013,10,Fall,California,CA,West,WECC,Normal,Islanding,,15.0,0.25,Under 1 day,433.0,4303.7,1
+498,2013-10-26 07:13:00,2013,10,Fall,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,2625.4,1
+265,2013-10-27 04:27:00,2013,10,Fall,Texas,TX,South,TRE,Normal,Severe Weather,Hailstorm,1080.0,18.0,Under 1 day,171117.0,2435.3,1
+905,2013-11-01 13:26:00,2013,11,Fall,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1838.3,1
+422,2013-11-02 00:00:00,2013,11,Fall,Washington,WA,Northwest,WECC,Normal,Severe Weather,Heavy Wind,3300.0,55.0,1 to 3 days,105000.0,2380.0,1
+685,2013-11-02 08:25:00,2013,11,Fall,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+1393,2013-11-04 09:04:00,2013,11,Fall,Connecticut,CT,Northeast,NPCC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1721.9,1
+331,2013-11-05 10:10:00,2013,11,Fall,Indiana,IN,Central,RFC,Normal,Intentional Attack,,2880.0,48.0,1 to 3 days,,1860.0,1
+1365,2013-11-12 09:14:00,2013,11,Fall,New Mexico,NM,Southwest,SPP,Normal,Fuel Supply Emergency,,76.0,1.2666666666666666,Under 1 day,,1928.5,1
+1124,2013-11-12 14:04:00,2013,11,Fall,California,CA,West,WECC,Normal,Islanding,,1.0,0.016666666666666666,Under 1 day,48400.0,4303.7,1
+652,2013-11-16 15:15:00,2013,11,Fall,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+94,2013-11-17 07:00:00,2013,11,Fall,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Snow/Ice Storm,5034.0,83.9,More than 3 days,325325.0,2034.1,1
+308,2013-11-17 12:35:00,2013,11,Fall,Indiana,IN,Central,RFC,Normal,System Operability Disruption,,65.0,1.0833333333333333,Under 1 day,7500.0,1860.0,1
+307,2013-11-17 13:06:00,2013,11,Fall,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,4320.0,72.0,More than 3 days,75065.0,1860.0,1
+356,2013-11-17 14:31:00,2013,11,Fall,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,479.0,7.983333333333333,Under 1 day,190000.0,2877.6,1
+110,2013-11-17 16:45:00,2013,11,Fall,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,5760.0,96.0,More than 3 days,50000.0,2034.1,1
+299,2013-11-17 16:47:00,2013,11,Fall,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,4320.0,72.0,More than 3 days,61705.0,1860.0,1
+311,2013-11-17 16:47:00,2013,11,Fall,Indiana,IN,Central,RFC,Normal,Severe Weather,Tornadoes,4032.0,67.2,1 to 3 days,61705.0,1860.0,1
+666,2013-11-20 03:08:00,2013,11,Fall,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+1133,2013-11-21 19:45:00,2013,11,Fall,California,CA,West,WECC,Normal,Severe Weather,Wind Storm,455.0,7.583333333333333,Under 1 day,89500.0,4303.7,1
+651,2013-11-24 07:38:00,2013,11,Fall,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+241,2013-12-06 01:51:00,2013,12,Winter,Texas,TX,South,TRE,Normal,Severe Weather,Snow/Ice,7809.0,130.15,More than 3 days,881000.0,2435.3,1
+662,2013-12-06 08:47:00,2013,12,Winter,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,2.0,0.03333333333333333,Under 1 day,,2737.1,1
+1314,2013-12-09 06:54:00,2013,12,Winter,Virginia,VA,Southeast,SERC,Normal,Severe Weather,Snow/Ice,448.0,7.466666666666667,Under 1 day,88000.0,2265.2,1
+510,2013-12-10 01:01:00,2013,12,Winter,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,,1440.0,24.0,1 to 3 days,,2625.4,1
+220,2013-12-13 11:00:00,2013,12,Winter,Texas,TX,South,TRE,Normal,Fuel Supply Emergency,Coal,20160.0,336.0,More than 3 days,,2435.3,1
+274,2013-12-13 11:00:00,2013,12,Winter,Texas,TX,South,TRE,Normal,Fuel Supply Emergency,Coal,20160.0,336.0,More than 3 days,,2435.3,1
+99,2013-12-22 03:28:00,2013,12,Winter,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Snow/Ice,9857.0,164.28333333333333,More than 3 days,50000.0,2034.1,1
+929,2013-12-22 06:16:00,2013,12,Winter,New York,NY,Northeast,NPCC,Normal,Severe Weather,Snow/Ice,3943.0,65.71666666666667,1 to 3 days,59000.0,4161.4,1
+141,2013-12-22 06:30:00,2013,12,Winter,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Snow/Ice,4242.0,70.7,1 to 3 days,140735.0,2034.1,1
+1465,2013-12-23 15:20:00,2013,12,Winter,Maine,ME,Northeast,NPCC,Normal,Severe Weather,Snow/Ice,2652.0,44.2,1 to 3 days,52500.0,1428.0,1
+495,2013-12-27 09:43:00,2013,12,Winter,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,,180.0,3.0,Under 1 day,,2625.4,1
+512,2013-12-30 11:00:00,2013,12,Winter,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,,2700.0,45.0,1 to 3 days,,2625.4,1
+653,2013-12-30 11:00:00,2013,12,Winter,Utah,UT,Southwest,WECC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+175,2014-01-06 07:01:00,2014,1,Winter,Texas,TX,South,TRE,Cold,Severe Weather,Winter,1559.0,25.983333333333334,1 to 3 days,,2435.3,1
+654,2014-01-06 14:37:00,2014,1,Winter,Utah,UT,Southwest,RFC,Cold,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+601,2014-01-06 19:50:00,2014,1,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Winter,59.0,0.9833333333333333,Under 1 day,62000.0,2123.4,1
+623,2014-01-06 19:50:00,2014,1,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Winter,54.0,0.9,Under 1 day,,2123.4,1
+847,2014-01-06 19:50:00,2014,1,Winter,District of Columbia,DC,Northeast,RFC,Cold,Severe Weather,Winter,54.0,0.9,Under 1 day,,9856.5,1
+906,2014-01-06 19:52:00,2014,1,Winter,Delaware,DE,Northeast,RFC,Cold,Severe Weather,Winter,53.0,0.8833333333333333,Under 1 day,,1838.3,1
+636,2014-01-06 22:00:00,2014,1,Winter,Kentucky,KY,Central,RFC,Cold,Severe Weather,Winter,1.0,0.016666666666666666,Under 1 day,,1795.8,1
+25,2014-01-07 06:00:00,2014,1,Winter,Tennessee,TN,Central,SERC,Cold,Severe Weather,Winter,150.0,2.5,Under 1 day,,1450.3,1
+44,2014-01-07 06:00:00,2014,1,Winter,Tennessee,TN,Central,SERC,Cold,Severe Weather,Winter,150.0,2.5,Under 1 day,,1450.3,1
+618,2014-01-07 06:18:00,2014,1,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Winter,1.0,0.016666666666666666,Under 1 day,,2123.4,1
+765,2014-01-07 07:58:00,2014,1,Winter,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,Winter,182.0,3.033333333333333,Under 1 day,,1367.2,1
+383,2014-01-07 10:59:00,2014,1,Winter,Illinois,IL,Central,RFC,Cold,Fuel Supply Emergency,Natural Gas,2761.0,46.016666666666666,1 to 3 days,,2877.6,1
+747,2014-01-07 16:15:00,2014,1,Winter,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,Winter,1265.0,21.083333333333332,Under 1 day,,1367.2,1
+814,2014-01-07 18:00:00,2014,1,Winter,South Carolina,SC,Southeast,SERC,Cold,Severe Weather,Winter,300.0,5.0,Under 1 day,677858.0,1288.1,1
+809,2014-01-08 06:00:00,2014,1,Winter,South Carolina,SC,Southeast,SERC,Cold,Severe Weather,Winter,180.0,3.0,Under 1 day,677858.0,1288.1,1
+503,2014-01-13 16:44:00,2014,1,Winter,Arizona,AZ,Southwest,WECC,Cold,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2625.4,1
+661,2014-01-15 14:32:00,2014,1,Winter,Utah,UT,Southwest,WECC,Cold,Intentional Attack,Vandalism,13.0,0.21666666666666667,Under 1 day,,2737.1,1
+504,2014-01-16 12:30:00,2014,1,Winter,Arizona,AZ,Southwest,WECC,Cold,Intentional Attack,Vandalism,87.0,1.45,Under 1 day,,2625.4,1
+276,2014-01-18 09:00:00,2014,1,Winter,Texas,TX,South,TRE,Cold,Public Appeal,,45.0,0.75,Under 1 day,,2435.3,1
+855,2014-01-21 12:14:00,2014,1,Winter,Missouri,MO,Central,SERC,Cold,Intentional Attack,Vandalism,25.0,0.4166666666666667,Under 1 day,,2053.5,1
+51,2014-01-22 00:30:00,2014,1,Winter,Wisconsin,WI,East North Central,MRO,Cold,Intentional Attack,Vandalism,135.0,2.25,Under 1 day,,2123.3,1
+731,2014-01-22 09:45:00,2014,1,Winter,Ohio,OH,Central,RFC,Cold,Intentional Attack,Vandalism,634.0,10.566666666666666,Under 1 day,,2033.7,1
+67,2014-01-22 13:55:00,2014,1,Winter,Wisconsin,WI,East North Central,MRO,Cold,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,,2123.3,1
+792,2014-01-22 21:15:00,2014,1,Winter,New Jersey,NJ,Northeast,RFC,Cold,Intentional Attack,,353.0,5.883333333333334,Under 1 day,,2851.2,1
+47,2014-01-23 04:00:00,2014,1,Winter,Tennessee,TN,Central,SERC,Cold,Severe Weather,Winter,1920.0,32.0,1 to 3 days,,1450.3,1
+541,2014-01-23 13:04:00,2014,1,Winter,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Winter,1196.0,19.933333333333334,Under 1 day,,2511.4,1
+38,2014-01-23 16:00:00,2014,1,Winter,Tennessee,TN,Central,SERC,Cold,Severe Weather,Winter,1200.0,20.0,Under 1 day,,1450.3,1
+399,2014-01-23 21:17:00,2014,1,Winter,Washington,WA,Northwest,WECC,Cold,Intentional Attack,Vandalism,1183.0,19.716666666666665,Under 1 day,,2380.0,1
+54,2014-01-24 00:00:00,2014,1,Winter,Wisconsin,WI,East North Central,RFC,Cold,Fuel Supply Emergency,Coal,108653.0,1810.8833333333334,More than 3 days,,2123.3,1
+63,2014-01-24 15:30:00,2014,1,Winter,Wisconsin,WI,East North Central,MRO,Cold,Intentional Attack,Vandalism,90.0,1.5,Under 1 day,,2123.3,1
+69,2014-01-25 10:00:00,2014,1,Winter,Wisconsin,WI,East North Central,MRO,Cold,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,,2123.3,1
+829,2014-01-26 21:00:00,2014,1,Winter,Oregon,OR,Northwest,WECC,Cold,Intentional Attack,Vandalism,840.0,14.0,Under 1 day,,2804.9,1
+531,2014-01-27 14:20:00,2014,1,Winter,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Winter,1840.0,30.666666666666668,1 to 3 days,,2511.4,1
+57,2014-01-29 16:00:00,2014,1,Winter,Wisconsin,WI,East North Central,MRO,Cold,Intentional Attack,Vandalism,44.0,0.7333333333333333,Under 1 day,,2123.3,1
+621,2014-02-05 01:00:00,2014,2,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Snow/Ice,6940.0,115.66666666666667,More than 3 days,144000.0,2123.4,1
+610,2014-02-05 05:00:00,2014,2,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Snow/Ice,1.0,0.016666666666666666,Under 1 day,715000.0,2123.4,1
+941,2014-02-05 07:00:00,2014,2,Winter,New York,NY,Northeast,NPCC,Cold,Fuel Supply Emergency,Coal,25920.0,432.0,More than 3 days,,4161.4,1
+617,2014-02-05 07:35:00,2014,2,Winter,Pennsylvania,PA,Northeast,RFC,Cold,Severe Weather,Snow/Ice,2668.0,44.46666666666667,1 to 3 days,62159.0,2123.4,1
+556,2014-02-05 08:05:00,2014,2,Winter,Maryland,MD,Northeast,RFC,Cold,Severe Weather,Snow/Ice,1.0,0.016666666666666666,Under 1 day,181000.0,2511.4,1
+1080,2014-02-06 13:00:00,2014,2,Winter,California,CA,West,WECC,Cold,Fuel Supply Emergency,Natural Gas,540.0,9.0,Under 1 day,,4303.7,1
+1119,2014-02-06 13:05:00,2014,2,Winter,California,CA,West,WECC,Cold,Fuel Supply Emergency,Natural Gas,370.0,6.166666666666667,Under 1 day,,4303.7,1
+204,2014-02-06 13:58:00,2014,2,Winter,Texas,TX,South,TRE,Cold,Public Appeal,,402.0,6.7,Under 1 day,,2435.3,1
+1256,2014-02-06 14:15:00,2014,2,Winter,California,CA,West,WECC,Cold,Fuel Supply Emergency,Natural Gas,324.0,5.4,Under 1 day,,4303.7,1
+174,2014-02-06 15:35:00,2014,2,Winter,Texas,TX,South,TRE,Cold,Public Appeal,,1195.0,19.916666666666668,Under 1 day,,2435.3,1
+990,2014-02-07 07:00:00,2014,2,Winter,New York,NY,Northeast,NPCC,Cold,Fuel Supply Emergency,Coal,60480.0,1008.0,More than 3 days,,4161.4,1
+261,2014-02-07 16:30:00,2014,2,Winter,Texas,TX,South,TRE,Cold,Public Appeal,,990.0,16.5,Under 1 day,,2435.3,1
+209,2014-02-07 16:50:00,2014,2,Winter,Texas,TX,South,TRE,Cold,Public Appeal,,220.0,3.6666666666666665,Under 1 day,,2435.3,1
+1388,2014-02-12 07:48:00,2014,2,Winter,Georgia,GA,Southeast,SERC,Cold,Severe Weather,Snow/Ice,4122.0,68.7,1 to 3 days,373835.0,1516.0,1
+810,2014-02-12 11:03:00,2014,2,Winter,South Carolina,SC,Southeast,SERC,Cold,Severe Weather,Snow/Ice,4177.0,69.61666666666666,1 to 3 days,120124.0,1288.1,1
+740,2014-02-12 12:10:00,2014,2,Winter,North Carolina,NC,Southeast,SERC,Cold,Severe Weather,Snow/Ice,4510.0,75.16666666666667,More than 3 days,200000.0,1367.2,1
+1370,2014-02-12 14:15:00,2014,2,Winter,Vermont,VT,Northeast,NPCC,Cold,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1558.8,1
+827,2014-02-14 13:00:00,2014,2,Winter,Oregon,OR,Northwest,WECC,Cold,Intentional Attack,Vandalism,120.0,2.0,Under 1 day,,2804.9,1
+839,2014-02-18 18:43:00,2014,2,Winter,Oregon,OR,Northwest,WECC,Cold,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2804.9,1
+1386,2014-02-21 02:53:00,2014,2,Winter,Georgia,GA,Southeast,SERC,Cold,Severe Weather,Heavy Wind,1087.0,18.116666666666667,Under 1 day,66445.0,1516.0,1
+251,2014-03-02 19:00:00,2014,3,Spring,Texas,TX,South,TRE,Normal,Severe Weather,Winter,2280.0,38.0,1 to 3 days,,2435.3,1
+483,2014-03-03 01:48:00,2014,3,Spring,Washington,WA,Northwest,WECC,Normal,Fuel Supply Emergency,Hydro,1.0,0.016666666666666666,Under 1 day,,2380.0,1
+43,2014-03-03 06:40:00,2014,3,Spring,Tennessee,TN,Central,SERC,Normal,Severe Weather,Wind Storm,528.0,8.8,Under 1 day,65904.0,1450.3,1
+64,2014-03-04 09:06:00,2014,3,Spring,Wisconsin,WI,East North Central,MRO,Normal,Fuel Supply Emergency,Coal,18660.0,311.0,More than 3 days,,2123.3,1
+677,2014-03-05 17:06:00,2014,3,Spring,Utah,UT,Southwest,WECC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+771,2014-03-07 03:30:00,2014,3,Spring,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Wind Storm,1050.0,17.5,Under 1 day,370900.0,1367.2,1
+914,2014-03-11 00:00:00,2014,3,Spring,Iowa,IA,East North Central,MRO,Normal,Intentional Attack,,2880.0,48.0,1 to 3 days,,2045.8,1
+760,2014-03-12 19:35:00,2014,3,Spring,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,Heavy Wind,985.0,16.416666666666668,Under 1 day,61377.0,1367.2,1
+909,2014-03-14 12:34:00,2014,3,Spring,Iowa,IA,East North Central,MRO,Normal,Intentional Attack,Vandalism,251.0,4.183333333333334,Under 1 day,,2045.8,1
+517,2014-03-17 17:25:00,2014,3,Spring,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,Sabotage,451.0,7.516666666666667,Under 1 day,,2625.4,1
+950,2014-03-20 00:00:00,2014,3,Spring,New York,NY,Northeast,NPCC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,4161.4,1
+674,2014-03-24 11:07:00,2014,3,Spring,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+917,2014-03-26 13:37:00,2014,3,Spring,Montana,MT,West North Central,WECC,Normal,Islanding,,56.0,0.9333333333333333,Under 1 day,,1860.8,1
+912,2014-03-26 16:00:00,2014,3,Spring,Iowa,IA,East North Central,MRO,Normal,Intentional Attack,,21360.0,356.0,More than 3 days,,2045.8,1
+55,2014-04-03 14:45:00,2014,4,Spring,Wisconsin,WI,East North Central,MRO,Normal,Fuel Supply Emergency,Coal,8468.0,141.13333333333333,More than 3 days,,2123.3,1
+1307,2014-04-04 03:30:00,2014,4,Spring,Arkansas,AR,South,SERC,Normal,Severe Weather,Wind,285.0,4.75,Under 1 day,57200.0,1492.8,1
+1285,2014-04-08 13:00:00,2014,4,Spring,California,CA,West,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,4303.7,1
+126,2014-04-12 18:15:00,2014,4,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,2325.0,38.75,1 to 3 days,50000.0,2034.1,1
+84,2014-04-12 20:00:00,2014,4,Spring,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,4290.0,71.5,1 to 3 days,164000.0,2034.1,1
+1024,2014-04-23 19:45:00,2014,4,Spring,Louisiana,LA,South,SERC,Normal,System Operability Disruption,,52.0,0.8666666666666667,Under 1 day,28000.0,1685.8,1
+879,2014-04-25 07:00:00,2014,4,Spring,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,30.0,0.5,Under 1 day,,1838.3,1
+818,2014-04-27 12:07:00,2014,4,Spring,Oregon,OR,Northwest,WECC,Normal,Intentional Attack,Vandalism,2.0,0.03333333333333333,Under 1 day,,2804.9,1
+347,2014-05-08 01:00:00,2014,5,Spring,Mississippi,MS,South,SERC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,1324.0,1
+1216,2014-05-08 08:39:00,2014,5,Spring,California,CA,West,WECC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,4303.7,1
+312,2014-05-09 18:00:00,2014,5,Spring,Indiana,IN,Central,RFC,Normal,Severe Weather,Heavy Wind,2580.0,43.0,1 to 3 days,56000.0,1860.0,1
+2,2014-05-11 18:38:00,2014,5,Spring,Minnesota,MN,East North Central,MRO,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2279.0,1
+650,2014-05-12 13:14:00,2014,5,Spring,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+306,2014-05-15 12:10:00,2014,5,Spring,Indiana,IN,Central,RFC,Normal,Intentional Attack,,3.0,0.05,Under 1 day,,1860.0,1
+1253,2014-05-16 10:43:00,2014,5,Spring,California,CA,West,WECC,Normal,Severe Weather,Wildfire,617.0,10.283333333333333,Under 1 day,1400000.0,4303.7,1
+682,2014-05-20 07:01:00,2014,5,Spring,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+749,2014-05-23 15:00:00,2014,5,Spring,North Carolina,NC,Southeast,SERC,Normal,Intentional Attack,Vandalism,3120.0,52.0,1 to 3 days,,1367.2,1
+502,2014-05-27 11:00:00,2014,5,Spring,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,Vandalism,353.0,5.883333333333334,Under 1 day,,2625.4,1
+179,2014-06-03 01:38:00,2014,6,Summer,Texas,TX,South,TRE,Normal,Intentional Attack,Vandalism,5.0,0.08333333333333333,Under 1 day,,2435.3,1
+35,2014-06-05 03:00:00,2014,6,Summer,Tennessee,TN,Central,SERC,Normal,Severe Weather,Thunderstorm,4125.0,68.75,1 to 3 days,38500.0,1450.3,1
+29,2014-06-05 13:06:00,2014,6,Summer,Tennessee,TN,Central,SERC,Normal,Severe Weather,Thunderstorm,1.0,0.016666666666666666,Under 1 day,56475.0,1450.3,1
+339,2014-06-07 23:00:00,2014,6,Summer,Alabama,AL,Southeast,SERC,Normal,Severe Weather,Thunderstorm,390.0,6.5,Under 1 day,65000.0,1278.5,1
+71,2014-06-10 21:50:00,2014,6,Summer,West Virginia,WV,Central,RFC,Normal,Severe Weather,Thunderstorm,1000.0,16.666666666666668,Under 1 day,66383.0,1409.9,1
+507,2014-06-11 09:30:00,2014,6,Summer,Arizona,AZ,Southwest,WECC,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,2625.4,1
+345,2014-06-11 16:00:00,2014,6,Summer,Mississippi,MS,South,SERC,Normal,Intentional Attack,Vandalism,30.0,0.5,Under 1 day,,1324.0,1
+277,2014-06-12 09:10:00,2014,6,Summer,Texas,TX,South,TRE,Normal,Intentional Attack,,1.0,0.016666666666666666,Under 1 day,,2435.3,1
+15,2014-06-15 00:00:00,2014,6,Summer,Minnesota,MN,East North Central,MRO,Normal,Severe Weather,Thunderstorm,60.0,1.0,Under 1 day,55951.0,2279.0,1
+463,2014-06-18 09:52:00,2014,6,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,548.0,9.133333333333333,Under 1 day,,2380.0,1
+136,2014-06-18 17:00:00,2014,6,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,Thunderstorm,2760.0,46.0,1 to 3 days,138802.0,2034.1,1
+31,2014-06-19 08:47:00,2014,6,Summer,Tennessee,TN,Central,SERC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1450.3,1
+46,2014-06-24 14:54:00,2014,6,Summer,Tennessee,TN,Central,SERC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1450.3,1
+65,2014-06-30 17:55:00,2014,6,Summer,Wisconsin,WI,East North Central,MRO,Normal,Severe Weather,Thunderstorm,538.0,8.966666666666667,Under 1 day,120000.0,2123.3,1
+361,2014-06-30 20:00:00,2014,6,Summer,Illinois,IL,Central,RFC,Normal,Severe Weather,Thunderstorm,2790.0,46.5,1 to 3 days,420000.0,2877.6,1
+296,2014-06-30 23:20:00,2014,6,Summer,Indiana,IN,Central,RFC,Normal,Severe Weather,Thunderstorm,1060.0,17.666666666666668,Under 1 day,127000.0,1860.0,1
+21,2015-01-07 17:00:00,2015,1,Winter,Tennessee,TN,Central,SERC,Warm,Severe Weather,Winter,935.0,15.583333333333334,Under 1 day,,1450.3,1
+835,2015-01-22 04:24:00,2015,1,Winter,Oregon,OR,Northwest,WECC,Warm,Intentional Attack,Vandalism,91.0,1.5166666666666666,Under 1 day,,2804.9,1
+821,2015-01-26 14:39:00,2015,1,Winter,Oregon,OR,Northwest,WECC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2804.9,1
+207,2015-01-27 10:30:00,2015,1,Winter,Texas,TX,South,SERC,Warm,Intentional Attack,Sabotage,1.0,0.016666666666666666,Under 1 day,0.0,2435.3,1
+672,2015-02-01 11:24:00,2015,2,Winter,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,20.0,0.3333333333333333,Under 1 day,,2737.1,1
+246,2015-02-02 09:40:00,2015,2,Winter,Texas,TX,South,TRE,Warm,Intentional Attack,Sabotage,1.0,0.016666666666666666,Under 1 day,,2435.3,1
+1171,2015-02-04 11:55:00,2015,2,Winter,California,CA,West,WECC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,4303.7,1
+515,2015-02-05 08:15:00,2015,2,Winter,Arizona,AZ,Southwest,WECC,Warm,Intentional Attack,Vandalism,2.0,0.03333333333333333,Under 1 day,,2625.4,1
+1090,2015-02-05 11:20:00,2015,2,Winter,California,CA,West,WECC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,4303.7,1
+1498,2015-02-09 11:30:00,2015,2,Winter,Colorado,CO,Southwest,WECC,Warm,Intentional Attack,Sabotage,105.0,1.75,Under 1 day,,2836.1,1
+1382,2015-02-16 21:41:00,2015,2,Winter,Georgia,GA,Southeast,SERC,Warm,Severe Weather,Winter,1999.0,33.31666666666667,1 to 3 days,186035.0,1516.0,1
+494,2015-02-17 06:20:00,2015,2,Winter,Arizona,AZ,Southwest,WECC,Warm,Intentional Attack,Vandalism,70.0,1.1666666666666667,Under 1 day,,2625.4,1
+493,2015-02-19 14:30:00,2015,2,Winter,Arizona,AZ,Southwest,WECC,Warm,Intentional Attack,Vandalism,50.0,0.8333333333333334,Under 1 day,,2625.4,1
+34,2015-02-21 08:34:00,2015,2,Winter,Tennessee,TN,Central,SERC,Warm,Severe Weather,Winter,251.0,4.183333333333334,Under 1 day,50000.0,1450.3,1
+742,2015-02-26 03:30:00,2015,2,Winter,North Carolina,NC,Southeast,SERC,Warm,Severe Weather,Winter,1950.0,32.5,1 to 3 days,103776.0,1367.2,1
+39,2015-03-04 09:05:00,2015,3,Spring,Tennessee,TN,Central,SERC,Warm,Intentional Attack,Vandalism,310.0,5.166666666666667,Under 1 day,,1450.3,1
+424,2015-03-09 23:50:00,2015,3,Spring,Washington,WA,Northwest,WECC,Warm,Intentional Attack,Vandalism,663.0,11.05,Under 1 day,,2380.0,1
+817,2015-03-15 15:30:00,2015,3,Spring,Oregon,OR,Northwest,WECC,Warm,Severe Weather,Wind,210.0,3.5,Under 1 day,71000.0,2804.9,1
+9,2015-03-16 07:31:00,2015,3,Spring,Minnesota,MN,East North Central,MRO,Warm,Intentional Attack,Sabotage,155.0,2.5833333333333335,Under 1 day,5941.0,2279.0,1
+1508,2015-03-19 18:30:00,2015,3,Spring,Kansas,KS,South,SPP,Warm,Intentional Attack,Vandalism,187.0,3.1166666666666667,Under 1 day,,2176.5,1
+70,2015-03-22 16:25:00,2015,3,Spring,West Virginia,WV,Central,RFC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,1409.9,1
+1215,2015-03-26 15:21:00,2015,3,Spring,California,CA,West,WECC,Warm,Islanding,,98.0,1.6333333333333333,Under 1 day,,4303.7,1
+1136,2015-03-29 04:26:00,2015,3,Spring,California,CA,West,WECC,Warm,Intentional Attack,Vandalism,295.0,4.916666666666667,Under 1 day,,4303.7,1
+655,2015-04-01 18:25:00,2015,4,Spring,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,37.0,2737.1,1
+657,2015-04-02 07:04:00,2015,4,Spring,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,113.0,1.8833333333333333,Under 1 day,5763.0,2737.1,1
+1510,2015-04-03 02:00:00,2015,4,Spring,Kansas,KS,South,SPP,Warm,Severe Weather,Thunderstorm,348.0,5.8,Under 1 day,70000.0,2176.5,1
+1268,2015-04-06 08:12:00,2015,4,Spring,California,CA,West,WECC,Warm,System Operability Disruption,,236.0,3.933333333333333,Under 1 day,80000.0,4303.7,1
+575,2015-04-07 12:30:00,2015,4,Spring,Maryland,MD,Northeast,RFC,Warm,System Operability Disruption,Uncontrolled Loss,304.0,5.066666666666666,Under 1 day,,2511.4,1
+1122,2015-04-07 15:34:00,2015,4,Spring,California,CA,West,WECC,Warm,Islanding,,12.0,0.2,Under 1 day,0.0,4303.7,1
+191,2015-04-17 21:30:00,2015,4,Spring,Texas,TX,South,TRE,Warm,Severe Weather,,3020.0,50.333333333333336,1 to 3 days,280982.0,2435.3,1
+256,2015-04-18 21:00:00,2015,4,Spring,Texas,TX,South,TRE,Warm,Severe Weather,,3300.0,55.0,1 to 3 days,89000.0,2435.3,1
+177,2015-04-24 19:10:00,2015,4,Spring,Texas,TX,South,TRE,Warm,Severe Weather,,2690.0,44.833333333333336,1 to 3 days,57000.0,2435.3,1
+33,2015-05-02 22:51:00,2015,5,Spring,Tennessee,TN,Central,SERC,Warm,Intentional Attack,Vandalism,95.0,1.5833333333333333,Under 1 day,215.0,1450.3,1
+687,2015-05-04 15:25:00,2015,5,Spring,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2737.1,1
+1263,2015-05-11 08:32:00,2015,5,Spring,California,CA,West,WECC,Warm,Intentional Attack,Sabotage,1.0,0.016666666666666666,Under 1 day,0.0,4303.7,1
+348,2015-05-12 00:40:00,2015,5,Spring,Mississippi,MS,South,SERC,Warm,Intentional Attack,Sabotage,5.0,0.08333333333333333,Under 1 day,0.0,1324.0,1
+404,2015-05-18 15:28:00,2015,5,Spring,Washington,WA,Northwest,WECC,Warm,Islanding,,19.0,0.31666666666666665,Under 1 day,,2380.0,1
+178,2015-05-25 18:00:00,2015,5,Spring,Texas,TX,South,TRE,Warm,Severe Weather,,5115.0,85.25,More than 3 days,454000.0,2435.3,1
+267,2015-05-25 20:30:00,2015,5,Spring,Texas,TX,South,SPP,Warm,Severe Weather,,1320.0,22.0,Under 1 day,57531.0,2435.3,1
+271,2015-05-25 22:45:00,2015,5,Spring,Texas,TX,South,TRE,Warm,Severe Weather,,3040.0,50.666666666666664,1 to 3 days,61000.0,2435.3,1
+640,2015-06-01 00:27:00,2015,6,Summer,Kentucky,KY,Central,SERC,Warm,Intentional Attack,Vandalism,108.0,1.8,Under 1 day,110.0,1795.8,1
+1121,2015-06-01 19:19:00,2015,6,Summer,California,CA,West,WECC,Warm,Islanding,,797.0,13.283333333333333,Under 1 day,484.0,4303.7,1
+1120,2015-06-02 18:58:00,2015,6,Summer,California,CA,West,WECC,Warm,Islanding,,26.0,0.43333333333333335,Under 1 day,727.0,4303.7,1
+189,2015-06-03 15:00:00,2015,6,Summer,Texas,TX,South,TRE,Warm,System Operability Disruption,,3000.0,50.0,1 to 3 days,,2435.3,1
+18,2015-06-07 13:52:00,2015,6,Summer,Tennessee,TN,Central,SERC,Warm,System Operability Disruption,Uncontrolled Loss,21.0,0.35,Under 1 day,,1450.3,1
+16,2015-06-07 13:54:00,2015,6,Summer,Tennessee,TN,Central,SERC,Warm,System Operability Disruption,Uncontrolled Loss,19.0,0.31666666666666665,Under 1 day,,1450.3,1
+1226,2015-06-20 13:52:00,2015,6,Summer,California,CA,West,WECC,Warm,Intentional Attack,Vandalism,98.0,1.6333333333333333,Under 1 day,0.0,4303.7,1
+903,2015-06-23 17:06:00,2015,6,Summer,Delaware,DE,Northeast,RFC,Warm,Severe Weather,,4254.0,70.9,1 to 3 days,65000.0,1838.3,1
+600,2015-06-23 17:30:00,2015,6,Summer,Pennsylvania,PA,Northeast,RFC,Warm,Severe Weather,,90.0,1.5,Under 1 day,200000.0,2123.4,1
+786,2015-06-23 18:00:00,2015,6,Summer,New Jersey,NJ,Northeast,RFC,Warm,Severe Weather,,10080.0,168.0,More than 3 days,263000.0,2851.2,1
+773,2015-06-23 18:18:00,2015,6,Summer,New Jersey,NJ,Northeast,RFC,Warm,System Operability Disruption,,132.0,2.2,Under 1 day,156338.0,2851.2,1
+108,2015-06-27 17:00:00,2015,6,Summer,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,4338.0,72.3,More than 3 days,68000.0,2034.1,1
+472,2015-06-29 19:21:00,2015,6,Summer,Washington,WA,Northwest,WECC,Warm,Islanding,,21.0,0.35,Under 1 day,0.0,2380.0,1
+1118,2015-06-30 10:50:00,2015,6,Summer,California,CA,West,WECC,Warm,Severe Weather,,2050.0,34.166666666666664,1 to 3 days,,4303.7,1
+1156,2015-06-30 14:00:00,2015,6,Summer,California,CA,West,WECC,Warm,Public Appeal,,420.0,7.0,Under 1 day,,4303.7,1
+1144,2015-07-03 08:30:00,2015,7,Summer,California,CA,West,WECC,Warm,Intentional Attack,Suspicious Activity,360.0,6.0,Under 1 day,0.0,4303.7,1
+169,2015-07-03 17:17:00,2015,7,Summer,Texas,TX,South,TRE,Warm,System Operability Disruption,Uncontrolled Loss,373.0,6.216666666666667,Under 1 day,30000.0,2435.3,1
+1317,2015-07-13 19:40:00,2015,7,Summer,Virginia,VA,Southeast,RFC,Warm,Severe Weather,,2435.0,40.583333333333336,1 to 3 days,52739.0,2265.2,1
+1296,2015-07-14 15:29:00,2015,7,Summer,Arkansas,AR,South,SPP,Warm,Severe Weather,Uncontrolled Loss,1226.0,20.433333333333334,Under 1 day,,1492.8,1
+343,2015-07-14 20:00:00,2015,7,Summer,Alabama,AL,Southeast,SERC,Warm,Severe Weather,,803.0,13.383333333333333,Under 1 day,111644.0,1278.5,1
+1097,2015-07-15 02:00:00,2015,7,Summer,California,CA,West,WECC,Warm,System Operability Disruption,Uncontrolled Loss,55.0,0.9166666666666666,Under 1 day,,4303.7,1
+244,2015-07-16 16:45:00,2015,7,Summer,Texas,TX,South,SPP,Warm,System Operability Disruption,,63.0,1.05,Under 1 day,17311.0,2435.3,1
+5,2015-07-18 02:00:00,2015,7,Summer,Minnesota,MN,East North Central,MRO,Warm,Severe Weather,,1740.0,29.0,1 to 3 days,250000.0,2279.0,1
+1233,2015-07-18 18:26:00,2015,7,Summer,California,CA,West,WECC,Warm,Islanding,,157.0,2.6166666666666667,Under 1 day,70.0,4303.7,1
+1184,2015-07-18 19:59:00,2015,7,Summer,California,CA,West,WECC,Warm,Severe Weather,,166.0,2.7666666666666666,Under 1 day,78164.0,4303.7,1
+414,2015-07-21 12:47:00,2015,7,Summer,Washington,WA,Northwest,WECC,Warm,System Operability Disruption,,25.0,0.4166666666666667,Under 1 day,,2380.0,1
+1211,2015-07-27 03:52:00,2015,7,Summer,California,CA,West,WECC,Warm,Islanding,,44.0,0.7333333333333333,Under 1 day,484.0,4303.7,1
+973,2015-07-29 16:45:00,2015,7,Summer,New York,NY,Northeast,NPCC,Warm,Fuel Supply Emergency,,255.0,4.25,Under 1 day,,4161.4,1
+279,2015-07-30 09:50:00,2015,7,Summer,Texas,TX,South,TRE,Warm,System Operability Disruption,,550.0,9.166666666666666,Under 1 day,,2435.3,1
+103,2015-08-02 17:45:00,2015,8,Summer,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,1995.0,33.25,1 to 3 days,162000.0,2034.1,1
+380,2015-08-03 00:30:00,2015,8,Summer,Illinois,IL,Central,RFC,Warm,Severe Weather,,90.0,1.5,Under 1 day,115000.0,2877.6,1
+151,2015-08-03 01:00:00,2015,8,Summer,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,2820.0,47.0,1 to 3 days,72520.0,2034.1,1
+289,2015-08-11 19:30:00,2015,8,Summer,Texas,TX,South,TRE,Warm,Severe Weather,,1955.0,32.583333333333336,1 to 3 days,100000.0,2435.3,1
+184,2015-08-13 15:15:00,2015,8,Summer,Texas,TX,South,TRE,Warm,Public Appeal,,225.0,3.75,Under 1 day,,2435.3,1
+400,2015-08-29 11:00:00,2015,8,Summer,Washington,WA,Northwest,WECC,Warm,Severe Weather,,8880.0,148.0,More than 3 days,250000.0,2380.0,1
+489,2015-08-29 13:00:00,2015,8,Summer,Washington,WA,Northwest,WECC,Warm,Severe Weather,,2520.0,42.0,1 to 3 days,64000.0,2380.0,1
+115,2015-09-03 02:33:00,2015,9,Fall,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,232.0,3.8666666666666667,Under 1 day,50114.0,2034.1,1
+975,2015-09-13 17:56:00,2015,9,Fall,New York,NY,Northeast,NPCC,Warm,Intentional Attack,Vandalism,161.0,2.683333333333333,Under 1 day,0.0,4161.4,1
+1095,2015-09-20 13:12:00,2015,9,Fall,California,CA,West,WECC,Warm,System Operability Disruption,,32.0,0.5333333333333333,Under 1 day,,4303.7,1
+840,2015-09-29 15:40:00,2015,9,Fall,Oregon,OR,Northwest,WECC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,2804.9,1
+649,2015-10-13 06:30:00,2015,10,Fall,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,120.0,2.0,Under 1 day,0.0,2737.1,1
+210,2015-10-13 10:25:00,2015,10,Fall,Texas,TX,South,TRE,Warm,Public Appeal,,455.0,7.583333333333333,Under 1 day,,2435.3,1
+1079,2015-10-13 16:32:00,2015,10,Fall,California,CA,West,WECC,Warm,Public Appeal,,247.0,4.116666666666666,Under 1 day,,4303.7,1
+659,2015-10-16 12:25:00,2015,10,Fall,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,31.0,0.5166666666666667,Under 1 day,0.0,2737.1,1
+1209,2015-10-18 07:00:00,2015,10,Fall,California,CA,West,WECC,Warm,Severe Weather,,989.0,16.483333333333334,Under 1 day,55677.0,4303.7,1
+632,2015-10-28 13:38:00,2015,10,Fall,Pennsylvania,PA,Northeast,RFC,Warm,Intentional Attack,,1642.0,27.366666666666667,1 to 3 days,35000.0,2123.4,1
+838,2015-10-30 15:00:00,2015,10,Fall,Oregon,OR,Northwest,WECC,Warm,Intentional Attack,,60.0,1.0,Under 1 day,0.0,2804.9,1
+205,2015-10-31 00:45:00,2015,10,Fall,Texas,TX,South,TRE,Warm,Severe Weather,,2420.0,40.333333333333336,1 to 3 days,130252.0,2435.3,1
+694,2015-11-01 11:53:00,2015,11,Fall,Ohio,OH,Central,RFC,Warm,Intentional Attack,Vandalism,7.0,0.11666666666666667,Under 1 day,0.0,2033.7,1
+1310,2015-11-02 17:37:00,2015,11,Fall,Arkansas,AR,South,SERC,Warm,Intentional Attack,Sabotage,2363.0,39.38333333333333,1 to 3 days,,1492.8,1
+300,2015-11-10 12:00:00,2015,11,Fall,Indiana,IN,Central,RFC,Warm,Intentional Attack,Sabotage,120.0,2.0,Under 1 day,0.0,1860.0,1
+939,2015-11-13 11:30:00,2015,11,Fall,New York,NY,Northeast,NPCC,Warm,Intentional Attack,Suspicious Activity,5.0,0.08333333333333333,Under 1 day,,4161.4,1
+88,2015-11-21 20:30:00,2015,11,Fall,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,1710.0,28.5,1 to 3 days,60000.0,2034.1,1
+1430,2015-11-28 06:00:00,2015,11,Fall,Oklahoma,OK,South,SPP,Warm,Severe Weather,,3300.0,55.0,1 to 3 days,55609.0,1901.7,1
+1509,2015-12-02 13:03:00,2015,12,Winter,Kansas,KS,South,SPP,Warm,Intentional Attack,Vandalism,1406.0,23.433333333333334,Under 1 day,0.0,2176.5,1
+1512,2015-12-05 21:00:00,2015,12,Winter,Kansas,KS,South,SPP,Warm,Intentional Attack,Vandalism,90.0,1.5,Under 1 day,0.0,2176.5,1
+1487,2015-12-08 14:00:00,2015,12,Winter,Nevada,NV,West,WECC,Warm,Intentional Attack,Sabotage,1.0,0.016666666666666666,Under 1 day,0.0,3314.8,1
+415,2015-12-09 04:00:00,2015,12,Winter,Washington,WA,Northwest,WECC,Warm,Severe Weather,,420.0,7.0,Under 1 day,76300.0,2380.0,1
+1187,2015-12-10 03:53:00,2015,12,Winter,California,CA,West,WECC,Warm,Severe Weather,,15.0,0.25,Under 1 day,9956.0,4303.7,1
+1262,2015-12-10 06:01:00,2015,12,Winter,California,CA,West,WECC,Warm,Severe Weather,,72.0,1.2,Under 1 day,9956.0,4303.7,1
+1148,2015-12-10 17:55:00,2015,12,Winter,California,CA,West,WECC,Warm,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,,4303.7,1
+851,2015-12-10 21:25:00,2015,12,Winter,Missouri,MO,Central,SERC,Warm,System Operability Disruption,Uncontrolled Loss,65.0,1.0833333333333333,Under 1 day,,2053.5,1
+159,2015-12-24 03:00:00,2015,12,Winter,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,2700.0,45.0,1 to 3 days,168000.0,2034.1,1
+1410,2015-12-27 23:38:00,2015,12,Winter,Oklahoma,OK,South,SPP,Warm,Severe Weather,,1042.0,17.366666666666667,Under 1 day,54476.0,1901.7,1
+1457,2015-12-29 08:30:00,2015,12,Winter,Maine,ME,Northeast,NPCC,Warm,Intentional Attack,Sabotage,1.0,0.016666666666666666,Under 1 day,0.0,1428.0,1
+1431,2015-12-31 17:00:00,2015,12,Winter,Oklahoma,OK,South,SPP,Warm,Severe Weather,Public Appeal,280.0,4.666666666666667,Under 1 day,1500.0,1901.7,1
+58,2016-01-04 05:15:00,2016,1,Winter,Wisconsin,WI,East North Central,MRO,Warm,Intentional Attack,Sabotage,1605.0,26.75,1 to 3 days,0.0,2123.3,1
+594,2016-01-11 20:16:00,2016,1,Winter,Pennsylvania,PA,Northeast,RFC,Warm,Intentional Attack,Vandalism,164.0,2.7333333333333334,Under 1 day,0.0,2123.4,1
+902,2016-01-14 08:27:00,2016,1,Winter,Delaware,DE,Northeast,RFC,Warm,Intentional Attack,Vandalism,213.0,3.55,Under 1 day,0.0,1838.3,1
+656,2016-01-17 12:00:00,2016,1,Winter,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Sabotage,60.0,1.0,Under 1 day,0.0,2737.1,1
+787,2016-01-23 07:49:00,2016,1,Winter,New Jersey,NJ,Northeast,RFC,Warm,Severe Weather,,76.0,1.2666666666666666,Under 1 day,50900.0,2851.2,1
+684,2016-02-07 13:21:00,2016,2,Winter,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,21.0,0.35,Under 1 day,0.0,2737.1,1
+1140,2016-02-13 12:44:00,2016,2,Winter,California,CA,West,SERC,Warm,Islanding,,223.0,3.716666666666667,Under 1 day,4300.0,4303.7,1
+78,2016-02-19 22:00:00,2016,2,Winter,Michigan,MI,East North Central,RFC,Warm,Severe Weather,,1513.0,25.216666666666665,1 to 3 days,145314.0,2034.1,1
+820,2016-02-21 15:54:00,2016,2,Winter,Oregon,OR,Northwest,WECC,Warm,Intentional Attack,Sabotage,73.0,1.2166666666666666,Under 1 day,0.0,2804.9,1
+882,2016-02-24 09:10:00,2016,2,Winter,Delaware,DE,Northeast,RFC,Warm,Intentional Attack,Vandalism,65.0,1.0833333333333333,Under 1 day,0.0,1838.3,1
+508,2016-02-26 16:35:00,2016,2,Winter,Arizona,AZ,Southwest,WECC,Warm,Intentional Attack,Sabotage,227.0,3.783333333333333,Under 1 day,2713.0,2625.4,1
+1208,2016-03-03 11:00:00,2016,3,Spring,California,CA,West,WECC,Warm,Fuel Supply Emergency,,49427.0,823.7833333333333,More than 3 days,0.0,4303.7,1
+427,2016-03-10 04:00:00,2016,3,Spring,Washington,WA,Northwest,WECC,Warm,Intentional Attack,Sabotage,1919.0,31.983333333333334,1 to 3 days,0.0,2380.0,1
+1499,2016-03-23 05:00:00,2016,3,Spring,Colorado,CO,Southwest,WECC,Warm,Severe Weather,,4019.0,66.98333333333333,1 to 3 days,0.0,2836.1,1
+1490,2016-03-27 12:00:00,2016,3,Spring,Nevada,NV,West,WECC,Warm,Intentional Attack,Sabotage,60.0,1.0,Under 1 day,110000.0,3314.8,1
+1445,2016-03-30 21:12:00,2016,3,Spring,Massachusetts,MA,Northeast,NPCC,Warm,Intentional Attack,Sabotage,1068.0,17.8,Under 1 day,50500.0,2016.3,1
+1037,2016-04-01 16:37:00,2016,4,Spring,Florida,FL,Southeast,FRCC,Warm,Intentional Attack,Sabotage,83.0,1.3833333333333333,Under 1 day,0.0,2315.2,1
+1138,2016-04-02 11:08:00,2016,4,Spring,California,CA,West,WECC,Warm,System Operability Disruption,Uncontrolled Loss,25.0,0.4166666666666667,Under 1 day,,4303.7,1
+437,2016-04-12 11:30:00,2016,4,Spring,Washington,WA,Northwest,WECC,Warm,Intentional Attack,,313.0,5.216666666666667,Under 1 day,0.0,2380.0,1
+564,2016-04-14 16:49:00,2016,4,Spring,Maryland,MD,Northeast,RFC,Warm,Intentional Attack,Sabotage,1673.0,27.883333333333333,1 to 3 days,0.0,2511.4,1
+673,2016-04-15 10:00:00,2016,4,Spring,Utah,UT,Southwest,WECC,Warm,Intentional Attack,Vandalism,60.0,1.0,Under 1 day,0.0,2737.1,1
+284,2016-04-18 05:05:00,2016,4,Spring,Texas,TX,South,TRE,Warm,Severe Weather,,3050.0,50.833333333333336,1 to 3 days,415103.0,2435.3,1
+225,2016-04-27 05:50:00,2016,4,Spring,Texas,TX,South,TRE,Warm,Severe Weather,,1185.0,19.75,Under 1 day,214864.0,2435.3,1
+216,2016-04-27 18:00:00,2016,4,Spring,Texas,TX,South,TRE,Warm,Intentional Attack,Sabotage,5.0,0.08333333333333333,Under 1 day,0.0,2435.3,1
+933,2016-05-07 07:49:00,2016,5,Spring,New York,NY,Northeast,NPCC,Warm,Intentional Attack,Sabotage,73.0,1.2166666666666666,Under 1 day,0.0,4161.4,1
+197,2016-05-10 20:45:00,2016,5,Spring,Texas,TX,South,TRE,Warm,System Operability Disruption,Transmission Interruption,3255.0,54.25,1 to 3 days,85000.0,2435.3,1
+863,2016-05-14 21:25:00,2016,5,Spring,Missouri,MO,Central,SERC,Warm,Intentional Attack,Sabotage,1199.0,19.983333333333334,Under 1 day,0.0,2053.5,1
+658,2016-05-19 21:36:00,2016,5,Spring,Utah,UT,Southwest,WECC,Warm,System Operability Disruption,Uncontrolled Loss,204.0,3.4,Under 1 day,85179.0,2737.1,1
+999,2016-05-20 00:00:00,2016,5,Spring,Louisiana,LA,South,SERC,Warm,System Operability Disruption,Transmission Interruption,3180.0,53.0,1 to 3 days,85000.0,1685.8,1
+931,2016-05-26 21:29:00,2016,5,Spring,New York,NY,Northeast,NPCC,Warm,System Operability Disruption,Transmission Interruption,191.0,3.183333333333333,Under 1 day,56645.0,4161.4,1
+965,2016-05-31 07:30:00,2016,5,Spring,New York,NY,Northeast,NPCC,Warm,Fuel Supply Emergency,,18717.0,311.95,More than 3 days,,4161.4,1
+670,2016-06-07 12:00:00,2016,6,Summer,Utah,UT,Southwest,WECC,Normal,Intentional Attack,Sabotage,15.0,0.25,Under 1 day,0.0,2737.1,1
+772,2016-06-14 07:59:00,2016,6,Summer,New Jersey,NJ,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2851.2,1
+895,2016-06-17 04:30:00,2016,6,Summer,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,1838.3,1
+828,2016-07-02 04:00:00,2016,7,Summer,Oregon,OR,Northwest,WECC,Normal,Intentional Attack,Vandalism,2680.0,44.666666666666664,1 to 3 days,0.0,2804.9,1
+172,2016-07-05 02:45:00,2016,7,Summer,Texas,TX,South,TRE,Normal,Severe Weather,,1455.0,24.25,1 to 3 days,52000.0,2435.3,1
+763,2016-07-07 05:53:00,2016,7,Summer,North Carolina,NC,Southeast,SERC,Normal,Intentional Attack,Vandalism,167.0,2.783333333333333,Under 1 day,0.0,1367.2,1
+104,2016-07-08 19:00:00,2016,7,Summer,Michigan,MI,East North Central,RFC,Normal,Severe Weather,,300.0,5.0,Under 1 day,160895.0,2034.1,1
+744,2016-07-08 20:50:00,2016,7,Summer,North Carolina,NC,Southeast,SERC,Normal,Severe Weather,,1355.0,22.583333333333332,Under 1 day,203345.0,1367.2,1
+219,2016-07-09 17:45:00,2016,7,Summer,Texas,TX,South,TRE,Normal,Severe Weather,,2655.0,44.25,1 to 3 days,62000.0,2435.3,1
+418,2016-07-13 13:00:00,2016,7,Summer,Washington,WA,Northwest,WECC,Normal,Intentional Attack,Vandalism,1.0,0.016666666666666666,Under 1 day,0.0,2380.0,1
+1420,2016-07-14 14:44:00,2016,7,Summer,Oklahoma,OK,South,SPP,Normal,Severe Weather,,796.0,13.266666666666667,Under 1 day,96966.0,1901.7,1
+1521,2016-07-19 15:45:00,2016,7,Summer,Idaho,ID,Northwest,WECC,Normal,System Operability Disruption,Uncontrolled Loss,224.0,3.7333333333333334,Under 1 day,,2216.8,1
+1529,2016-07-19 15:45:00,2016,7,Summer,Idaho,ID,Northwest,WECC,Normal,System Operability Disruption,Uncontrolled Loss,220.0,3.6666666666666665,Under 1 day,,2216.8,1
+901,2016-07-21 06:18:00,2016,7,Summer,Delaware,DE,Northeast,RFC,Normal,Intentional Attack,,507.0,8.45,Under 1 day,0.0,1838.3,1
+606,2016-07-23 15:15:00,2016,7,Summer,Pennsylvania,PA,Northeast,RFC,Normal,System Operability Disruption,Voltage Reduction,278.0,4.633333333333334,Under 1 day,,2123.4,1
